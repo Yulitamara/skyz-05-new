@@ -1,0 +1,95 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.9;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: #e7e7e7;
+  display: flex;
+  max-width: 3000px;
+  margin: 0 auto;
+}
+
+.main {
+  width: 100%;
+  margin: 6rem 0 0 0;
+}
+.main.form {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  font-weight: font-weight(font-weight-regular);
+  font-size: font-size(font-size-small);
+  color: var(--color-on-primary-light);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+i {
+  color: var(--color-primary);
+  font-size: font-size(font-size-medium);
+}
+
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  height: 20px;
+  resize: none;
+  border: none;
+  font-size: font-size(font-size-small);
+}
+textarea::placeholder {
+  color: gray;
+  font-family: "Open Sans", sans-serif;
+}
+
+hr {
+  border: 0.5px solid var(--color-light-gray);
+}
+
+.subtitle {
+  margin: 2rem 0.5rem 1rem 0.5rem;
+  color: var(--color-on-primary-light);
+}
+
+.clickable {
+  cursor: pointer;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+// Dark Mode Toggle Button
+.darkmode-toggle button {
+  background-color: transparent;
+  border: none 0;
+  border-radius: 50%;
+  // padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.darkmode-toggle span {
+  color: var(--color-primary);
+}

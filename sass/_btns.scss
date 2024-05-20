@@ -1,0 +1,128 @@
+.btns-container {
+  margin: 2rem 0;
+}
+
+.btn-primary {
+  color: var(--color-on-primary);
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: font-size(font-size-small);
+  gap: $gap-small;
+  padding: 0.4rem 0.8rem;
+  border-radius: $border-radius-small;
+  width: fit-content;
+  min-width: 50px;
+  height: 47px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: font-size(font-size-small);
+  gap: 5px;
+  padding: 0.4rem 0.8rem;
+  border-radius: $border-radius-small;
+  width: fit-content;
+  min-width: 50px;
+  height: 47px;
+  cursor: pointer;
+}
+
+.round-btn {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: $border-radius-round;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.6rem;
+}
+
+.round-btn-primary {
+  color: var(--color-on-primary-light);
+  background-color: transparent;
+
+  transition: $transition;
+}
+.round-btn-primary:hover,
+.round-btn-primary:active {
+  background-color: var(--color-hover-btn);
+}
+
+.round-btn-secondary {
+  // background-color: var(--color-permanent-secondary);
+  // color: var(--color-permanent-on-primary-light);
+  background-color: var(--color-blue);
+  color: var(--color-on-blue);
+  transition: $transition;
+}
+.round-btn-secondary:hover,
+.round-btn-secondary:active {
+  background-color: var(--color-blue-hover);
+}
+
+.btn-default {
+  padding: $padding-xsmall;
+  cursor: pointer;
+  transition: $transition;
+  border-radius: $border-radius-round;
+}
+.btn-default:hover,
+.btn-default.clicked {
+  background-color: var(--color-hover-btn);
+}
+
+.dynamic-btns {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  gap: $gap-medium;
+  // @include media-tablet {
+  //   visibility: visible;
+  // }
+  // @media (pointer: coarse) {
+  //   visibility: visible;
+  // }
+}
+
+.close-second-extend {
+  left: 0;
+  min-width: 40px;
+  height: 40px;
+  // position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: $border-radius-round;
+  background-color: var(--color-btn);
+  color: var(--color-on-btn);
+}
+// .round-close-btn {
+
+// }
+
+.menu-com {
+  display: block;
+}
+
+.close-expand-new {
+  display: none;
+}
+.disabled-btn {
+  color: rgb(191, 191, 191);
+  cursor: default !important;
+}
+.disabled-btn:hover {
+  background-color: transparent;
+}
+.label-icon {
+  color: var(--color-on-primary-light);
+}

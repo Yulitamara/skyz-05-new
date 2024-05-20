@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="blue">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./up/css/main-style.css">
+
+    <title>Resize Table</title>
+</head>
+
+<body>
+    <div class="table-wrapper">
+        <table class="fl-table table">
+            <thead>
+                <tr>
+                    <th>
+                        <div class="td-bold">
+                            <span class="material-symbols-outlined">category</span>
+                        </div>
+                    </th>
+                    <th>קטגוריה</th>
+                    <th>סטטוס</th>
+                    <th>זמן</th>
+                    <th>עובדים</th>
+                    <th>קשרים</th>
+                    <th>נושא/הערות</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="first-level">
+                    <td>
+                        <span class="material-symbols-outlined">
+                            note_alt
+                        </span>
+                    </td>
+                    <td>הערה</td>
+                    <td>
+                        <div class="tag">
+                            <span class="material-symbols-outlined">
+                                radio_button_unchecked
+                            </span>
+                            <span>פתוח</span>
+                        </div>
+                    </td>
+                    <td>06/09/2022 12:15</td>
+                    <td>
+                        <span>יצחק נהון</span>,
+                        <span>רינת מורגן</span>,
+                        <span>נועה ברק</span>,
+                        <span>מאיה לוי</span>,
+                        <span>קובי כהן</span>,
+                        <span class="clickable hover-td-text" id="toPersonCard">יעל סגל</span>
+                    </td>
+                    <td>
+                        <div class="td-header" id="td-close2-v2">
+                            <div>
+                                <span>משה כהן, מנהל</span>
+                                <span class="material-symbols-outlined stop-icon">
+                                    stop
+                                </span>
+                                <span>שולמית כהן, מנהלת חשבונות</span>
+                                <span class="material-symbols-outlined stop-icon">
+                                    stop
+                                </span>
+                                <span>אייל לוי הכהן</span>
+                                <span class="material-symbols-outlined stop-icon">
+                                    stop
+                                </span>
+                                <span>אסף אופנהיימר, מתכנת</span>
+                            </div>
+                            <span class="material-symbols-outlined clickable td-expand-btn" id="innerTableBtn2-v2">
+                                expand_more
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="td-header">
+                            <span>
+                                נושא לפעולה טקסט שהוא ארוך שהוא הערה
+                            </span>
+                            <span class="td-hover-btns td-expand-btn">
+                                <span class="material-symbols-outlined tr-expand-btn clickable td-icon" id="addTr">
+                                    chevron_right
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    delete
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    add
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    visibility
+                                </span>
+                                <span class="material-symbols-outlined clickable td-icon">
+                                    more_vert
+                                </span>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="first-level">
+                    <td>
+                        <span class="material-symbols-outlined clickable td-icon">attach_money</span>
+                    </td>
+                    <td>
+                        <span class="clickable hover-td-text">Debit
+                            Order</span>
+                        <span class="small-chip red">דחוף</span>
+                        <span class="small-chip green">?חוב אבוד</span>
+                    </td>
+                    <td>
+                        <div class="tag">
+                            <span class="material-symbols-outlined fill-icon">
+                                radio_button_unchecked
+                            </span>
+                            <span>נקלט</span>
+                        </div>
+                    </td>
+                    <td><span class="hover-td-text">13/07/2022 14:40</span></td>
+                    <td>
+                        <span class="hover-td-text">
+                            אייל כהן, אימפקט
+                        </span>
+                    </td>
+                    <td>
+                        <span>רוית אייל</span>
+                    </td>
+                    <td>
+                        <div class="td-header">
+                            <span>
+                            </span>
+                            <span class="td-hover-btns td-expand-btn" id="tdHoverDebitBtns" style="opacity: 0;">
+                                <span class="material-symbols-outlined tr-expand-btn clickable td-icon">
+                                    chevron_right
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    delete
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    add
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    visibility
+                                </span>
+                                <span class="material-symbols-outlined clickable td-icon">
+                                    more_vert
+                                </span>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="first-level">
+                    <td>
+                        <span class="material-symbols-outlined">
+                            timeline
+                        </span>
+                    </td>
+                    <td>שלב</td>
+                    <td>
+                        <div class="tag">
+                            <span class="material-symbols-outlined fill-icon">
+                                radio_button_unchecked
+                            </span>
+                            <span>נקלט</span>
+                        </div>
+                    </td>
+                    <td>13/07/2022 14:40</td>
+                    <td></td>
+                    <td>משה כהן מנהל</td>
+                    <td>
+                        <div class="td-header">
+                            <span>
+                            </span>
+                            <span class="td-hover-btns td-expand-btn">
+                                <span class="material-symbols-outlined tr-expand-btn clickable td-icon">
+                                    chevron_right
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    delete
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    add
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    visibility
+                                </span>
+                                <span class="material-symbols-outlined td-icon">
+                                    more_vert
+                                </span>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="first-level">
+                    <td>
+                        <span class="material-symbols-outlined">
+                            call
+                        </span>
+                    </td>
+                    <td>שיחה</td>
+                    <td>
+                        <div class="tag">
+                            <span class="material-symbols-outlined">
+                                radio_button_unchecked
+                            </span>
+                            <span>פתוח</span>
+                        </div>
+                    </td>
+                    <td>13/05/2023 11:20</td>
+                    <td>ורה קרקו</td>
+                    <td>אנאליסט קופות גמל בע"מ, ארז רפאלי, ויקטור ברכה</td>
+                    <td>
+                        <div class="td-header">
+                            <span>
+                                מעקב גביה חש' 2023
+                            </span>
+                            <span class="td-hover-btns td-expand-btn">
+                                <span class="material-symbols-outlined tr-expand-btn clickable td-icon">
+                                    chevron_right
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    delete
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    add
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    visibility
+                                </span>
+                                <span class="material-symbols-outlined td-icon">
+                                    more_vert
+                                </span>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="first-level">
+                    <td>
+                        <span class="material-symbols-outlined">
+                            task
+                        </span>
+                    </td>
+                    <td>משימה</td>
+                    <td>
+                        <div class="tag">
+                            <span class="material-symbols-outlined">
+                                radio_button_unchecked
+                            </span>
+                            <span>תכנון</span>
+                        </div>
+                    </td>
+                    <td>13/05/2023 11:20</td>
+                    <td>ורה קרקו</td>
+                    <td>מכללת בילדינג בע"מ, שרית אלט</td>
+                    <td>
+                        <div class="td-header">
+                            <span>
+                                החלפת רישיון הורידו ל3 במקום 8
+                            </span>
+                            <span class="td-hover-btns td-expand-btn">
+                                <span class="material-symbols-outlined tr-expand-btn clickable td-icon">
+                                    chevron_right
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    delete
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    add
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    visibility
+                                </span>
+                                <span class="material-symbols-outlined td-icon">
+                                    more_vert
+                                </span>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="first-level">
+                    <td>
+                        <span class="material-symbols-outlined">
+                            people
+                        </span>
+                    </td>
+                    <td>פגישה</td>
+                    <td>
+                        <div class="tag">
+                            <span class="material-symbols-outlined">
+                                radio_button_unchecked
+                            </span>
+                            <span>תכנון</span>
+                        </div>
+                    </td>
+                    <td>13/05/2023 11:20</td>
+                    <td>צחי בן ארי</td>
+                    <td>henia@orbasviva.co.il, orlys@orbasviva.co.il</td>
+                    <td>
+                        <div class="td-header">
+                            <span>
+                                הצגת CRM "גולדפלוס" - אורלי בסביבה
+                            </span>
+                            <span class="td-hover-btns td-expand-btn">
+                                <span class="material-symbols-outlined tr-expand-btn clickable td-icon">
+                                    chevron_right
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    delete
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    add
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    visibility
+                                </span>
+                                <span class="material-symbols-outlined td-icon">
+                                    more_vert
+                                </span>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="first-level">
+                    <td>
+                        <span class="material-symbols-outlined">
+                            campaign
+                        </span>
+                    </td>
+                    <td>קריאה</td>
+                    <td>
+                        <div class="tag">
+                            <span class="material-symbols-outlined fill-icon">
+                                radio_button_unchecked
+                            </span>
+                            <span>נשלח</span>
+                        </div>
+                    </td>
+                    <td>13/05/2023 11:20</td>
+                    <td>ורה קרקו</td>
+                    <td>מישלב קורסים בע"מ</td>
+                    <td>
+                        <div class="td-header">
+                            <span>
+                                מישלב חידוש חוזה שירות
+                            </span>
+                            <span class="td-hover-btns td-expand-btn">
+                                <span class="material-symbols-outlined tr-expand-btn clickable td-icon">
+                                    chevron_right
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    delete
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    add
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    visibility
+                                </span>
+                                <span class="material-symbols-outlined td-icon">
+                                    more_vert
+                                </span>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="first-level">
+                    <td>
+                        <span class="material-symbols-outlined">
+                            attach_money
+                        </span>
+                    </td>
+                    <td>חשבונית מס-קבלה</td>
+                    <td>
+                        <div class="tag">
+                            <span class="material-symbols-outlined fill-icon">
+                                radio_button_unchecked
+                            </span>
+                            <span>סגור</span>
+                        </div>
+                    </td>
+                    <td>23/06/2023 11:20</td>
+                    <td>ורה קרקו</td>
+                    <td>איגוד מנהלי מחלקות לחינוך ברשויות המקומי, תלמה</td>
+                    <td>
+                        <div class="td-header">
+                            <span>
+                                חשובנית מס-קבלה 109059
+                            </span>
+                            <span class="td-hover-btns td-expand-btn">
+                                <span class="material-symbols-outlined tr-expand-btn clickable td-icon">
+                                    chevron_right
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    delete
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    add
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    visibility
+                                </span>
+                                <span class="material-symbols-outlined td-icon">
+                                    more_vert
+                                </span>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="first-level">
+                    <td>
+                        <span class="material-symbols-outlined">
+                            pending_actions
+                        </span>
+                    </td>
+                    <td>דיווח שעות</td>
+                    <td>
+                        <div class="tag">
+                            <span class="material-symbols-outlined fill-icon">
+                                radio_button_unchecked
+                            </span>
+                            <span>סגור</span>
+                        </div>
+                    </td>
+                    <td>23/06/2023 11:20</td>
+                    <td>יבגני נוסוב</td>
+                    <td></td>
+                    <td>
+                        <div class="td-header">
+                            <span>
+                                דיווח עצמי
+                            </span>
+                            <span class="td-hover-btns td-expand-btn">
+                                <span class="material-symbols-outlined tr-expand-btn td-icon">
+                                    chevron_right
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    delete
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    add
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    visibility
+                                </span>
+                                <span class="material-symbols-outlined td-icon">
+                                    more_vert
+                                </span>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="first-level">
+                    <td>
+                        <span class="material-symbols-outlined">
+                            campaign
+                        </span>
+                    </td>
+                    <td>קריאה</td>
+                    <td>
+                        <div class="tag">
+                            <span class="material-symbols-outlined fill-icon">
+                                radio_button_unchecked
+                            </span>
+                            <span>סגור</span>
+                        </div>
+                    </td>
+                    <td>09/05/2023 11:20</td>
+                    <td>אסף אופנהיימר</td>
+                    <td>ליעד בנון, מטבחי הדקל</td>
+                    <td>
+                        <div class="td-header">
+                            <span>
+                                לא מצליחה להתחבר למשתמש מצורף תוכן מייל
+                            </span>
+                            <span class="td-hover-btns td-expand-btn">
+                                <span class="material-symbols-outlined tr-expand-btn td-icon">
+                                    chevron_right
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    delete
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    add
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    visibility
+                                </span>
+                                <span class="material-symbols-outlined td-icon">
+                                    more_vert
+                                </span>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="up/js/resize.js"></script>
+    <script src="up/js/card.js"></script>
+    <script src="up/js/cards.js"></script>
+
+</body>
+
+</html>

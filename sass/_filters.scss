@@ -1,0 +1,106 @@
+.filters-container {
+  display: flex;
+  gap: $gap-small;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: 1rem 0 2rem 0;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.filters-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.filters-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.filter-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: font-size(font-size-regular);
+  gap: $gap-small;
+  padding: 0.4rem 0.6rem;
+  border-radius: $border-radius-small;
+  width: fit-content;
+  height: 30px;
+  border: 1.5px solid var(--color-light-gray);
+  cursor: pointer;
+  color: var(--color-on-primary-light);
+  transition: $transition;
+  .filter-icon {
+    color: gray;
+  }
+  .gold {
+    color: #FFB800;
+  }
+}
+
+.filter-tag.green {
+  border: 1px solid var(--color-green-light);
+  color: var(--color-green);
+}
+
+.filter-tag.disabled {
+  border: none;
+  cursor: auto;
+}
+.filter-tag:hover {
+  background-color: var(--color-permanent-bg);
+}
+
+.filter-tag.clicked {
+  border: none;
+  background-color: var(--color-blue);
+}
+.filter-tag.clicked:hover {
+  background-color: var(--color-blue-hover);
+}
+
+.filter-with-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: font-size(font-size-small);
+  gap: 5px;
+  border-radius: 8px;
+  width: fit-content;
+  height: 30px;
+  background-color: var(--color-primary-95);
+  border: 1px solid var(--color-light-gray);
+  color: var(--color-on-primary-light);
+  width: 180px;
+  min-width: 180px;
+  margin: 0;
+  overflow: hidden;
+  span {
+    padding-right: 5px;
+  }
+  .filter-tag-input {
+    background-color: var(--color-on-primary);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+.filter-tag-input {
+  background-color: transparent;
+}
+
+.browsing {
+  margin: 1.2rem 0;
+  background-color: transparent !important;
+  border: none;
+  position: sticky;
+  left: 0;
+}
+
+.vartical-split {
+  @include media-medium {
+    display: none;
+  }
+}

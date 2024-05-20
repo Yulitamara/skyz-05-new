@@ -1,0 +1,285 @@
+.card-container {
+  min-height: 100vh;
+  background-color: var(--color-bg-light);
+  padding: $padding-medium;
+  padding-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-big;
+
+  .card {
+    background-color: var(--color-bg);
+    max-height: min-content;
+    padding: $padding-medium;
+    max-width: 100%;
+    container-type: inline-size;
+    border-radius: $border-radius-medium;
+    min-height: 110vh;
+
+    &__navigate {
+      display: flex;
+      align-items: center;
+      color: var(--color-on-primary-light);
+      margin: 0 0.5rem;
+      h4 {
+        cursor: pointer;
+      }
+      span {
+        font-size: font-size(font-size-regular);
+      }
+    }
+    &__boxes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @media screen and (max-width: 2000px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      grid-template-columns: repeat(auto-fill, minmax(2, 1fr));
+
+      gap: $gap-medium;
+      align-items: start;
+      padding-bottom: $padding-big;
+      &--box {
+        min-width: 400px;
+        @include media-small {
+          min-width: 0;
+        }
+
+        &__header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: var(--color-on-primary-light);
+          padding: $padding-small;
+
+          span {
+            cursor: pointer;
+          }
+
+          &--title {
+            display: flex;
+            align-items: center;
+            gap: $gap-small;
+
+            span {
+              font-size: font-size(font-size-medium);
+              cursor: pointer;
+            }
+          }
+          &--btns {
+            font-size: font-size(font-size-medium);
+            display: flex;
+            align-items: center;
+            gap: $gap-medium;
+
+            span {
+              cursor: pointer;
+            }
+          }
+        }
+        &__content {
+          display: flex;
+          align-items: start;
+          font-size: font-size(font-size-regular);
+          width: 100%;
+          min-height: 45px;
+          background-color: var(--color-on-primary);
+          border-radius: $border-radius-small;
+          flex-direction: column;
+          // border: 1.5px solid #E0E2EC;
+
+          &--fields {
+            padding: 0 $padding-small;
+            color: var(--color-on-primary-light);
+            background-color: var(--color-on-primary);
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: $gap-small;
+            border-radius: $border-radius-small;
+
+            flex-grow: 1;
+          }
+
+          &--table {
+            padding: $padding-medium;
+            overflow: hidden;
+            // overflow-x: scroll;
+            width: 100%;
+          }
+        }
+    
+       
+        .add-circle {
+          opacity: 0;
+        }
+      }
+
+      &--box:hover {
+        .dynamic-btns {
+          visibility: visible;
+        }
+        .add-circle {
+          opacity: 0.5;
+        }
+      }
+    }
+    &__boxes.full-boxes {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @include media-tablet {
+    padding: 0rem;
+
+    .card {
+      padding: $padding-medium $padding-medium;
+      border-radius: 0rem;
+
+      &__boxes {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      &__open-boxes {
+        &--box {
+          padding: 8px 4px;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}
+
+.tr-menu {
+  padding: $padding-small;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: $gap-medium;
+  width: fit-content;
+  border-radius: $border-radius-small;
+  margin-bottom: 1rem;
+  color: var(--color-on-primary-light);
+}
+
+.tr-expand-container {
+  display: flex;
+  flex-direction: column;
+
+  .fields-wrapper {
+    .fields {
+      display: flex;
+      flex-direction: row;
+      .fields__field {
+        max-width: 410px;
+      }
+    }
+  }
+}
+///////////////// LOCAL MENU
+.more-vert {
+  position: relative;
+}
+.local-menu-more-vert {
+  direction: rtl;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  width: fit-content;
+  min-width: 100px;
+  background-color: var(--color-on-primary);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  overflow: visible;
+}
+
+.local-menu-more-vert__item {
+  list-style: none;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: font-size(font-size-regular);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: $gap-medium;
+  cursor: pointer;
+}
+
+.local-menu-more-vert__item.only-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+.local-menu-more-vert.push-pin-menu {
+  .local-menu-more-vert__item {
+    flex-direction: column;
+    .title {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.card__boxes--box {
+  transition: all 0.5s ease;
+}
+.hide-animation {
+  transform-origin: "top left";
+  transition-property: "transform";
+  transition-duration: "0.3s";
+  //  transitionimingFunction:"ease";
+  transition-timing-function: ease;
+  transform: "scale(0)";
+}
+
+.expanded {
+  grid-column: span 2;
+  @media screen and (max-width: 850px) {
+    grid-column: span 1;
+  }
+}
+
+.expanded-max {
+  grid-column: span 3;
+  @media screen and (max-width: 2000px) {
+    grid-column: span 2;
+  }
+  @media screen and (max-width: 850px) {
+    grid-column: span 1;
+  }
+}
+
+.full-box {
+  display: none;
+}
+
+.pop-in {
+  animation: popInAnimation 0.5s ease forwards;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+@keyframes popInAnimation {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.pop-out {
+  animation: popOutAnimation 0.5s ease forwards;
+  opacity: 1;
+  transform: scale(1);
+}
+
+@keyframes popOutAnimation {
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+.red-frame {
+  border: 1px solid rgb(164, 181, 215);
+  transition: border 1s ease-in; /* Add a transition effect for a smoother change */
+}

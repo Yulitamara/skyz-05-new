@@ -1,0 +1,114 @@
+.small-boxes-wrapper {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-boxes-container {
+  display: flex;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  gap: $gap-small;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  // margin: 0 40px 0 80px;
+
+  .small-box {
+    background-color: var(--color-bg-light);
+    color: var(--color-on-primary-light);
+    display: flex;
+    align-items: center;
+    gap: $gap-small;
+    width: max-content;
+    justify-content: center;
+    border-radius: $border-radius-medium;
+    // border: 1px solid var(--color-bg-dark);
+    padding: $padding-small $padding-medium;
+    font-size: font-size(font-size-regular);
+    transition: $transition;
+    cursor: pointer;
+    margin: 0 5px 20px 5px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .small-box:hover {
+    background-color: var(--color-secondary-light);
+  }
+}
+
+.small-boxes-container::-webkit-scrollbar {
+  display: none;
+}
+.small-box.red-background {
+  background-color: var(--color-secondary);
+  // border: 1px solid var(--color-primary);
+}
+.small-box.red-background:hover {
+  background-color: var(--color-secondary);
+  // border: 1px solid var(--color-primary);
+}
+
+.hide-single {
+  cursor: pointer;
+}
+.small-boxes-container-second {
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: wrap;
+  gap: $gap-medium;
+
+  .small-box-second {
+    background-color: var(--color-bg-light);
+    color: var(--color-on-primary-light);
+    display: flex;
+    align-items: center;
+    gap: $gap-small;
+    width: max-content;
+    justify-content: center;
+    border-radius: $border-radius-medium;
+    border: 1px solid var(--color-on-primary-light);
+    padding: $padding-small $padding-medium;
+    font-size: font-size(font-size-regular);
+    transition: $transition;
+    cursor: pointer;
+    .btn-default {
+      visibility: hidden;
+    }
+  }
+  .small-box-second:hover {
+    background-color: var(--color-primary-light-hover);
+    .dynamic-btns {
+      visibility: visible;
+    }
+  }
+}
+
+.scroll-arrow {
+  top: 0;
+  bottom: 0;
+  min-width: 40px;
+  background-color: var(--color-table-th);
+  color: var(--color-on-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 40px;
+  border-radius: $border-radius-round;
+}
+
+.scroll-arrow-left {
+  left: 0;
+}
+
+.scroll-arrow-right {
+  right: 0;
+}
+@media (max-width: 500px) {
+  .scroll-arrow {
+    display: none !important;
+  }
+}

@@ -1,0 +1,129 @@
+.navbar {
+  position: fixed;
+  max-width: 3000px;
+  width: 100%;
+  background-color: var(--color-bg-light);
+  color: var(--color-permanent-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding-medium;
+  font-size: font-size(font-size-regular);
+  height: 6.5rem;
+  z-index: 100;
+  border: 1px solid var(--color-light-gray);
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: $gap-large;
+    &--side-toggle {
+      cursor: pointer;
+      display: none;
+      span {
+        font-size: font-size(font-size-regular);
+      }
+    }
+    &--logo {
+      display: flex;
+      align-items: center;
+      gap: $gap-small;
+    }
+  }
+
+  &__main {
+    display: flex;
+    &--search {
+      display: flex;
+      align-items: center;
+      gap: $gap-medium;
+      position: relative;
+
+      &__links-container {
+        display: flex;
+        align-items: center;
+        gap: $gap-small;
+      }
+    }
+    &--media-small {
+      display: none;
+    }
+  }
+  &__personal {
+    display: flex;
+    align-items: center;
+    gap: $gap-big;
+  }
+
+  input[type="text"].search-input::placeholder {
+    opacity: 0.5;
+    font-size: font-size(font-size-regular);
+  }
+
+  @media screen and (max-width: 920px) {
+    &__menu {
+      &--logo {
+        display: none;
+      }
+    }
+    &__personal {
+      &--name {
+        display: none;
+      }
+    }
+  }
+
+  @include media-medium {
+    &__main {
+      display: none;
+      &--media-small {
+        display: flex;
+        gap: $gap-medium;
+        align-items: center;
+      }
+    }
+  }
+  @include media-tablet-big {
+    .navbar__menu--side-toggle {
+      display: block;
+    }
+  }
+}
+.active {
+  display: none !important;
+}
+
+.round-img-container {
+  width: 50px;
+  height: 50px;
+  border-radius: $border-radius-round;
+  overflow: hidden;
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    display: block;
+  }
+  @include media-medium {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.navbar__overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-permanent-bg);
+  position: fixed;
+  opacity: 0;
+  display: none;
+  z-index: 10;
+}
+.navbar__overlay.open {
+  display: block;
+  opacity: 0.8;
+}
+
+.color-change {
+  color: var(--color-primary);
+}

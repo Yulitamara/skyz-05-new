@@ -1,0 +1,45 @@
+.fields-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .fields-title {
+    padding: 0 $padding-medium;
+    margin: 0.5rem 0 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .fields {
+    padding: $padding-small;
+    background-color: var(--color-card-background);
+    border-radius: $border-radius-small;
+    gap: $gap-medium;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 1764px) {
+  .fields-wrapper {
+    .fields {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 100%;
+    }
+  }
+}
+@include media-tablet {
+  .fields-wrapper {
+    .fields {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include media-small {
+  .fields-wrapper {
+    .fields {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

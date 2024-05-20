@@ -1,0 +1,87 @@
+//*-*-*-*-*-*-*-*-*-*-- The 1700px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+@mixin media-desktop {
+  @media screen and (min-width: break-point(break-point-desktop)) {
+    @content;
+  }
+}
+
+//*-*-*-*-*-*-*-*-*-*-- The 1250px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+@mixin media-tablet-big {
+  @media screen and (max-width: break-point(break-point-tablet-big)) {
+    @content;
+  }
+}
+
+//*-*-*-*-*-*-*-*-*-*-- The 800px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+@mixin media-tablet {
+  @media screen and (max-width: break-point(break-point-tablet)) {
+    @content;
+  }
+}
+
+//*-*-*-*-*-*-*-*-*-*-- The 600px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+@mixin media-medium {
+  @media screen and (max-width: break-point(break-point-medium)) {
+    @content;
+  }
+}
+
+//*-*-*-*-*-*-*-*-*-*-- The 470px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+@mixin media-small {
+  @media screen and (max-width: break-point(break-point-small)) {
+    @content;
+  }
+}
+// *-*-*-*-*-*--*-*-*-*-*-*-*-*---------------------------------*-*-*-*-*-*-*--*-*-*--*-*-*-*-*-*-*-*
+
+@import "1.variables";
+@import "utilities";
+@import "sidebar";
+@import "navbar";
+@import "home";
+@import "table";
+@import "fields";
+@import "card";
+@import "inputs";
+@import "footer";
+@import "smallSearch";
+@import "dropdown";
+@import "filters";
+@import "modal";
+@import "formPDF";
+@import "scrollbar";
+@import "btns";
+@import "chips";
+@import "tags";
+@import "icons";
+@import "edit-mode";
+@import "flex-table";
+@import "small-boxes";
+@import "header";
+@import "calendar";
+@import "kanban";
+@import "chat";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: font-size(font-size-xlarge);
+  font-weight: font-weight(font-weight-medium);
+  color: var(--color-text);
+}
+
+h3 {
+  font-size: font-size(font-size-regular);
+  font-weight: font-weight(font-weight-regular);
+}
+h4 {
+  font-size: font-size(font-size-regular);
+  font-weight: font-weight(font-weight-regular);
+}
+

@@ -1,0 +1,120 @@
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  box-sizing: border-box;
+  border: none;
+  padding: 0 $padding-small;
+  color: var(--color-on-primary-light);
+  background-color: transparent;
+  width: 100%;
+  font-size: font-size(font-size-regular);
+  font-family: "Open Sans", sans-serif;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+textarea {
+  outline: none !important;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  max-width: 120px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder {
+  color: var(--color-permanent-on-primary-light);
+  font-size: font-size(font-size-regular);
+}
+
+input[type="number"]::placeholder,
+input[type="text"]::placeholder {
+  opacity: 0.5;
+  font-family: "Open Sans", sans-serif;
+}
+
+input[type="text"].edit-name {
+  height: 4.6rem;
+  border-radius: $border-radius-big;
+  background-color: var(--color-on-primary);
+  padding: 0 $padding-medium;
+  background-origin: content-box;
+  font-size: font-size(font-size-large);
+  border: 1px solid #75acce;
+}
+input[type="text"].edit-name:hover,
+input[type="text"].edit-name:focus-within {
+  border: 1px solid var(--color-primary);
+}
+input[type="text"].edit-name::placeholder {
+  opacity: 0.5;
+  font-size: font-size(font-size-large);
+}
+
+.label-container {
+  display: flex;
+  padding: 0 $padding-small;
+  align-self: center;
+  align-items: center;
+  gap: $gap-medium;
+  color: var(--color-permanent-on-primary-light);
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: $gap-medium;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 0;
+  height: 46px;
+  border-radius: $border-radius-big;
+  padding: $padding-medium;
+  background-color: var(--color-permanent-bg);
+  transition: $transition;
+}
+
+.input-container:focus-within {
+  background-color: var(--color-on-primary);
+  border: 1px solid var(--color-permanent-primary);
+}
+
+.textarea-title {
+  padding: $padding-medium;
+  width: 100%;
+  height: 50px;
+  font-size: font-size(font-size-medium);
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  border-radius: $border-radius-small;
+  background-color: var(--color-on-primary);
+}
+
+.textarea-content {
+  padding: $padding-medium;
+  width: 100%;
+  height: 300px;
+  font-size: font-size(font-size-regular);
+  border-radius: $border-radius-small;
+  background-color: var(--color-on-primary);
+}
+textarea {
+  color: var(--color-on-primary-light);
+  font-size: font-size(font-size-regular);
+  font-family: "Open Sans", sans-serif;
+}
+
+.new-mail-container {
+  width: 100%;
+  background-color: var(--color-bg-dark);
+  border-radius: $border-radius-small;
+  padding: $padding-medium;
+  padding-top: 0;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,121 @@
+.kanban-container {
+  // display: grid;
+  // grid-template-columns: repeat(3, max-content);
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+.kanban {
+  min-height: 100vh;
+  font-size: font-size(font-size-regular);
+  background-color: var(--color-on-primary);
+  border-radius: 1rem;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: font-size(font-size-medium);
+    // background-color: var(--color-green-light);
+    padding: 0 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    .status-container {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .fill-icon {
+      font-size: font-size(font-size-medium);
+    }
+    .close-icon {
+      font-size: font-size(font-size-xlarge);
+      cursor: pointer;
+    }
+  }
+  .green-header {
+    background-color: #d0ffc0;
+  }
+  .yellow-header {
+    background-color: #fff6c0;
+  }
+  .purple-header {
+    background-color: #c0d4ff;
+  }
+  
+  .small-screen-header {
+    display: none;
+  }
+  &-content-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
+.kanban-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 1rem 1rem 1rem;
+  max-width: 350px;
+  min-width: 300px;
+  .kanban-title {
+    text-align: start;
+    padding-right: 0.4rem;
+    font-size: font-size(font-size-medium);
+  }
+  .kanban-note {
+    border-radius: 0.5rem;
+    border: 0.5px solid var(--color-bg-dark);
+    padding: 0.5rem 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      .status-icon {
+        font-size: font-size(font-size-small);
+        vertical-align: middle;
+        color: var(--color-green);
+      }
+      .status-icon.green {
+        color: var(--color-green);
+      }
+      .status-icon.blue {
+        color: var(--color-blue);
+      }
+    }
+
+    &-title {
+      margin-bottom: -10px;
+      font-size: 15px;
+      color: var(--color-primary);
+    }
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .kanban-container {
+    flex-direction: column;
+    .kanban {
+      min-height: 0;
+      &-header {
+        min-width: 97%;
+        position: fixed;
+        margin-left: 2rem;
+      }
+      .hidden-header {
+        display: none;
+      }
+      .small-screen-header {
+        display: flex;
+      }
+      .kanban-content-container {
+        margin-top: 5rem;
+      }
+    }
+  }
+}

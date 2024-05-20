@@ -1,0 +1,47 @@
+
+.tags {
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap-medium;
+  padding: 4px 8px;
+  border-radius: $border-radius-medium;
+  width: 110px;
+  height: 30px;
+  background-color: var(--color-blue);
+  color: var(--color-on-blue);
+  cursor: pointer;
+  transition: $transition;
+  span {
+    font-size: font-size(font-size-regular);
+  }
+  .material-symbols-outlined {
+    font-size: font-size(font-size-large);
+  }
+}
+.tag:hover {
+  background-color: var(--color-blue-hover);
+}
+
+.tag.green {
+  background-color: var(--color-green-lighter);
+  color: var(--color-on-green-lighter);
+}
+
+.tag.green:hover {
+  background-color: var(--color-green-lighter-hover);
+}
+
+.tag.red {
+  background: var(--color-red-light);
+  color: var(--color-on-red-light);
+}
+
+.tag.red:hover {
+  background: var(--color-red-light-hover);
+}

@@ -1,0 +1,37 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  justify-items: center;
+  padding: $padding-medium;
+  padding-top: $padding-large;
+  border-top: 1px solid var(--color-light-gray);
+  background-color: var(--color-bg-light);
+
+  &__box {
+    color: var(--color-on-primary-light);
+
+    &--title {
+      font-size: font-size(font-size-small);
+      font-weight: font-weight(font-weight-medium);
+    }
+    &--list {
+      font-size: font-size(font-size-small);
+      font-weight: font-weight(font-weight-light);
+      li {
+        cursor: pointer;
+      }
+      li:hover,
+      li:active {
+        font-weight: font-weight(font-weight-regular);
+      }
+    }
+  }
+
+  @include media-tablet-big {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  @include media-small {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

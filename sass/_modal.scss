@@ -1,0 +1,190 @@
+.modal {
+  right: 0;
+  // width: 50%;
+  container: modal / inline-size;
+  min-width: 580px;
+  max-height: 100vh;
+  overflow-y: scroll;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+  // border: 2px solid rgb(165, 164, 164);
+  border: 1px solid #b4e6ec;
+  min-width: 400px;
+  max-width: 100%;
+}
+
+.modal-y {
+  container: modal / inline-size;
+  // min-width: 580px;
+  // max-height: 80vh;
+  max-width: 10px;
+  width: 10px;
+
+  overflow-y: scroll;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.resizable-x {
+  display: flex;
+  // overflow: hidden;
+  // height: 100%;
+  flex-direction: row !important;
+}
+
+.resizable-x.for-y {
+  display: flex;
+  // height: 100%;
+
+  flex-direction: column;
+}
+
+.resizer-x {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resizer-y {
+  z-index: 1;
+  cursor: row-resize;
+  flex-direction: column;
+}
+
+.resizer-x {
+  z-index: 2;
+  cursor: col-resize;
+}
+
+.card__open-boxes--box__content.resizable-x {
+  gap: 0px;
+}
+.resizer-x::before,
+.resizer-x::after {
+  content: "";
+  width: 1px;
+  height: 16px;
+}
+
+@container modal (inline-size <= 900px) {
+  .card {
+    &__boxes {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    &__open-boxes {
+      &--box {
+        padding: 8px 4px;
+      }
+    }
+
+    .card-header {
+      .top {
+        flex-direction: column-reverse;
+        align-items: start;
+        gap: 0;
+        .left {
+          gap: $gap-small;
+          flex-direction: column;
+          margin-bottom: 2rem;
+
+          .title {
+            align-items: center;
+            font-size: 22px;
+          }
+          .debit-number {
+            font-size: 16px;
+            margin-top: 0;
+          }
+        }
+        .medium-title {
+          span {
+            font-size: 25px;
+          }
+        }
+
+        .small-title {
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+      .right {
+        margin: 1rem 0 1.5rem 0;
+        align-self: end;
+      }
+    }
+
+    &__boxes {
+      padding: 0.5rem;
+    }
+    &__open-boxes {
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+// y
+.resizable-y {
+  flex-direction: column;
+  min-width: 580px;
+}
+
+.resizer-y {
+  z-index: 1;
+  cursor: row-resize;
+  flex-direction: column;
+}
+.resizer-y::before,
+.resizer-y::after {
+  content: "";
+  width: 1px;
+  height: 2px;
+}
+
+.resizable-y {
+  display: flex;
+  overflow: hidden;
+}
+
+.resizable-y {
+  flex-direction: column;
+  min-width: 580px;
+}
+
+.resizer-y {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#top-panel {
+  // position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 200px;
+}
+
+#bottom-panel {
+  // position: absolute;
+  // right: 0;
+  // left: 0;
+  height: 200px;
+  // bottom: 0;
+
+  color: #fff;
+  background: black;
+}
+#drag {
+  position: absolute;
+  left: 0;
+  top: -4px;
+  right: 0;
+  height: 8px;
+  cursor: n-resize;
+}
