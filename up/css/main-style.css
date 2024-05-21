@@ -3164,6 +3164,7 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  cursor: grab;
 }
 .kanban-content .kanban-note-header {
   display: flex;
@@ -3209,6 +3210,15 @@ textarea {
     margin-top: 5rem;
   }
 }
+.kanban.minimize .columns-container {
+  display: none;
+}
+
+.main-title {
+  cursor: pointer;
+  padding: 10px;
+}
+
 .main-container {
   position: relative;
   max-width: 100%;

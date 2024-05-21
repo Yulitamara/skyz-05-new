@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     new Sortable(column, {
       group: "kanban", // set the group to enable drag and drop between lists
       animation: 150,
+      filter: ".kanban-title", // specify the class of elements that should not be draggable
+      preventOnFilter: false, // prevent the default action for filtered elements
       onEnd: function (event) {
         // Here you can handle the logic when the drag and drop action ends
         const itemEl = event.item; // dragged HTMLElement
