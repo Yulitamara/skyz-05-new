@@ -3156,6 +3156,7 @@ textarea {
   text-align: start;
   padding-right: 0.4rem;
   font-size: 1.8rem;
+  pointer-events: none; /* Make the kanban-title non-draggable */
 }
 .kanban-content .kanban-note {
   border-radius: 0.5rem;
@@ -3210,8 +3211,14 @@ textarea {
     margin-top: 5rem;
   }
 }
-.kanban.minimize .columns-container {
-  display: none;
+.kanban.minimize {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column-reverse;
+}
+.kanban.minimize .kanban-header {
+  gap: 1rem;
 }
 
 .main-title {

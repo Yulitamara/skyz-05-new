@@ -26,13 +26,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const toggleMinimize = () => {
-    document.querySelectorAll(".kanban").forEach((kanban) => {
-      kanban.classList.toggle("minimize");
-    });
-  };
+  //   const toggleMinimize = () => {
+  //     document.querySelectorAll(".kanban").forEach((kanban) => {
+  //       kanban.classList.toggle("minimize");
+  //     });
+  //   };
 
-  document.querySelectorAll(".main-title").forEach((title) => {
-    title.addEventListener("click", toggleMinimize);
+  //   document.querySelectorAll(".main-title").forEach((title) => {
+  //     title.addEventListener("click", toggleMinimize);
+  //   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const closeIcons = document.querySelectorAll(".close-icon");
+
+  closeIcons.forEach((icon) => {
+    icon.addEventListener("click", function () {
+      const kanban = icon.closest(".kanban");
+      const contentContainer = kanban.querySelector(
+        ".kanban-content-container"
+      );
+      kanban.classList.toggle("minimize");
+      contentContainer.style.display = kanban.classList.contains("minimize")
+        ? "none"
+        : "flex";
+      // Toggle the inner HTML of the close icon
+      if (kanban.classList.contains("minimize")) {
+        icon.innerHTML = "expand_content"; // Change to "expand" when minimized
+      } else {
+        icon.innerHTML = "close"; // Change back to "close" when expanded
+      }
+    });
   });
 });
