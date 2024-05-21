@@ -1,251 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="blue">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Icons -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <!-- Main Style Sheet -->
-    <link rel="stylesheet" href="./up/css/main-style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <title>Impact System</title>
-  </head>
 
-  <body class="container" dir="rtl">
-    <!---*-*-*-*-*-*-*-*--*-*-*- Navbar Section --*-*-*-*-*-*-*-*-*-*-*-->
-    <div class="navbar">
-      <div class="navbar__menu">
-        <span
-          class="material-symbols-outlined navbar__menu--side-toggle"
-          id="sideNavBtn"
-        >
-          menu
-        </span>
-        <div class="navbar__menu--logo">
-          <span class="material-symbols-outlined navbar__main--logo__icon">
-            home</span
-          >
-          <div class="navbar__main--logo__name">Skyz<span>CRM</span></div>
-        </div>
-      </div>
-      <div class="navbar__main">
-        <div class="navbar__main--search">
-          <div class="field-container">
-            <div class="input-container">
-              <input
-                type="text"
-                class="input"
-                placeholder="חיפוש..."
-                id="searchInput"
-              />
-              <div class="navbar__main--search__links-container">
-                <div class="round-btn round-btn-primary">
-                  <span class="material-symbols-outlined"> search </span>
-                </div>
-                <div class="round-btn round-btn-secondary">
-                  <span class="material-symbols-outlined" id="addMenuBtn">
-                    add
-                  </span>
-                </div>
-                <div class="label-container">
-                  <label class="label-text">
-                    <nobr> רשומה </nobr>
-                  </label>
-                  <span class="material-symbols-outlined label-icon">
-                    expand_more
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Main Style Sheet -->
+  <link rel="stylesheet" href="./up/css/main-style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 
-      <div class="navbar__personal">
-        <span
-          class="material-symbols-outlined fill-icon color-change"
-          style="cursor: pointer"
-          >circle</span
-        >
-        <div class="darkmode-toggle">
-          <button aria-label="darkmode-toggle" id="darkmodeToggle">
-            <span class="material-symbols-outlined"> dark_mode </span>
-          </button>
-        </div>
-        <div class="navbar__personal--name">Impact System</div>
-        <div class="round-img-container">
-          <img src="./up/imgs/passport.webp" alt="" />
-        </div>
+  <title>Impact System</title>
+</head>
+
+<body class="container" dir="rtl">
+  <!---*-*-*-*-*-*-*-*--*-*-*- Navbar Section --*-*-*-*-*-*-*-*-*-*-*-->
+  <div class="navbar">
+    <div class="navbar__menu">
+      <span class="material-symbols-outlined navbar__menu--side-toggle" id="sideNavBtn">
+        menu
+      </span>
+      <div class="navbar__menu--logo">
+        <span class="material-symbols-outlined navbar__main--logo__icon">
+          home</span>
+        <div class="navbar__main--logo__name">Skyz<span>CRM</span></div>
       </div>
     </div>
-
-    <div class="navbar__overlay"></div>
-
-    <!---*-*-*-*-*-*-*-*--*-*-*- Sidebar Section --*-*-*-*-*-*-*-*-*-*-*-->
-    <aside class="side-nav" dir="rtl">
-      <div class="side-nav__content">
-        <ul class="side-nav__content--list">
-          <li class="side-nav__content--list__item create-item">
-            <div class="item-name">
-              <a href="#">
-                <span class="material-symbols-outlined"> create </span>
-                <div>צור</div>
-              </a>
-              <span class="material-symbols-outlined btn-default"> add </span>
-            </div>
-          </li>
-
-          <li class="side-nav__content--list__item" id="homeBtn">
-            <div class="item-name">
-              <a href="#">
-                <span class="material-symbols-outlined"> home </span>
-                <div>SkyzCRM</div>
-              </a>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="formPDF.html">
-                <span class="material-symbols-outlined"> view_timeline </span>
-                <div>טופס</div>
-              </a>
-              <span class="material-symbols-outlined btn-default">
-                expand_more
-              </span>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item" id="actionsBtn">
-            <div class="item-name">
-              <a href="#">
-                <span class="material-symbols-outlined"> category </span>
-                <div>פעולות</div>
-              </a>
-              <span class="material-symbols-outlined btn-default">
-                expand_more
-              </span>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="calendar.html">
-                <span class="material-symbols-outlined"> event </span>
-                <div>יומן</div>
-              </a>
-              <span class="material-symbols-outlined btn-default">
-                expand_more
-              </span>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="kanban.html">
-                <span class="material-symbols-outlined"> view_kanban </span>
-                <div>תצוגת קנבן</div>
-              </a>
-              <span class="material-symbols-outlined btn-default">
-                expand_more
-              </span>
-            </div>
-          </li>
-          <li id="acountsBtnSidebar" class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="#">
-                <span class="material-symbols-outlined">
-                  account_balance_wallet
-                </span>
-                <div>חשבונות</div>
-              </a>
-              <span
-                class="material-symbols-outlined btn-default btn-actions-menu"
-              >
-                expand_more
-              </span>
-            </div>
-            <div
-              class="side-nav__content--list__item--collapse active"
-              id="acountsCollapse"
-            >
-              <span>הכול</span>
-              <span>פתוחים</span>
-              <span>בתהליך</span>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="edit-person.html">
-                <span class="material-symbols-outlined"> person </span>
-                <div>עריכת איש</div>
-              </a>
-              <span
-                class="material-symbols-outlined btn-default btn-actions-menu"
-              >
-                expand_more
-              </span>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="new-person.html">
-                <span class="material-symbols-outlined"> person </span>
-                <div>איש חדש</div>
-              </a>
-              <span
-                class="material-symbols-outlined btn-default btn-actions-menu"
-              >
-                expand_more
-              </span>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="#">
-                <span class="material-symbols-outlined"> chat </span>
-                <div>צ'אט</div>
-              </a>
-              <span
-                class="material-symbols-outlined btn-default btn-actions-menu"
-              >
-                expand_more
-              </span>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="#">
-                <span class="material-symbols-outlined"> handyman </span>
-                <div>הגדרות</div>
-              </a>
-              <span
-                class="material-symbols-outlined btn-default btn-actions-menu"
-              >
-                expand_more
-              </span>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </aside>
-
-    <div class="main">
-      <!---*-*-*-*-*-*-*-*--*-*-*- Search For Small Screen --*-*-*-*-*-*-*-*-*-*-*-->
-      <section class="small-screen-search">
+    <div class="navbar__main">
+      <div class="navbar__main--search">
         <div class="field-container">
           <div class="input-container">
-            <input
-              type="text"
-              class="input"
-              placeholder="חיפוש..."
-              id="searchInput"
-            />
+            <input type="text" class="input" placeholder="חיפוש..." id="searchInput" />
             <div class="navbar__main--search__links-container">
               <div class="round-btn round-btn-primary">
                 <span class="material-symbols-outlined"> search </span>
@@ -255,7 +45,10 @@
                   add
                 </span>
               </div>
-              <div>
+              <div class="label-container">
+                <label class="label-text">
+                  <nobr> רשומה </nobr>
+                </label>
                 <span class="material-symbols-outlined label-icon">
                   expand_more
                 </span>
@@ -263,708 +56,907 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
 
-      <!-- -*-*-*-*-*-*-*-*--*-*-*- Card Section - Person --*-*-*-*-*-*-*-*-*-*-* -->
-      <section class="card-container" id="personCard">
-        <div class="card">
-          <div class="kanban-container">
-            <div class="kanban">
-              <div class="kanban-header small-screen-header">
-                <span></span>
-                <div class="status-container">
-                  <span class="material-symbols-outlined fill-icon">
-                    circle
-                  </span>
-                  <span class="status">סטטוס</span>
-                </div>
-                <span class="material-symbols-outlined close-icon">
-                  expand_more
+    <div class="navbar__personal">
+      <span class="material-symbols-outlined fill-icon color-change" style="cursor: pointer">circle</span>
+      <div class="darkmode-toggle">
+        <button aria-label="darkmode-toggle" id="darkmodeToggle">
+          <span class="material-symbols-outlined"> dark_mode </span>
+        </button>
+      </div>
+      <div class="navbar__personal--name">Impact System</div>
+      <div class="round-img-container">
+        <img src="./up/imgs/passport.webp" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar__overlay"></div>
+
+  <!---*-*-*-*-*-*-*-*--*-*-*- Sidebar Section --*-*-*-*-*-*-*-*-*-*-*-->
+  <aside class="side-nav" dir="rtl">
+    <div class="side-nav__content">
+      <ul class="side-nav__content--list">
+        <li class="side-nav__content--list__item create-item">
+          <div class="item-name">
+            <a href="#">
+              <span class="material-symbols-outlined"> create </span>
+              <div>צור</div>
+            </a>
+            <span class="material-symbols-outlined btn-default"> add </span>
+          </div>
+        </li>
+
+        <li class="side-nav__content--list__item" id="homeBtn">
+          <div class="item-name">
+            <a href="#">
+              <span class="material-symbols-outlined"> home </span>
+              <div>SkyzCRM</div>
+            </a>
+          </div>
+        </li>
+        <li class="side-nav__content--list__item">
+          <div class="item-name">
+            <a href="formPDF.html">
+              <span class="material-symbols-outlined"> view_timeline </span>
+              <div>טופס</div>
+            </a>
+            <span class="material-symbols-outlined btn-default">
+              expand_more
+            </span>
+          </div>
+        </li>
+        <li class="side-nav__content--list__item" id="actionsBtn">
+          <div class="item-name">
+            <a href="#">
+              <span class="material-symbols-outlined"> category </span>
+              <div>פעולות</div>
+            </a>
+            <span class="material-symbols-outlined btn-default">
+              expand_more
+            </span>
+          </div>
+        </li>
+        <li class="side-nav__content--list__item">
+          <div class="item-name">
+            <a href="calendar.html">
+              <span class="material-symbols-outlined"> event </span>
+              <div>יומן</div>
+            </a>
+            <span class="material-symbols-outlined btn-default">
+              expand_more
+            </span>
+          </div>
+        </li>
+        <li class="side-nav__content--list__item">
+          <div class="item-name">
+            <a href="kanban.html">
+              <span class="material-symbols-outlined"> view_kanban </span>
+              <div>תצוגת קנבן</div>
+            </a>
+            <span class="material-symbols-outlined btn-default">
+              expand_more
+            </span>
+          </div>
+        </li>
+        <li id="acountsBtnSidebar" class="side-nav__content--list__item">
+          <div class="item-name">
+            <a href="#">
+              <span class="material-symbols-outlined">
+                account_balance_wallet
+              </span>
+              <div>חשבונות</div>
+            </a>
+            <span class="material-symbols-outlined btn-default btn-actions-menu">
+              expand_more
+            </span>
+          </div>
+          <div class="side-nav__content--list__item--collapse active" id="acountsCollapse">
+            <span>הכול</span>
+            <span>פתוחים</span>
+            <span>בתהליך</span>
+          </div>
+        </li>
+        <li class="side-nav__content--list__item">
+          <div class="item-name">
+            <a href="edit-person.html">
+              <span class="material-symbols-outlined"> person </span>
+              <div>עריכת איש</div>
+            </a>
+            <span class="material-symbols-outlined btn-default btn-actions-menu">
+              expand_more
+            </span>
+          </div>
+        </li>
+        <li class="side-nav__content--list__item">
+          <div class="item-name">
+            <a href="new-person.html">
+              <span class="material-symbols-outlined"> person </span>
+              <div>איש חדש</div>
+            </a>
+            <span class="material-symbols-outlined btn-default btn-actions-menu">
+              expand_more
+            </span>
+          </div>
+        </li>
+        <li class="side-nav__content--list__item">
+          <div class="item-name">
+            <a href="#">
+              <span class="material-symbols-outlined"> chat </span>
+              <div>צ'אט</div>
+            </a>
+            <span class="material-symbols-outlined btn-default btn-actions-menu">
+              expand_more
+            </span>
+          </div>
+        </li>
+        <li class="side-nav__content--list__item">
+          <div class="item-name">
+            <a href="#">
+              <span class="material-symbols-outlined"> handyman </span>
+              <div>הגדרות</div>
+            </a>
+            <span class="material-symbols-outlined btn-default btn-actions-menu">
+              expand_more
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <div class="main">
+    <!---*-*-*-*-*-*-*-*--*-*-*- Search For Small Screen --*-*-*-*-*-*-*-*-*-*-*-->
+    <section class="small-screen-search">
+      <div class="field-container">
+        <div class="input-container">
+          <input type="text" class="input" placeholder="חיפוש..." id="searchInput" />
+          <div class="navbar__main--search__links-container">
+            <div class="round-btn round-btn-primary">
+              <span class="material-symbols-outlined"> search </span>
+            </div>
+            <div class="round-btn round-btn-secondary">
+              <span class="material-symbols-outlined" id="addMenuBtn">
+                add
+              </span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined label-icon">
+                expand_more
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -*-*-*-*-*-*-*-*--*-*-*- Card Section - Person --*-*-*-*-*-*-*-*-*-*-* -->
+    <!-- <section class="card-container">
+      <div class="card">
+        <div class="kanban-container">
+          <div class="kanban">
+            <div class="kanban-header small-screen-header">
+              <span></span>
+              <div class="status-container">
+                <span class="material-symbols-outlined fill-icon">
+                  circle
                 </span>
+                <span class="status">סטטוס</span>
               </div>
-              <div class="kanban-header hidden-header green-header">
-                <span></span>
-                <div class="status-container">
-                  <span class="material-symbols-outlined fill-icon">
-                    circle
-                  </span>
-                  <span class="status">פתוח</span>
-                </div>
-                <span
-                  class="material-symbols-outlined close-icon"
-                  id="menu-icon"
-                >
-                  close
+              <span class="material-symbols-outlined close-icon">
+                expand_more
+              </span>
+            </div>
+            <div class="kanban-header hidden-header green-header">
+              <span></span>
+              <div class="status-container">
+                <span class="material-symbols-outlined fill-icon">
+                  circle
                 </span>
+                <span class="status">פתוח</span>
               </div>
-              <div class="kanban-content-container" id="open">
-                <div class="kanban-content">
-                  <div class="kanban-title">פוטנציאלי</div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
+              <span class="material-symbols-outlined close-icon" id="menu-icon">
+                close
+              </span>
+            </div>
+            <div class="kanban-content-container" id="open">
+              <div class="kanban-content">
+                <div class="kanban-title">פוטנציאלי</div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
                     </div>
-                    <div class="kanban-note-title">
-                      עדכון שדה "מקור משני" ב"כרטסת לקוחות"
-                    </div>
-                    <p class="kanban-note-para">
-                      בזמן תהליך הכנסת הלידים. השדה יההי מעודכן בהתאם לליד
-                      האחרון שהתקבל עבור אותו לקוח.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>משה, דוד, שלמה</span>
-                    </div>
+                    <span>12-01-24</span>
                   </div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
-                    </div>
-                    <div class="kanban-note-title">שדרוג גולדפלוס</div>
-                    <p class="kanban-note-para">
-                      שדרוג האפליקציה ומסד הנתונים לגרסה מתקדמת מ-2008. ידרוש
-                      גישה מרחוק.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>מיטב בית השקעות בע"מ, סילבינה בצלאל</span>
-                    </div>
+                  <div class="kanban-note-title">
+                    עדכון שדה "מקור משני" ב"כרטסת לקוחות"
+                  </div>
+                  <p class="kanban-note-para">
+                    בזמן תהליך הכנסת הלידים. השדה יההי מעודכן בהתאם לליד
+                    האחרון שהתקבל עבור אותו לקוח.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>משה, דוד, שלמה</span>
                   </div>
                 </div>
-                <div class="kanban-content">
-                  <div class="kanban-title">הצעה</div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
                     </div>
-                    <div class="kanban-note-title">גולדפלוס/סקייז</div>
-                    <p class="kanban-note-para"></p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>אורלי בסביבה ציפורי בע"מ, אורלי סרוסי זהר</span>
-                    </div>
+                    <span>12-01-24</span>
                   </div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
-                    </div>
-                    <div class="kanban-note-title">
-                      התאמת סקייז לעמותה חדשה "קרן ידע"
-                    </div>
-                    <p class="kanban-note-para">
-                      התאמות על בסיס סקייז שפותח לעמותה לקידום מקצועי של עובדי
-                      המדינה. הצעה סופית רק לאחר אפיון.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span
-                        >העמותה לקידום מקצועי של עובדי המדינה, עידית כהן</span
-                      >
-                    </div>
+                  <div class="kanban-note-title">שדרוג גולדפלוס</div>
+                  <p class="kanban-note-para">
+                    שדרוג האפליקציה ומסד הנתונים לגרסה מתקדמת מ-2008. ידרוש
+                    גישה מרחוק.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>מיטב בית השקעות בע"מ, סילבינה בצלאל</span>
                   </div>
                 </div>
-                <div class="kanban-content">
-                  <div class="kanban-title">הזמנה</div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
+              </div>
+              <div class="kanban-content">
+                <div class="kanban-title">הצעה</div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
                     </div>
-                    <div class="kanban-note-title">
-                      פיצול מסד נתונים ל-2 מסדים
-                    </div>
-                    <p class="kanban-note-para"></p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>המכללה האקדמית כנרת בעמק הירדן, ענבל עבו</span>
-                    </div>
+                    <span>12-01-24</span>
                   </div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
-                    </div>
-                    <div class="kanban-note-title">העברת שרתים</div>
-                    <p class="kanban-note-para">
-                      העברת שתי מערכות גולדפלוס עמיתים וגולדפלוס סוכנים. התאמת
-                      הגדרות לכור תדיראן שרת VM. נדרש יצירת קישור והוספה ל
-                      security group ב AD + מיפוי כונן לתיקייה של הגולדפלוס לשתי
-                      המערכות. הגדרת מערכת לעבודה ב SSO. חיבור מבדי הנתונים.
-                      נושא ה SSIS לא נכלל בהעברה. וגם שרתי הפצה. המערכת מיועדת
-                      לקריאה בלבד.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>הילה קולנגי, הפניקס חברה לביטוח בע"מ</span>
-                    </div>
+                  <div class="kanban-note-title">גולדפלוס/סקייז</div>
+                  <p class="kanban-note-para"></p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>אורלי בסביבה ציפורי בע"מ, אורלי סרוסי זהר</span>
                   </div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon green"
-                          >radio_button_unchecked</span
-                        >
-                        <span>חשבונאות</span>
-                      </div>
-                      <span>12-01-24</span>
+                </div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
                     </div>
-                    <div class="kanban-note-title">חוזה שירות גולדפלוס</div>
-                    <p class="kanban-note-para">
-                      מתאריך: 22/01/2024
-                      <br />
-                      עד תאריך: 21/01/2025
-                      <br />
-                      משעות 9 עד 17. אין תמיכה בימי שישי וערבי חג. חול המועד עד
-                      13:00. זמן חזרה רגיל עד שעה. במצבי לחץ עד 3 שעות. חוזה
-                      השירות כולל גם שדרוג גרסאות. התמיכה אינה כוללת עבודות
-                      תכנות, התקנות, דוחות ושאילתות מורכבות. כל נושא גיבויים
-                      ותחזוקת מסד נתונים MSSQL הוא באחריות הלקוח. לפי הצורך נדרש
-                      חיבור מרחוק. על הלקוח לאפשר התחברות זו במידת הצורך.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>תאגיד הבריאות - רמב"ם</span>
+                    <span>12-01-24</span>
+                  </div>
+                  <div class="kanban-note-title">
+                    התאמת סקייז לעמותה חדשה "קרן ידע"
+                  </div>
+                  <p class="kanban-note-para">
+                    התאמות על בסיס סקייז שפותח לעמותה לקידום מקצועי של עובדי
+                    המדינה. הצעה סופית רק לאחר אפיון.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>העמותה לקידום מקצועי של עובדי המדינה, עידית כהן</span>
+                  </div>
+                </div>
+              </div>
+              <div class="kanban-content">
+                <div class="kanban-title">הזמנה</div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
                     </div>
+                    <span>12-01-24</span>
+                  </div>
+                  <div class="kanban-note-title">
+                    פיצול מסד נתונים ל-2 מסדים
+                  </div>
+                  <p class="kanban-note-para"></p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>המכללה האקדמית כנרת בעמק הירדן, ענבל עבו</span>
+                  </div>
+                </div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
+                    </div>
+                    <span>12-01-24</span>
+                  </div>
+                  <div class="kanban-note-title">העברת שרתים</div>
+                  <p class="kanban-note-para">
+                    העברת שתי מערכות גולדפלוס עמיתים וגולדפלוס סוכנים. התאמת
+                    הגדרות לכור תדיראן שרת VM. נדרש יצירת קישור והוספה ל
+                    security group ב AD + מיפוי כונן לתיקייה של הגולדפלוס לשתי
+                    המערכות. הגדרת מערכת לעבודה ב SSO. חיבור מבדי הנתונים.
+                    נושא ה SSIS לא נכלל בהעברה. וגם שרתי הפצה. המערכת מיועדת
+                    לקריאה בלבד.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>הילה קולנגי, הפניקס חברה לביטוח בע"מ</span>
+                  </div>
+                </div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon green">radio_button_unchecked</span>
+                      <span>חשבונאות</span>
+                    </div>
+                    <span>12-01-24</span>
+                  </div>
+                  <div class="kanban-note-title">חוזה שירות גולדפלוס</div>
+                  <p class="kanban-note-para">
+                    מתאריך: 22/01/2024
+                    <br />
+                    עד תאריך: 21/01/2025
+                    <br />
+                    משעות 9 עד 17. אין תמיכה בימי שישי וערבי חג. חול המועד עד
+                    13:00. זמן חזרה רגיל עד שעה. במצבי לחץ עד 3 שעות. חוזה
+                    השירות כולל גם שדרוג גרסאות. התמיכה אינה כוללת עבודות
+                    תכנות, התקנות, דוחות ושאילתות מורכבות. כל נושא גיבויים
+                    ותחזוקת מסד נתונים MSSQL הוא באחריות הלקוח. לפי הצורך נדרש
+                    חיבור מרחוק. על הלקוח לאפשר התחברות זו במידת הצורך.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>תאגיד הבריאות - רמב"ם</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="kanban">
-              <div class="kanban-header hidden-header yellow-header">
-                <span></span>
-                <div class="status-container">
-                  <span class="material-symbols-outlined fill-icon">
-                    circle
-                  </span>
-                  <span class="status">ביצוע</span>
-                </div>
-                <span class="material-symbols-outlined close-icon">
-                  close
+          </div>
+          <div class="kanban">
+            <div class="kanban-header hidden-header yellow-header">
+              <span></span>
+              <div class="status-container">
+                <span class="material-symbols-outlined fill-icon">
+                  circle
                 </span>
+                <span class="status">ביצוע</span>
               </div>
-              <div class="kanban-content-container" id="ongoing">
-                <div class="kanban-content">
-                  <div class="kanban-title">זכיה</div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
+              <span class="material-symbols-outlined close-icon">
+                close
+              </span>
+            </div>
+            <div class="kanban-content-container" id="ongoing">
+              <div class="kanban-content">
+                <div class="kanban-title">זכיה</div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
                     </div>
-                    <div class="kanban-note-title">
-                      עדכון שדה "מקור משני" ב"כרטסת לקוחות"
-                    </div>
-                    <p class="kanban-note-para">
-                      בזמן תהליך הכנסת הלידים. השדה יההי מעודכן בהתאם לליד
-                      האחרון שהתקבל עבור אותו לקוח.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>משה, דוד, שלמה</span>
-                    </div>
+                    <span>12-01-24</span>
                   </div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
-                    </div>
-                    <div class="kanban-note-title">שדרוג גולדפלוס</div>
-                    <p class="kanban-note-para">
-                      שדרוג האפליקציה ומסד הנתונים לגרסה מתקדמת מ-2008. ידרוש
-                      גישה מרחוק.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>מיטב בית השקעות בע"מ, סילבינה בצלאל</span>
-                    </div>
+                  <div class="kanban-note-title">
+                    עדכון שדה "מקור משני" ב"כרטסת לקוחות"
+                  </div>
+                  <p class="kanban-note-para">
+                    בזמן תהליך הכנסת הלידים. השדה יההי מעודכן בהתאם לליד
+                    האחרון שהתקבל עבור אותו לקוח.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>משה, דוד, שלמה</span>
                   </div>
                 </div>
-                <div class="kanban-content">
-                  <div class="kanban-title">בעבודה</div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
                     </div>
-                    <div class="kanban-note-title">גולדפלוס/סקייז</div>
-                    <p class="kanban-note-para"></p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>אורלי בסביבה ציפורי בע"מ, אורלי סרוסי זהר</span>
-                    </div>
+                    <span>12-01-24</span>
                   </div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
-                    </div>
-                    <div class="kanban-note-title">
-                      התאמת סקייז לעמותה חדשה "קרן ידע"
-                    </div>
-                    <p class="kanban-note-para">
-                      התאמות על בסיס סקייז שפותח לעמותה לקידום מקצועי של עובדי
-                      המדינה. הצעה סופית רק לאחר אפיון.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span
-                        >העמותה לקידום מקצועי של עובדי המדינה, עידית כהן</span
-                      >
-                    </div>
+                  <div class="kanban-note-title">שדרוג גולדפלוס</div>
+                  <p class="kanban-note-para">
+                    שדרוג האפליקציה ומסד הנתונים לגרסה מתקדמת מ-2008. ידרוש
+                    גישה מרחוק.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>מיטב בית השקעות בע"מ, סילבינה בצלאל</span>
                   </div>
                 </div>
-                <div class="kanban-content">
-                  <div class="kanban-title">בהמתנה</div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
+              </div>
+              <div class="kanban-content">
+                <div class="kanban-title">בעבודה</div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
                     </div>
-                    <div class="kanban-note-title">
-                      פיצול מסד נתונים ל-2 מסדים
-                    </div>
-                    <p class="kanban-note-para"></p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>המכללה האקדמית כנרת בעמק הירדן, ענבל עבו</span>
-                    </div>
+                    <span>12-01-24</span>
                   </div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
-                    </div>
-                    <div class="kanban-note-title">העברת שרתים</div>
-                    <p class="kanban-note-para">
-                      העברת שתי מערכות גולדפלוס עמיתים וגולדפלוס סוכנים. התאמת
-                      הגדרות לכור תדיראן שרת VM. נדרש יצירת קישור והוספה ל
-                      security group ב AD + מיפוי כונן לתיקייה של הגולדפלוס לשתי
-                      המערכות. הגדרת מערכת לעבודה ב SSO. חיבור מבדי הנתונים.
-                      נושא ה SSIS לא נכלל בהעברה. וגם שרתי הפצה. המערכת מיועדת
-                      לקריאה בלבד.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>הילה קולנגי, הפניקס חברה לביטוח בע"מ</span>
-                    </div>
+                  <div class="kanban-note-title">גולדפלוס/סקייז</div>
+                  <p class="kanban-note-para"></p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>אורלי בסביבה ציפורי בע"מ, אורלי סרוסי זהר</span>
                   </div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon green"
-                          >radio_button_unchecked</span
-                        >
-                        <span>חשבונאות</span>
-                      </div>
-                      <span>12-01-24</span>
+                </div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
                     </div>
-                    <div class="kanban-note-title">חוזה שירות גולדפלוס</div>
-                    <p class="kanban-note-para">
-                      מתאריך: 22/01/2024
-                      <br />
-                      עד תאריך: 21/01/2025
-                      <br />
-                      משעות 9 עד 17. אין תמיכה בימי שישי וערבי חג. חול המועד עד
-                      13:00. זמן חזרה רגיל עד שעה. במצבי לחץ עד 3 שעות. חוזה
-                      השירות כולל גם שדרוג גרסאות. התמיכה אינה כוללת עבודות
-                      תכנות, התקנות, דוחות ושאילתות מורכבות. כל נושא גיבויים
-                      ותחזוקת מסד נתונים MSSQL הוא באחריות הלקוח. לפי הצורך נדרש
-                      חיבור מרחוק. על הלקוח לאפשר התחברות זו במידת הצורך.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>תאגיד הבריאות - רמב"ם</span>
+                    <span>12-01-24</span>
+                  </div>
+                  <div class="kanban-note-title">
+                    התאמת סקייז לעמותה חדשה "קרן ידע"
+                  </div>
+                  <p class="kanban-note-para">
+                    התאמות על בסיס סקייז שפותח לעמותה לקידום מקצועי של עובדי
+                    המדינה. הצעה סופית רק לאחר אפיון.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>העמותה לקידום מקצועי של עובדי המדינה, עידית כהן</span>
+                  </div>
+                </div>
+              </div>
+              <div class="kanban-content">
+                <div class="kanban-title">בהמתנה</div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
                     </div>
+                    <span>12-01-24</span>
+                  </div>
+                  <div class="kanban-note-title">
+                    פיצול מסד נתונים ל-2 מסדים
+                  </div>
+                  <p class="kanban-note-para"></p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>המכללה האקדמית כנרת בעמק הירדן, ענבל עבו</span>
+                  </div>
+                </div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
+                    </div>
+                    <span>12-01-24</span>
+                  </div>
+                  <div class="kanban-note-title">העברת שרתים</div>
+                  <p class="kanban-note-para">
+                    העברת שתי מערכות גולדפלוס עמיתים וגולדפלוס סוכנים. התאמת
+                    הגדרות לכור תדיראן שרת VM. נדרש יצירת קישור והוספה ל
+                    security group ב AD + מיפוי כונן לתיקייה של הגולדפלוס לשתי
+                    המערכות. הגדרת מערכת לעבודה ב SSO. חיבור מבדי הנתונים.
+                    נושא ה SSIS לא נכלל בהעברה. וגם שרתי הפצה. המערכת מיועדת
+                    לקריאה בלבד.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>הילה קולנגי, הפניקס חברה לביטוח בע"מ</span>
+                  </div>
+                </div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon green">radio_button_unchecked</span>
+                      <span>חשבונאות</span>
+                    </div>
+                    <span>12-01-24</span>
+                  </div>
+                  <div class="kanban-note-title">חוזה שירות גולדפלוס</div>
+                  <p class="kanban-note-para">
+                    מתאריך: 22/01/2024
+                    <br />
+                    עד תאריך: 21/01/2025
+                    <br />
+                    משעות 9 עד 17. אין תמיכה בימי שישי וערבי חג. חול המועד עד
+                    13:00. זמן חזרה רגיל עד שעה. במצבי לחץ עד 3 שעות. חוזה
+                    השירות כולל גם שדרוג גרסאות. התמיכה אינה כוללת עבודות
+                    תכנות, התקנות, דוחות ושאילתות מורכבות. כל נושא גיבויים
+                    ותחזוקת מסד נתונים MSSQL הוא באחריות הלקוח. לפי הצורך נדרש
+                    חיבור מרחוק. על הלקוח לאפשר התחברות זו במידת הצורך.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>תאגיד הבריאות - רמב"ם</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="kanban">
-              <div class="kanban-header hidden-header purple-header">
-                <span></span>
-                <div class="status-container">
-                  <span class="material-symbols-outlined fill-icon">
-                    circle
-                  </span>
-                  <span class="status">סגור</span>
-                </div>
-                <span class="material-symbols-outlined close-icon">
-                  close
+          </div>
+          <div class="kanban">
+            <div class="kanban-header hidden-header purple-header">
+              <span></span>
+              <div class="status-container">
+                <span class="material-symbols-outlined fill-icon">
+                  circle
                 </span>
+                <span class="status">סגור</span>
               </div>
-              <div class="kanban-content-container" id="close">
-                <div class="kanban-content">
-                  <div class="kanban-title">בוצע</div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
+              <span class="material-symbols-outlined close-icon">
+                close
+              </span>
+            </div>
+            <div class="kanban-content-container" id="close">
+              <div class="kanban-content">
+                <div class="kanban-title">בוצע</div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
                     </div>
-                    <div class="kanban-note-title">
-                      עדכון שדה "מקור משני" ב"כרטסת לקוחות"
-                    </div>
-                    <p class="kanban-note-para">
-                      בזמן תהליך הכנסת הלידים. השדה יההי מעודכן בהתאם לליד
-                      האחרון שהתקבל עבור אותו לקוח.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>משה, דוד, שלמה</span>
-                    </div>
+                    <span>12-01-24</span>
                   </div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
-                    </div>
-                    <div class="kanban-note-title">שדרוג גולדפלוס</div>
-                    <p class="kanban-note-para">
-                      שדרוג האפליקציה ומסד הנתונים לגרסה מתקדמת מ-2008. ידרוש
-                      גישה מרחוק.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>מיטב בית השקעות בע"מ, סילבינה בצלאל</span>
-                    </div>
+                  <div class="kanban-note-title">
+                    עדכון שדה "מקור משני" ב"כרטסת לקוחות"
+                  </div>
+                  <p class="kanban-note-para">
+                    בזמן תהליך הכנסת הלידים. השדה יההי מעודכן בהתאם לליד
+                    האחרון שהתקבל עבור אותו לקוח.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>משה, דוד, שלמה</span>
                   </div>
                 </div>
-                <div class="kanban-content">
-                  <div class="kanban-title">זכיה - הסתים</div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
                     </div>
-                    <div class="kanban-note-title">גולדפלוס/סקייז</div>
-                    <p class="kanban-note-para"></p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>אורלי בסביבה ציפורי בע"מ, אורלי סרוסי זהר</span>
-                    </div>
+                    <span>12-01-24</span>
                   </div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
-                    </div>
-                    <div class="kanban-note-title">
-                      התאמת סקייז לעמותה חדשה "קרן ידע"
-                    </div>
-                    <p class="kanban-note-para">
-                      התאמות על בסיס סקייז שפותח לעמותה לקידום מקצועי של עובדי
-                      המדינה. הצעה סופית רק לאחר אפיון.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span
-                        >העמותה לקידום מקצועי של עובדי המדינה, עידית כהן</span
-                      >
-                    </div>
+                  <div class="kanban-note-title">שדרוג גולדפלוס</div>
+                  <p class="kanban-note-para">
+                    שדרוג האפליקציה ומסד הנתונים לגרסה מתקדמת מ-2008. ידרוש
+                    גישה מרחוק.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>מיטב בית השקעות בע"מ, סילבינה בצלאל</span>
                   </div>
                 </div>
-                <div class="kanban-content">
-                  <div class="kanban-title">הקפאה</div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
+              </div>
+              <div class="kanban-content">
+                <div class="kanban-title">זכיה - הסתים</div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
                     </div>
-                    <div class="kanban-note-title">
-                      פיצול מסד נתונים ל-2 מסדים
-                    </div>
-                    <p class="kanban-note-para"></p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>המכללה האקדמית כנרת בעמק הירדן, ענבל עבו</span>
-                    </div>
+                    <span>12-01-24</span>
                   </div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon blue"
-                          >radio_button_unchecked</span
-                        >
-                        <span>משימה</span>
-                      </div>
-                      <span>12-01-24</span>
-                    </div>
-                    <div class="kanban-note-title">העברת שרתים</div>
-                    <p class="kanban-note-para">
-                      העברת שתי מערכות גולדפלוס עמיתים וגולדפלוס סוכנים. התאמת
-                      הגדרות לכור תדיראן שרת VM. נדרש יצירת קישור והוספה ל
-                      security group ב AD + מיפוי כונן לתיקייה של הגולדפלוס לשתי
-                      המערכות. הגדרת מערכת לעבודה ב SSO. חיבור מבדי הנתונים.
-                      נושא ה SSIS לא נכלל בהעברה. וגם שרתי הפצה. המערכת מיועדת
-                      לקריאה בלבד.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>הילה קולנגי, הפניקס חברה לביטוח בע"מ</span>
-                    </div>
-                  </div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon green"
-                          >radio_button_unchecked</span
-                        >
-                        <span>חשבונאות</span>
-                      </div>
-                      <span>12-01-24</span>
-                    </div>
-                    <div class="kanban-note-title">חוזה שירות גולדפלוס</div>
-                    <p class="kanban-note-para">
-                      מתאריך: 22/01/2024
-                      <br />
-                      עד תאריך: 21/01/2025
-                      <br />
-                      משעות 9 עד 17. אין תמיכה בימי שישי וערבי חג. חול המועד עד
-                      13:00. זמן חזרה רגיל עד שעה. במצבי לחץ עד 3 שעות. חוזה
-                      השירות כולל גם שדרוג גרסאות. התמיכה אינה כוללת עבודות
-                      תכנות, התקנות, דוחות ושאילתות מורכבות. כל נושא גיבויים
-                      ותחזוקת מסד נתונים MSSQL הוא באחריות הלקוח. לפי הצורך נדרש
-                      חיבור מרחוק. על הלקוח לאפשר התחברות זו במידת הצורך.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>תאגיד הבריאות - רמב"ם</span>
-                    </div>
+                  <div class="kanban-note-title">גולדפלוס/סקייז</div>
+                  <p class="kanban-note-para"></p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>אורלי בסביבה ציפורי בע"מ, אורלי סרוסי זהר</span>
                   </div>
                 </div>
-                <div class="kanban-content">
-                  <div class="kanban-title">הפסד</div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
+                    </div>
+                    <span>12-01-24</span>
+                  </div>
+                  <div class="kanban-note-title">
+                    התאמת סקייז לעמותה חדשה "קרן ידע"
+                  </div>
+                  <p class="kanban-note-para">
+                    התאמות על בסיס סקייז שפותח לעמותה לקידום מקצועי של עובדי
+                    המדינה. הצעה סופית רק לאחר אפיון.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>העמותה לקידום מקצועי של עובדי המדינה, עידית כהן</span>
+                  </div>
                 </div>
-                <div class="kanban-content">
-                  <div class="kanban-title">מבוטל</div>
-                  <div class="kanban-note">
-                    <div class="kanban-note-header">
-                      <div>
-                        <span
-                          class="material-symbols-outlined fill-icon status-icon green"
-                          >radio_button_unchecked</span
-                        >
-                        <span>חשבונאות</span>
-                      </div>
-                      <span>12-01-24</span>
+              </div>
+              <div class="kanban-content">
+                <div class="kanban-title">הקפאה</div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
                     </div>
-                    <div class="kanban-note-title">חוזה שירות גולדפלוס</div>
-                    <p class="kanban-note-para">
-                      מתאריך: 22/01/2024
-                      <br />
-                      עד תאריך: 21/01/2025
-                      <br />
-                      משעות 9 עד 17. אין תמיכה בימי שישי וערבי חג. חול המועד עד
-                      13:00. זמן חזרה רגיל עד שעה. במצבי לחץ עד 3 שעות. חוזה
-                      השירות כולל גם שדרוג גרסאות. התמיכה אינה כוללת עבודות
-                      תכנות, התקנות, דוחות ושאילתות מורכבות. כל נושא גיבויים
-                      ותחזוקת מסד נתונים MSSQL הוא באחריות הלקוח. לפי הצורך נדרש
-                      חיבור מרחוק. על הלקוח לאפשר התחברות זו במידת הצורך.
-                    </p>
-                    <div class="kanban-note-header">
-                      <span>210,000$</span>
-                      <span>תאגיד הבריאות - רמב"ם</span>
+                    <span>12-01-24</span>
+                  </div>
+                  <div class="kanban-note-title">
+                    פיצול מסד נתונים ל-2 מסדים
+                  </div>
+                  <p class="kanban-note-para"></p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>המכללה האקדמית כנרת בעמק הירדן, ענבל עבו</span>
+                  </div>
+                </div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span>
+                      <span>משימה</span>
                     </div>
+                    <span>12-01-24</span>
+                  </div>
+                  <div class="kanban-note-title">העברת שרתים</div>
+                  <p class="kanban-note-para">
+                    העברת שתי מערכות גולדפלוס עמיתים וגולדפלוס סוכנים. התאמת
+                    הגדרות לכור תדיראן שרת VM. נדרש יצירת קישור והוספה ל
+                    security group ב AD + מיפוי כונן לתיקייה של הגולדפלוס לשתי
+                    המערכות. הגדרת מערכת לעבודה ב SSO. חיבור מבדי הנתונים.
+                    נושא ה SSIS לא נכלל בהעברה. וגם שרתי הפצה. המערכת מיועדת
+                    לקריאה בלבד.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>הילה קולנגי, הפניקס חברה לביטוח בע"מ</span>
+                  </div>
+                </div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon green">radio_button_unchecked</span>
+                      <span>חשבונאות</span>
+                    </div>
+                    <span>12-01-24</span>
+                  </div>
+                  <div class="kanban-note-title">חוזה שירות גולדפלוס</div>
+                  <p class="kanban-note-para">
+                    מתאריך: 22/01/2024
+                    <br />
+                    עד תאריך: 21/01/2025
+                    <br />
+                    משעות 9 עד 17. אין תמיכה בימי שישי וערבי חג. חול המועד עד
+                    13:00. זמן חזרה רגיל עד שעה. במצבי לחץ עד 3 שעות. חוזה
+                    השירות כולל גם שדרוג גרסאות. התמיכה אינה כוללת עבודות
+                    תכנות, התקנות, דוחות ושאילתות מורכבות. כל נושא גיבויים
+                    ותחזוקת מסד נתונים MSSQL הוא באחריות הלקוח. לפי הצורך נדרש
+                    חיבור מרחוק. על הלקוח לאפשר התחברות זו במידת הצורך.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>תאגיד הבריאות - רמב"ם</span>
+                  </div>
+                </div>
+              </div>
+              <div class="kanban-content">
+                <div class="kanban-title">הפסד</div>
+              </div>
+              <div class="kanban-content">
+                <div class="kanban-title">מבוטל</div>
+                <div class="kanban-note">
+                  <div class="kanban-note-header">
+                    <div>
+                      <span class="material-symbols-outlined fill-icon status-icon green">radio_button_unchecked</span>
+                      <span>חשבונאות</span>
+                    </div>
+                    <span>12-01-24</span>
+                  </div>
+                  <div class="kanban-note-title">חוזה שירות גולדפלוס</div>
+                  <p class="kanban-note-para">
+                    מתאריך: 22/01/2024
+                    <br />
+                    עד תאריך: 21/01/2025
+                    <br />
+                    משעות 9 עד 17. אין תמיכה בימי שישי וערבי חג. חול המועד עד
+                    13:00. זמן חזרה רגיל עד שעה. במצבי לחץ עד 3 שעות. חוזה
+                    השירות כולל גם שדרוג גרסאות. התמיכה אינה כוללת עבודות
+                    תכנות, התקנות, דוחות ושאילתות מורכבות. כל נושא גיבויים
+                    ותחזוקת מסד נתונים MSSQL הוא באחריות הלקוח. לפי הצורך נדרש
+                    חיבור מרחוק. על הלקוח לאפשר התחברות זו במידת הצורך.
+                  </p>
+                  <div class="kanban-note-header">
+                    <span>210,000$</span>
+                    <span>תאגיד הבריאות - רמב"ם</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section> -->
 
-      <!---*-*-*-*-*-*-*-*--*-*-*- Footer Section --*-*-*-*-*-*-*-*-*-*-*-->
-      <footer class="footer">
-        <div class="footer__box">
-          <div class="footer__box--title">Records</div>
-          <ul class="footer__box--list">
-            <li>Leads</li>
-            <li>People</li>
-            <li>Organizations</li>
-          </ul>
+    <section class="card-container">
+      <div class="card">
+        <div class="kanban-container">
+          <div class="kanban">
+            <div class="kanban-header small-screen-header">
+              <span></span>
+              <div class="status-container">
+                <span class="material-symbols-outlined fill-icon">circle</span>
+                <span class="status">סטטוס</span>
+              </div>
+              <span class="material-symbols-outlined close-icon">expand_more</span>
+            </div>
+            <div class="kanban-header hidden-header green-header">
+              <span></span>
+              <div class="status-container">
+                <span class="material-symbols-outlined fill-icon">circle</span>
+                <span class="status">פתוח</span>
+              </div>
+              <span class="material-symbols-outlined close-icon" id="menu-icon">close</span>
+            </div>
+            <div class="kanban-content-container" id="open">
+              <div class="kanban-content" id="column-potential">
+                <div class="kanban-title">פוטנציאלי</div>
+                <div class="kanban-note">Task 1</div>
+                <div class="kanban-note">Task 2</div>
+              </div>
+              <div class="kanban-content" id="column-proposal">
+                <div class="kanban-title">הצעה</div>
+                <div class="kanban-note">Task 3</div>
+                <div class="kanban-note">Task 4</div>
+              </div>
+              <div class="kanban-content" id="column-order">
+                <div class="kanban-title">הזמנה</div>
+                <div class="kanban-note">Task 5</div>
+              </div>
+            </div>
+          </div>
+          <div class="kanban">
+            <div class="kanban-header hidden-header yellow-header">
+              <span></span>
+              <div class="status-container">
+                <span class="material-symbols-outlined fill-icon">circle</span>
+                <span class="status">ביצוע</span>
+              </div>
+              <span class="material-symbols-outlined close-icon">close</span>
+            </div>
+            <div class="kanban-content-container" id="ongoing">
+              <div class="kanban-content" id="column-win">
+                <div class="kanban-title">זכיה</div>
+                <div class="kanban-note">Task 6</div>
+              </div>
+              <div class="kanban-content" id="column-inprogress">
+                <div class="kanban-title">בעבודה</div>
+                <div class="kanban-note">Task 7</div>
+              </div>
+              <div class="kanban-content" id="column-waiting">
+                <div class="kanban-title">בהמתנה</div>
+                <div class="kanban-note">Task 8</div>
+                <div class="kanban-note">Task 9</div>
+              </div>
+            </div>
+          </div>
+          <div class="kanban">
+            <div class="kanban-header hidden-header purple-header">
+              <span></span>
+              <div class="status-container">
+                <span class="material-symbols-outlined fill-icon">circle</span>
+                <span class="status">סגור</span>
+              </div>
+              <span class="material-symbols-outlined close-icon">close</span>
+            </div>
+            <div class="kanban-content-container" id="close">
+              <div class="kanban-content" id="column-done">
+                <div class="kanban-title">בוצע</div>
+                <div class="kanban-note">Task 10</div>
+                <div class="kanban-note">Task 11</div>
+              </div>
+              <div class="kanban-content" id="column-completed">
+                <div class="kanban-title">זכיה - הסתים</div>
+                <div class="kanban-note">Task 12</div>
+              </div>
+              <div class="kanban-content" id="column-onhold">
+                <div class="kanban-title">הקפאה</div>
+                <div class="kanban-note">Task 13</div>
+              </div>
+              <div class="kanban-content" id="column-lost">
+                <div class="kanban-title">הפסד</div>
+              </div>
+              <div class="kanban-content" id="column-cancelled">
+                <div class="kanban-title">מבוטל</div>
+                <div class="kanban-note">Task 14</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="footer__box">
-          <div class="footer__box--title">All actions</div>
-          <ul class="footer__box--list">
-            <li>Tasks</li>
-            <li>Calls</li>
-            <li>Meetings</li>
-            <li>Notes</li>
-            <li>Mails</li>
-            <li>SMS</li>
-            <li>Whatsapp</li>
-          </ul>
-        </div>
-        <div class="footer__box">
-          <div class="footer__box--title">Sales</div>
-          <ul class="footer__box--list">
-            <li>Opportunities</li>
-            <li>Contracts</li>
-          </ul>
-        </div>
-        <div class="footer__box">
-          <div class="footer__box--title">Marketing</div>
-          <ul class="footer__box--list">
-            <li>Campaigns</li>
-            <li>SMS</li>
-            <li>Whatsapp</li>
-          </ul>
-        </div>
-        <div class="footer__box">
-          <div class="footer__box--title">Sales</div>
-          <ul class="footer__box--list">
-            <li>Quotes</li>
-            <li>Orders</li>
-            <li>Proforma invoices</li>
-            <li>Invoices</li>
-            <li>More...</li>
-          </ul>
-        </div>
-        <div class="footer__box">
-          <div class="footer__box--title">Purchase</div>
-          <ul class="footer__box--list">
-            <li>Orders</li>
-            <li>Invoices</li>
-            <li>More...</li>
-          </ul>
-        </div>
-        <div class="footer__box">
-          <div class="footer__box--title">Stock</div>
-          <ul class="footer__box--list">
-            <li>Items catalog</li>
-            <li>Add</li>
-            <li>Decrease</li>
-            <li>Sold/Returned</li>
-          </ul>
-        </div>
-        <div class="footer__box">
-          <div class="footer__box--title">Legal</div>
-          <ul class="footer__box--list">
-            <li>Terms of use</li>
-            <li>Privacy notice</li>
-            <li>Cookie policy</li>
-            <li>Sold/Returned</li>
-          </ul>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </section>
 
-    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-* JavaScript Files *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
-    <!-- Sidebar -->
-    <script src="./up/js/sidebar.js"></script>
-    <!-- Dark Mode -->
-    <script src="./up/js/dark-mode.js"></script>
-    <script src="up/js/edit-address.js"></script>
-    <script src="/up/js/person.js"></script>
-    <script src="/up/js/sidebar.js"></script>
-    <script src="/up/js/kanban.js"></script>
-  </body>
+
+    <!---*-*-*-*-*-*-*-*--*-*-*- Footer Section --*-*-*-*-*-*-*-*-*-*-*-->
+    <footer class="footer">
+      <div class="footer__box">
+        <div class="footer__box--title">Records</div>
+        <ul class="footer__box--list">
+          <li>Leads</li>
+          <li>People</li>
+          <li>Organizations</li>
+        </ul>
+      </div>
+      <div class="footer__box">
+        <div class="footer__box--title">All actions</div>
+        <ul class="footer__box--list">
+          <li>Tasks</li>
+          <li>Calls</li>
+          <li>Meetings</li>
+          <li>Notes</li>
+          <li>Mails</li>
+          <li>SMS</li>
+          <li>Whatsapp</li>
+        </ul>
+      </div>
+      <div class="footer__box">
+        <div class="footer__box--title">Sales</div>
+        <ul class="footer__box--list">
+          <li>Opportunities</li>
+          <li>Contracts</li>
+        </ul>
+      </div>
+      <div class="footer__box">
+        <div class="footer__box--title">Marketing</div>
+        <ul class="footer__box--list">
+          <li>Campaigns</li>
+          <li>SMS</li>
+          <li>Whatsapp</li>
+        </ul>
+      </div>
+      <div class="footer__box">
+        <div class="footer__box--title">Sales</div>
+        <ul class="footer__box--list">
+          <li>Quotes</li>
+          <li>Orders</li>
+          <li>Proforma invoices</li>
+          <li>Invoices</li>
+          <li>More...</li>
+        </ul>
+      </div>
+      <div class="footer__box">
+        <div class="footer__box--title">Purchase</div>
+        <ul class="footer__box--list">
+          <li>Orders</li>
+          <li>Invoices</li>
+          <li>More...</li>
+        </ul>
+      </div>
+      <div class="footer__box">
+        <div class="footer__box--title">Stock</div>
+        <ul class="footer__box--list">
+          <li>Items catalog</li>
+          <li>Add</li>
+          <li>Decrease</li>
+          <li>Sold/Returned</li>
+        </ul>
+      </div>
+      <div class="footer__box">
+        <div class="footer__box--title">Legal</div>
+        <ul class="footer__box--list">
+          <li>Terms of use</li>
+          <li>Privacy notice</li>
+          <li>Cookie policy</li>
+          <li>Sold/Returned</li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-* JavaScript Files *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+  <!-- Sidebar -->
+  <script src="./up/js/sidebar.js"></script>
+  <!-- Dark Mode -->
+  <script src="./up/js/dark-mode.js"></script>
+  <script src="up/js/edit-address.js"></script>
+  <script src="/up/js/person.js"></script>
+  <script src="/up/js/sidebar.js"></script>
+  <script src="/up/js/kanban.js"></script>
+</body>
+
 </html>
