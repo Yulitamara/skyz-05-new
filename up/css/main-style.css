@@ -3189,28 +3189,6 @@ textarea {
   color: var(--color-primary);
 }
 
-@media screen and (max-width: 985px) {
-  .kanban-container {
-    flex-direction: column;
-  }
-  .kanban-container .kanban {
-    min-height: 0;
-  }
-  .kanban-container .kanban-header {
-    min-width: 97%;
-    position: fixed;
-    margin-left: 2rem;
-  }
-  .kanban-container .kanban .hidden-header {
-    display: none;
-  }
-  .kanban-container .kanban .small-screen-header {
-    display: flex;
-  }
-  .kanban-container .kanban .kanban-content-container {
-    margin-top: 5rem;
-  }
-}
 .kanban.minimize {
   display: flex;
   align-items: start;

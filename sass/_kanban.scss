@@ -110,33 +110,33 @@
   }
 }
 
-@media screen and (max-width: 985px) {
-  .kanban-container {
-    flex-direction: column;
+// @media screen and (max-width: 985px) {
+//   .kanban-container {
+//     flex-direction: column;
 
-    .kanban {
-      min-height: 0;
+//     .kanban {
+//       min-height: 0;
 
-      &-header {
-        min-width: 97%;
-        position: fixed;
-        margin-left: 2rem;
-      }
+//       &-header {
+//         min-width: 97%;
+//         position: fixed;
+//         margin-left: 2rem;
+//       }
 
-      .hidden-header {
-        display: none;
-      }
+//       .hidden-header {
+//         display: none;
+//       }
 
-      .small-screen-header {
-        display: flex;
-      }
+//       .small-screen-header {
+//         display: flex;
+//       }
 
-      .kanban-content-container {
-        margin-top: 5rem;
-      }
-    }
-  }
-}
+//       .kanban-content-container {
+//         margin-top: 5rem;
+//       }
+//     }
+//   }
+// }
 
 .kanban.minimize {
   display: flex;
