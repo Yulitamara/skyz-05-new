@@ -91,7 +91,7 @@
           &--fields {
             padding: 0 $padding-small;
             color: var(--color-on-primary-light);
-            background-color: var(--color-on-primary);
+            // background-color: var(--color-on-primary);
             display: flex;
             align-items: center;
             flex-wrap: wrap;
@@ -287,6 +287,8 @@
   .card {
     background-color: transparent;
     container-type: normal;
+    width: 100%;
+
     .card-header {
       .top {
         .left {
@@ -298,16 +300,10 @@
         }
       }
     }
-    .card-boxes {
-      grid-template-columns: repeat(1fr);
-    }
-  }
-}
-@media screen and (max-width: 2000px) {
-  .zero-extend {
-    .card {
-      .card-boxes {
-        grid-template-columns: repeat(1fr);
+    .new-class {
+      grid-template-columns: repeat(1, 1fr);
+      .zero-extend {
+        background-color: var(--color-bg-light);
       }
     }
   }

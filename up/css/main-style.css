@@ -1251,7 +1251,6 @@ tr > td:first-child {
 .card-container .card__boxes--box__content--fields {
   padding: 0 0.5rem;
   color: var(--color-on-primary-light);
-  background-color: var(--color-on-primary);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -1431,19 +1430,18 @@ tr > td:first-child {
 .zero-extend .card {
   background-color: transparent;
   container-type: normal;
+  width: 100%;
 }
 .zero-extend .card .card-header .top .left .title span {
   font-size: 1.8rem;
 }
-.zero-extend .card .card-boxes {
-  grid-template-columns: repeat(1fr);
+.zero-extend .card .new-class {
+  grid-template-columns: repeat(1, 1fr);
+}
+.zero-extend .card .new-class .zero-extend {
+  background-color: var(--color-bg-light);
 }
 
-@media screen and (max-width: 2000px) {
-  .zero-extend .card .card-boxes {
-    grid-template-columns: repeat(1fr);
-  }
-}
 input[type=text],
 input[type=password],
 input[type=number] {
