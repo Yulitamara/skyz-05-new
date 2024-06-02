@@ -108,8 +108,7 @@
             width: 100%;
           }
         }
-    
-       
+
         .add-circle {
           opacity: 0;
         }
@@ -282,4 +281,34 @@
 .red-frame {
   border: 1px solid rgb(164, 181, 215);
   transition: border 1s ease-in; /* Add a transition effect for a smoother change */
+}
+
+.zero-extend {
+  .card {
+    background-color: transparent;
+    container-type: normal;
+    .card-header {
+      .top {
+        .left {
+          .title {
+            span {
+              font-size: font-size(font-size-medium);
+            }
+          }
+        }
+      }
+    }
+    .card-boxes {
+      grid-template-columns: repeat(1fr);
+    }
+  }
+}
+@media screen and (max-width: 2000px) {
+  .zero-extend {
+    .card {
+      .card-boxes {
+        grid-template-columns: repeat(1fr);
+      }
+    }
+  }
 }
