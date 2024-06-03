@@ -38,13 +38,14 @@ input[type="text"]::placeholder {
 }
 
 input[type="text"].edit-name {
-  height: 4.6rem;
+  height: 4rem;
   border-radius: $border-radius-big;
   background-color: var(--color-on-primary);
   padding: 0 $padding-medium;
   background-origin: content-box;
-  font-size: font-size(font-size-large);
+  font-size: 1.8rem;
   border: 1px solid #75acce;
+  max-width: 200px;
 }
 input[type="text"].edit-name:hover,
 input[type="text"].edit-name:focus-within {
@@ -52,7 +53,7 @@ input[type="text"].edit-name:focus-within {
 }
 input[type="text"].edit-name::placeholder {
   opacity: 0.5;
-  font-size: font-size(font-size-large);
+  font-size: 1.8rem;
 }
 
 .label-container {
