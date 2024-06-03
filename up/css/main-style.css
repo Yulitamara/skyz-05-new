@@ -1175,7 +1175,6 @@ tr > td:first-child {
   max-width: 100%;
   container-type: inline-size;
   border-radius: 1.4rem;
-  min-height: 110vh;
 }
 .card-container .card__navigate {
   display: flex;
