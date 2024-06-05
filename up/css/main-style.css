@@ -2773,8 +2773,8 @@ textarea {
 .small-boxes-container-second {
   display: flex;
   white-space: nowrap;
-  flex-wrap: wrap;
   gap: 1rem;
+  overflow-x: scroll;
 }
 .small-boxes-container-second .small-box-second {
   background-color: var(--color-bg-light);
@@ -2799,6 +2799,10 @@ textarea {
 }
 .small-boxes-container-second .small-box-second:hover .dynamic-btns {
   visibility: visible;
+}
+
+.small-boxes-container-second::-webkit-scrollbar {
+  display: none;
 }
 
 .scroll-arrow {

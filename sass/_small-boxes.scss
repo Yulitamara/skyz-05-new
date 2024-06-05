@@ -57,8 +57,9 @@
 .small-boxes-container-second {
   display: flex;
   white-space: nowrap;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   gap: $gap-medium;
+  overflow-x: scroll;
 
   .small-box-second {
     background-color: var(--color-bg-light);
@@ -69,7 +70,7 @@
     width: max-content;
     justify-content: center;
     border-radius: $border-radius-medium;
-    border: .5px solid var(--color-on-primary-light);
+    border: 0.5px solid var(--color-on-primary-light);
     padding: $padding-small $padding-medium;
     font-size: font-size(font-size-regular);
     transition: $transition;
@@ -84,6 +85,10 @@
       visibility: visible;
     }
   }
+}
+
+.small-boxes-container-second::-webkit-scrollbar {
+  display: none;
 }
 
 .scroll-arrow {
