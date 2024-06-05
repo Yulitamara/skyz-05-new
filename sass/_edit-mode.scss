@@ -9,7 +9,7 @@
   padding: $padding-xsmall;
   gap: $gap-medium;
   border: 1px solid var(--color-on-primary);
-  // width: 200px;
+  width: 200px;
   transition: $transition;
 
   .edit-content-menu {
@@ -247,12 +247,12 @@
   .edit-content.even,
   .edit-content.no-padding,
   .edit-content.di-co {
-    flex-direction: column;
-    align-items: flex-start;
-    height: 80px;
-    gap: 0;
-    min-width: 0;
-    justify-content: flex-end;
+    // flex-direction: column;
+    // align-items: flex-start;
+    // height: 80px;
+    // gap: 0;
+    // min-width: 0;
+    // justify-content: flex-end;
 
     .label {
       flex-grow: 0;
@@ -267,7 +267,11 @@
 @include media-small {
   .edit-content.small,
   .edit-content.medium,
-  .edit-content.big {
+  .edit-content.big,
+  .edit-content,
+  .edit-content.even,
+  .edit-content.no-padding,
+  .edit-content.di-co {
     width: 100%;
     min-width: 180px;
   }
