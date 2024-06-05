@@ -2876,7 +2876,6 @@ textarea {
   display: flex;
   align-items: center;
   gap: 7px;
-  flex-wrap: wrap;
 }
 .card-header .top .right {
   display: flex;
