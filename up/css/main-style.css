@@ -2329,6 +2329,7 @@ textarea {
   padding: 0.2rem;
   gap: 1rem;
   border: 1px solid var(--color-on-primary);
+  width: 200px;
   transition: all 0.2s ease-in-out;
 }
 .edit-content .edit-content-menu {
@@ -2543,17 +2544,6 @@ textarea {
 }
 
 @media screen and (max-width: 850px) {
-  .edit-content,
-  .edit-content.even,
-  .edit-content.no-padding,
-  .edit-content.di-co {
-    flex-direction: column;
-    align-items: flex-start;
-    height: 80px;
-    gap: 0;
-    min-width: 0;
-    justify-content: flex-end;
-  }
   .edit-content .label,
   .edit-content.even .label,
   .edit-content.no-padding .label,
@@ -2571,7 +2561,11 @@ textarea {
 @media screen and (max-width: 470px) {
   .edit-content.small,
   .edit-content.medium,
-  .edit-content.big {
+  .edit-content.big,
+  .edit-content,
+  .edit-content.even,
+  .edit-content.no-padding,
+  .edit-content.di-co {
     width: 100%;
     min-width: 180px;
   }
@@ -2791,7 +2785,7 @@ textarea {
   width: max-content;
   justify-content: center;
   border-radius: 1.4rem;
-  border: 1px solid var(--color-on-primary-light);
+  border: 0.5px solid var(--color-on-primary-light);
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   transition: all 0.2s ease-in-out;
