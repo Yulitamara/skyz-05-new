@@ -82,3 +82,21 @@ document
     document.getElementById("new-person-local").classList.remove("active");
     document.getElementById("for-bg-change").classList.add("new-class-bg");
   });
+
+// Event listener for the first button
+document
+  .getElementById("click-open-second-level-menu")
+  .addEventListener("click", function () {
+    // Remove "active" class from the element with id "menu-second-level"
+    document.getElementById("menu-second-level").classList.remove("active");
+  });
+
+// Event listener for the second button
+document
+  .getElementById("click-open-second-level-card")
+  .addEventListener("click", function () {
+    // Add "active" class to the element with id "new-person-local"
+    document.getElementById("new-person-local").classList.add("active");
+    // Remove "active" class from the element with id "second-level-card"
+    document.getElementById("second-level-card").classList.remove("active");
+  });
