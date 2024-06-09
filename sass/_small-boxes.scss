@@ -69,9 +69,9 @@
     gap: $gap-small;
     width: max-content;
     justify-content: center;
-    border-radius: $border-radius-medium;
-    border: 0.5px solid var(--color-on-primary-light);
-    padding: $padding-small $padding-medium;
+    border-radius: $border-radius-small;
+    // border: 0.5px solid var(--color-on-primary-light);
+    padding: 0.2rem 0.5rem;
     font-size: font-size(font-size-regular);
     transition: $transition;
     cursor: pointer;

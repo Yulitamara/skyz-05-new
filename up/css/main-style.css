@@ -2787,9 +2787,8 @@ textarea {
   gap: 0.5rem;
   width: max-content;
   justify-content: center;
-  border-radius: 1.4rem;
-  border: 0.5px solid var(--color-on-primary-light);
-  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
   font-size: 1.25rem;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
