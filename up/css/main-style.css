@@ -2773,11 +2773,17 @@ textarea {
   cursor: pointer;
 }
 
+.container-new-small-boxes-second {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .small-boxes-container-second {
   display: flex;
   white-space: nowrap;
-  gap: 1rem;
   overflow-x: scroll;
+  gap: 1rem;
 }
 .small-boxes-container-second .small-box-second {
   background-color: var(--color-bg-light);
@@ -2849,6 +2855,7 @@ textarea {
 .card-header .top .left {
   display: flex;
   gap: 2rem;
+  align-items: flex-end;
 }
 .card-header .top .left .title {
   display: flex;

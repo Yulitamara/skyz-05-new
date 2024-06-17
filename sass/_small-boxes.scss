@@ -54,12 +54,18 @@
 .hide-single {
   cursor: pointer;
 }
+.container-new-small-boxes-second {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .small-boxes-container-second {
   display: flex;
   white-space: nowrap;
   // flex-wrap: wrap;
-  gap: $gap-medium;
+  // gap: $gap-medium;
   overflow-x: scroll;
+  gap: 1rem;
 
   .small-box-second {
     background-color: var(--color-bg-light);
