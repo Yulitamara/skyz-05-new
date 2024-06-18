@@ -15,6 +15,7 @@
     container-type: inline-size;
     border-radius: $border-radius-medium;
     // min-height: 110vh;
+    transition: all 1s ease-in-out;
 
     &__navigate {
       display: flex;
@@ -87,6 +88,7 @@
           border-radius: $border-radius-small;
           flex-direction: column;
           // border: 1.5px solid #E0E2EC;
+          transition: all 0.5s ease-in-out;
 
           &--fields {
             padding: 0 $padding-small;
@@ -280,10 +282,11 @@
 
 .red-frame {
   border: 1px solid rgb(164, 181, 215);
-  transition: border 1s ease-in; /* Add a transition effect for a smoother change */
+  transition: border 0.5s ease-in; /* Add a transition effect for a smoother change */
 }
 
 .zero-extend {
+  transition: all 0.5s ease-in-out;
   .card {
     background-color: transparent;
     container-type: normal;

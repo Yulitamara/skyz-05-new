@@ -1175,6 +1175,7 @@ tr > td:first-child {
   max-width: 100%;
   container-type: inline-size;
   border-radius: 1.4rem;
+  transition: all 1s ease-in-out;
 }
 .card-container .card__navigate {
   display: flex;
@@ -1246,6 +1247,7 @@ tr > td:first-child {
   background-color: var(--color-on-primary);
   border-radius: 0.5rem;
   flex-direction: column;
+  transition: all 0.5s ease-in-out;
 }
 .card-container .card__boxes--box__content--fields {
   padding: 0 0.5rem;
@@ -1423,9 +1425,12 @@ tr > td:first-child {
 }
 .red-frame {
   border: 1px solid rgb(164, 181, 215);
-  transition: border 1s ease-in; /* Add a transition effect for a smoother change */
+  transition: border 0.5s ease-in; /* Add a transition effect for a smoother change */
 }
 
+.zero-extend {
+  transition: all 0.5s ease-in-out;
+}
 .zero-extend .card {
   background-color: transparent;
   container-type: normal;
