@@ -486,3 +486,10 @@ function handleDoubleClick() {
   // Remove "active" class from "left-second"
   leftSecondElement.classList.remove("active");
 }
+
+const container = document.querySelector(".small-boxes-container-second");
+const button = document.getElementById("extend-btn-for-second-new");
+
+button.addEventListener("click", function () {
+  container.style.flexWrap = "wrap";
+});
