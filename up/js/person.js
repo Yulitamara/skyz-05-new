@@ -490,6 +490,16 @@ function handleDoubleClick() {
 const container = document.querySelector(".small-boxes-container-second");
 const button = document.getElementById("extend-btn-for-second-new");
 
+let isWrapEnabled = false; // Flag to track wrapping state
+
 button.addEventListener("click", function () {
-  container.style.flexWrap = "wrap";
+  isWrapEnabled = !isWrapEnabled; // Toggle flag on each click
+
+  if (isWrapEnabled) {
+    container.style.flexWrap = "wrap";
+    button.textContent = "close"; // Change button text to "close"
+  } else {
+    container.style.flexWrap = ""; // Remove flex-wrap style
+    button.textContent = "expand_content"; // Change button text to "expand_content"
+  }
 });
