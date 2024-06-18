@@ -143,6 +143,10 @@
   align-items: start;
   justify-content: start;
   flex-direction: column-reverse;
+  // transform: rotate(90deg);
+  min-height: 125px;
+  height: min-content;
+  background-color: transparent;
 
   .kanban-header {
     gap: 1rem;

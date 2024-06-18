@@ -3275,6 +3275,9 @@ textarea {
   align-items: start;
   justify-content: start;
   flex-direction: column-reverse;
+  min-height: 125px;
+  height: min-content;
+  background-color: transparent;
 }
 .kanban.minimize .kanban-header {
   gap: 1rem;
