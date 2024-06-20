@@ -9,6 +9,7 @@
   font-size: font-size(font-size-regular);
   background-color: var(--color-on-primary);
   border-radius: 1rem;
+  animation: minimize-reversed 0.3s ease-in-out forwards;
 
   &-header {
     display: flex;
@@ -35,13 +36,13 @@
     }
     .status-container.yellow {
       background-color: #f4e7a0;
-       .fill-icon {
+      .fill-icon {
         color: #cbb434;
       }
     }
     .status-container.purple {
       background-color: #aec6fa;
-       .fill-icon {
+      .fill-icon {
         color: #395286;
       }
     }
@@ -75,6 +76,14 @@
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
+  }
+}
+@keyframes minimize-reversed {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
 
@@ -164,12 +173,23 @@
   justify-content: start;
   flex-direction: column-reverse;
   // transform: rotate(90deg);
-  min-height: 125px;
+  min-height: 150px;
   height: min-content;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
-
+  animation: minimize 0.3s ease-in-out forwards;
   .kanban-header {
     gap: 1rem;
+  }
+}
+@keyframes minimize {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
   }
 }
 

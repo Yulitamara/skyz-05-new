@@ -3185,6 +3185,7 @@ textarea {
   font-size: 1.25rem;
   background-color: var(--color-on-primary);
   border-radius: 1rem;
+  animation: minimize-reversed 0.3s ease-in-out forwards;
 }
 .kanban-header {
   display: flex;
@@ -3246,6 +3247,14 @@ textarea {
   margin-top: 1rem;
 }
 
+@keyframes minimize-reversed {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
 .kanban-content {
   display: flex;
   flex-direction: column;
@@ -3296,14 +3305,26 @@ textarea {
   align-items: start;
   justify-content: start;
   flex-direction: column-reverse;
-  min-height: 125px;
+  min-height: 150px;
   height: min-content;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
+  animation: minimize 0.3s ease-in-out forwards;
 }
 .kanban.minimize .kanban-header {
   gap: 1rem;
 }
 
+@keyframes minimize {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
 .main-title {
   cursor: pointer;
   padding: 10px;
