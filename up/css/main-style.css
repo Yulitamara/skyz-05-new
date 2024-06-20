@@ -3199,6 +3199,27 @@ textarea {
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  margin: 0.5rem;
+  padding: 0 0.5rem;
+  border-radius: 1rem;
+}
+.kanban-header .status-container.green {
+  background-color: #b4f1a0;
+}
+.kanban-header .status-container.green .fill-icon {
+  color: #59854b;
+}
+.kanban-header .status-container.yellow {
+  background-color: #f4e7a0;
+}
+.kanban-header .status-container.yellow .fill-icon {
+  color: #cbb434;
+}
+.kanban-header .status-container.purple {
+  background-color: #aec6fa;
+}
+.kanban-header .status-container.purple .fill-icon {
+  color: #395286;
 }
 .kanban-header .fill-icon {
   font-size: 1.8rem;

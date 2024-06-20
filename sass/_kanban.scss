@@ -23,8 +23,28 @@
       display: flex;
       align-items: center;
       gap: 0.4rem;
+      margin: 0.5rem;
+      padding: 0 0.5rem;
+      border-radius: 1rem;
     }
-
+    .status-container.green {
+      background-color: #b4f1a0;
+      .fill-icon {
+        color: #59854b;
+      }
+    }
+    .status-container.yellow {
+      background-color: #f4e7a0;
+       .fill-icon {
+        color: #cbb434;
+      }
+    }
+    .status-container.purple {
+      background-color: #aec6fa;
+       .fill-icon {
+        color: #395286;
+      }
+    }
     .fill-icon {
       font-size: font-size(font-size-medium);
     }
