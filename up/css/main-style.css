@@ -3311,7 +3311,7 @@ textarea {
   align-items: start;
   justify-content: start;
   flex-direction: column-reverse;
-  min-height: 140px;
+  min-height: 120px;
   height: min-content;
   width: 50px;
   align-items: center;
@@ -3319,17 +3319,14 @@ textarea {
   background-color: transparent;
   animation: minimize 0.3s ease-in-out forwards;
 }
-.kanban.minimize .kanban-header {
-  gap: 1rem;
-}
 .kanban.minimize .green-header {
-  background-color: #DAFEDA;
+  background-color: #dafeda;
 }
 .kanban.minimize .yellow-header {
-  background-color: #FEF6D4;
+  background-color: #fef6d4;
 }
 .kanban.minimize .purple-header {
-  background-color: #E1D6FE;
+  background-color: #e1d6fe;
 }
 
 @keyframes minimize {
