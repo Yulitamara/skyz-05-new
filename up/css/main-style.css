@@ -3186,13 +3186,13 @@ textarea {
   background-color: var(--color-on-primary);
   border-radius: 1rem;
   animation: minimize-reversed 0.3s ease-in-out forwards;
+  padding: 1rem;
 }
 .kanban-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 1.8rem;
-  padding: 0 1rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
@@ -3205,19 +3205,19 @@ textarea {
   border-radius: 1rem;
 }
 .kanban-header .status-container.green {
-  background-color: #b4f1a0;
+  background-color: #dafeda;
 }
 .kanban-header .status-container.green .fill-icon {
   color: #59854b;
 }
 .kanban-header .status-container.yellow {
-  background-color: #f4e7a0;
+  background-color: #fef6d4;
 }
 .kanban-header .status-container.yellow .fill-icon {
   color: #cbb434;
 }
 .kanban-header .status-container.purple {
-  background-color: #aec6fa;
+  background-color: #e1d6fe;
 }
 .kanban-header .status-container.purple .fill-icon {
   color: #395286;
@@ -3228,15 +3228,6 @@ textarea {
 .kanban-header .close-icon {
   font-size: 2.6rem;
   cursor: pointer;
-}
-.kanban .green-header {
-  background-color: #d0ffc0;
-}
-.kanban .yellow-header {
-  background-color: #fff6c0;
-}
-.kanban .purple-header {
-  background-color: #c0d4ff;
 }
 .kanban .small-screen-header {
   display: none;
@@ -3255,6 +3246,18 @@ textarea {
     transform: rotate(0deg);
   }
 }
+.kanban.green {
+  background-color: #e9fee9;
+}
+
+.kanban.yellow {
+  background-color: #fefae9;
+}
+
+.kanban.purple {
+  background-color: #efe9fe;
+}
+
 .kanban-content {
   display: flex;
   flex-direction: column;
@@ -3262,6 +3265,8 @@ textarea {
   padding: 0 1rem 1rem 1rem;
   max-width: 350px;
   min-width: 300px;
+  border: 0.2px solid rgba(170, 168, 168, 0.523);
+  border-radius: 0.5rem;
 }
 .kanban-content .kanban-title {
   text-align: start;
@@ -3277,6 +3282,7 @@ textarea {
   flex-direction: column;
   gap: 1rem;
   cursor: grab;
+  background-color: var(--color-on-primary);
 }
 .kanban-content .kanban-note-header {
   display: flex;
@@ -3305,7 +3311,7 @@ textarea {
   align-items: start;
   justify-content: start;
   flex-direction: column-reverse;
-  min-height: 150px;
+  min-height: 140px;
   height: min-content;
   width: 50px;
   align-items: center;
@@ -3315,6 +3321,15 @@ textarea {
 }
 .kanban.minimize .kanban-header {
   gap: 1rem;
+}
+.kanban.minimize .green-header {
+  background-color: #DAFEDA;
+}
+.kanban.minimize .yellow-header {
+  background-color: #FEF6D4;
+}
+.kanban.minimize .purple-header {
+  background-color: #E1D6FE;
 }
 
 @keyframes minimize {
