@@ -3204,13 +3204,13 @@ textarea {
   border-radius: 1rem;
 }
 .kanban-header .status-container.green {
-  background-color: #dafeda;
+  background-color: #b8e4c1;
 }
 .kanban-header .status-container.green .fill-icon {
   color: #59854b;
 }
 .kanban-header .status-container.yellow {
-  background-color: #fef6d4;
+  background-color: #f9ecb2;
 }
 .kanban-header .status-container.yellow .fill-icon {
   color: #cbb434;
@@ -3246,11 +3246,11 @@ textarea {
   }
 }
 .kanban.green {
-  background-color: #e9fee9;
+  background-color: #dcecdf;
 }
 
 .kanban.yellow {
-  background-color: #fefae9;
+  background-color: #fcf2da;
 }
 
 .kanban.purple {
@@ -3304,15 +3304,6 @@ textarea {
   font-size: 15px;
   color: var(--color-primary);
 }
-.kanban-content .kanban-note::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 0;
-  width: 1px;
-  background-color: red;
-}
 
 .kanban.minimize {
   display: flex;
@@ -3328,10 +3319,10 @@ textarea {
   animation: minimize 0.3s ease-in-out forwards;
 }
 .kanban.minimize .green-header {
-  background-color: #dafeda;
+  background-color: #b8e4c1;
 }
 .kanban.minimize .yellow-header {
-  background-color: #fef6d4;
+  background-color: #f9ecb2;
 }
 .kanban.minimize .purple-header {
   background-color: #e1d6fe;

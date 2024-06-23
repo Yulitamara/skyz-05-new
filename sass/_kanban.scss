@@ -30,13 +30,13 @@
       border-radius: 1rem;
     }
     .status-container.green {
-      background-color: #dafeda;
+      background-color: #b8e4c1;
       .fill-icon {
         color: #59854b;
       }
     }
     .status-container.yellow {
-      background-color: #fef6d4;
+      background-color: #f9ecb2;
       .fill-icon {
         color: #cbb434;
       }
@@ -77,10 +77,10 @@
   }
 }
 .kanban.green {
-  background-color: #e9fee9;
+  background-color: #dcecdf;
 }
 .kanban.yellow {
-  background-color: #fefae9;
+  background-color: #fcf2da;
 }
 .kanban.purple {
   background-color: #efe9fe;
@@ -143,16 +143,6 @@
       color: var(--color-primary);
     }
   }
-  .kanban-note::before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    bottom: 8px;
-    right: 0;
-    width: 1px;
-    // height: 100%;
-    background-color: red;
-  }
 }
 
 // @media screen and (max-width: 985px) {
@@ -197,11 +187,11 @@
   animation: minimize 0.3s ease-in-out forwards;
 
   .green-header {
-    background-color: #dafeda;
+    background-color: #b8e4c1;
   }
 
   .yellow-header {
-    background-color: #fef6d4;
+    background-color: #f9ecb2;
   }
 
   .purple-header {
