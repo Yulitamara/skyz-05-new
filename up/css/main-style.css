@@ -3210,7 +3210,7 @@ textarea {
   color: #59854b;
 }
 .kanban-header .status-container.yellow {
-  background-color: #f9ecb2;
+  background-color: #fcecbb;
 }
 .kanban-header .status-container.yellow .fill-icon {
   color: #cbb434;
@@ -3322,7 +3322,7 @@ textarea {
   background-color: #b8e4c1;
 }
 .kanban.minimize .yellow-header {
-  background-color: #f9ecb2;
+  background-color: #fcecbb;
 }
 .kanban.minimize .purple-header {
   background-color: #e1d6fe;
