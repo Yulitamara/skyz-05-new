@@ -3282,6 +3282,7 @@ textarea {
   gap: 1rem;
   cursor: grab;
   background-color: var(--color-on-primary);
+  position: relative;
 }
 .kanban-content .kanban-note-header {
   display: flex;
@@ -3303,6 +3304,15 @@ textarea {
   margin-bottom: -10px;
   font-size: 15px;
   color: var(--color-primary);
+}
+.kanban-content .kanban-note::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 0;
+  width: 1px;
+  background-color: red;
 }
 
 .kanban.minimize {
