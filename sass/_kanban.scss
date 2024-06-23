@@ -97,7 +97,7 @@
   // border: 0.5px solid rgba(176, 176, 176, 0.719);
 
   border-radius: $border-radius-small;
-  background-color: #ffffff8c;
+  background-color: #ffffff7d;
 
   .kanban-title {
     text-align: start;
@@ -108,7 +108,7 @@
 
   .kanban-note {
     border-radius: 0.5rem;
-    border: 0.5px solid var(--color-bg-dark);
+    // border: 0.5px solid var(--color-bg-dark);
     padding: 0.5rem 0.7rem;
     display: flex;
     flex-direction: column;

@@ -3265,7 +3265,7 @@ textarea {
   max-width: 350px;
   min-width: 300px;
   border-radius: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.5490196078);
+  background-color: rgba(255, 255, 255, 0.4901960784);
 }
 .kanban-content .kanban-title {
   text-align: start;
@@ -3275,7 +3275,6 @@ textarea {
 }
 .kanban-content .kanban-note {
   border-radius: 0.5rem;
-  border: 0.5px solid var(--color-bg-dark);
   padding: 0.5rem 0.7rem;
   display: flex;
   flex-direction: column;
