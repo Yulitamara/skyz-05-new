@@ -5,7 +5,7 @@
 }
 
 .kanban {
-  min-height: 100vh;
+  // min-height: 100vh;
   font-size: font-size(font-size-regular);
   background-color: var(--color-on-primary);
   border-radius: 1rem;
@@ -96,7 +96,7 @@
   border: 0.5px solid var(--color-bg-dark);
 
   border-radius: $border-radius-small;
-  background-color: #ffffff8c;
+  // background-color: #ffffff8c;
 
   .kanban-title {
     text-align: start;

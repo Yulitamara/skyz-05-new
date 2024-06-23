@@ -3181,7 +3181,6 @@ textarea {
 }
 
 .kanban {
-  min-height: 100vh;
   font-size: 1.25rem;
   background-color: var(--color-on-primary);
   border-radius: 1rem;
@@ -3267,7 +3266,6 @@ textarea {
   min-width: 300px;
   border: 0.5px solid var(--color-bg-dark);
   border-radius: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.5490196078);
 }
 .kanban-content .kanban-title {
   text-align: start;
