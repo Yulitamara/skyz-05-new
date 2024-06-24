@@ -155,6 +155,10 @@
     border: 0.5px solid #d4e4ed;
     background-color: #d4e4ed;
   }
+  .kanban-note.green-border {
+    border: 0.5px solid #d4edd7;
+    background-color: #d4edd7;
+  }
 }
 
 // @media screen and (max-width: 985px) {
@@ -223,3 +227,43 @@
   cursor: pointer;
   padding: 10px;
 }
+
+.color-menu {
+  position: absolute;
+  top: 100%;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  z-index: 1;
+  display: flex;
+}
+
+.color-option {
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.color-option.active {
+  border: 2px solid #000;
+}
+
+.pink-border {
+  background-color: #ff99cc;
+}
+
+.blue-border {
+  background-color: #99ccff;
+}
+
+.yellow-border {
+  background-color: #fff099;
+}
+
+.green-border {
+  background-color: #d4edd7;
+}
+
+/* Add CSS for other color options here */
