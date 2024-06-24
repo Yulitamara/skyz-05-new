@@ -108,7 +108,6 @@
 
   .kanban-note {
     border-radius: 0.5rem;
-    // border: 0.5px solid var(--color-bg-dark);
     padding: 0.5rem 0.7rem;
     display: flex;
     flex-direction: column;
@@ -142,6 +141,19 @@
       font-size: 15px;
       color: var(--color-primary);
     }
+  }
+
+  .kanban-note.yellow-border {
+    border: 0.5px solid #fff8b8;
+    background-color: #fff8b8;
+  }
+  .kanban-note.pink-border {
+    border: 0.5px solid #ffc1bb;
+    background-color: #ffc1bb;
+  }
+  .kanban-note.blue-border {
+    border: 0.5px solid #d4e4ed;
+    background-color: #d4e4ed;
   }
 }
 
