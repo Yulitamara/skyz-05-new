@@ -20,10 +20,12 @@
     border-radius: 8px;
     padding: 10px;
     top: 100%;
-    right: 30%;
+    // right: 30%;
+    // left: 0;
     margin: 0.5rem;
     z-index: 100;
     min-width: 250px;
+    max-width: max-content;
     min-height: min-content;
     display: flex;
     flex-direction: column;
@@ -32,10 +34,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 1rem;
       &--right {
         display: flex;
         gap: 0.5rem;
         .edit-content-menu__category {
+          display: inline-block;
           border-top-left-radius: 0.5rem;
           border-top-right-radius: 0.5rem;
           border: 1px solid var(--color-primary);
@@ -52,6 +56,9 @@
         }
       }
       &--left {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
         span:first-child,
         span:nth-child(2) {
           font-size: 2rem;
@@ -134,16 +141,7 @@
   .edit-field:focus-within {
     border: 1px solid var(--color-primary);
   }
-
-  .edit-content-menu {
-    position: absolute;
-    bottom: 0;
-  }
 }
-// .edit-content:hover {
-//   background-color: #E0E2EC;
-// }
-
 .edit-content:hover:not(.focus-content) {
   background-color: #e0e2ec;
 }

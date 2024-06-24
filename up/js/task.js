@@ -100,3 +100,15 @@ document
     // Remove "active" class from the element with id "second-level-card"
     document.getElementById("second-level-card").classList.remove("active");
   });
+
+const elements = document.querySelectorAll(".edit-content-menu__category");
+
+elements.forEach((element) => {
+  const text = element.textContent.trim();
+  const words = text.split(" ");
+
+  if (words.length > 1) {
+    element.textContent = words[0] + "...";
+    element.title = text;
+  }
+});
