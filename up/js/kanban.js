@@ -60,70 +60,40 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// const colorMenuToggle = document.querySelectorAll(".change-color");
-// const colorMenu = document.querySelectorAll(".color-menu");
-// const colorOptions = document.querySelectorAll(".color-option");
-
-// colorMenuToggle.forEach((toggle) => {
-//   toggle.addEventListener("click", () => {
-//     const menu = toggle.nextElementSibling;
-//     menu.classList.toggle("active");
-//   });
-// });
-
-// colorMenu.forEach((menu) => {
-//   menu.addEventListener("click", (event) => {
-//     event.stopPropagation();
-//   });
-// });
-
-// document.addEventListener("click", (event) => {
-//   colorMenu.forEach((menu) => {
-//     menu.classList.remove("active");
-//   });
-// });
-
-// // Apply the selected color to the Kanban note
-// colorOptions.forEach((option) => {
-//   option.addEventListener("click", (event) => {
-//     const color = event.target.dataset.color;
-//     const kanbanNote = option.closest(".kanban-note");
-//     kanbanNote.classList.remove("pink-border", "blue-border", "yellow-border"); // Remove existing borders
-//     kanbanNote.classList.add(`${color}-border`); // Apply the new border class based on the selected color
-//     // You can add further logic here to update the Kanban note's data (e.g., store the color preference)
-//   });
-// });
-
 const colorMenuToggle = document.querySelectorAll(".change-color");
 const colorMenu = document.querySelectorAll(".color-menu");
 const colorOptions = document.querySelectorAll(".color-option");
 
-colorMenuToggle.forEach((toggle) => {
-  toggle.addEventListener("click", () => {
-    const menu = toggle.nextElementSibling;
-    menu.classList.toggle("active");
-  });
-});
+function toggleActiveClass(element) {
+  element.classList.toggle("active");
+}
 
-colorMenu.forEach((menu) => {
-  menu.addEventListener("click", (event) => {
+colorMenuToggle.forEach((toggle) => {
+  toggle.addEventListener("click", (event) => {
     event.stopPropagation();
+
+    const associatedMenu = toggle.nextElementSibling;
+
+    toggleActiveClass(associatedMenu);
   });
 });
 
 document.addEventListener("click", (event) => {
-  colorMenu.forEach((menu) => {
-    menu.classList.remove("active");
-  });
+  if (
+    !event.target.closest(".change-color") &&
+    !event.target.closest(".color-menu")
+  ) {
+    colorMenu.forEach((menu) => {
+      menu.classList.add("active");
+    });
+  }
 });
 
-// Helper function to get the current border color class
 function getCurrentBorderColorClass(element) {
   const classes = Array.from(element.classList);
   return classes.find((cls) => cls.endsWith("-border"));
 }
 
-// Apply the selected color to the Kanban note
 colorOptions.forEach((option) => {
   option.addEventListener("click", (event) => {
     const color = event.target.dataset.color;
@@ -134,7 +104,5 @@ colorOptions.forEach((option) => {
       kanbanNote.classList.remove(currentBorderClass);
     }
     kanbanNote.classList.add(`${color}-border`);
-
-    // You can add further logic here to update the Kanban note's data (e.g., store the color preference)
   });
 });
