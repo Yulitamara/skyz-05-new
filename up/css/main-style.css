@@ -2346,15 +2346,15 @@ textarea {
   top: 100%;
   margin: 0.5rem;
   z-index: 100;
-  min-width: 250px;
-  max-width: max-content;
-  min-height: min-content;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  min-width: 200px;
+  max-width: 350px;
 }
 .edit-content .edit-content-menu__header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
@@ -2363,7 +2363,8 @@ textarea {
   display: flex;
   gap: 0.5rem;
   overflow: scroll;
-  max-width: 250px;
+  max-width: 300px;
+  align-self: self-start;
 }
 .edit-content .edit-content-menu__header--right .edit-content-menu__category {
   display: inline-block;
@@ -2391,6 +2392,7 @@ textarea {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
+  align-self: self-end;
 }
 .edit-content .edit-content-menu__header--left span:first-child,
 .edit-content .edit-content-menu__header--left span:nth-child(2) {
