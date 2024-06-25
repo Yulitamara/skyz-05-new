@@ -112,3 +112,24 @@ elements.forEach((element) => {
     element.title = text;
   }
 });
+
+const list = document.querySelector(".edit-content-menu__header--right .list");
+const expandBtn = document.querySelector(".expand-btn");
+
+function checkOverflow() {
+  if (list.scrollWidth > list.clientWidth) {
+    expandBtn.style.display = "flex"; // Show the button
+  } else {
+    expandBtn.style.display = "none"; // Hide the button
+  }
+}
+
+function toggleFlexWrap() {
+  list.classList.toggle("wrap");
+}
+
+expandBtn.addEventListener("click", toggleFlexWrap);
+
+checkOverflow();
+
+window.addEventListener("resize", checkOverflow);
