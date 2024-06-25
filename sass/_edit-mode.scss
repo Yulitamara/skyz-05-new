@@ -38,6 +38,9 @@
       &--right {
         display: flex;
         gap: 0.5rem;
+        overflow: scroll;
+        max-width: 250px;
+
         .edit-content-menu__category {
           display: inline-block;
           border-top-left-radius: 0.5rem;
@@ -45,6 +48,10 @@
           border: 1px solid var(--color-primary);
           padding: 0 0.5rem;
           cursor: pointer;
+        }
+
+        .edit-content-menu__category:last-child {
+          margin-left: 0.5rem;
         }
         .edit-content-menu__category:hover {
           background-color: var(--color-primary);
@@ -54,6 +61,9 @@
           background-color: var(--color-primary);
           color: var(--color-on-primary);
         }
+      }
+      &--right::-webkit-scrollbar {
+        display: none;
       }
       &--left {
         display: flex;
