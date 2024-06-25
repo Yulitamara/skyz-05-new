@@ -141,6 +141,23 @@
       }
     }
 
+    .line {
+      width: 100%;
+      height: 1px;
+    }
+    .line.yellow-border {
+      background-color: #f4e774;
+    }
+    .line.pink-border {
+      background-color: #ffc1bb;
+    }
+    .line.blue-border {
+      background-color: #d4e4ed;
+    }
+    .line.green-border {
+      background-color: #d4edd7;
+    }
+
     &-title {
       margin-bottom: -10px;
       font-size: 15px;
@@ -149,7 +166,7 @@
   }
 
   .kanban-note.yellow-border {
-    border: 0.5px solid #fff8b8;
+    border: 0.5px solid #f4e774;
   }
   .kanban-note.pink-border {
     border: 0.5px solid #ffc1bb;

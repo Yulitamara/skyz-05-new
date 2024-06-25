@@ -3315,13 +3315,29 @@ textarea {
 .kanban-content .kanban-note-header .status-icon.blue {
   color: var(--color-blue);
 }
+.kanban-content .kanban-note .line {
+  width: 100%;
+  height: 1px;
+}
+.kanban-content .kanban-note .line.yellow-border {
+  background-color: #f4e774;
+}
+.kanban-content .kanban-note .line.pink-border {
+  background-color: #ffc1bb;
+}
+.kanban-content .kanban-note .line.blue-border {
+  background-color: #d4e4ed;
+}
+.kanban-content .kanban-note .line.green-border {
+  background-color: #d4edd7;
+}
 .kanban-content .kanban-note-title {
   margin-bottom: -10px;
   font-size: 15px;
   color: var(--color-primary);
 }
 .kanban-content .kanban-note.yellow-border {
-  border: 0.5px solid #fff8b8;
+  border: 0.5px solid #f4e774;
 }
 .kanban-content .kanban-note.pink-border {
   border: 0.5px solid #ffc1bb;

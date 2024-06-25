@@ -99,10 +99,15 @@ colorOptions.forEach((option) => {
     const color = event.target.dataset.color;
     const kanbanNote = option.closest(".kanban-note");
     const currentBorderClass = getCurrentBorderColorClass(kanbanNote);
+    const lineElement = kanbanNote.querySelector(".line");
 
     if (currentBorderClass) {
       kanbanNote.classList.remove(currentBorderClass);
+      lineElement.classList.remove(currentBorderClass);
     }
-    kanbanNote.classList.add(`${color}-border`);
+
+    const newColorClass = `${color}-border`;
+    kanbanNote.classList.add(newColorClass);
+    lineElement.classList.add(newColorClass);
   });
 });
