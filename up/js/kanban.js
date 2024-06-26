@@ -20,21 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
             fromColumn.id
           } at index ${fromIndex} to column ${toColumn.id} at index ${toIndex}`
         );
-
-        // Update the task state if necessary, e.g., using a function like updateTasks()
       },
     });
   });
-
-  //   const toggleMinimize = () => {
-  //     document.querySelectorAll(".kanban").forEach((kanban) => {
-  //       kanban.classList.toggle("minimize");
-  //     });
-  //   };
-
-  //   document.querySelectorAll(".main-title").forEach((title) => {
-  //     title.addEventListener("click", toggleMinimize);
-  //   });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
