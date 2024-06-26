@@ -3207,6 +3207,7 @@ textarea {
   gap: 1rem;
   overflow-x: auto;
   cursor: grab;
+  min-height: 100vh;
 }
 
 .kanban-container:active {
@@ -3219,6 +3220,7 @@ textarea {
   border-radius: 1rem;
   animation: minimize-reversed 0.3s ease-in-out forwards;
   padding: 1rem;
+  margin-bottom: 1rem;
 }
 .kanban-header {
   display: flex;
