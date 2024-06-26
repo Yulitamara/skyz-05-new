@@ -19,15 +19,14 @@
       .title {
         display: flex;
         align-items: center;
-        gap: $gap-medium;
-        font-weight: font-weight(font-weight-light);
+        gap: $gap-small;
 
         .debit-number {
           font-size: font-size(font-size-small);
           margin-top: 15px;
         }
         span {
-          font-size: 35px;
+          font-size: 24px;
           color: var(--color-on-primary-light);
         }
         .material-symbols-outlined {
@@ -72,7 +71,6 @@
 
   @media screen and (max-width: 640px) {
     .top {
-      // flex-direction: column-reverse;
       align-items: start;
       gap: $gap-medium;
 
@@ -82,10 +80,7 @@
         margin-bottom: 2rem;
         .title {
           align-items: center;
-          // font-size: 22px;
-          // span {
-          //   font-size: 22px;
-          // }
+
           .debit-number {
             font-size: 16px;
             margin-top: 0;
@@ -127,14 +122,14 @@
       align-items: start;
       gap: $gap-medium;
       .left {
-        gap: $gap-small;
         flex-direction: column;
         margin-bottom: 2rem;
         .title {
-          align-items: center;
-          font-size: 22px;
           span {
-            font-size: 29px;
+            font-size: 24px;
+          }
+          .material-symbols-outlined {
+            font-size: 23px;
           }
           .debit-number {
             font-size: 16px;

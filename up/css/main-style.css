@@ -2893,15 +2893,14 @@ textarea {
 .card-header .top .left .title {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  font-weight: 300;
+  gap: 0.5rem;
 }
 .card-header .top .left .title .debit-number {
   font-size: 1.2rem;
   margin-top: 15px;
 }
 .card-header .top .left .title span {
-  font-size: 35px;
+  font-size: 24px;
   color: var(--color-on-primary-light);
 }
 .card-header .top .left .title .material-symbols-outlined {
@@ -2972,16 +2971,14 @@ textarea {
     gap: 1rem;
   }
   .card-header.long-header .top .left {
-    gap: 0.5rem;
     flex-direction: column;
     margin-bottom: 2rem;
   }
-  .card-header.long-header .top .left .title {
-    align-items: center;
-    font-size: 22px;
-  }
   .card-header.long-header .top .left .title span {
-    font-size: 29px;
+    font-size: 24px;
+  }
+  .card-header.long-header .top .left .title .material-symbols-outlined {
+    font-size: 23px;
   }
   .card-header.long-header .top .left .title .debit-number {
     font-size: 16px;
