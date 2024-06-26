@@ -3336,7 +3336,14 @@ textarea {
   color: var(--color-blue);
 }
 .kanban-content .kanban-note-header .note-date {
+  position: relative;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  padding: 0 0.2rem;
+  border-radius: 0.5rem;
+}
+.kanban-content .kanban-note-header .note-date:hover {
+  background-color: var(--color-hover-btn);
 }
 .kanban-content .kanban-note .line {
   width: 100%;
@@ -3449,10 +3456,6 @@ textarea {
 
 .green-border {
   background-color: #d4edd7;
-}
-
-.note-date {
-  position: relative; /* Ensure the parent element can be used for positioning */
 }
 
 /* Customize the flatpickr calendar appearance */

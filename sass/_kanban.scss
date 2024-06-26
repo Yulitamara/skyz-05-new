@@ -148,7 +148,14 @@
       }
 
       .note-date {
+        position: relative;
         cursor: pointer;
+        transition: $transition;
+        padding: 0 0.2rem;
+        border-radius: $border-radius-small;
+      }
+      .note-date:hover {
+        background-color: var(--color-hover-btn);
       }
     }
 
@@ -299,10 +306,6 @@
 
 .green-border {
   background-color: #d4edd7;
-}
-
-.note-date {
-  position: relative; /* Ensure the parent element can be used for positioning */
 }
 
 /* Customize the flatpickr calendar appearance */
