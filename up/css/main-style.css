@@ -3302,6 +3302,7 @@ textarea {
   padding: 0 1rem 1rem 1rem;
   max-width: 350px;
   min-width: 300px;
+  width: 400px;
   border-radius: 0.5rem;
   background-color: rgba(255, 255, 255, 0.4901960784);
 }
@@ -3453,7 +3454,11 @@ textarea {
   background-color: #d4edd7;
 }
 
-/* Add CSS for other color options here */
+.note-date {
+  position: relative; /* Ensure the parent element can be used for positioning */
+}
+
+/* Customize the flatpickr calendar appearance */
 .main-container {
   position: relative;
   max-width: 100%;

@@ -104,6 +104,7 @@
   padding: 0 1rem 1rem 1rem;
   max-width: 350px;
   min-width: 300px;
+  width: 400px;
   // border: 0.5px solid var(--color-bg-dark);
   // border: 0.5px solid rgba(176, 176, 176, 0.719);
 
@@ -300,4 +301,8 @@
   background-color: #d4edd7;
 }
 
-/* Add CSS for other color options here */
+.note-date {
+  position: relative; /* Ensure the parent element can be used for positioning */
+}
+
+/* Customize the flatpickr calendar appearance */

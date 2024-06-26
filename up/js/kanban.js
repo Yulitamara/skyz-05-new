@@ -99,3 +99,30 @@ colorOptions.forEach((option) => {
     lineElement.classList.add(newColorClass);
   });
 });
+
+// Initialize flatpickr on note-date elements
+const dateElements = document.querySelectorAll(".note-date");
+
+dateElements.forEach((dateElement) => {
+  flatpickr(dateElement, {
+    dateFormat: "d-m-y",
+    onChange: function (selectedDates, dateStr, instance) {
+      // Update the text content of the note-date element
+      dateElement.textContent = dateStr;
+    },
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const dateElements = document.querySelectorAll(".note-date");
+
+  dateElements.forEach((dateElement) => {
+    flatpickr(dateElement, {
+      dateFormat: "d-m-y",
+      onChange: function (selectedDates, dateStr, instance) {
+        dateElement.textContent = dateStr;
+      },
+      appendTo: dateElement.parentElement,
+    });
+  });
+});
