@@ -34,7 +34,6 @@
 .not-in-table:hover {
   .material-symbols-outlined {
     opacity: 1;
-
   }
 }
 
@@ -91,4 +90,17 @@
   .showSingle {
     display: none;
   }
+}
+
+.add-icon-small {
+  font-size: 20px;
+  border-radius: $border-radius-round;
+  transition: $transition;
+  margin: 0 0.2rem 0.2rem 0;
+  cursor: pointer;
+}
+
+.add-icon-small:hover,
+.add-icon-small.clicked {
+  background-color: var(--color-hover-btn);
 }

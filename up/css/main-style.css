@@ -2324,6 +2324,19 @@ textarea {
     display: none;
   }
 }
+.add-icon-small {
+  font-size: 20px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  margin: 0 0.2rem 0.2rem 0;
+  cursor: pointer;
+}
+
+.add-icon-small:hover,
+.add-icon-small.clicked {
+  background-color: var(--color-hover-btn);
+}
+
 .edit-content {
   position: relative;
   display: flex;
@@ -3318,6 +3331,7 @@ textarea {
   cursor: grab;
   background-color: var(--color-on-primary);
   position: relative;
+  transition: all 0.2s ease-in-out;
 }
 .kanban-content .kanban-note-header {
   display: flex;
@@ -3345,6 +3359,15 @@ textarea {
 .kanban-content .kanban-note-header .note-date:hover {
   background-color: var(--color-hover-btn);
 }
+.kanban-content .kanban-note-header__title {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.kanban-content .kanban-note-header__title .material-symbols-outlined {
+  font-size: 20px;
+  opacity: 0.8;
+}
 .kanban-content .kanban-note .line {
   width: 100%;
   height: 1px;
@@ -3367,9 +3390,16 @@ textarea {
   color: var(--color-primary);
 }
 .kanban-content .kanban-note .kanban-icons {
+  opacity: 0;
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+.kanban-content .kanban-note:hover {
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.kanban-content .kanban-note:hover .kanban-icons {
+  opacity: 1;
 }
 .kanban-content .kanban-note.yellow-border {
   border: 0.5px solid #f4e774;

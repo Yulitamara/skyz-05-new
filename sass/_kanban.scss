@@ -127,6 +127,7 @@
     cursor: grab;
     background-color: var(--color-on-primary);
     position: relative;
+    transition: $transition;
 
     &-header {
       display: flex;
@@ -157,6 +158,16 @@
       .note-date:hover {
         background-color: var(--color-hover-btn);
       }
+
+      &__title {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        .material-symbols-outlined {
+          font-size: 20px;
+          opacity: 0.8;
+        }
+      }
     }
 
     .line {
@@ -183,12 +194,18 @@
     }
 
     .kanban-icons {
+      opacity: 0;
       display: flex;
       align-items: center;
       gap: 1rem;
     }
   }
-
+  .kanban-note:hover {
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    .kanban-icons {
+      opacity: 1;
+    }
+  }
   .kanban-note.yellow-border {
     border: 0.5px solid #f4e774;
   }
