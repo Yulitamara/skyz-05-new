@@ -2844,7 +2844,7 @@ textarea {
   gap: 1rem;
 }
 .small-boxes-container-second .small-box-second {
-  background-color: var(--color-bg-light);
+  background-color: var(--color-on-primary);
   color: var(--color-on-primary-light);
   display: flex;
   align-items: center;
@@ -2852,6 +2852,7 @@ textarea {
   width: max-content;
   justify-content: center;
   border-radius: 0.5rem;
+  border: 0.5px solid var(--color-on-primary-light);
   padding: 0.2rem 0.5rem;
   font-size: 1.25rem;
   transition: all 0.2s ease-in-out;
@@ -2861,7 +2862,7 @@ textarea {
   visibility: hidden;
 }
 .small-boxes-container-second .small-box-second:hover {
-  background-color: var(--color-primary-light-hover);
+  background-color: var(--color-hover-btn);
 }
 .small-boxes-container-second .small-box-second:hover .dynamic-btns {
   visibility: visible;

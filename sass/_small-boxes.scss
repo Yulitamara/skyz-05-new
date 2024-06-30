@@ -69,7 +69,8 @@
   gap: 1rem;
 
   .small-box-second {
-    background-color: var(--color-bg-light);
+    // background-color: var(--color-bg-light);
+    background-color: var(--color-on-primary);
     color: var(--color-on-primary-light);
     display: flex;
     align-items: center;
@@ -77,7 +78,7 @@
     width: max-content;
     justify-content: center;
     border-radius: $border-radius-small;
-    // border: 0.5px solid var(--color-on-primary-light);
+    border: 0.5px solid var(--color-on-primary-light);
     padding: 0.2rem 0.5rem;
     font-size: font-size(font-size-regular);
     transition: $transition;
@@ -86,8 +87,9 @@
       visibility: hidden;
     }
   }
+
   .small-box-second:hover {
-    background-color: var(--color-primary-light-hover);
+    background-color: var(--color-hover-btn);
     .dynamic-btns {
       visibility: visible;
     }
