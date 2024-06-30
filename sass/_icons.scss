@@ -104,3 +104,15 @@
 .add-icon-small.clicked {
   background-color: var(--color-hover-btn);
 }
+
+.select-note-icon {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background-color: var(--color-on-primary-light);
+  color: var(--color-on-primary);
+  border-radius: $border-radius-round;
+  cursor: pointer;
+  font-size: 21px;
+  opacity: 0;
+}

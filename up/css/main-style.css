@@ -2337,6 +2337,18 @@ textarea {
   background-color: var(--color-hover-btn);
 }
 
+.select-note-icon {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background-color: var(--color-on-primary-light);
+  color: var(--color-on-primary);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 21px;
+  opacity: 0;
+}
+
 .edit-content {
   position: relative;
   display: flex;
@@ -3402,6 +3414,9 @@ textarea {
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 .kanban-content .kanban-note:hover .kanban-icons {
+  opacity: 1;
+}
+.kanban-content .kanban-note:hover .select-note-icon {
   opacity: 1;
 }
 .kanban-content .kanban-note.gray-border {
