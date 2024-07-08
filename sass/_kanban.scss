@@ -116,6 +116,8 @@
     padding-right: 0.4rem;
     font-size: font-size(font-size-medium);
     pointer-events: none; /* Make the kanban-title non-draggable */
+    display: flex;
+    justify-content: space-between;
   }
 
   .kanban-note {
@@ -387,5 +389,20 @@
   .edit-content-menu__category.clicked {
     background-color: var(--color-primary);
     color: var(--color-on-primary);
+  }
+}
+
+.note-card {
+  .card-header {
+    .top {
+      .left {
+        flex-direction: column;
+        align-items: start;
+      }
+      .right {
+        align-self: start;
+        padding-top: 1rem;
+      }
+    }
   }
 }
