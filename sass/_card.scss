@@ -322,10 +322,9 @@
   container-name: card;
 }
 
-
 @container card (width < 320px) {
   .note-card {
-    background-color: var(--color-bg);
+    // background-color: var(--color-bg);
 
     .card-header {
       .top {
@@ -349,6 +348,7 @@
       border-radius: 0;
       // width: 0px !important;
       min-width: fit-content !important;
+     
     }
   }
 }

@@ -1455,9 +1455,6 @@ tr > td:first-child {
 }
 
 @container card (width < 320px) {
-  .note-card {
-    background-color: var(--color-bg);
-  }
   .note-card .card-header .top .left {
     flex-direction: column;
   }
@@ -3456,6 +3453,7 @@ textarea {
 }
 .kanban-content .kanban-note.pink-border {
   border: 0.5px solid #ffc1bb;
+  background-color: #ffc1bb;
 }
 .kanban-content .kanban-note.blue-border {
   border: 0.5px solid #d4e4ed;
