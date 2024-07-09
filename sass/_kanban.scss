@@ -241,6 +241,10 @@
 
   }
 }
+.kanban-expanded {
+  width: 700px;
+  max-width: 700px;
+}
 
 // @media screen and (max-width: 985px) {
 //   .kanban-container {
@@ -445,5 +449,9 @@
     // width: 0px !important;
     // min-width: fit-content !important;
     min-width: 300px;
+  }
+
+  .fields-wrapper .fields {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

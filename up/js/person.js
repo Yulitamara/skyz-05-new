@@ -4,6 +4,9 @@ const minimizeButtons = document.querySelectorAll(".minimize");
 
 const closeExpandButtons = document.querySelectorAll(".close-expand-new");
 
+const kanbanContent = document.querySelectorAll(".kanban-content");
+
+
 function handleExpandedClass() {
   // Get the screen width
   const screenWidth = window.innerWidth;
@@ -16,8 +19,10 @@ function handleExpandedClass() {
       const zeroExtend = parentBox.querySelector(".zero-extend");
       const firstExtend = parentBox.querySelector(".first-extend");
 
+
       if (zeroExtend.classList.contains("active")) {
         button.classList.remove("clicked");
+
 
         if (screenWidth > 1200) {
           if (!parentBox.classList.contains("expanded")) {
@@ -25,6 +30,7 @@ function handleExpandedClass() {
           } else if (screenWidth > 2000) {
             parentBox.classList.add("expanded-max");
             button.classList.add("disabled-btn");
+            
           }
         }
       }
