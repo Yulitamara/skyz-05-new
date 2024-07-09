@@ -3642,7 +3642,7 @@ textarea {
 .note-card .card__boxes--box {
   padding: 8px 4px;
   border-radius: 0;
-  min-width: 100px;
+  min-width: 300px;
 }
 
 .main-container {
