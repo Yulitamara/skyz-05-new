@@ -9,7 +9,7 @@
   display: flex;
   white-space: nowrap;
   scroll-snap-type: x mandatory;
-  gap: $gap-small;
+  // gap: $gap-xsmall;
   overflow-x: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -78,11 +78,12 @@
     width: max-content;
     justify-content: center;
     border-radius: $border-radius-small;
-    border: 0.5px solid var(--color-on-primary-light);
+    // border: 0.5px solid var(--color-on-primary-light);
     padding: 0.2rem 0.5rem;
     font-size: font-size(font-size-regular);
     transition: $transition;
     cursor: pointer;
+    height: 40px;
     .btn-default {
       visibility: hidden;
     }

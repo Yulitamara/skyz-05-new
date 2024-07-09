@@ -316,41 +316,16 @@
                     <span class="material-symbols-outlined btn-default" title="הדפסה">print</span>
                   </div>
                 </div>
+           
+              </div>
+              <div class="kanban-content" id="column-proposal">
+                <div class="kanban-title">הצעה</div>
+
+                
                 <div class="kanban-note yellow-border">
-                  <div class="kanban-note-header">
-                    <div>
-                      <!-- <span class="material-symbols-outlined fill-icon status-icon blue">radio_button_unchecked</span> -->
-                      <span>משימה</span>
-                    </div>
-                    <span class="note-date">12-01-24</span>
-                  </div>
-                  <div class="line yellow-border"></div>
-                  <div class="kanban-note-title">שדרוג גולדפלוס</div>
-                  <p class="kanban-note-para">
-                    שדרוג האפליקציה ומסד הנתונים לגרסה מתקדמת מ-2008. ידרוש
-                    גישה מרחוק.
-                  </p>
-                  <div class="kanban-note-header">
-                    <span>210,000$</span>
-                    <span>מיטב בית השקעות בע"מ, סילבינה בצלאל</span>
-                  </div>
-
-                  <div class="kanban-icons">
-                    <span class="material-symbols-outlined btn-default change-color"
-                      data-toggle="color-menu">palette</span>
-
-                    <div class="color-menu active">
-                      <span class="color-option pink-border" data-color="pink"></span>
-                      <span class="color-option blue-border" data-color="blue"></span>
-                      <span class="color-option yellow-border" data-color="yellow"></span>
-                      <span class="color-option green-border" data-color="green"></span>
-                    </div>
-
-                    <span class="material-symbols-outlined btn-default">person_add</span>
-                  </div>
-                </div>
-
-                <div class="kanban-note pink-border">
+                  <span class="material-symbols-outlined select-note-icon">
+                    check
+                  </span>
                   <div class="note-card">
                     <div class="card-header long-header">
                       <div class="top">
@@ -389,19 +364,28 @@
                           </div>
                         </div>
                         <div class="right">
+                          <span class="material-symbols-outlined btn-default change-color" data-toggle="color-menu" title="אפשרויות רקע">palette</span>
+                          <div class="color-menu ">
+                            <span class="color-option gray-border default-border" data-color="gray"></span>
+                            <span class="color-option pink-border" data-color="pink"></span>
+                            <span class="color-option blue-border" data-color="blue"></span>
+                            <span class="color-option yellow-border" data-color="yellow"></span>
+                            <span class="color-option green-border" data-color="green"></span>
+                          </div>
+
                           <span class="material-symbols-outlined open-in-new btn-default">
                             web_asset
                           </span>
+                          
                           <div class="icon-container not-in-table">
                             <span class="material-symbols-outlined bigger-icon">mail</span>
                             <span class="material-symbols-outlined smaller-icon green" id="new-mail-btn">add</span>
                           </div>
+                          
                           <span class="material-symbols-outlined btn-default">
                             more_vert
                           </span>
-                          <span class="material-symbols-outlined btn-default">
-                            close
-                          </span>
+                        
                         </div>
                       </div>
                     </div>
@@ -1085,7 +1069,7 @@
                         </div>
                       </div>
                       <!-- מידע נוסף -->
-                      <div class="card__boxes--box box-reduced" data-target="box4">
+                      <div class="card__boxes--box box-reduced active" data-target="box4">
                         <div class="card__boxes--box__header">
                           <div class="card__boxes--box__header--title">
                             <span class="material-symbols-outlined"> info </span>
@@ -1188,7 +1172,7 @@
                         </div>
                       </div>
                       <!-- שלבים -->
-                      <div class="card__boxes--box box-reduced" data-target="box5">
+                      <div class="card__boxes--box box-reduced active" data-target="box5">
                         <div class="card__boxes--box__header">
                           <div class="card__boxes--box__header--title">
                             <span class="material-symbols-outlined"> moving </span>
@@ -1266,8 +1250,8 @@
                           </div>
                         </div>
                       </div>
-                      <!-- מוצרים שנרכשו -->
-                      <div class="card__boxes--box box-reduced" data-target="box6">
+                      <!-- מוצרים שנרכשו --> 
+                      <div class="card__boxes--box box-reduced active" data-target="box6">
                         <div class="card__boxes--box__header">
                           <div class="card__boxes--box__header--title">
                             <span class="material-symbols-outlined"> shopping_bag </span>
@@ -1412,7 +1396,7 @@
                         </div>
                       </div>
                       <!-- מסמכים לגבייה -->
-                      <div class="card__boxes--box box-reduced" data-target="box7">
+                      <div class="card__boxes--box box-reduced active" data-target="box7">
                         <div class="card__boxes--box__header">
                           <div class="card__boxes--box__header--title">
                             <span class="material-symbols-outlined"> description </span>
@@ -1534,7 +1518,7 @@
                         </div>
                       </div>
                       <!-- דוח גיול -->
-                      <div class="card__boxes--box box-reduced" data-target="box8">
+                      <div class="card__boxes--box box-reduced active" data-target="box8">
                         <div class="card__boxes--box__header">
                           <div class="card__boxes--box__header--title">
                             <span class="material-symbols-outlined"> description </span>
@@ -1656,7 +1640,7 @@
                         </div>
                       </div>
                       <!-- חשבונות -->
-                      <div class="card__boxes--box box-reduced" data-target="box9">
+                      <div class="card__boxes--box box-reduced active" data-target="box9">
                         <div class="card__boxes--box__header">
                           <div class="card__boxes--box__header--title">
                             <span class="material-symbols-outlined"> account_box </span>
@@ -1707,7 +1691,7 @@
                         </div>
                       </div>
                       <!-- פעולות -->
-                      <div class="card__boxes--box box-reduced" data-target="box10">
+                      <div class="card__boxes--box box-reduced active" data-target="box10">
                         <div class="card__boxes--box__header">
                           <div class="card__boxes--box__header--title">
                             <span class="material-symbols-outlined"> category </span>
@@ -2071,90 +2055,90 @@
                             link
                           </span>
                           <!-- <span>קשרים</span> -->
-                          <span class="material-symbols-outlined btn-default dynamic-btns" id="btn-animation">
+                          <!-- <span class="material-symbols-outlined btn-default dynamic-btns" id="btn-animation">
                             more_vert
-                          </span>
+                          </span> -->
                         </div>
                         <div class="small-box-second active" data-target="box2">
                           <span class="material-symbols-outlined">
                             call
                           </span>
                           <!-- <span>תקשורת</span> -->
-                          <span class="material-symbols-outlined btn-default dynamic-btns">
+                          <!-- <span class="material-symbols-outlined btn-default dynamic-btns">
                             more_vert
-                          </span>
+                          </span> -->
                         </div>
                         <div class="small-box-second active" data-target="box3">
                           <span class="material-symbols-outlined">
                             home
                           </span>
                           <!-- <span>כתובות</span> -->
-                          <span class="material-symbols-outlined btn-default dynamic-btns">
+                          <!-- <span class="material-symbols-outlined btn-default dynamic-btns">
                             more_vert
-                          </span>
+                          </span> -->
                         </div>
-                        <div class="small-box-second active" data-target="box4">
+                        <div class="small-box-second" data-target="box4">
                           <span class="material-symbols-outlined">
                             info
                           </span>
                           <!-- <span>מידע נוסף</span> -->
-                          <span class="material-symbols-outlined btn-default dynamic-btns">
+                          <!-- <span class="material-symbols-outlined btn-default dynamic-btns">
                             more_vert
-                          </span>
+                          </span> -->
                         </div>
-                        <div class="small-box-second active" data-target="box5">
+                        <div class="small-box-second" data-target="box5">
                           <span class="material-symbols-outlined">
                             moving
                           </span>
                           <!-- <span>שלבים</span> -->
-                          <span class="material-symbols-outlined btn-default dynamic-btns">
+                          <!-- <span class="material-symbols-outlined btn-default dynamic-btns">
                             more_vert
-                          </span>
+                          </span> -->
                         </div>
-                        <div class="small-box-second active" data-target="box6">
+                        <div class="small-box-second" data-target="box6">
                           <span class="material-symbols-outlined">
                             shopping_bag
                           </span>
                           <!-- <span>מוצרים שנרכשו</span> -->
-                          <span class="material-symbols-outlined btn-default dynamic-btns">
+                          <!-- <span class="material-symbols-outlined btn-default dynamic-btns">
                             more_vert
-                          </span>
+                          </span> -->
                         </div>
-                        <div class="small-box-second active" data-target="box7">
+                        <div class="small-box-second" data-target="box7">
                           <span class="material-symbols-outlined">
                             description
                           </span>
                           <!-- <span>מסמכים לגבייה</span> -->
-                          <span class="material-symbols-outlined btn-default dynamic-btns">
+                          <!-- <span class="material-symbols-outlined btn-default dynamic-btns">
                             more_vert
-                          </span>
+                          </span> -->
                         </div>
-                        <div class="small-box-second active" data-target="box8">
+                        <div class="small-box-second" data-target="box8">
                           <span class="material-symbols-outlined">
                             description
                           </span>
                           <!-- <span>דוח גיול</span> -->
-                          <span class="material-symbols-outlined btn-default dynamic-btns">
+                          <!-- <span class="material-symbols-outlined btn-default dynamic-btns">
                             more_vert
-                          </span>
+                          </span> -->
                         </div>
-                        <div class="small-box-second active" data-target="box9">
+                        <div class="small-box-second" data-target="box9">
                           <span class="material-symbols-outlined">
                             account_box
                           </span>
                           <!-- <span>חשבונות</span> -->
-                          <span class="material-symbols-outlined btn-default dynamic-btns">
+                          <!-- <span class="material-symbols-outlined btn-default dynamic-btns">
                             more_vert
-                          </span>
+                          </span> -->
                         </div>
-                        <div class="small-box-second active" data-target="box10">
+                        <div class="small-box-second" data-target="box10">
                           <span class="material-symbols-outlined">
                             category
                           </span>
                           <!-- <span>פעולות</span> -->
-                          <span class="material-symbols-outlined btn-default dynamic-btns">
+                          <!-- <span class="material-symbols-outlined btn-default dynamic-btns">
                             more_vert
-                          </span>
+                          </span> -->
                         </div>
 
                       </div>
@@ -3114,9 +3098,6 @@
                   </div>
                 </div>
 
-              </div>
-              <div class="kanban-content" id="column-proposal">
-                <div class="kanban-title">הצעה</div>
                 <div class="kanban-note">Task 3</div>
                 <div class="kanban-note">Task 4</div>
               </div>

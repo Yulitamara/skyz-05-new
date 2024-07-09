@@ -322,33 +322,32 @@
   container-name: card;
 }
 
-@container card (width < 320px) {
-  .note-card {
-    // background-color: var(--color-bg);
+// @container card (width < 320px) {
+//   .note-card {
 
-    .card-header {
-      .top {
-        .left {
-          flex-direction: column;
-        }
-      }
-    }
+//     .card-header {
+//       .top {
+//         .left {
+//           flex-direction: column;
+//         }
+//       }
+//     }
 
-    .round-img-container {
-      display: none;
-    }
+//     .round-img-container {
+//       display: none;
+//     }
 
-    .card__boxes {
-      grid-template-columns: repeat(1, 1fr) !important;
-      width: fit-content;
-    }
+//     .card__boxes {
+//       grid-template-columns: repeat(1, 1fr) !important;
+//       // width: fit-content;
+//     }
 
-    .card__boxes--box {
-      padding: 8px 4px;
-      border-radius: 0;
-      // width: 0px !important;
-      min-width: fit-content !important;
-     
-    }
-  }
-}
+//     .card__boxes--box {
+//       padding: 8px 4px;
+//       border-radius: 0;
+//       // width: 0px !important;
+//       // min-width: fit-content !important;
+//       max-width: 200px;
+//     }
+//   }
+// }

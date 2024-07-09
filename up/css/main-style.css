@@ -1465,25 +1465,6 @@ tr > td:first-child {
   container-name: card;
 }
 
-@container card (width < 320px) {
-  .note-card .card-header .top .left {
-    flex-direction: column;
-  }
-  .note-card .round-img-container {
-    display: none;
-  }
-  .note-card .card__boxes {
-    grid-template-columns: repeat(1, 1fr) !important;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  .note-card .card__boxes--box {
-    padding: 8px 4px;
-    border-radius: 0;
-    min-width: -moz-fit-content !important;
-    min-width: fit-content !important;
-  }
-}
 input[type=text],
 input[type=password],
 input[type=number] {
@@ -2846,7 +2827,6 @@ textarea {
   display: flex;
   white-space: nowrap;
   scroll-snap-type: x mandatory;
-  gap: 0.5rem;
   overflow-x: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -2911,11 +2891,11 @@ textarea {
   width: max-content;
   justify-content: center;
   border-radius: 0.5rem;
-  border: 0.5px solid var(--color-on-primary-light);
   padding: 0.2rem 0.5rem;
   font-size: 1.25rem;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+  height: 40px;
 }
 .small-boxes-container-second .small-box-second .btn-default {
   visibility: hidden;
@@ -3407,6 +3387,7 @@ textarea {
   background-color: var(--color-on-primary);
   position: relative;
   transition: all 0.2s ease-in-out;
+  z-index: 90;
 }
 .kanban-content .kanban-note-header {
   display: flex;
@@ -3472,6 +3453,7 @@ textarea {
   display: flex;
   align-items: center;
   gap: 1rem;
+  position: relative;
 }
 .kanban-content .kanban-note:hover {
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
@@ -3488,7 +3470,7 @@ textarea {
 }
 .kanban-content .kanban-note.yellow-border {
   border: 0.5px solid #f4e774;
-  background-color: #fffad1;
+  background-color: #fcf7cb;
 }
 .kanban-content .kanban-note.pink-border {
   border: 0.5px solid #ffe0de;
@@ -3542,11 +3524,11 @@ textarea {
 
 .color-menu {
   position: absolute;
-  top: 100%;
+  top: 40px;
   background-color: #fff;
   padding: 10px;
   border: 1px solid #ccc;
-  z-index: 1;
+  z-index: 99;
   display: flex;
 }
 
@@ -3639,10 +3621,28 @@ textarea {
 .note-card .card-header .top .left {
   flex-direction: column;
   align-items: start;
+  gap: 0;
 }
 .note-card .card-header .top .right {
   align-self: start;
   padding-top: 1rem;
+}
+.note-card .card-header .top .left {
+  flex-direction: column;
+}
+.note-card .card-header .top .right {
+  position: relative;
+}
+.note-card .round-img-container {
+  display: none;
+}
+.note-card .card__boxes {
+  grid-template-columns: repeat(1, 1fr) !important;
+}
+.note-card .card__boxes--box {
+  padding: 8px 4px;
+  border-radius: 0;
+  min-width: 100px;
 }
 
 .main-container {
