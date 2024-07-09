@@ -183,7 +183,7 @@
       background-color: #f4e774;
     }
     .line.pink-border {
-      background-color: #ffc1bb;
+      background-color: #ffe4e2;
     }
     .line.blue-border {
       background-color: #d4e4ed;
@@ -215,20 +215,28 @@
     }
   }
   .kanban-note.gray-border {
-    border: 0.5px solid #ababab;
+    border: 0.5px solid #dddddd;
+    background-color: var(--color-on-primary);
+
   }
   .kanban-note.yellow-border {
     border: 0.5px solid #f4e774;
+    background-color:  #fffad1;
+
   }
   .kanban-note.pink-border {
-    border: 0.5px solid #ffc1bb;
-    background-color: #ffc1bb;
+    border: 0.5px solid #ffe0de;
+    background-color: #ffe8e6;
   }
   .kanban-note.blue-border {
     border: 0.5px solid #d4e4ed;
+    background-color: #e9f7ff;
+
   }
   .kanban-note.green-border {
     border: 0.5px solid #d4edd7;
+    background-color: #d4f1d6;
+
   }
 }
 
