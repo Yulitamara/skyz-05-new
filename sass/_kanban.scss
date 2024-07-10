@@ -209,6 +209,10 @@
   }
   .kanban-note:hover {
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+    // border-width: 1em;
+
     .kanban-icons {
       opacity: 1;
     }
@@ -219,13 +223,12 @@
   .kanban-note.gray-border {
     border: 0.5px solid #dddddd;
     background-color: var(--color-on-primary);
-
   }
   .kanban-note.yellow-border {
     border: 0.5px solid #f4e774;
-    background-color:  #fcf7cb;
-
+    background-color: #fcf7cb;
   }
+
   .kanban-note.pink-border {
     border: 0.5px solid #ffe0de;
     background-color: #ffe8e6;
@@ -233,12 +236,10 @@
   .kanban-note.blue-border {
     border: 0.5px solid #d4e4ed;
     background-color: #e9f7ff;
-
   }
   .kanban-note.green-border {
     border: 0.5px solid #d4edd7;
     background-color: #d4f1d6;
-
   }
 }
 .kanban-expanded {
@@ -312,7 +313,6 @@
   cursor: pointer;
   padding: 10px;
 }
-
 
 .color-menu {
   position: absolute;
@@ -409,7 +409,6 @@
 }
 
 .note-card {
-  
   .card-header {
     .top {
       .left {
@@ -418,7 +417,7 @@
         gap: 0;
       }
       .right {
-        position: relative; 
+        position: relative;
         align-self: start;
         padding-top: 1rem;
       }
@@ -446,13 +445,13 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .container-new-small-boxes-second { 
+  .container-new-small-boxes-second {
     opacity: 0;
   }
 }
 
 .note-card:hover {
-  .container-new-small-boxes-second { 
+  .container-new-small-boxes-second {
     opacity: 1;
   }
 }
