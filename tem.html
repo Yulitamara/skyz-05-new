@@ -1,127 +1,323 @@
-<section class="card-container">
-    <div class="card">
-        <div class="kanban-container">
-            <div class="kanban">
-                <div class="kanban-header small-screen-header">
-                    <span></span>
-                    <div class="status-container">
-                        <span class="material-symbols-outlined fill-icon">
-                            circle
-                        </span>
-                        <span class="status">סטטוס</span>
-                    </div>
-                    <span class="material-symbols-outlined close-icon">
-                        expand_more
-                    </span>
+<div class="kanban-content" id="column-proposal">
+    <div class="kanban-title">הצעה</div>
+
+    
+    <div class="kanban-note yellow-border">
+      <span class="material-symbols-outlined select-note-icon">
+        check
+      </span>
+      <div class="note-card">
+     
+       
+        <div class="card__boxes">
+          <!-- קשרים -->
+          <div class="card__boxes--box box-reduced temp-class" data-target="box1">
+            <div class="card__boxes--box__header">
+              <div class="card__boxes--box__header--title">
+                <span class="material-symbols-outlined"> link </span>
+                <span>קשרים</span>
+              </div>
+              <div class="card__boxes--box__header--btns">
+                <div class="dynamic-btns">
+                  <span class="material-symbols-outlined btn-default">
+                    add
+                  </span>
+                  <span class="material-symbols-outlined btn-default close-expand-new">
+                    close
+                  </span>
+                  <span class="material-symbols-outlined btn-default expend-btn" id="toggleButton">
+                    arrows_more_up
+                  </span>
+                  <span class="material-symbols-outlined btn-default minimize" data-target="box1" id="start-animation">
+                    arrows_more_down
+                  </span>
                 </div>
-                <div class="kanban-header hidden-header green-header">
-                    <span></span>
-                    <div class="status-container">
-                        <span class="material-symbols-outlined fill-icon">
-                            circle
-                        </span>
-                        <span class="status">פתוח</span>
-                    </div>
-                    <span class="material-symbols-outlined close-icon" id="menu-icon">
+                <span class="material-symbols-outlined btn-default more-vert">
+                  more_vert
+                  <div class="local-menu-more-vert icons-menu active">
+                    <div class="local-menu-more-vert__item only-icons">
+                      <span class="material-symbols-outlined showSingle btn-default">
+                        top_panel_open
+                      </span>
+                      <span class="material-symbols-outlined btn-defadivt">search</span>
+                      <span class="material-symbols-outlined btn-default">filter_alt</span>
+                      <span class="material-symbols-outlined btn-default">cached</span>
+                      <span class="material-symbols-outlined btn-default">print</span>
+                      <span class="material-symbols-outlined btn-default" id="push-pin">push_pin</span>
+                      <span class="material-symbols-outlined btn-default">content_copy</span>
+                      <span class="material-symbols-outlined btn-default" id="open-export-menu">exit_to_app</span>
+                      <span class="material-symbols-outlined btn-default" id="open-mark-menu">done</span>
+                      <span class="material-symbols-outlined btn-default" id="open-delete-menu">delete</span>
+                      <span class="material-symbols-outlined btn-default">
                         close
-                    </span>
-                </div>
-                <div class="kanban-content-container" id="open">
-                    <div class="kanban-content">
-                        <div class="kanban-title">פוטנציאלי</div>
-                        <div class="kanban-note">
-                        </div>
-                        <div class="kanban-note">
-                        </div>
+                      </span>
                     </div>
-                    <div class="kanban-content">
-                        <div class="kanban-title">הצעה</div>
-                        <div class="kanban-note">
-                        </div>
-                        <div class="kanban-note">
-                        </div>
-                    </div>
-                    <div class="kanban-content">
-                        <div class="kanban-title">הזמנה</div>
-                        <div class="kanban-note">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="kanban">
-                <div class="kanban-header hidden-header yellow-header">
-                    <span></span>
-                    <div class="status-container">
-                        <span class="material-symbols-outlined fill-icon">
-                            circle
+                  </div>
+                  <div class="local-menu-more-vert push-pin-menu active" id="display-menu">
+                    <div class="local-menu-more-vert__item">
+                      <div class="title">ברירת מחדל לתצוגה:</div>
+                      <div>
+                        <span class="material-symbols-outlined check-box-checked">
+                          done
                         </span>
-                        <span class="status">ביצוע</span>
-                    </div>
-                    <span class="material-symbols-outlined close-icon">
-                        close
-                    </span>
-                </div>
-                <div class="kanban-content-container" id="ongoing">
-                    <div class="kanban-content">
-                        <div class="kanban-title">זכיה</div>
-                        <div class="kanban-note">
-                        </div>
-                    </div>
-                    <div class="kanban-content">
-                        <div class="kanban-title">בעבודה</div>
-                        <div class="kanban-note">
-                        </div>
-                    </div>
-                    <div class="kanban-content">
-                        <div class="kanban-title">בהמתנה</div>
-                        <div class="kanban-note">
-                        </div>
-                        <div class="kanban-note">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="kanban">
-                <div class="kanban-header hidden-header purple-header">
-                    <span></span>
-                    <div class="status-container">
-                        <span class="material-symbols-outlined fill-icon">
-                            circle
+                        <span class="material-symbols-outlined icon-disabled">
+                          crop_16_9
                         </span>
-                        <span class="status">סגור</span>
+                        <span>מצומצמת</span>
+                      </div>
+                      <div>
+                        <span class="material-symbols-outlined check-box-checked">
+                          check_box_outline_blank
+                        </span>
+                        <span class="material-symbols-outlined icon-disabled">
+                          web_asset
+                        </span>
+                        <span>מורחבת</span>
+                      </div>
+                      <div>
+                        <span class="material-symbols-outlined check-box-blank">
+                          check_box_outline_blank
+                        </span>
+                        <span class="material-symbols-outlined icon-disabled">
+                          top_panel_open
+                        </span>
+                        <span>פתוחה למטה</span>
+                      </div>
+                      <div>
+                        <span class="material-symbols-outlined check-box-blank">
+                          check_box_outline_blank
+                        </span>
+                        <span class="material-symbols-outlined icon-disabled">
+                          arrows_more_down
+                        </span>
+                        <span>מוקטנת</span>
+                      </div>
+                      <div>
+                        <span class="material-symbols-outlined check-box-blank">
+                          check_box_outline_blank
+                        </span>
+                        <span class="material-symbols-outlined icon-disabled">
+                          visibility_off
+                        </span>
+                        <span>מוסתרת</span>
+                      </div>
                     </div>
-                    <span class="material-symbols-outlined close-icon">
-                        close
-                    </span>
-                </div>
-                <div class="kanban-content-container" id="close">
-                    <div class="kanban-content">
-                        <div class="kanban-title">בוצע</div>
-                        <div class="kanban-note">
-                        </div>
-                        <div class="kanban-note">
-                        </div>
+                  </div>
+                  <div class="local-menu-more-vert push-pin-menu active" id="delete-menu">
+                    <div class="local-menu-more-vert__item">
+                      <div class="title">מחק:</div>
+                      <div>
+                        <span>מסומנים</span>
+                      </div>
+                      <div>
+                        <span>מוצגים</span>
+                      </div>
                     </div>
-                    <div class="kanban-content">
-                        <div class="kanban-title">זכיה - הסתים</div>
-                        <div class="kanban-note">
-                        </div>
+                  </div>
+                  <div class="local-menu-more-vert push-pin-menu active" id="mark-menu">
+                    <div class="local-menu-more-vert__item">
+                      <div class="title">סימון:</div>
+                      <div>
+                        <span>בטל את כל המסומנים</span>
+                      </div>
+                      <div>
+                        <span>סמן הכול</span>
+                      </div>
+                      <div>
+                        <span>הפוך בחירה</span>
+                      </div>
                     </div>
-                    <div class="kanban-content">
-                        <div class="kanban-title">הקפאה</div>
-                        <div class="kanban-note">
-                        </div>
+                  </div>
+                  <div class="local-menu-more-vert push-pin-menu active" id="export-menu">
+                    <div class="local-menu-more-vert__item">
+                      <div class="title">יצוא:</div>
+                      <div>
+                        <span>רגיל</span>
+                      </div>
+                      <div>
+                        <span>מורחב</span>
+                      </div>
                     </div>
-                    <div class="kanban-content">
-                        <div class="kanban-title">הפסד</div>
-                    </div>
-                    <div class="kanban-content">
-                        <div class="kanban-title">מבוטל</div>
-                        <div class="kanban-note">
-                        </div>
-                    </div>
-                </div>
+                  </div>
+                </span>
+              </div>
             </div>
+            <div class="card__boxes--box__content zero-extend" id="zero-extend-communications">
+              <div class="card__boxes--box__content--fields">
+                <span>פיגמה, מעסיק</span>
+                <span class="material-symbols-outlined stop-icon"> stop </span>
+                <span>אביבה</span>
+                <span class="material-symbols-outlined stop-icon"> stop </span>
+                <span>יצחק נהון, ממליץ</span>
+              </div>
+
+            </div>
+            <div class="card__boxes--box__content active first-extend" id="first-extend-communications">
+              <div class="card__boxes--box__content--table">
+                <div class="table-flex-container">
+                  <div class="table-flex">
+                    <div class="table-header">
+                      <div class="table-cell sticky-cell sticky-header">
+                        שם
+                      </div>
+                      <div class="table-cell big-cell">תפקיד בקשר</div>
+                      <div class="table-cell big-cell">תקשורת</div>
+                    </div>
+                    <div class="table-row">
+                      <div class="table-cell sticky-cell sticky-row">Figma
+                      </div>
+                      <div class="table-cell big-cell">
+                        מעסיק חיצוני, בעלים
+                      </div>
+                      <div class="table-cell big-cell">
+                        <span>04-84900301, ראשי</span>
+                        <span class="material-symbols-outlined stop-icon"> stop
+                        </span>
+                        <span>04-8490032, פקס</span>
+                        <span class="material-symbols-outlined stop-icon"> stop
+                        </span>
+                        <span>055-5555555, סיווג</span>
+                      </div>
+                    </div>
+                    <div class="table-row">
+                      <div class="table-cell sticky-cell sticky-row">
+                        אביבה
+                      </div>
+                      <div class="table-cell big-cell">
+                        עובד
+                      </div>
+                      <div class="table-cell big-cell">
+                      </div>
+                    </div>
+                    <div class="table-row">
+                      <div class="table-cell sticky-cell sticky-row">יצחק נהון
+                      </div>
+                      <div class="table-cell big-cell">
+                        עובד, מזכיר
+                      </div>
+                      <div class="table-cell big-cell">
+                        <span>04-84900301, ראשי</span>
+                        <span class="material-symbols-outlined stop-icon"> stop
+                        </span>
+                        <span>04-8490032, פקס</span>
+                        <span class="material-symbols-outlined stop-icon"> stop
+                        </span>
+                        <span>055-5555555, סיווג</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+       
+          <!-- מידע נוסף -->
+          <div class="card__boxes--box box-reduced active" data-target="box4">
+            <div class="card__boxes--box__header">
+              <div class="card__boxes--box__header--title">
+                <span class="material-symbols-outlined"> info </span>
+                <span>מידע נוסף</span>
+              </div>
+              <div class="card__boxes--box__header--btns">
+                <div class="dynamic-btns">
+                  <span class="material-symbols-outlined btn-default close-expand-new">
+                    close
+                  </span>
+                  <span class="material-symbols-outlined btn-default expend-btn">
+                    arrows_more_up
+                  </span>
+                  <span class="material-symbols-outlined showSingle btn-default" style="display: none;">
+                    top_panel_open
+                  </span>
+                  <span class="material-symbols-outlined btn-default minimize" data-target="box4">
+                    arrows_more_down
+                  </span>
+                </div>
+                <span class="material-symbols-outlined btn-default">
+                  more_vert
+                </span>
+              </div>
+            </div>
+            <div class="card__boxes--box__content zero-extend">
+              <div class="card__boxes--box__content--fields">
+                <span>יעל סגל</span>
+                <span class="material-symbols-outlined stop-icon"> stop </span>
+                <span>דוקטור</span>
+                <span class="material-symbols-outlined stop-icon"> stop </span>
+                <span>24/08/1989</span>
+              </div>
+            </div>
+            <div class="card__boxes--box__content active first-extend">
+              <div class="card__boxes--box__content--fields">
+                <div class="fields-wrapper">
+                  <div class="fields">
+                    <span class="edit-content even no-padding">
+                      <span class="label">
+                        <span>שם</span>
+                      </span>
+                      <span class="edit-field">
+                        <span>יעל סגל</span>
+                      </span>
+                    </span>
+                    <span class="edit-content even no-padding">
+                      <span class="label">
+                        <span>תואר</span>
+                      </span>
+                      <span class="edit-field">
+                        <span>דוקטור</span>
+                      </span>
+                    </span>
+                    <span class="edit-content even no-padding">
+                      <span class="label">
+                        <span>תאריך לידה</span>
+                      </span>
+                      <span class="edit-field">
+                        <span>14/09/1989</span>
+                      </span>
+                    </span>
+                    <span class="edit-content even no-padding">
+                      <span class="label">
+                        <span>ת"ז</span>
+                      </span>
+                      <span class="edit-field">
+                        <span>22308182</span>
+                      </span>
+                    </span>
+                    <span class="edit-content even no-padding">
+                      <span class="label">
+                        <span>סטטוס</span>
+                      </span>
+                      <span class="edit-field">
+                        <span>נקלט</span>
+                      </span>
+                    </span>
+                    <span class="edit-content even no-padding">
+                      <span class="label">
+                        <span>דירוג</span>
+                      </span>
+                      <span class="edit-field">
+                        <span>רגיל</span>
+                      </span>
+                    </span>
+                    <span class="edit-content even no-padding">
+                      <span class="label">
+                        <span>ברירת מחדל</span>
+                      </span>
+                      <span class="edit-field no-padding">
+                        <span style="color: #0083c0;" class="material-symbols-outlined">
+                          done
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+       
         </div>
+
+      </div>
     </div>
-</section>
+
+  </div>

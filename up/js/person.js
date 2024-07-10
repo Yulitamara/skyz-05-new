@@ -4,7 +4,7 @@ const minimizeButtons = document.querySelectorAll(".minimize");
 
 const closeExpandButtons = document.querySelectorAll(".close-expand-new");
 
-const kanbanContent = document.querySelectorAll(".kanban-content");
+const kanbanContent = document.querySelectorAll(".kanban-content"); 
 
 
 function handleExpandedClass() {
@@ -112,6 +112,19 @@ function handleResize() {
 
 window.addEventListener("load", handleExpandedClass);
 window.addEventListener("resize", handleExpandedClass);
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  expendButtons.forEach(button => {
+      button.addEventListener("click", function() {
+          // Find the closest kanban-content parent
+          const kanbanContent = this.closest(".kanban-content");
+          if (kanbanContent) {
+              kanbanContent.classList.add("kanban-expanded");
+          }
+      });
+  });
+});
 
 ///////////////////////////// OPEN IN NEW ////////////////////////////
 const openInNewButtons = document.querySelectorAll(".open-in-new");
