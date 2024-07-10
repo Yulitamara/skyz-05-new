@@ -3412,6 +3412,8 @@ textarea {
   transition: all 0.2s ease-in-out;
   padding: 0 0.2rem;
   border-radius: 0.5rem;
+  align-self: flex-end;
+  padding: 0 1rem;
 }
 .kanban-content .kanban-note-header .note-date:hover {
   background-color: var(--color-hover-btn);
@@ -3625,6 +3627,9 @@ textarea {
   color: var(--color-on-primary);
 }
 
+.note-card .card-header .top {
+  padding: 0;
+}
 .note-card .card-header .top .left {
   flex-direction: column;
   align-items: start;

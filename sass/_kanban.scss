@@ -158,6 +158,8 @@
         transition: $transition;
         padding: 0 0.2rem;
         border-radius: $border-radius-small;
+        align-self: flex-end;
+        padding: 0 1rem;
       }
       .note-date:hover {
         background-color: var(--color-hover-btn);
@@ -412,6 +414,7 @@
 .note-card {
   .card-header {
     .top {
+      padding: 0;
       .left {
         flex-direction: column;
         align-items: start;
