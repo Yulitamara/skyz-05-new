@@ -409,6 +409,7 @@
 }
 
 .note-card {
+  
   .card-header {
     .top {
       .left {
@@ -417,19 +418,9 @@
         gap: 0;
       }
       .right {
+        position: relative; 
         align-self: start;
         padding-top: 1rem;
-      }
-    }
-  }
-
-  .card-header {
-    .top {
-      .left {
-        flex-direction: column;
-      }
-      .right {
-        position: relative;
       }
     }
   }
@@ -453,5 +444,15 @@
 
   .fields-wrapper .fields {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .container-new-small-boxes-second { 
+    opacity: 0;
+  }
+}
+
+.note-card:hover {
+  .container-new-small-boxes-second { 
+    opacity: 1;
   }
 }

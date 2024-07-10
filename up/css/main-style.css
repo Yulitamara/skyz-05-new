@@ -3629,14 +3629,9 @@ textarea {
   gap: 0;
 }
 .note-card .card-header .top .right {
+  position: relative;
   align-self: start;
   padding-top: 1rem;
-}
-.note-card .card-header .top .left {
-  flex-direction: column;
-}
-.note-card .card-header .top .right {
-  position: relative;
 }
 .note-card .round-img-container {
   display: none;
@@ -3651,6 +3646,13 @@ textarea {
 }
 .note-card .fields-wrapper .fields {
   grid-template-columns: repeat(1, 1fr);
+}
+.note-card .container-new-small-boxes-second {
+  opacity: 0;
+}
+
+.note-card:hover .container-new-small-boxes-second {
+  opacity: 1;
 }
 
 .main-container {
