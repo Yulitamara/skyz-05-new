@@ -127,10 +127,11 @@
     flex-direction: column;
     gap: 1rem;
     cursor: grab;
-    background-color: var(--color-on-primary);
     position: relative;
     transition: $transition;
     z-index: 90;
+    background-color: var(--color-bg);
+    border: 0.5px solid #d6d6d6;
 
     &-header {
       display: flex;
@@ -184,13 +185,13 @@
       background-color: #f4e774;
     }
     .line.pink-border {
-      background-color: #ffe4e2;
+      background-color: #ffcfcc;
     }
     .line.blue-border {
       background-color: #d4e4ed;
     }
     .line.green-border {
-      background-color: #d4edd7;
+      background-color: #b3cfb7;
     }
 
     &-title {
@@ -221,8 +222,8 @@
     }
   }
   .kanban-note.gray-border {
-    border: 0.5px solid #dddddd;
-    background-color: var(--color-on-primary);
+    border: 0.5px solid #d6d6d6;
+    background-color: var(--color-bg);
   }
   .kanban-note.yellow-border {
     border: 0.5px solid #f4e774;
@@ -230,7 +231,7 @@
   }
 
   .kanban-note.pink-border {
-    border: 0.5px solid #ffe0de;
+    border: 0.5px solid #ffcfcc;
     background-color: #ffe8e6;
   }
   .kanban-note.blue-border {
@@ -238,7 +239,7 @@
     background-color: #e9f7ff;
   }
   .kanban-note.green-border {
-    border: 0.5px solid #d4edd7;
+    border: 0.5px solid #b3cfb7;
     background-color: #d4f1d6;
   }
 }
@@ -355,19 +356,19 @@
   border-top: 1px solid #000; /* Diagonal line using border-top */
 }
 .pink-border {
-  background-color: #ff99cc;
+  background-color: #ffcfcc;
 }
 
 .blue-border {
-  background-color: #99ccff;
+  background-color: #d1dee5;
 }
 
 .yellow-border {
-  background-color: #fff099;
+  background-color: #f4e774;
 }
 
 .green-border {
-  background-color: #d4edd7;
+  background-color: #b3cfb7;
 }
 
 .list-container {
@@ -448,6 +449,9 @@
   .container-new-small-boxes-second {
     opacity: 0;
   }
+}
+.small-boxes-wrapper {
+  margin-top: 1.5rem;
 }
 
 .note-card:hover {
