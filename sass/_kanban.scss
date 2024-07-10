@@ -222,7 +222,14 @@
     .select-note-icon {
       opacity: 1;
     }
+    .select-note-icon:hover {
+      background-color: #000;
+    }
   }
+  .note-selected {
+    border: 0.5px solid #000 !important;
+  }
+
   .kanban-note.gray-border {
     border: 0.5px solid #d6d6d6;
     background-color: var(--color-bg);

@@ -126,3 +126,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// const selectNoteIcons = document.querySelectorAll(".select-note-icon");
+
+// selectNoteIcons.forEach(function (icon) {
+//   icon.addEventListener("click", function () {
+//     const kanbanNote = this.closest(".kanban-note");
+//     if (kanbanNote) {
+//       kanbanNote.classList.add("note-selected");
+//     }
+//   });
+// });
