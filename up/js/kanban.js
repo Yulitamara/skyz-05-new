@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         icon.innerHTML = "close"; // Change back to "close" when expanded
       }
+      
     });
   });
 });
@@ -137,3 +138,11 @@ document.addEventListener("DOMContentLoaded", () => {
 //     }
 //   });
 // });
+
+$('.minimize').click(function() {
+  // Check if all zero-extend elements within the current context (`.kanban-content`) have no active class
+  if ($('.zero-extend', $(this).closest('.kanban-content')).not('.active').length === $('.zero-extend', $(this).closest('.kanban-content')).length) {
+    // If all zero-extend elements have no active class, remove .kanban-expanded from the closest .kanban-content
+    $(this).closest('.kanban-content').removeClass('kanban-expanded');
+  }
+});

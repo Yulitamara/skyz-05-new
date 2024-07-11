@@ -54,6 +54,7 @@ function handleExpandedClass() {
       const firstExtend = parentBox.querySelector(".first-extend");
 
       if (zeroExtend.classList.contains("active")) {
+        
         if (screenWidth > 1200) {
           if (parentBox.classList.contains("expanded")) {
             expendButtons[index].classList.remove("disabled-btn");
@@ -69,6 +70,10 @@ function handleExpandedClass() {
           }
         }
       }
+      // if ($('.zero-extend', $(this).closest('.kanban-content')).not('.active').length === $('.zero-extend', $(this).closest('.kanban-content')).length) {
+      //   // If all zero-extend elements have no active class, remove .kanban-expanded from the closest .kanban-content
+      //   $(this).closest('.kanban-content').removeClass('kanban-expanded');
+      // }
       if (
         !parentBox.classList.contains("expanded") &&
         !parentBox.classList.contains("expanded-max")
