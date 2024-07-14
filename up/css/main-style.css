@@ -2911,7 +2911,6 @@ textarea {
 }
 .card-header {
   padding: 0 0.5rem;
-  padding-bottom: 2rem;
   color: var(--color-on-primary-light);
 }
 .card-header .top {
