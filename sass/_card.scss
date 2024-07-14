@@ -17,6 +17,12 @@
     // min-height: 110vh;
     transition: all 1s ease-in-out;
 
+    .top-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
     &__navigate {
       display: flex;
       align-items: center;

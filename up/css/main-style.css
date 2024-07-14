@@ -542,16 +542,13 @@ i {
 }
 
 textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   height: 20px;
   resize: none;
   border: none;
   font-size: 1.2rem;
-}
-
-textarea::-moz-placeholder {
-  color: gray;
-  font-family: "Open Sans", sans-serif;
 }
 
 textarea::placeholder {
@@ -608,7 +605,6 @@ hr {
   align-items: center;
   overflow-x: hidden;
   min-height: 100vh;
-  max-height: -moz-min-content;
   max-height: min-content;
   min-width: 210px;
 }
@@ -665,6 +661,7 @@ hr {
 .side-nav__content--list__item:focus {
   -webkit-tap-highlight-color: transparent;
   outline: none;
+  -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
 .side-nav__content--list__item.create-item {
@@ -759,10 +756,6 @@ hr {
   align-items: center;
   gap: 2rem;
 }
-.navbar input[type=text].search-input::-moz-placeholder {
-  opacity: 0.5;
-  font-size: 1.25rem;
-}
 .navbar input[type=text].search-input::placeholder {
   opacity: 0.5;
   font-size: 1.25rem;
@@ -803,8 +796,7 @@ hr {
 }
 .round-img-container img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   display: block;
 }
@@ -1178,13 +1170,17 @@ tr > td:first-child {
 }
 .card-container .card {
   background-color: var(--color-bg);
-  max-height: -moz-min-content;
   max-height: min-content;
   padding: 1rem;
   max-width: 100%;
   container-type: inline-size;
   border-radius: 1.4rem;
   transition: all 1s ease-in-out;
+}
+.card-container .card .top-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .card-container .card__navigate {
   display: flex;
@@ -1308,7 +1304,6 @@ tr > td:first-child {
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
-  width: -moz-fit-content;
   width: fit-content;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
@@ -1337,7 +1332,6 @@ tr > td:first-child {
   top: 100%;
   left: 0;
   width: 100%;
-  width: -moz-fit-content;
   width: fit-content;
   min-width: 100px;
   background-color: var(--color-on-primary);
@@ -1496,19 +1490,9 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input::-moz-placeholder {
-  color: var(--color-permanent-on-primary-light);
-  font-size: 1.25rem;
-}
-
 input::placeholder {
   color: var(--color-permanent-on-primary-light);
   font-size: 1.25rem;
-}
-
-input[type=number]::-moz-placeholder, input[type=text]::-moz-placeholder {
-  opacity: 0.5;
-  font-family: "Open Sans", sans-serif;
 }
 
 input[type=number]::placeholder,
@@ -1531,11 +1515,6 @@ input[type=text].edit-name {
 input[type=text].edit-name:hover,
 input[type=text].edit-name:focus-within {
   border: 1px solid var(--color-primary);
-}
-
-input[type=text].edit-name::-moz-placeholder {
-  opacity: 0.5;
-  font-size: 1.8rem;
 }
 
 input[type=text].edit-name::placeholder {
@@ -1727,7 +1706,6 @@ textarea {
   gap: 0.5rem;
   padding: 0.4rem 0.6rem;
   border-radius: 0.5rem;
-  width: -moz-fit-content;
   width: fit-content;
   height: 30px;
   border: 1.5px solid var(--color-light-gray);
@@ -1772,7 +1750,6 @@ textarea {
   font-size: 1.2rem;
   gap: 5px;
   border-radius: 8px;
-  width: -moz-fit-content;
   width: fit-content;
   height: 30px;
   background-color: var(--color-primary-95);
@@ -2082,7 +2059,6 @@ textarea {
   gap: 0.5rem;
   padding: 0.4rem 0.8rem;
   border-radius: 0.5rem;
-  width: -moz-fit-content;
   width: fit-content;
   min-width: 50px;
   height: 47px;
@@ -2100,7 +2076,6 @@ textarea {
   gap: 5px;
   padding: 0.4rem 0.8rem;
   border-radius: 0.5rem;
-  width: -moz-fit-content;
   width: fit-content;
   min-width: 50px;
   height: 47px;
@@ -2196,7 +2171,6 @@ textarea {
   gap: 0.2rem;
   padding: 0 10px;
   border-radius: 2.2rem;
-  width: -moz-fit-content;
   width: fit-content;
   min-width: 50px;
   display: flex;
@@ -2749,7 +2723,6 @@ textarea {
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
-  min-width: -moz-fit-content;
   min-width: fit-content;
 }
 
@@ -2837,7 +2810,6 @@ textarea {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  width: -moz-max-content;
   width: max-content;
   justify-content: center;
   border-radius: 1.4rem;
@@ -2887,7 +2859,6 @@ textarea {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  width: -moz-max-content;
   width: max-content;
   justify-content: center;
   border-radius: 0.5rem;
@@ -3103,7 +3074,6 @@ textarea {
   gap: 1rem;
   color: var(--color-on-primary-light);
   padding: 1rem 2rem;
-  width: -moz-max-content;
   width: max-content;
 }
 .calendar-menu .date-nav {
@@ -3506,7 +3476,6 @@ textarea {
   justify-content: start;
   flex-direction: column-reverse;
   min-height: 120px;
-  height: -moz-min-content;
   height: min-content;
   width: 50px;
   align-items: center;
@@ -3770,8 +3739,7 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   cursor: pointer;
 }
 
@@ -4000,8 +3968,7 @@ textarea {
 }
 .chat-icon-container img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   display: block;
 }
@@ -4052,8 +4019,7 @@ textarea {
 
 img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .chat-list .chat-box .chat-details .text-message b {
@@ -4231,8 +4197,7 @@ img {
 }
 .message-container .chat-icon-container img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   display: block;
 }

@@ -139,10 +139,28 @@ document.addEventListener("DOMContentLoaded", () => {
 //   });
 // });
 
-$('.minimize').click(function() {
-  // Check if all zero-extend elements within the current context (`.kanban-content`) have no active class
-  if ($('.zero-extend', $(this).closest('.kanban-content')).not('.active').length === $('.zero-extend', $(this).closest('.kanban-content')).length) {
-    // If all zero-extend elements have no active class, remove .kanban-expanded from the closest .kanban-content
-    $(this).closest('.kanban-content').removeClass('kanban-expanded');
+// $('.minimize').click(function() {
+//   // Check if all zero-extend elements within the current context (`.kanban-content`) have no active class
+//   if ($('.zero-extend', $(this).closest('.kanban-content')).not('.active').length === $('.zero-extend', $(this).closest('.kanban-content')).length) {
+//     // If all zero-extend elements have no active class, remove .kanban-expanded from the closest .kanban-content
+//     $(this).closest('.kanban-content').removeClass('kanban-expanded');
+//   }
+// });
+
+
+$(document).ready(function() {
+  $('.minimize').click(function() {
+      // Trigger the event to check for active classes
+      checkActiveClasses();
+  });
+
+  function checkActiveClasses() {
+      // Check if all elements with class '.first-extand' have the class 'active'
+      var allActive = $('.first-extand').length === $('.first-extand.active').length;
+      
+      // If all are active, remove the class '.kanban-expanded' from '.kanban-content'
+      if (allActive) {
+          $('.kanban-content').removeClass('kanban-expanded');
+      }
   }
 });
