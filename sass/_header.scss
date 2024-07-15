@@ -13,8 +13,9 @@
 
     .left {
       display: flex;
-      gap: $gap-big;
-      align-items: flex-end;
+      gap: $gap-medium;
+      flex-direction: column;
+
 
       .title {
         display: flex;

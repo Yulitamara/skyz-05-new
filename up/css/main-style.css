@@ -2919,8 +2919,8 @@ textarea {
 }
 .card-header .top .left {
   display: flex;
-  gap: 2rem;
-  align-items: flex-end;
+  gap: 1rem;
+  flex-direction: column;
 }
 .card-header .top .left .title {
   display: flex;
