@@ -1721,17 +1721,13 @@ textarea {
 }
 
 .filter-tag.green {
-  border: 1px solid var(--color-green-light);
+  background-color: var(--color-green-light);
   color: var(--color-green);
 }
 
 .filter-tag.disabled {
   border: none;
   cursor: auto;
-}
-
-.filter-tag:hover {
-  background-color: var(--color-permanent-bg);
 }
 
 .filter-tag.clicked {
@@ -2911,6 +2907,7 @@ textarea {
 }
 .card-header {
   padding: 0 0.5rem;
+  padding-bottom: 2rem;
   color: var(--color-on-primary-light);
 }
 .card-header .top {
