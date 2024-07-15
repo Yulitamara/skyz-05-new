@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // background-color: var(--color-bg-dark);
 
   border-radius: $border-radius-small;
   padding: $padding-xsmall;
@@ -11,6 +10,8 @@
   border: 1px solid var(--color-on-primary);
   width: 200px;
   transition: $transition;
+
+  background-color: var(--color-on-primary);
 
   .edit-content-menu {
     position: absolute;
@@ -110,7 +111,7 @@
 
   .label {
     padding-right: $padding-small;
-    max-width: 90px;
+    max-width: 100px;
     font-size: font-size(font-size-regular);
     display: flex;
     gap: 1.5rem;
