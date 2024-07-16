@@ -2395,11 +2395,9 @@ textarea {
   justify-content: space-between;
   border-radius: 0.5rem;
   padding: 0.2rem;
-  gap: 1rem;
-  border: 1px solid var(--color-on-primary);
+  gap: 0.5rem;
   width: 200px;
   transition: all 0.2s ease-in-out;
-  background-color: var(--color-on-primary);
 }
 .edit-content .edit-content-menu {
   position: absolute;
@@ -2506,6 +2504,16 @@ textarea {
   border-radius: 50%;
   background-color: var(--color-primary-light);
   color: var(--color-on-primary-light);
+}
+.edit-content .pink-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-red-light);
+  color: var(--color-on-red-light);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
 }
 .edit-content .edit-field {
   display: flex;
@@ -2993,6 +3001,10 @@ textarea {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+.card-header .top .right .edit-content {
+  min-width: 150px;
+  max-width: 0;
 }
 .card-header .small-top {
   margin-top: 0px;

@@ -62,6 +62,10 @@
       display: flex;
       align-items: center;
       gap: $gap-small;
+      .edit-content {
+        min-width: 150px;
+        max-width: 0;
+      }
     }
   }
 
