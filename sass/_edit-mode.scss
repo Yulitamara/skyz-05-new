@@ -129,16 +129,6 @@
       color: var(--color-on-primary-light);
     }
   }
-  .pink-label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-red-light);
-    color: var(--color-on-red-light);
-    border-radius: $border-radius-round;
-    height: 30px;
-    width: 30px;
-  }
 
   .edit-field {
     display: flex;
