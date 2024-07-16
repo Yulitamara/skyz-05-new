@@ -2493,6 +2493,7 @@ textarea {
   font-size: 1.25rem;
   display: flex;
   gap: 1.5rem;
+  padding: 0 0.5rem;
 }
 .edit-content .label img {
   display: flex;
@@ -2658,7 +2659,6 @@ textarea {
   .edit-content.no-padding .label,
   .edit-content.di-co .label {
     flex-grow: 0;
-    padding: 0 0.5rem;
   }
   .edit-content .edit-field,
   .edit-content.even .edit-field,
@@ -3001,6 +3001,8 @@ textarea {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 1.25rem;
+  align-self: start;
 }
 .card-header .top .right .edit-content {
   min-width: 150px;
@@ -3038,9 +3040,6 @@ textarea {
 @media screen and (max-width: 470px) {
   .card-header .top .left {
     gap: 0.5rem;
-    flex-direction: column;
-  }
-  .card-header .top .right {
     flex-direction: column;
   }
 }
