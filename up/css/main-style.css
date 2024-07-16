@@ -1262,6 +1262,7 @@ tr > td:first-child {
   flex-wrap: wrap;
   gap: 0.5rem;
   border-radius: 0.5rem;
+  width: 100%;
   flex-grow: 1;
 }
 .card-container .card__boxes--box__content--table {
@@ -2568,8 +2569,8 @@ textarea {
 }
 
 .edit-content.small {
-  min-width: 140px;
-  max-width: 100%;
+  min-width: 120px;
+  max-width: 120px;
 }
 
 .edit-content.medium {
