@@ -29,7 +29,7 @@ html[data-theme=blue] {
   --color-bg-dark: #ccd0de6d;
   --color-table-th: #f2f5fc;
   --color-table-th-hover: #f0f1f1;
-  --color-green: #006029;
+  --color-green: #017a36;
   --color-green-hover: #0a7136;
   --color-green-light: #cad7bd;
   --color-on-green-light: #43493e;
@@ -2400,6 +2400,11 @@ textarea {
   font-size: 22px;
 }
 
+.green-circle {
+  color: var(--color-green);
+  font-size: 22px;
+}
+
 .edit-content {
   position: relative;
   display: flex;
@@ -3005,6 +3010,10 @@ textarea {
   gap: 0.5rem;
   font-size: 1.25rem;
   align-self: start;
+  background-color: var(--color-on-primary);
+  padding: 0 0.5rem;
+  height: 40px;
+  border-radius: 1rem;
 }
 .card-header .top .right .edit-content {
   min-width: 150px;

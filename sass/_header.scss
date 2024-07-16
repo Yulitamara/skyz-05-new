@@ -64,6 +64,10 @@
       gap: $gap-small;
       font-size: font-size(font-size-regular);
       align-self: start;
+      background-color: var(--color-on-primary);
+      padding: 0 0.5rem;
+      height: 40px;
+      border-radius: 1rem;
 
       .edit-content {
         min-width: 150px;
