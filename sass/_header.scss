@@ -10,7 +10,7 @@
     // align-items: center;
     gap: $gap-medium;
     padding-top: $padding-medium;
-    flex-direction: column-reverse;
+    // flex-direction: column-reverse;
 
     .left {
       display: flex;
@@ -65,7 +65,7 @@
       gap: $gap-small;
       font-size: font-size(font-size-regular);
       align-self: start;
-      background-color: var(--color-on-primary);
+      // background-color: var(--color-on-primary);
       padding: 0 0.5rem;
       height: 40px;
       border-radius: 1rem;

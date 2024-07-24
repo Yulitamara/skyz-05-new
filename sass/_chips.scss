@@ -1,3 +1,10 @@
+.chips-container {
+display: flex;
+align-items: center;
+gap: 1rem;
+margin-top: 2rem;
+}
+
 .small-chip {
   font-size: font-size(font-size-small);
   gap: $gap-xsmall;
