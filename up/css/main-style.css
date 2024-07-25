@@ -2986,7 +2986,6 @@ textarea {
   font-size: 1.25rem;
   align-self: start;
   padding: 0 0.5rem;
-  height: 40px;
   border-radius: 1rem;
   width: 50%;
   align-self: flex-end;
@@ -3000,7 +2999,7 @@ textarea {
 }
 @media screen and (max-width: 640px) {
   .card-header .top {
-    align-items: start;
+    flex-direction: column-reverse;
     gap: 1rem;
   }
   .card-header .top .left {
@@ -3022,43 +3021,13 @@ textarea {
   }
   .card-header .top .right {
     margin: 1rem 0 1.5rem 0;
+    align-self: flex-start;
   }
 }
-@media screen and (max-width: 470px) {
-  .card-header .top .left {
-    gap: 0.5rem;
+@media screen and (max-width: 350px) {
+  .card-header .top .right {
     flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 800px) and (max-width: 1400px), (max-width: 600px) {
-  .card-header.long-header .top {
-    flex-direction: column-reverse;
-    align-items: start;
-    gap: 1rem;
-  }
-  .card-header.long-header .top .left {
-    flex-direction: column;
-  }
-  .card-header.long-header .top .left .title span {
-    font-size: 24px;
-  }
-  .card-header.long-header .top .left .title .material-symbols-outlined {
-    font-size: 23px;
-  }
-  .card-header.long-header .top .left .title .debit-number {
-    font-size: 16px;
-    margin-top: 0;
-  }
-  .card-header.long-header .top .left .medium-title span {
-    font-size: 25px;
-  }
-  .card-header.long-header .top .left .small-title span {
-    font-size: 20px;
-  }
-  .card-header.long-header .top .right {
-    margin: 0 0 1.5rem 0;
-    align-self: flex-end;
+    width: auto;
   }
 }
 
@@ -3085,11 +3054,6 @@ textarea {
   }
 }
 
-@media screen and (max-width: 850px) {
-  .right {
-    width: 100% !important;
-  }
-}
 .calendar-menu {
   overflow-x: scroll;
   overflow-y: hidden;
