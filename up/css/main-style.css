@@ -2664,6 +2664,8 @@ textarea {
 }
 .value-text {
   color: #0083c0;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .text-toolbar {
