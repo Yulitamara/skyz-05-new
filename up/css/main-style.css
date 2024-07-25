@@ -2399,12 +2399,11 @@ textarea {
   border-radius: 8px;
   padding: 10px;
   top: 100%;
-  margin: 0.5rem;
   z-index: 100;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 350px;
+  width: 100%;
 }
 .edit-content .edit-content-menu__header {
   display: flex;
@@ -2589,11 +2588,6 @@ textarea {
 .no-padding .edit-field {
   border-radius: 0rem;
   border: none;
-}
-
-.edit-content.small {
-  min-width: 120px;
-  max-width: 120px;
 }
 
 .edit-content.medium {
