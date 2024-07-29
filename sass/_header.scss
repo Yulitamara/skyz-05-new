@@ -62,20 +62,26 @@
     .right {
       display: flex;
       align-items: center;
-      gap: $gap-small;
+      gap: $gap-medium;
       font-size: font-size(font-size-regular);
 
-      .edit-content {
-        width: fit-content;
-      }
-      .edit-content.green {
-        .edit-field {
-          background-color: #b8e4c1;
-          .value-text {
-            color: #0B3A0F;
+      .header-fields {
+        display: flex;
+        gap: $gap-small;
+        .edit-content {
+          width: fit-content;
+        }
+        .edit-content.green {
+          .edit-field {
+            background-color: #b8e4c1;
+            .value-text {
+              color: #0B3A0F;
+            }
           }
         }
       }
+     
+   
       
     }
   }

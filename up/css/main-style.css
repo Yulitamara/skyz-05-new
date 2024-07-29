@@ -2203,7 +2203,6 @@ textarea {
 
 .tags {
   display: flex;
-  padding-bottom: 1rem;
 }
 
 .tag {
@@ -2977,16 +2976,20 @@ textarea {
 .card-header .top .right {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   font-size: 1.25rem;
 }
-.card-header .top .right .edit-content {
+.card-header .top .right .header-fields {
+  display: flex;
+  gap: 0.5rem;
+}
+.card-header .top .right .header-fields .edit-content {
   width: fit-content;
 }
-.card-header .top .right .edit-content.green .edit-field {
+.card-header .top .right .header-fields .edit-content.green .edit-field {
   background-color: #b8e4c1;
 }
-.card-header .top .right .edit-content.green .edit-field .value-text {
+.card-header .top .right .header-fields .edit-content.green .edit-field .value-text {
   color: #0B3A0F;
 }
 .card-header .small-top {
