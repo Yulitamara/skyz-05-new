@@ -174,9 +174,9 @@
 .edit-content:hover:not(.focus-content) {
   background-color: #e0e2ec;
 }
-.edit-content.green:hover:not(.focus-content) {
-  background-color: green;
-}
+// .edit-content.green:hover:not(.focus-content) {
+//   background-color: green;
+// }
 
 .focus-content {
   background-color: var(--color-primary);

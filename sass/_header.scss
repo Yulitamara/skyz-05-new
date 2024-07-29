@@ -80,7 +80,36 @@
             }
           }
         }
- 
+        .edit-content.red {
+          .edit-field {
+            background-color: #FEE3E2;
+            .value-text {
+              color: #913239;
+            }
+          }
+        }
+        .edit-content.yellow {
+          .edit-field {
+            background-color: #FBF3CB;
+            .value-text {
+              color: #877D4B;
+            }
+          }
+        }
+        .edit-content.transparent {
+          .edit-field {
+            background-color: transparent;
+            .value-text {
+              color: #877D4B;
+            }
+          }
+        }
+        .focus-content {
+          background-color: #E0E2EC;
+          .label {
+            color: var(--color-on-primary);
+          }
+        }
       }
      
    

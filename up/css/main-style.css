@@ -2533,10 +2533,6 @@ textarea {
   background-color: #e0e2ec;
 }
 
-.edit-content.green:hover:not(.focus-content) {
-  background-color: green;
-}
-
 .focus-content {
   background-color: var(--color-primary);
 }
@@ -2992,6 +2988,30 @@ textarea {
 }
 .card-header .top .right .header-fields .edit-content.green .edit-field .value-text {
   color: #0B3A0F;
+}
+.card-header .top .right .header-fields .edit-content.red .edit-field {
+  background-color: #FEE3E2;
+}
+.card-header .top .right .header-fields .edit-content.red .edit-field .value-text {
+  color: #913239;
+}
+.card-header .top .right .header-fields .edit-content.yellow .edit-field {
+  background-color: #FBF3CB;
+}
+.card-header .top .right .header-fields .edit-content.yellow .edit-field .value-text {
+  color: #877D4B;
+}
+.card-header .top .right .header-fields .edit-content.transparent .edit-field {
+  background-color: transparent;
+}
+.card-header .top .right .header-fields .edit-content.transparent .edit-field .value-text {
+  color: #877D4B;
+}
+.card-header .top .right .header-fields .focus-content {
+  background-color: #E0E2EC;
+}
+.card-header .top .right .header-fields .focus-content .label {
+  color: var(--color-on-primary);
 }
 .card-header .small-top {
   margin-top: 0px;
