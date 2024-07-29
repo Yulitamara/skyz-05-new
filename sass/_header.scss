@@ -79,6 +79,7 @@
             }
           }
         }
+ 
       }
      
    
@@ -89,6 +90,13 @@
   .small-top {
     margin-top: 0px;
   }
+
+  // @media screen and (max-width: 850px) { 
+  //   .card-header .header-fields .edit-content .edit-field {
+  //       width: fit-content;
+  //       min-width: fit-content !important;
+  //     }
+  //  }
 
   @media screen and (max-width: 640px) {
     .top {
@@ -131,7 +139,7 @@
     .top {
        .right {
         // display: flex;
-        flex-direction: column;
+        // flex-direction: column;
         width: auto;
       }
     }

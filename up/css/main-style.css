@@ -2653,7 +2653,6 @@ textarea {
   .edit-content.no-padding,
   .edit-content.di-co {
     width: 100%;
-    min-width: 180px;
   }
 }
 .value-text {
@@ -3024,7 +3023,6 @@ textarea {
 }
 @media screen and (max-width: 350px) {
   .card-header .top .right {
-    flex-direction: column;
     width: auto;
   }
 }
