@@ -6,11 +6,11 @@
 
   .top {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     // align-items: center;
     gap: $gap-medium;
     padding-top: $padding-medium;
-    // flex-direction: column-reverse;
+    flex-direction: column-reverse;
 
     .left {
       display: flex;
@@ -64,17 +64,19 @@
       align-items: center;
       gap: $gap-small;
       font-size: font-size(font-size-regular);
-      align-self: start;
-      // background-color: var(--color-on-primary);
-      padding: 0 0.5rem;
-      border-radius: 1rem;
-      width: 50%;
-      align-self: flex-end;
 
       .edit-content {
-        min-width: 150px;
-        max-width: 0;
+        width: fit-content;
       }
+      .edit-content.green {
+        .edit-field {
+          background-color: #b8e4c1;
+          .value-text {
+            color: #0B3A0F;
+          }
+        }
+      }
+      
     }
   }
 

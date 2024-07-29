@@ -2526,15 +2526,16 @@ textarea {
   padding: 0 0.1rem;
   transition: all 0.2s ease-in-out;
 }
-.edit-content .edit-field .material-symbols-outlined:hover {
-  background-color: #e0e2ec;
-}
 .edit-content .edit-field:focus-within {
   border: 1px solid var(--color-primary);
 }
 
 .edit-content:hover:not(.focus-content) {
   background-color: #e0e2ec;
+}
+
+.edit-content.green:hover:not(.focus-content) {
+  background-color: green;
 }
 
 .focus-content {
@@ -2932,9 +2933,9 @@ textarea {
 }
 .card-header .top {
   display: flex;
-  justify-content: space-between;
   gap: 1rem;
   padding-top: 1rem;
+  flex-direction: column-reverse;
 }
 .card-header .top .left {
   display: flex;
@@ -2978,15 +2979,15 @@ textarea {
   align-items: center;
   gap: 0.5rem;
   font-size: 1.25rem;
-  align-self: start;
-  padding: 0 0.5rem;
-  border-radius: 1rem;
-  width: 50%;
-  align-self: flex-end;
 }
 .card-header .top .right .edit-content {
-  min-width: 150px;
-  max-width: 0;
+  width: fit-content;
+}
+.card-header .top .right .edit-content.green .edit-field {
+  background-color: #b8e4c1;
+}
+.card-header .top .right .edit-content.green .edit-field .value-text {
+  color: #0B3A0F;
 }
 .card-header .small-top {
   margin-top: 0px;

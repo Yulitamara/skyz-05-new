@@ -159,9 +159,9 @@
       padding: 0 0.1rem;
       transition: $transition;
     }
-    .material-symbols-outlined:hover {
-      background-color: #e0e2ec;
-    }
+    // .material-symbols-outlined:hover {
+    //   background-color: #e0e2ec;
+    // }
   }
   // .edit-field:hover,
   // .edit-field:focus {
@@ -173,6 +173,9 @@
 }
 .edit-content:hover:not(.focus-content) {
   background-color: #e0e2ec;
+}
+.edit-content.green:hover:not(.focus-content) {
+  background-color: green;
 }
 
 .focus-content {
