@@ -2977,10 +2977,12 @@ textarea {
   align-items: center;
   gap: 1rem;
   font-size: 1.25rem;
+  flex-wrap: wrap;
 }
 .card-header .top .right .header-fields {
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 .card-header .top .right .header-fields .edit-content {
   width: fit-content;

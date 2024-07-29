@@ -6,8 +6,6 @@
 
   .top {
     display: flex;
-    // justify-content: space-between;
-    // align-items: center;
     gap: $gap-medium;
     padding-top: $padding-medium;
     flex-direction: column-reverse;
@@ -64,10 +62,13 @@
       align-items: center;
       gap: $gap-medium;
       font-size: font-size(font-size-regular);
+      flex-wrap: wrap;
 
       .header-fields {
         display: flex;
         gap: $gap-small;
+      flex-wrap: wrap;
+
         .edit-content {
           width: fit-content;
         }
@@ -90,13 +91,6 @@
   .small-top {
     margin-top: 0px;
   }
-
-  // @media screen and (max-width: 850px) { 
-  //   .card-header .header-fields .edit-content .edit-field {
-  //       width: fit-content;
-  //       min-width: fit-content !important;
-  //     }
-  //  }
 
   @media screen and (max-width: 640px) {
     .top {
@@ -138,62 +132,12 @@
   @media screen and (max-width: 350px) {
     .top {
        .right {
-        // display: flex;
-        // flex-direction: column;
         width: auto;
       }
     }
   }
 }
 
-// .card-header.long-header {
-//   @media screen and (min-width: 800px) and (max-width: 1400px),
-//     (max-width: 600px) {
-//     .top {
-//       flex-direction: column-reverse;
-//       align-items: start;
-//       gap: $gap-medium;
-//       .left {
-//         flex-direction: column;
-//         // margin-bottom: 2rem;
-//         .title {
-//           span {
-//             font-size: 24px;
-//           }
-//           .material-symbols-outlined {
-//             font-size: 23px;
-//           }
-//           .debit-number {
-//             font-size: 16px;
-//             margin-top: 0;
-//           }
-//         }
-
-//         .medium-title {
-//           span {
-//             font-size: 25px;
-//           }
-//         }
-
-//         .small-title {
-//           span {
-//             font-size: 20px;
-//           }
-//         }
-//       }
-//       .right {
-//         margin: 0 0 1.5rem 0;
-//         align-self: flex-end;
-//       }
-//     }
-//   }
-// }
-
-// @media screen and (max-width: 850px) {
-//   .right {
-//     width: 100% !important;
-//   }
-// }
 
 
 
