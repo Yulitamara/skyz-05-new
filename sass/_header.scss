@@ -1,13 +1,12 @@
 // card header
 .card-header {
-  padding: 0 $padding-small;
   padding-bottom: $padding-big;
   color: var(--color-on-primary-light);
 
   .top {
     display: flex;
     gap: $gap-medium;
-    padding-top: $padding-medium;
+    padding-top: $padding-small;
     flex-direction: column-reverse;
 
     .left {

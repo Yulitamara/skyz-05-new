@@ -2921,14 +2921,13 @@ textarea {
   }
 }
 .card-header {
-  padding: 0 0.5rem;
   padding-bottom: 2rem;
   color: var(--color-on-primary-light);
 }
 .card-header .top {
   display: flex;
   gap: 1rem;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   flex-direction: column-reverse;
 }
 .card-header .top .left {
