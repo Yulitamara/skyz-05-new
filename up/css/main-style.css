@@ -2921,7 +2921,6 @@ textarea {
   }
 }
 .card-header {
-  padding-bottom: 2rem;
   color: var(--color-on-primary-light);
 }
 .card-header .top {
