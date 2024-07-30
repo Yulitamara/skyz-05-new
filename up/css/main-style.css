@@ -3004,10 +3004,7 @@ textarea {
 .card-header .top .right .header-fields .edit-content.yellow .edit-field .value-text {
   color: #877D4B;
 }
-.card-header .top .right .header-fields .edit-content.transparent .edit-field {
-  background-color: transparent;
-}
-.card-header .top .right .header-fields .edit-content.transparent .edit-field .value-text {
+.card-header .top .right .header-fields .edit-content.transparent .value-text {
   color: #877D4B;
 }
 .card-header .top .right .header-fields .focus-content {
