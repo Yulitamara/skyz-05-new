@@ -2944,7 +2944,7 @@ textarea {
   margin-top: 15px;
 }
 .card-header .top .left .title span {
-  font-size: 24px;
+  font-size: 27px;
   color: var(--color-on-primary-light);
 }
 .card-header .top .left .title .material-symbols-outlined {
@@ -2953,6 +2953,7 @@ textarea {
 .card-header .top .left .title .title-icon {
   color: var(--color-primary);
   opacity: 0.5;
+  font-size: 35px;
 }
 .card-header .top .left .medium-title span {
   font-size: 30px;
@@ -2969,7 +2970,7 @@ textarea {
 .card-header .top .right {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   font-size: 1.25rem;
   flex-wrap: wrap;
 }
@@ -2977,6 +2978,10 @@ textarea {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  align-items: center;
+}
+.card-header .top .right .header-fields .add-circle {
+  opacity: 0;
 }
 .card-header .top .right .header-fields .edit-content {
   width: fit-content;
@@ -3010,6 +3015,9 @@ textarea {
 }
 .card-header .top .right .header-fields .focus-content .label {
   color: var(--color-on-primary);
+}
+.card-header .top .right .header-fields:hover .add-circle {
+  opacity: 0.8;
 }
 .card-header .small-top {
   margin-top: 0px;

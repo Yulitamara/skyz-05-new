@@ -23,7 +23,7 @@
           margin-top: 15px;
         }
         span {
-          font-size: 24px;
+          font-size: 27px;
           color: var(--color-on-primary-light);
         }
         .material-symbols-outlined {
@@ -33,6 +33,7 @@
         .title-icon {
           color: var(--color-primary);
           opacity: 0.5;
+          font-size: 35px;
         }
       }
       .medium-title {
@@ -58,7 +59,7 @@
     .right {
       display: flex;
       align-items: center;
-      gap: $gap-medium;
+      gap: 1.5rem;
       font-size: font-size(font-size-regular);
       flex-wrap: wrap;
 
@@ -66,6 +67,10 @@
         display: flex;
         gap: $gap-small;
       flex-wrap: wrap;
+      align-items: center;
+      .add-circle {
+        opacity: 0;
+      }
 
         .edit-content {
           width: fit-content;
@@ -109,7 +114,11 @@
           }
         }
       }
-     
+      .header-fields:hover {
+        .add-circle {
+          opacity: .8;
+        }
+      }
    
       
     }
