@@ -2386,7 +2386,7 @@ textarea {
   align-items: center;
   justify-content: space-between;
   border-radius: 0.5rem;
-  padding: 0.2rem;
+  padding: 0 0.2rem;
   gap: 0.5rem;
   width: 200px;
   transition: all 0.2s ease-in-out;
@@ -3004,8 +3004,18 @@ textarea {
 .card-header .top .right .header-fields .edit-content.yellow .edit-field .value-text {
   color: #877D4B;
 }
-.card-header .top .right .header-fields .edit-content.transparent .value-text {
+.card-header .top .right .header-fields .edit-content.transparent {
+  border: 1px solid rgba(135, 125, 74, 0.361);
+}
+.card-header .top .right .header-fields .edit-content.transparent .edit-field {
+  background-color: transparent;
+  border: none;
+}
+.card-header .top .right .header-fields .edit-content.transparent .edit-field .value-text {
   color: #877D4B;
+}
+.card-header .top .right .header-fields .edit-content:hover {
+  background-color: transparent;
 }
 .card-header .top .right .header-fields .focus-content {
   background-color: #E0E2EC;
