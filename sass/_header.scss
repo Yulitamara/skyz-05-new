@@ -78,6 +78,8 @@
         .edit-content.green {
           .edit-field {
             background-color: #b8e4c1;
+            border-color: transparent;
+
             .value-text {
               color: #0B3A0F;
             }
@@ -86,14 +88,25 @@
         .edit-content.red {
           .edit-field {
             background-color: #FEE3E2;
+            border-color: transparent;
             .value-text {
               color: #913239;
+            }
+          }
+        }
+        .edit-content.blue {
+          .edit-field {
+            background-color: transparent;
+            border: 1px solid #00649369;
+            .value-text {
+              color: var(--color-primary);
             }
           }
         }
         .edit-content.yellow {
           .edit-field {
             background-color: #FBF3CB;
+            border-color: transparent;;
             .value-text {
               color: #877D4B;
             }
