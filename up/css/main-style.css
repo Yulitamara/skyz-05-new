@@ -3036,6 +3036,9 @@ textarea {
 .card-header .top .right .header-fields:hover .add-circle {
   opacity: 0.8;
 }
+.card-header .top .right .add-circle.touchscreen {
+  opacity: 0.8;
+}
 .card-header .small-top {
   margin-top: 0px;
 }
