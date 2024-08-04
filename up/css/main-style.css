@@ -3024,6 +3024,16 @@ textarea {
 .card-header .top .right .header-fields .edit-content.transparent .edit-field .value-text {
   color: #877D4B;
 }
+.card-header .top .right .header-fields .edit-content.gray {
+  border: 1px solid rgba(102, 102, 100, 0.361);
+}
+.card-header .top .right .header-fields .edit-content.gray .edit-field {
+  background-color: transparent;
+  border: none;
+}
+.card-header .top .right .header-fields .edit-content.gray .edit-field .value-text {
+  color: gray;
+}
 .card-header .top .right .header-fields .edit-content:hover {
   background-color: transparent;
 }

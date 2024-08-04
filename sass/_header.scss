@@ -123,6 +123,17 @@
             }
           }
         }
+        .edit-content.gray {
+          border: 1px solid rgba(102, 102, 100, 0.361);
+          .edit-field {
+            background-color: transparent;
+            border: none;
+
+            .value-text {
+              color: gray;
+            }
+          }
+        }
         .edit-content:hover {
           background-color: transparent;
         }
