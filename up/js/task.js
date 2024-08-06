@@ -134,16 +134,39 @@ checkOverflow();
 
 window.addEventListener("resize", checkOverflow);
 
-
 // Check for touch support
-const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
 // Get all elements with the class 'add-circle'
-const addCircleElements = document.querySelectorAll('.add-circle');
+const addCircleElements = document.querySelectorAll(".add-circle");
 
 // Add a class to elements if it's a touch device
 if (isTouchDevice) {
-  addCircleElements.forEach(element => {
-    element.classList.add('touchscreen');
+  addCircleElements.forEach((element) => {
+    element.classList.add("touchscreen");
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuExample = document.getElementById("top-menu-example");
+  const menuExampleClicked = document.getElementById(
+    "top-menu-example-clicked"
+  );
+
+  menuExample.addEventListener("click", () => {
+    menuExample.classList.add("active");
+    menuExampleClicked.classList.remove("active");
+  });
+
+  document.addEventListener("click", (event) => {
+    if (
+      !menuExampleClicked.contains(event.target) &&
+      !menuExample.contains(event.target)
+    ) {
+      if (!menuExampleClicked.classList.contains("active")) {
+        menuExampleClicked.classList.add("active");
+        menuExample.classList.remove("active");
+      }
+    }
+  });
+});
