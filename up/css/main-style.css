@@ -3035,16 +3035,17 @@ textarea {
 .card-header .top .right .header-fields .edit-content {
   width: -moz-fit-content;
   width: fit-content;
+  height: 35px;
 }
 .card-header .top .right .header-fields .edit-content.green .edit-field {
   background-color: #b8e4c1;
   border-color: transparent;
 }
 .card-header .top .right .header-fields .edit-content.green .edit-field .value-text {
-  color: #0B3A0F;
+  color: #0b3a0f;
 }
 .card-header .top .right .header-fields .edit-content.red .edit-field {
-  background-color: #FEE3E2;
+  background-color: #fee3e2;
   border-color: transparent;
 }
 .card-header .top .right .header-fields .edit-content.red .edit-field .value-text {
@@ -3058,11 +3059,11 @@ textarea {
   color: var(--color-primary);
 }
 .card-header .top .right .header-fields .edit-content.yellow .edit-field {
-  background-color: #FBF3CB;
+  background-color: #fbf3cb;
   border-color: transparent;
 }
 .card-header .top .right .header-fields .edit-content.yellow .edit-field .value-text {
-  color: #877D4B;
+  color: #877d4b;
 }
 .card-header .top .right .header-fields .edit-content.transparent {
   border: 1px solid rgba(135, 125, 74, 0.361);
@@ -3072,7 +3073,7 @@ textarea {
   border: none;
 }
 .card-header .top .right .header-fields .edit-content.transparent .edit-field .value-text {
-  color: #877D4B;
+  color: #877d4b;
 }
 .card-header .top .right .header-fields .edit-content.gray {
   border: 1px solid rgba(102, 102, 100, 0.361);
@@ -3088,7 +3089,7 @@ textarea {
   background-color: transparent;
 }
 .card-header .top .right .header-fields .focus-content {
-  background-color: #E0E2EC;
+  background-color: #e0e2ec;
 }
 .card-header .top .right .header-fields .focus-content .label {
   color: var(--color-on-primary);
