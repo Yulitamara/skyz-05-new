@@ -134,18 +134,18 @@ checkOverflow();
 
 window.addEventListener("resize", checkOverflow);
 
-// // Check for touch support
-// const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+// Check for touch support
+const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
-// // Get all elements with the class 'add-circle'
-// const addCircleElements = document.querySelectorAll(".add-circle");
+// Get all elements with the class 'add-circle'
+const addCircleElements = document.querySelectorAll(".add-circle");
 
-// // Add a class to elements if it's a touch device
-// if (isTouchDevice) {
-//   addCircleElements.forEach((element) => {
-//     element.classList.add("touchscreen");
-//   });
-// }
+// Add a class to elements if it's a touch device
+if (isTouchDevice) {
+  addCircleElements.forEach((element) => {
+    element.classList.add("touchscreen");
+  });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const menuExample = document.getElementById("top-menu-example");

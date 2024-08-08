@@ -79,11 +79,13 @@
         }
         .edit-content.green {
           .edit-field {
-            background-color: #b8e4c1;
+            background-color: var(--color-green-kanban);
             border-color: transparent;
 
             .value-text {
               color: #0b3a0f;
+          color: var(--color-on-primary-light);
+
             }
           }
         }
