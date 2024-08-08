@@ -68,14 +68,37 @@
           // height: 200px;
           // width: 400px;
           display: flex;
+          gap: .5rem;
           .group {
             display: flex;
             align-items: flex-start;
             flex-direction: column;
+            gap: .5rem;
             .group-name {
                 font-size: font-size(font-size-regular);
                 margin-right: .5rem;
             }
+            .group-topics {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              font-size: font-size(font-size-regular);
+
+              .topic {
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                background-color: var(--color-green-kanban);
+                padding: 0 .5rem;
+                border-radius: 6px 6px 0 0;
+                margin-bottom: .6rem;
+              span {
+               font-size: 16px;
+              }
+
+              }
+            }
+          
             .group-fields {
               display: flex;
               align-items: center;

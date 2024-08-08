@@ -656,15 +656,35 @@ hr {
   gap: 1rem;
   margin-top: 0.5rem;
   display: flex;
+  gap: 0.5rem;
 }
 .side-nav__content--list__item .sidebar-menu .group {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  gap: 0.5rem;
 }
 .side-nav__content--list__item .sidebar-menu .group .group-name {
   font-size: 1.25rem;
   margin-right: 0.5rem;
+}
+.side-nav__content--list__item .sidebar-menu .group .group-topics {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.25rem;
+}
+.side-nav__content--list__item .sidebar-menu .group .group-topics .topic {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-green-kanban);
+  padding: 0 0.5rem;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 0.6rem;
+}
+.side-nav__content--list__item .sidebar-menu .group .group-topics .topic span {
+  font-size: 16px;
 }
 .side-nav__content--list__item .sidebar-menu .group .group-fields {
   display: flex;
