@@ -70,11 +70,10 @@
           display: flex;
           .group {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             flex-direction: column;
             .group-name {
                 font-size: font-size(font-size-regular);
-                align-self: flex-start;
                 margin-right: .5rem;
             }
             .group-fields {

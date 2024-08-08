@@ -659,12 +659,11 @@ hr {
 }
 .side-nav__content--list__item .sidebar-menu .group {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 }
 .side-nav__content--list__item .sidebar-menu .group .group-name {
   font-size: 1.25rem;
-  align-self: flex-start;
   margin-right: 0.5rem;
 }
 .side-nav__content--list__item .sidebar-menu .group .group-fields {
