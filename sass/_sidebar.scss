@@ -88,14 +88,28 @@
                 display: flex;
                 align-items: center;
                 gap: .5rem;
-                background-color: var(--color-green-kanban);
                 padding: 0 .5rem;
                 border-radius: 6px 6px 0 0;
                 margin-bottom: .6rem;
-              span {
-               font-size: 16px;
+                border: 1px solid var(--color-bg-dark);
+
+               span {
+                font-size: 16px;
               }
 
+              }
+              
+              .topic.green-clicked {
+                background-color: var(--color-green-kanban);
+                span {
+                  color: var(--color-green);
+                }
+              }
+              .topic.blue-clicked {
+                background-color: var(--color-blue);
+                span {
+                  color: var(--color-primary);
+                }
               }
             }
           
@@ -105,6 +119,30 @@
               gap: .5rem;
               .edit-content {
                 max-width: 100px;
+              }
+              .edit-content:hover {
+                background-color: transparent;
+              }
+          
+              .value-text {
+                color: var(--color-on-primary-light);
+
+              }
+            }
+            .group-fields.green {
+              .edit-field:hover {
+                background-color: var(--color-green);
+                .value-text {
+                  color: var(--color-on-primary);
+                }
+              }
+            }
+            .group-fields.blue {
+              .edit-field:hover {
+                background-color: var(--color-primary);
+                .value-text {
+                  color: var(--color-on-primary);
+                }
               }
             }
           }

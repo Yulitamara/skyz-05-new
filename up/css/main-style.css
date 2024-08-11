@@ -678,13 +678,25 @@ hr {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: var(--color-green-kanban);
   padding: 0 0.5rem;
   border-radius: 6px 6px 0 0;
   margin-bottom: 0.6rem;
+  border: 1px solid var(--color-bg-dark);
 }
 .side-nav__content--list__item .sidebar-menu .group .group-topics .topic span {
   font-size: 16px;
+}
+.side-nav__content--list__item .sidebar-menu .group .group-topics .topic.green-clicked {
+  background-color: var(--color-green-kanban);
+}
+.side-nav__content--list__item .sidebar-menu .group .group-topics .topic.green-clicked span {
+  color: var(--color-green);
+}
+.side-nav__content--list__item .sidebar-menu .group .group-topics .topic.blue-clicked {
+  background-color: var(--color-blue);
+}
+.side-nav__content--list__item .sidebar-menu .group .group-topics .topic.blue-clicked span {
+  color: var(--color-primary);
 }
 .side-nav__content--list__item .sidebar-menu .group .group-fields {
   display: flex;
@@ -693,6 +705,24 @@ hr {
 }
 .side-nav__content--list__item .sidebar-menu .group .group-fields .edit-content {
   max-width: 100px;
+}
+.side-nav__content--list__item .sidebar-menu .group .group-fields .edit-content:hover {
+  background-color: transparent;
+}
+.side-nav__content--list__item .sidebar-menu .group .group-fields .value-text {
+  color: var(--color-on-primary-light);
+}
+.side-nav__content--list__item .sidebar-menu .group .group-fields.green .edit-field:hover {
+  background-color: var(--color-green);
+}
+.side-nav__content--list__item .sidebar-menu .group .group-fields.green .edit-field:hover .value-text {
+  color: var(--color-on-primary);
+}
+.side-nav__content--list__item .sidebar-menu .group .group-fields.blue .edit-field:hover {
+  background-color: var(--color-primary);
+}
+.side-nav__content--list__item .sidebar-menu .group .group-fields.blue .edit-field:hover .value-text {
+  color: var(--color-on-primary);
 }
 .side-nav__content--list__item--collapse {
   display: flex;
