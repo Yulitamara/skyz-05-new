@@ -119,6 +119,9 @@
               gap: .5rem;
               .edit-content {
                 max-width: 100px;
+                .edit-field:hover {
+                  background-color: var(--color-permanent-bg);
+                }
               }
               .edit-content:hover {
                 background-color: transparent;

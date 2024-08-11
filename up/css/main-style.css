@@ -706,6 +706,9 @@ hr {
 .side-nav__content--list__item .sidebar-menu .group .group-fields .edit-content {
   max-width: 100px;
 }
+.side-nav__content--list__item .sidebar-menu .group .group-fields .edit-content .edit-field:hover {
+  background-color: var(--color-permanent-bg);
+}
 .side-nav__content--list__item .sidebar-menu .group .group-fields .edit-content:hover {
   background-color: transparent;
 }
