@@ -378,3 +378,10 @@
 //     }
 //   }
 // }
+// .card__boxes--box__content--fields span {
+//   display: none;
+// }
+
+.card__boxes--box__content--fields span.not-visible {
+  display: none;
+}

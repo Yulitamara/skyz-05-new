@@ -1577,6 +1577,10 @@ tr > td:first-child {
   container-name: card;
 }
 
+.card__boxes--box__content--fields span.not-visible {
+  display: none;
+}
+
 input[type=text],
 input[type=password],
 input[type=number] {

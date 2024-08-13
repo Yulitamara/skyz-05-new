@@ -4,8 +4,7 @@ const minimizeButtons = document.querySelectorAll(".minimize");
 
 const closeExpandButtons = document.querySelectorAll(".close-expand-new");
 
-const kanbanContent = document.querySelectorAll(".kanban-content"); 
-
+const kanbanContent = document.querySelectorAll(".kanban-content");
 
 function handleExpandedClass() {
   // Get the screen width
@@ -19,10 +18,8 @@ function handleExpandedClass() {
       const zeroExtend = parentBox.querySelector(".zero-extend");
       const firstExtend = parentBox.querySelector(".first-extend");
 
-
       if (zeroExtend.classList.contains("active")) {
         button.classList.remove("clicked");
-
 
         if (screenWidth > 1200) {
           if (!parentBox.classList.contains("expanded")) {
@@ -30,7 +27,6 @@ function handleExpandedClass() {
           } else if (screenWidth > 2000) {
             parentBox.classList.add("expanded-max");
             button.classList.add("disabled-btn");
-            
           }
         }
       }
@@ -54,7 +50,6 @@ function handleExpandedClass() {
       const firstExtend = parentBox.querySelector(".first-extend");
 
       if (zeroExtend.classList.contains("active")) {
-        
         if (screenWidth > 1200) {
           if (parentBox.classList.contains("expanded")) {
             expendButtons[index].classList.remove("disabled-btn");
@@ -118,16 +113,15 @@ function handleResize() {
 window.addEventListener("load", handleExpandedClass);
 window.addEventListener("resize", handleExpandedClass);
 
-document.addEventListener("DOMContentLoaded", function() {
-
-  expendButtons.forEach(button => {
-      button.addEventListener("click", function() {
-          // Find the closest kanban-content parent
-          const kanbanContent = this.closest(".kanban-content");
-          if (kanbanContent) {
-              kanbanContent.classList.add("kanban-expanded");
-          }
-      });
+document.addEventListener("DOMContentLoaded", function () {
+  expendButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Find the closest kanban-content parent
+      const kanbanContent = this.closest(".kanban-content");
+      if (kanbanContent) {
+        kanbanContent.classList.add("kanban-expanded");
+      }
+    });
   });
 });
 
@@ -527,3 +521,29 @@ button.addEventListener("click", function () {
     button.textContent = "expand_content"; // Change button text to "expand_content"
   }
 });
+
+//
+document
+  .getElementById("show-more-fields")
+  .addEventListener("click", function () {
+    const elements = document.querySelectorAll(
+      ".card__boxes--box__content--fields span.not-visible, .card__boxes--box__content--fields span.visible"
+    );
+
+    elements.forEach(function (element) {
+      if (element.classList.contains("not-visible")) {
+        element.classList.remove("not-visible");
+        element.classList.add("visible");
+      } else {
+        element.classList.remove("visible");
+        element.classList.add("not-visible");
+      }
+    });
+
+    const btn = document.getElementById("show-more-fields");
+    if (btn.innerHTML.trim() === "expand_content") {
+      btn.innerHTML = "collapse_content";
+    } else {
+      btn.innerHTML = "expand_content";
+    }
+  });

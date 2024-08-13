@@ -11,7 +11,6 @@ homeBtn.addEventListener("click", () => {
   }
 });
 
-
 // Actions Section
 const actionsBtn = document.getElementById("actionsBtn");
 const actionsCard = document.getElementById("actionsCard");
@@ -40,7 +39,6 @@ debitBtn.addEventListener("click", () => {
     chatCard.classList.add("active");
   }
 });
-
 
 // Whatsapp Chat Section
 const chatBtn = document.getElementById("chatBtn");
