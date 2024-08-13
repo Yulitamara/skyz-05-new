@@ -39,24 +39,23 @@
           width: 170px;
           position: relative;
           a {
-          display: flex;
-          align-items: center;
-          gap: 0.4rem;
-          font-size: font-size(font-size-regular);
-
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: font-size(font-size-regular);
           }
           span {
             font-size: font-size(font-size-large);
             color: var(--color-on-primary-light);
           }
-
         }
 
-        
         .sidebar-menu {
           position: fixed;
           background-color: var(--color-on-primary);
-          box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+            0 9px 46px 8px rgba(0, 0, 0, 0.12),
+            0 11px 15px -7px rgba(0, 0, 0, 0.2);
           border-radius: 8px;
           padding: 10px;
           right: 180px;
@@ -68,15 +67,15 @@
           // height: 200px;
           // width: 400px;
           display: flex;
-          gap: .5rem;
+          gap: 0.5rem;
           .group {
             display: flex;
             align-items: flex-start;
             flex-direction: column;
-            gap: .5rem;
+            gap: 0.5rem;
             .group-name {
-                font-size: font-size(font-size-regular);
-                margin-right: .5rem;
+              font-size: font-size(font-size-regular);
+              margin-right: 0.5rem;
             }
             .group-topics {
               display: flex;
@@ -87,18 +86,17 @@
               .topic {
                 display: flex;
                 align-items: center;
-                gap: .5rem;
-                padding: 0 .5rem;
+                gap: 0.5rem;
+                padding: 0 0.5rem;
                 border-radius: 6px 6px 0 0;
-                margin-bottom: .6rem;
+                margin-bottom: 0.6rem;
                 border: 1px solid var(--color-bg-dark);
 
-               span {
-                font-size: 16px;
+                span {
+                  font-size: 16px;
+                }
               }
 
-              }
-              
               .topic.green-clicked {
                 background-color: var(--color-green-kanban);
                 span {
@@ -112,11 +110,11 @@
                 }
               }
             }
-          
+
             .group-fields {
               display: flex;
               align-items: center;
-              gap: .5rem;
+              gap: 0.5rem;
               .edit-content {
                 max-width: 100px;
                 .edit-field:hover {
@@ -126,10 +124,9 @@
               .edit-content:hover {
                 background-color: transparent;
               }
-          
+
               .value-text {
                 color: var(--color-on-primary-light);
-
               }
             }
             .group-fields.green {
@@ -149,8 +146,12 @@
               }
             }
           }
+          .expand-more {
+            align-self: flex-end;
+            font-size: font-size(font-size-regular);
+          }
         }
-        
+
         &--collapse {
           display: flex;
           flex-direction: column;
