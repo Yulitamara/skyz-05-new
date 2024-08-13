@@ -151,7 +151,10 @@
             font-size: font-size(font-size-regular);
           }
         }
-
+        .sidebar-menu.inner {
+          right: 530px;
+          // position: relative;
+        }
         &--collapse {
           display: flex;
           flex-direction: column;
