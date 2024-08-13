@@ -204,6 +204,13 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 10;
   overflow: visible;
+  display: flex;
+  flex-direction: column;
+  .edit-content {
+    width: 150px;
+    margin: 0.5rem;
+    font-family: "Open Sans", sans-serif;
+  }
 }
 
 .local-menu-more-vert__item {
