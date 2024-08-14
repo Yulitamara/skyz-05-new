@@ -196,3 +196,12 @@ document.getElementById("topic-green").addEventListener("click", function() {
   groupFields.classList.add("green");
   groupFields.classList.remove("blue");
 });
+
+
+document.getElementById('expand-groups').addEventListener('click', function() {
+  const groups = document.querySelectorAll('.sidebar-menu .group');
+  
+  groups.forEach(function(group) {
+    group.classList.remove('active');
+  });
+});

@@ -68,7 +68,7 @@
           // width: 400px;
           display: flex;
           gap: 0.5rem;
-          .group {
+          .group  {
             display: flex;
             align-items: flex-start;
             flex-direction: column;
@@ -76,6 +76,7 @@
             .group-name {
               font-size: font-size(font-size-regular);
               margin-right: 0.5rem;
+              color: gray;
             }
             .group-topics {
               display: flex;
@@ -145,6 +146,9 @@
                 }
               }
             }
+          }
+          .group:not(:first-child) {
+            margin-top: .6rem;
           }
           .expand-more {
             align-self: flex-end;

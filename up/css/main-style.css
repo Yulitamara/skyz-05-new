@@ -667,6 +667,7 @@ hr {
 .side-nav__content--list__item .sidebar-menu .group .group-name {
   font-size: 1.25rem;
   margin-right: 0.5rem;
+  color: gray;
 }
 .side-nav__content--list__item .sidebar-menu .group .group-topics {
   display: flex;
@@ -726,6 +727,9 @@ hr {
 }
 .side-nav__content--list__item .sidebar-menu .group .group-fields.blue .edit-field:hover .value-text {
   color: var(--color-on-primary);
+}
+.side-nav__content--list__item .sidebar-menu .group:not(:first-child) {
+  margin-top: 0.6rem;
 }
 .side-nav__content--list__item .sidebar-menu .expand-more {
   align-self: flex-end;
