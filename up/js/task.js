@@ -205,3 +205,29 @@ document.getElementById('expand-groups').addEventListener('click', function() {
     group.classList.remove('active');
   });
 });
+
+// 
+document
+  .getElementById("show-more-fields")
+  .addEventListener("click", function () {
+    const elements = document.querySelectorAll(
+      ".group-fields .edit-content.visible"
+    );
+
+    elements.forEach(function (element) {
+      if (element.classList.contains("not-visible")) {
+        element.classList.remove("not-visible");
+        element.classList.add("visible");
+      } else {
+        element.classList.remove("visible");
+        element.classList.add("not-visible");
+      }
+    });
+
+    const btn = document.getElementById("show-more-fields");
+    if (btn.innerHTML.trim() === "expand_content") {
+      btn.innerHTML = "collapse_content";
+    } else {
+      btn.innerHTML = "expand_content";
+    }
+  });

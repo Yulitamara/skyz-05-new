@@ -231,3 +231,10 @@
     // top: 0;
   }
 }
+
+.not-visible {
+  display: none !important;
+}
+.visible {
+  display: flex;
+}

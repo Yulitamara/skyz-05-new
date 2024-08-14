@@ -803,6 +803,14 @@ hr {
     right: 0 !important;
   }
 }
+.not-visible {
+  display: none !important;
+}
+
+.visible {
+  display: flex;
+}
+
 .navbar {
   position: fixed;
   max-width: 3000px;
