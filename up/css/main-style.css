@@ -660,15 +660,24 @@ hr {
   gap: 0.5rem;
 }
 .side-nav__content--list__item .sidebar-menu .group {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
   gap: 0.5rem;
 }
 .side-nav__content--list__item .sidebar-menu .group .group-name {
   font-size: 1.25rem;
   margin-right: 0.5rem;
   color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.side-nav__content--list__item .sidebar-menu .group .dynamic-btns-group {
+  opacity: 0;
+}
+.side-nav__content--list__item .sidebar-menu .group .dynamic-btns-group span {
+  font-size: 22px;
+}
+.side-nav__content--list__item .sidebar-menu .group .group-name:hover .dynamic-btns-group {
+  opacity: 1;
 }
 .side-nav__content--list__item .sidebar-menu .group .group-topics {
   display: flex;

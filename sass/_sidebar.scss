@@ -68,14 +68,29 @@
           display: flex;
           gap: 0.5rem;
           .group  {
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
+            // display: flex;
+            // align-items: flex-start;
+            // flex-direction: column;
             gap: 0.5rem;
             .group-name {
               font-size: font-size(font-size-regular);
               margin-right: 0.5rem;
               color: gray;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
+            .dynamic-btns-group {
+              opacity: 0;
+              span {
+                font-size: 22px;
+              }
+              
+            }
+            .group-name:hover {
+              .dynamic-btns-group {
+                opacity: 1;
+              }
             }
             .group-topics {
               display: flex;
