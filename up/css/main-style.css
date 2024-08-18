@@ -811,6 +811,23 @@ hr {
   display: flex;
 }
 
+.reduced-groups {
+  align-self: flex-start;
+}
+.reduced-groups .reduced-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  background-color: var(--color-blue);
+  padding: 0.4rem 0.8rem;
+  border-radius: 1.4rem;
+}
+.reduced-groups .reduced-group:hover {
+  background-color: var(--color-blue-hover);
+}
+
 .navbar {
   position: fixed;
   max-width: 3000px;
@@ -2289,6 +2306,14 @@ textarea {
 
 .label-icon {
   color: var(--color-on-primary-light);
+}
+
+.show-on-hover-btn {
+  opacity: 0;
+}
+
+.group-fields:hover .show-on-hover-btn {
+  opacity: 1;
 }
 
 .chips-container {

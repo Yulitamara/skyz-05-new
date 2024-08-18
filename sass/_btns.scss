@@ -126,3 +126,13 @@
 .label-icon {
   color: var(--color-on-primary-light);
 }
+
+.show-on-hover-btn {
+  opacity: 0;
+}
+.group-fields:hover {
+  .show-on-hover-btn{
+    opacity: 1;
+
+  }
+}
