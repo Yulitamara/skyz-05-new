@@ -200,21 +200,18 @@ document.getElementById("topic-green").addEventListener("click", function() {
 
 document.getElementById('expand-groups').addEventListener('click', function() {
   const groups = document.querySelectorAll('.sidebar-menu .group-hidden');
-  
+  const moreLess = document.querySelector('.more-less');
+
   groups.forEach(function(group) {
     group.classList.toggle('active');
   });
-});
-document.querySelectorAll('.more-less').forEach(element => {
-  element.addEventListener('click', function() {
-      if (this.innerHTML === "פחות") {
-          this.innerHTML = "עוד";
-      } else {
-          this.innerHTML = "פחות";
-      }
-  });
-});
 
+  if (moreLess.innerHTML === "עוד") {
+    moreLess.innerHTML = "פחות";
+  } else {
+    moreLess.innerHTML = "עוד";
+  }
+});
 // 
 document
   .getElementById("show-more-fields")
