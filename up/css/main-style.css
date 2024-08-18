@@ -739,7 +739,7 @@ hr {
   color: var(--color-on-primary);
 }
 .side-nav__content--list__item .sidebar-menu .group:not(:first-child) {
-  margin-top: 0.6rem;
+  margin-top: 1rem;
 }
 .side-nav__content--list__item .sidebar-menu .expand-more {
   align-self: flex-end;
