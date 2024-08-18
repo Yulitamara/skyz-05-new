@@ -822,6 +822,11 @@ hr {
 
 .reduced-groups {
   align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 .reduced-groups .reduced-group {
   display: flex;
