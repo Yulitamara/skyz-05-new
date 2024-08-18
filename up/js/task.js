@@ -199,10 +199,19 @@ document.getElementById("topic-green").addEventListener("click", function() {
 
 
 document.getElementById('expand-groups').addEventListener('click', function() {
-  const groups = document.querySelectorAll('.sidebar-menu .group');
+  const groups = document.querySelectorAll('.sidebar-menu .group-hidden');
   
   groups.forEach(function(group) {
-    group.classList.remove('active');
+    group.classList.toggle('active');
+  });
+});
+document.querySelectorAll('.more-less').forEach(element => {
+  element.addEventListener('click', function() {
+      if (this.innerHTML === "פחות") {
+          this.innerHTML = "עוד";
+      } else {
+          this.innerHTML = "פחות";
+      }
   });
 });
 
