@@ -761,6 +761,12 @@ hr {
 .side-nav__content--list__item .sidebar-menu .group.blue .group-fields .edit-content .edit-field:hover {
   background-color: var(--color-blue);
 }
+.side-nav__content--list__item .sidebar-menu .group.purple .group-name {
+  color: #395286;
+}
+.side-nav__content--list__item .sidebar-menu .group.purple .group-fields .edit-content .edit-field:hover {
+  background-color: #e1d6fe;
+}
 .side-nav__content--list__item .sidebar-menu .expand-more {
   align-self: flex-end;
   font-size: 1.25rem;

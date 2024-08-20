@@ -192,6 +192,18 @@
               }
             }
           }
+          .group.purple {
+            .group-name {
+              color: #395286;
+            }
+            .group-fields {
+              .edit-content {
+                .edit-field:hover {
+                  background-color: #e1d6fe;
+                }
+              }
+            }
+          }
           .expand-more {
             align-self: flex-end;
             font-size: font-size(font-size-regular);
