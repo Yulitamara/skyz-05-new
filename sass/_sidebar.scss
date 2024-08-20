@@ -164,8 +164,33 @@
               }
             }
           }
+
           .group:not(:first-child) {
             margin-top: 1rem;
+          }
+          .group.green {
+            .group-name {
+              color: #36562c;
+            }
+            .group-fields {
+              .edit-content {
+                .edit-field:hover {
+                  background-color: #d5f3dc;
+                }
+              }
+            }
+          }
+          .group.blue {
+            .group-name {
+              color: var(--color-primary);
+            }
+            .group-fields {
+              .edit-content {
+                .edit-field:hover {
+                  background-color: var(--color-blue);
+                }
+              }
+            }
           }
           .expand-more {
             align-self: flex-end;

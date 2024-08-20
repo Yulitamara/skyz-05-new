@@ -749,6 +749,18 @@ hr {
 .side-nav__content--list__item .sidebar-menu .group:not(:first-child) {
   margin-top: 1rem;
 }
+.side-nav__content--list__item .sidebar-menu .group.green .group-name {
+  color: #36562c;
+}
+.side-nav__content--list__item .sidebar-menu .group.green .group-fields .edit-content .edit-field:hover {
+  background-color: #d5f3dc;
+}
+.side-nav__content--list__item .sidebar-menu .group.blue .group-name {
+  color: var(--color-primary);
+}
+.side-nav__content--list__item .sidebar-menu .group.blue .group-fields .edit-content .edit-field:hover {
+  background-color: var(--color-blue);
+}
 .side-nav__content--list__item .sidebar-menu .expand-more {
   align-self: flex-end;
   font-size: 1.25rem;
