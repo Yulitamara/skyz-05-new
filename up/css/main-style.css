@@ -717,6 +717,7 @@ hr {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 .side-nav__content--list__item .sidebar-menu .group .group-fields .edit-content {
   max-width: 100px;
@@ -729,6 +730,9 @@ hr {
 }
 .side-nav__content--list__item .sidebar-menu .group .group-fields .value-text {
   color: var(--color-on-primary-light);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .side-nav__content--list__item .sidebar-menu .group .group-fields.green .edit-field:hover {
   background-color: var(--color-green);

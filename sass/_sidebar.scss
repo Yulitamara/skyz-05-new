@@ -67,7 +67,7 @@
           margin-top: 0.5rem;
           display: flex;
           gap: 0.5rem;
-          .group  {
+          .group {
             // display: flex;
             // align-items: flex-start;
             // flex-direction: column;
@@ -85,7 +85,6 @@
               span {
                 font-size: 22px;
               }
-              
             }
             .group-name:hover {
               .dynamic-btns-group {
@@ -130,6 +129,7 @@
               display: flex;
               align-items: center;
               gap: 0.5rem;
+              flex-wrap: wrap;
               .edit-content {
                 max-width: 100px;
                 .edit-field:hover {
@@ -142,6 +142,9 @@
 
               .value-text {
                 color: var(--color-on-primary-light);
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
               }
             }
             .group-fields.green {
@@ -169,7 +172,7 @@
             font-size: font-size(font-size-regular);
           }
         }
-     
+
         &--collapse {
           display: flex;
           flex-direction: column;
@@ -262,14 +265,14 @@
   flex-wrap: wrap;
   margin-top: 1rem;
   .reduced-group {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: .5rem;
-  font-size: font-size(font-size-regular);
-  background-color: var(--color-blue);
-  padding: .4rem .8rem;
-  border-radius: $border-radius-medium;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: font-size(font-size-regular);
+    background-color: var(--color-blue);
+    padding: 0.4rem 0.8rem;
+    border-radius: $border-radius-medium;
   }
   .reduced-group:hover {
     background-color: var(--color-blue-hover);
