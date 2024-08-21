@@ -36,7 +36,6 @@
           gap: 2rem;
           align-items: center;
           flex-wrap: wrap;
-          width: 170px;
           position: relative;
           a {
             display: flex;
@@ -248,12 +247,9 @@
         touch-action: manipulation;
       }
       &__item.create-item {
-        // background-color: var(--color-permanent-secondary);
         border-radius: $border-radius-small;
         margin-bottom: 1rem;
         padding: $padding-small $padding-medium;
-        flex-direction: row;
-        width: 130px;
         align-self: center;
         margin-top: 1rem;
         background-color: var(--color-blue);
