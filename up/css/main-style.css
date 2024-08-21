@@ -752,17 +752,26 @@ hr {
 .side-nav__content--list__item .sidebar-menu .group.green .group-name {
   color: #36562c;
 }
+.side-nav__content--list__item .sidebar-menu .group.green .group-fields .edit-content .edit-field {
+  border: 1px solid #d5f3dc;
+}
 .side-nav__content--list__item .sidebar-menu .group.green .group-fields .edit-content .edit-field:hover {
   background-color: #d5f3dc;
 }
 .side-nav__content--list__item .sidebar-menu .group.blue .group-name {
   color: var(--color-primary);
 }
+.side-nav__content--list__item .sidebar-menu .group.blue .group-fields .edit-content .edit-field {
+  border: 1px solid var(--color-blue);
+}
 .side-nav__content--list__item .sidebar-menu .group.blue .group-fields .edit-content .edit-field:hover {
   background-color: var(--color-blue);
 }
 .side-nav__content--list__item .sidebar-menu .group.purple .group-name {
   color: #3b4aa1;
+}
+.side-nav__content--list__item .sidebar-menu .group.purple .group-fields .edit-content .edit-field {
+  border: 1px solid #e1d6fe;
 }
 .side-nav__content--list__item .sidebar-menu .group.purple .group-fields .edit-content .edit-field:hover {
   background-color: #e1d6fe;
