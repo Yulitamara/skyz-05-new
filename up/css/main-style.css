@@ -3234,6 +3234,13 @@ textarea {
 .card-header .top .right .header-fields .edit-content.red .edit-field .value-text {
   color: #913239;
 }
+.card-header .top .right .header-fields .edit-content.purple .edit-field {
+  background-color: #e1d6fe;
+  border-color: transparent;
+}
+.card-header .top .right .header-fields .edit-content.purple .edit-field .value-text {
+  color: #3b4aa1;
+}
 .card-header .top .right .header-fields .edit-content.blue .edit-field {
   background-color: transparent;
   border: 1px solid rgba(0, 100, 147, 0.4117647059);

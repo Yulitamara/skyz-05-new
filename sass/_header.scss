@@ -84,8 +84,7 @@
 
             .value-text {
               color: #0b3a0f;
-          color: var(--color-on-primary-light);
-
+              color: var(--color-on-primary-light);
             }
           }
         }
@@ -95,6 +94,15 @@
             border-color: transparent;
             .value-text {
               color: #913239;
+            }
+          }
+        }
+        .edit-content.purple {
+          .edit-field {
+            background-color: #e1d6fe;
+            border-color: transparent;
+            .value-text {
+              color: #3b4aa1;
             }
           }
         }
