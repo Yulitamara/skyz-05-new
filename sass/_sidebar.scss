@@ -249,17 +249,14 @@
       &__item.create-item {
         border-radius: $border-radius-small;
         margin-bottom: 1rem;
-        padding: $padding-small 0;
+        padding: $padding-small 0 0 0;
         align-self: center;
         margin-top: 1rem;
         // background-color: var(--color-blue);
         color: var(--color-on-blue);
         .item-name {
           padding: 0.5rem 1rem 0 1rem;
-          a {
-            font-size: 16px;
-
-          }
+         
         }
       }
       // &__item.create-item:hover,
