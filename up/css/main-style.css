@@ -608,7 +608,7 @@ hr {
   overflow-x: hidden;
   min-height: 100vh;
   max-height: min-content;
-  min-width: 210px;
+  min-width: 250px;
 }
 .side-nav__content--list {
   display: flex;

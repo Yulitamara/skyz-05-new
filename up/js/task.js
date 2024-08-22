@@ -236,3 +236,21 @@ document.addEventListener("DOMContentLoaded", () => {
 //       btn.innerHTML = "expand_content";
 //     }
 //   });
+
+document.querySelectorAll('.create-icon').forEach(icon => {
+  icon.addEventListener('click', function() {
+    // Remove 'active' class from all sidebar menus
+    document.querySelectorAll('.sidebar-menu').forEach(menu => {
+      menu.classList.add('active');
+    });
+
+    // Get the color associated with the clicked icon
+    const color = this.getAttribute('data-color');
+
+    // Add 'active' class to the matching sidebar menu
+    const selectedMenu = document.querySelector(`.sidebar-menu[data-color="${color}"]`);
+    if (selectedMenu) {
+      selectedMenu.classList.remove('active');
+    }
+  });
+});
