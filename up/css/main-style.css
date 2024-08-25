@@ -608,7 +608,7 @@ hr {
   overflow-x: hidden;
   min-height: 100vh;
   max-height: min-content;
-  min-width: 250px;
+  min-width: 200px;
 }
 .side-nav__content--list {
   display: flex;
@@ -650,7 +650,6 @@ hr {
   border-radius: 8px;
   padding: 10px;
   right: 180px;
-  top: 120px;
   z-index: 100;
   display: flex;
   flex-direction: column;
@@ -804,8 +803,8 @@ hr {
   border-radius: 0.5rem;
   margin-bottom: 1rem;
   padding: 0.5rem 0 0 0;
-  align-self: center;
   margin-top: 1rem;
+  background-color: var(--color-green-kanban);
   color: var(--color-on-blue);
   padding-bottom: 1rem;
 }
