@@ -127,7 +127,9 @@
       transition: $transition;
     }
     .create-icon:hover {
-  
+      background-color: #e2e1e1;
+    }
+    .create-icon.clicked {
       background-color: #e2e1e1;
     }
   }

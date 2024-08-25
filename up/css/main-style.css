@@ -706,6 +706,9 @@ hr {
 .side-nav__content .create-icon:hover {
   background-color: #e2e1e1;
 }
+.side-nav__content .create-icon.clicked {
+  background-color: #e2e1e1;
+}
 @media screen and (max-width: 1250px) {
   .side-nav {
     position: fixed;
@@ -943,6 +946,9 @@ hr {
   cursor: pointer;
 }
 .navbar__create .create-icon:hover {
+  background-color: #e2e1e1;
+}
+.navbar__create .create-icon.clicked {
   background-color: #e2e1e1;
 }
 .navbar__main {
