@@ -36,6 +36,38 @@
           >
           <div class="navbar__main--logo__name">Skyz<span>CRM</span></div>
         </div>
+        <div class="navbar__create">
+          <div class="create-title">
+            <!-- <span class="material-symbols-outlined"> add </span> -->
+            <div>צור</div>
+          </div>
+          <div class="icons-container">
+            <span
+              class="material-symbols-outlined create-icon"
+              data-color="blue"
+            >
+              person
+            </span>
+            <span
+              class="material-symbols-outlined create-icon"
+              data-color="green"
+            >
+              attach_money
+            </span>
+            <span
+              class="material-symbols-outlined create-icon"
+              data-color="purple"
+            >
+              move_to_inbox
+            </span>
+            <span
+              class="material-symbols-outlined create-icon"
+              data-color="red"
+            >
+              task_alt
+            </span>
+          </div>
+        </div>
       </div>
       <div class="navbar__main">
         <div class="navbar__main--search">
@@ -94,7 +126,7 @@
     <aside class="side-nav" dir="rtl">
       <div class="side-nav__content">
         <ul class="side-nav__content--list">
-          <li class="side-nav__content--list__item create-item">
+          <!-- <li class="side-nav__content--list__item create-item">
             <div class="item-name">
               <a href="#">
                 <span class="material-symbols-outlined"> create </span>
@@ -104,7 +136,7 @@
                 person
               </span>
             </div>
-          </li>
+          </li> -->
 
           <li class="side-nav__content--list__item" id="homeBtn">
             <div class="item-name">
@@ -270,6 +302,79 @@
       <!-- -*-*-*-*-*-*-*-*--*-*-*- Card Section - Person --*-*-*-*-*-*-*-*-*-*-* -->
       <section class="card-container" id="personCard">
         <div class="card">
+          <div class="group-container-create">
+            <div class="group purple">
+              <div class="group-name">
+                <div>
+                  <span>תכנון לעתיד</span>
+                </div>
+              </div>
+              <div class="group-fields">
+                <span class="edit-content">
+                  <span class="edit-field">
+                    <span class="value-text">
+                      <span class="material-symbols-outlined">
+                        cardio_load
+                      </span>
+                      קריאה</span
+                    >
+                  </span>
+                </span>
+                <span class="edit-content">
+                  <span class="edit-field">
+                    <span class="value-text">
+                      <span class="material-symbols-outlined"> task_alt </span>
+                      משימה</span
+                    >
+                  </span>
+                </span>
+                <span class="edit-content">
+                  <span class="edit-field">
+                    <span class="value-text">
+                      <span class="material-symbols-outlined"> notes </span>
+                      הערה</span
+                    >
+                  </span>
+                </span>
+                <span class="edit-content">
+                  <span class="edit-field">
+                    <span class="value-text">
+                      <span class="material-symbols-outlined"> call </span>
+                      שיחה</span
+                    >
+                  </span>
+                </span>
+                <span class="edit-content">
+                  <span class="edit-field">
+                    <span class="value-text">
+                      <span class="material-symbols-outlined"> today </span>
+                      פגישה</span
+                    >
+                  </span>
+                </span>
+                <span class="edit-content medium">
+                  <span class="edit-field">
+                    <span class="value-text">
+                      <span class="material-symbols-outlined">
+                        credit_card_clock
+                      </span>
+                      דיווח שעות</span
+                    >
+                  </span>
+                </span>
+                <span class="edit-content medium">
+                  <span class="edit-field">
+                    <span class="value-text">
+                      <span class="material-symbols-outlined">
+                        devices_wearables
+                      </span>
+                      דיווח שעות עצמי</span
+                    >
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
           <div class="top-container">
             <div class="card__navigate">
               <h4>פעולות</h4>
@@ -297,6 +402,99 @@
           </div>
           <div class="card-header long-header">
             <div class="top">
+              <div class="right">
+                <div class="header-fields">
+                  <span class="edit-content green">
+                    <span class="edit-field">
+                      <span class="value-text">
+                        <span class="material-symbols-outlined green-circle">
+                          circle
+                        </span>
+                        תכנון</span
+                      >
+                      <span class="material-symbols-outlined">
+                        expand_more
+                      </span>
+                    </span>
+                    <!-- <div class="edit-content-menu"></div> -->
+                  </span>
+
+                  <span class="edit-content transparent">
+                    <span class="label">
+                      <span>לטיפול</span>
+                    </span>
+                    <span class="edit-field">
+                      <span class="value-text">14/08/24</span>
+                      <span class="material-symbols-outlined">
+                        expand_more
+                      </span>
+                    </span>
+                  </span>
+                </div>
+                <div class="header-fields">
+                  <span class="edit-content red">
+                    <!-- <span class="label">
+                      <span>סטטוס</span>
+                    </span> -->
+                    <span class="edit-field">
+                      <span class="value-text"> חשוב מאוד</span>
+                    </span>
+                    <!-- <div class="edit-content-menu"></div> -->
+                  </span>
+                  <span class="edit-content yellow">
+                    <!-- <span class="label">
+                      <span>סטטוס</span>
+                    </span> -->
+                    <span class="edit-field">
+                      <span class="value-text">אירוע אבטחת מידע</span>
+                    </span>
+                    <!-- <div class="edit-content-menu"></div> -->
+                  </span>
+                  <span class="edit-content purple">
+                    <!-- <span class="label">
+                      <span>סטטוס</span>
+                    </span> -->
+                    <span class="edit-field">
+                      <span class="value-text">תגית סגולה</span>
+                    </span>
+                    <!-- <div class="edit-content-menu"></div> -->
+                  </span>
+                  <span class="edit-content gray">
+                    <span class="edit-field">
+                      <span class="value-text">
+                        <span class="material-symbols-outlined">
+                          new_label
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </div>
+                <div class="header-fields">
+                  <span class="edit-content blue">
+                    <!-- <span class="label">
+                      <span>סטטוס</span>
+                    </span> -->
+                    <span class="edit-field">
+                      <span class="value-text">
+                        <span class="material-symbols-outlined">
+                          analytics
+                        </span>
+                        מרצה</span
+                      >
+                    </span>
+                    <!-- <div class="edit-content-menu"></div> -->
+                  </span>
+                  <span class="edit-content gray">
+                    <span class="edit-field">
+                      <span class="value-text">
+                        <span class="material-symbols-outlined">
+                          add_triangle
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </div>
               <div class="left" id="left">
                 <div class="title">
                   <span class="round-img-container">
@@ -346,38 +544,6 @@
                     <span>אלון כהן</span>
                   </div>
                 </div>
-              </div>
-              <div class="right">
-                <span class="edit-content">
-                  <!-- <span class="label">
-                    <span>סטטוס</span>
-                  </span> -->
-                  <span class="edit-field">
-                    <span class="value-text">
-                      <span class="material-symbols-outlined green-circle">
-                        circle
-                      </span>
-                      תכנון</span
-                    >
-                    <span class="material-symbols-outlined"> expand_more </span>
-                  </span>
-                </span>
-                <span class="edit-content">
-                  <!-- <span class="label">
-                    <span>לטיפול</span>
-                  </span> -->
-                  <span class="edit-field">
-                    <span class="value-text">14/08/24</span>
-                    <span class="material-symbols-outlined"> expand_more </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-            <div class="chips-container">
-              <span class="small-chip red">Manager</span>
-              <span class="small-chip green">Sales</span>
-              <div class="small-chip neutral">
-                <span class="material-symbols-outlined btn-default"> add </span>
               </div>
             </div>
           </div>

@@ -66,156 +66,7 @@
           margin-top: 0.5rem;
           display: flex;
           gap: 0.5rem;
-          .group {
-            // display: flex;
-            // align-items: flex-start;
-            // flex-direction: column;
-            gap: 0.5rem;
-            .group-name {
-              font-size: font-size(font-size-regular);
-              margin-right: 0.5rem;
-              color: gray;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-            }
-            .dynamic-btns-group {
-              opacity: 0;
-              span {
-                font-size: 22px;
-              }
-            }
-            .group-name:hover {
-              .dynamic-btns-group {
-                opacity: 1;
-              }
-            }
-            .group-topics {
-              display: flex;
-              align-items: center;
-              gap: 1rem;
-              font-size: font-size(font-size-regular);
-
-              .topic {
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                padding: 0 0.5rem;
-                border-radius: 6px 6px 0 0;
-                margin-bottom: 0.6rem;
-                border: 1px solid var(--color-bg-dark);
-
-                span {
-                  font-size: 16px;
-                }
-              }
-
-              .topic.green-clicked {
-                background-color: var(--color-green-kanban);
-                span {
-                  color: var(--color-green);
-                }
-              }
-              .topic.blue-clicked {
-                background-color: var(--color-blue);
-                span {
-                  color: var(--color-primary);
-                }
-              }
-            }
-
-            .group-fields {
-              display: flex;
-              align-items: center;
-              gap: 0.5rem;
-              flex-wrap: wrap;
-              .edit-content {
-                max-width: 100px;
-                .edit-field:hover {
-                  background-color: var(--color-permanent-bg);
-                }
-              }
-              .edit-content:hover {
-                background-color: transparent;
-              }
-
-              .value-text {
-                color: var(--color-on-primary-light);
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-              }
-            }
-            .group-fields.green {
-              .edit-field:hover {
-                background-color: var(--color-green);
-                .value-text {
-                  color: var(--color-on-primary);
-                }
-              }
-            }
-            .group-fields.blue {
-              .edit-field:hover {
-                background-color: var(--color-primary);
-                .value-text {
-                  color: var(--color-on-primary);
-                }
-              }
-            }
-          }
-
-          .group:not(:first-child) {
-            margin-top: 1rem;
-          }
-          .group.green {
-            .group-name {
-              color: #36562c;
-            }
-            .group-fields {
-              .edit-content {
-                .edit-field {
-                  border: 1px solid #d5f3dc;
-                }
-                .edit-field:hover {
-                  background-color: #d5f3dc;
-                }
-              }
-            }
-          }
-          .group.blue {
-            .group-name {
-              color: var(--color-primary);
-            }
-            .group-fields {
-              .edit-content {
-                .edit-field {
-                  border: 1px solid var(--color-blue);
-                }
-                .edit-field:hover {
-                  background-color: var(--color-blue);
-                }
-              }
-            }
-          }
-          .group.purple {
-            .group-name {
-              color: #3b4aa1;
-            }
-            .group-fields {
-              .edit-content {
-                .edit-field {
-                  border: 1px solid #e1d6fe;
-                }
-                .edit-field:hover {
-                  background-color: #e1d6fe;
-                }
-              }
-            }
-          }
-          .expand-more {
-            align-self: flex-end;
-            font-size: font-size(font-size-regular);
-          }
+         
         }
 
         &--collapse {
@@ -337,4 +188,160 @@
   .reduced-group:hover {
     background-color: var(--color-blue-hover);
   }
+}
+
+
+.group {
+  // display: flex;
+  // align-items: flex-start;
+  // flex-direction: column;
+  gap: 0.5rem;
+  .group-name {
+    font-size: font-size(font-size-regular);
+    margin-right: 0.5rem;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dynamic-btns-group {
+    opacity: 0;
+    span {
+      font-size: 22px;
+    }
+  }
+  .group-name:hover {
+    .dynamic-btns-group {
+      opacity: 1;
+    }
+  }
+  .group-topics {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: font-size(font-size-regular);
+
+    .topic {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0 0.5rem;
+      border-radius: 6px 6px 0 0;
+      margin-bottom: 0.6rem;
+      border: 1px solid var(--color-bg-dark);
+
+      span {
+        font-size: 16px;
+      }
+    }
+
+    .topic.green-clicked {
+      background-color: var(--color-green-kanban);
+      span {
+        color: var(--color-green);
+      }
+    }
+    .topic.blue-clicked {
+      background-color: var(--color-blue);
+      span {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  .group-fields {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    .edit-content {
+      max-width: 100px;
+      .edit-field:hover {
+        background-color: var(--color-permanent-bg);
+      }
+    }
+    .edit-content:hover {
+      background-color: transparent;
+    }
+
+    .value-text {
+      color: var(--color-on-primary-light);
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .group-fields.green {
+    .edit-field:hover {
+      background-color: var(--color-green);
+      .value-text {
+        color: var(--color-on-primary);
+      }
+    }
+  }
+  .group-fields.blue {
+    .edit-field:hover {
+      background-color: var(--color-primary);
+      .value-text {
+        color: var(--color-on-primary);
+      }
+    }
+  }
+}
+
+.group:not(:first-child) {
+  margin-top: 1rem;
+}
+.group.green {
+  .group-name {
+    color: #36562c;
+  }
+  .group-fields {
+    .edit-content {
+      .edit-field {
+        border: 1px solid #d5f3dc;
+      }
+      .edit-field:hover {
+        background-color: #d5f3dc;
+      }
+    }
+  }
+}
+.group.blue {
+  .group-name {
+    color: var(--color-primary);
+  }
+  .group-fields {
+    .edit-content {
+      .edit-field {
+        border: 1px solid var(--color-blue);
+      }
+      .edit-field:hover {
+        background-color: var(--color-blue);
+      }
+    }
+  }
+}
+.group.purple {
+  .group-name {
+    color: #3b4aa1;
+  }
+  .group-fields {
+    .edit-content {
+      .edit-field {
+        border: 1px solid #e1d6fe;
+      }
+      .edit-field:hover {
+        background-color: #e1d6fe;
+      }
+    }
+  }
+}
+.expand-more {
+  align-self: flex-end;
+  font-size: font-size(font-size-regular);
+}
+
+.group-container-create {
+  margin-bottom: 1rem;
 }
