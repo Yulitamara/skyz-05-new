@@ -1871,16 +1871,21 @@ textarea {
   justify-content: center;
   font-size: 1.2rem;
   display: none;
-  padding: 40px 10px 36px 10px;
+  padding: 60px 10px 56px 10px;
 }
 .small-screen-search .field-container {
   width: 100%;
 }
+.small-screen-search .navbar__create {
+  padding-right: 0.5rem;
+}
 @media screen and (max-width: 600px) {
   .small-screen-search {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }
 
