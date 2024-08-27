@@ -39,7 +39,7 @@
       align-items: center;
     }
     .create-icon {
-      padding: .2rem;
+      padding: 0.2rem;
       font-size: 22px !important;
       border: 1px solid #c9c9c9;
       margin: 0 0.5rem;
@@ -86,11 +86,6 @@
   }
 
   @media screen and (max-width: 920px) {
-    &__menu {
-      &--logo {
-        display: none;
-      }
-    }
     &__personal {
       &--name {
         display: none;
@@ -111,6 +106,11 @@
   @include media-tablet-big {
     .navbar__menu--side-toggle {
       display: block;
+    }
+    &__menu {
+      &--logo {
+        display: none;
+      }
     }
   }
 }

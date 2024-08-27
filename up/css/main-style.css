@@ -855,10 +855,6 @@ hr {
   color: var(--color-on-primary);
 }
 
-.group:not(:first-child) {
-  margin-top: 1rem;
-}
-
 .group.green .group-name {
   color: #36562c;
 }
@@ -897,7 +893,7 @@ hr {
 .group-container-create {
   margin-bottom: 1rem;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem 1.5rem;
 }
@@ -989,9 +985,6 @@ hr {
   font-size: 1.25rem;
 }
 @media screen and (max-width: 920px) {
-  .navbar__menu--logo {
-    display: none;
-  }
   .navbar__personal--name {
     display: none;
   }
@@ -1009,6 +1002,9 @@ hr {
 @media screen and (max-width: 1250px) {
   .navbar .navbar__menu--side-toggle {
     display: block;
+  }
+  .navbar__menu--logo {
+    display: none;
   }
 }
 
