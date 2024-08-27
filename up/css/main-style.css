@@ -1743,6 +1743,7 @@ textarea {
 }
 
 input[type=number] {
+  -moz-appearance: textfield;
   max-width: 120px;
 }
 

@@ -17,7 +17,7 @@ textarea {
   outline: none !important;
 }
 input[type="number"] {
-  // -moz-appearance: textfield;
+  -moz-appearance: textfield;
   max-width: 120px;
 }
 input::-webkit-outer-spin-button,
