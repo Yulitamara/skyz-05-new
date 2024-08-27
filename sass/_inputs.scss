@@ -17,7 +17,7 @@ textarea {
   outline: none !important;
 }
 input[type="number"] {
-  -moz-appearance: textfield;
+  // -moz-appearance: textfield;
   max-width: 120px;
 }
 input::-webkit-outer-spin-button,
@@ -78,6 +78,10 @@ input[type="text"].edit-name::placeholder {
   padding: $padding-medium;
   background-color: var(--color-permanent-bg);
   transition: $transition;
+  .navbar__main--search__links-container {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .input-container:focus-within {

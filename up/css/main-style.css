@@ -905,40 +905,43 @@ hr {
   background-color: var(--color-bg-light);
   color: var(--color-permanent-primary);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   padding: 1rem;
   font-size: 1.25rem;
-  height: 6.5rem;
   z-index: 100;
   border: 1px solid var(--color-light-gray);
 }
-.navbar__menu {
+.navbar .navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .navbar-top .navbar__menu {
   display: flex;
   align-items: center;
   gap: 4rem;
 }
-.navbar__menu--side-toggle {
+.navbar .navbar-top .navbar__menu--side-toggle {
   cursor: pointer;
   display: none;
 }
-.navbar__menu--side-toggle span {
+.navbar .navbar-top .navbar__menu--side-toggle span {
   font-size: 1.25rem;
 }
-.navbar__menu--logo {
+.navbar .navbar-top .navbar__menu .navbar__menu--logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.navbar__create {
+.navbar .navbar-top .navbar__create {
   display: flex;
   gap: 1rem;
 }
-.navbar__create .create-title {
+.navbar .navbar-top .navbar__create .create-title {
   display: flex;
   align-items: center;
 }
-.navbar__create .create-icon {
+.navbar .navbar-top .navbar__create .create-icon {
   padding: 0.2rem;
   font-size: 22px !important;
   border: 1px solid #c9c9c9;
@@ -948,33 +951,36 @@ hr {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-.navbar__create .create-icon:hover {
+.navbar .navbar-top .navbar__create .create-icon:hover {
   background-color: #e2e1e1;
 }
-.navbar__create .create-icon.clicked {
+.navbar .navbar-top .navbar__create .create-icon.clicked {
   background-color: #e2e1e1;
 }
-.navbar__main {
+.navbar .navbar-top .navbar__main {
   display: flex;
 }
-.navbar__main--search {
+.navbar .navbar-top .navbar__main .navbar__main--search {
   display: flex;
   align-items: center;
   gap: 1rem;
   position: relative;
 }
-.navbar__main--search__links-container {
+.navbar .navbar-top .navbar__main .navbar__main--search__links-container {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.navbar__main--media-small {
+.navbar .navbar-top .navbar__main .navbar__main--media-small {
   display: none;
 }
-.navbar__personal {
+.navbar .navbar-top .navbar__personal {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+.navbar .navbar-bottom {
+  display: flex;
 }
 .navbar input[type=text].search-input::-moz-placeholder {
   opacity: 0.5;
@@ -985,25 +991,28 @@ hr {
   font-size: 1.25rem;
 }
 @media screen and (max-width: 920px) {
-  .navbar__personal--name {
+  .navbar .navbar-top .navbar__personal .navbar__personal--name {
     display: none;
   }
 }
 @media screen and (max-width: 600px) {
-  .navbar__main {
+  .navbar .navbar-top .navbar__main {
     display: none;
   }
-  .navbar__main--media-small {
+  .navbar .navbar-top .navbar__main .navbar__main--media-small {
     display: flex;
     gap: 1rem;
     align-items: center;
   }
 }
 @media screen and (max-width: 1250px) {
-  .navbar .navbar__menu--side-toggle {
+  .navbar .navbar-top .navbar__menu--side-toggle {
     display: block;
   }
-  .navbar__menu--logo {
+  .navbar .navbar-top .navbar__menu .navbar__menu--logo {
+    display: none;
+  }
+  .navbar .navbar-top .navbar__create {
     display: none;
   }
 }
@@ -1049,6 +1058,11 @@ hr {
 
 .color-change {
   color: var(--color-primary);
+}
+
+.icons-container-create {
+  display: flex;
+  overflow: hidden;
 }
 
 .home {
@@ -1388,7 +1402,7 @@ tr > td:first-child {
   min-height: 100vh;
   background-color: var(--color-bg-light);
   padding: 1rem;
-  padding-top: 1.6rem;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -1516,6 +1530,7 @@ tr > td:first-child {
   .card-container .card {
     padding: 1rem 1rem;
     border-radius: 0rem;
+    padding-top: 2.5rem;
   }
   .card-container .card__boxes {
     grid-template-columns: repeat(1, 1fr);
@@ -1728,7 +1743,6 @@ textarea {
 }
 
 input[type=number] {
-  -moz-appearance: textfield;
   max-width: 120px;
 }
 
@@ -1807,6 +1821,10 @@ input[type=text].edit-name::placeholder {
   padding: 1rem;
   background-color: var(--color-permanent-bg);
   transition: all 0.2s ease-in-out;
+}
+.input-container .navbar__main--search__links-container {
+  display: flex;
+  align-items: center;
 }
 
 .input-container:focus-within {

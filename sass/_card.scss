@@ -2,7 +2,7 @@
   min-height: 100vh;
   background-color: var(--color-bg-light);
   padding: $padding-medium;
-  padding-top: 1.6rem;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: $gap-big;
@@ -147,6 +147,7 @@
     .card {
       padding: $padding-medium $padding-medium;
       border-radius: 0rem;
+      padding-top: 2.5rem;
 
       &__boxes {
         grid-template-columns: repeat(1, 1fr);
