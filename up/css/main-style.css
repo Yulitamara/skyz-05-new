@@ -981,6 +981,7 @@ hr {
 }
 .navbar .navbar-bottom {
   display: flex;
+  margin-top: 1rem;
 }
 .navbar input[type=text].search-input::-moz-placeholder {
   opacity: 0.5;
