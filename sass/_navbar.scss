@@ -167,3 +167,9 @@
   display: flex;
   overflow: hidden;
 }
+
+.navbar__create-append {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}

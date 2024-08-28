@@ -548,22 +548,64 @@ document
     }
   });
 
-  // create
+// create
 
-  document.querySelectorAll('.create-icon').forEach(icon => {
-    icon.addEventListener('click', function() {
-      // Remove 'active' class from all sidebar menus
-      document.querySelectorAll('.group-container-create').forEach(menu => {
-        menu.classList.add('active');
-      });
-  
-      // Get the color associated with the clicked icon
-      const color = this.getAttribute('data-color');
-  
-      // Add 'active' class to the matching sidebar menu
-      const selectedMenu = document.querySelector(`.group-container-create[data-color="${color}"]`);
-      if (selectedMenu) {
-        selectedMenu.classList.remove('active');
-      }
+document.querySelectorAll(".create-icon").forEach((icon) => {
+  icon.addEventListener("click", function () {
+    // Remove 'active' class from all sidebar menus
+    document.querySelectorAll(".group-container-create").forEach((menu) => {
+      menu.classList.add("active");
     });
+
+    // Get the color associated with the clicked icon
+    const color = this.getAttribute("data-color");
+
+    // Add 'active' class to the matching sidebar menu
+    const selectedMenu = document.querySelector(
+      `.group-container-create[data-color="${color}"]`
+    );
+    if (selectedMenu) {
+      selectedMenu.classList.remove("active");
+    }
   });
+});
+
+function moveNavbarContent() {
+  // Check if screen width is less than 985px
+  if (window.innerWidth < 985) {
+    // Get the elements
+    const navbarCreate = document.querySelector(".navbar__create");
+    const appendTarget = document.querySelector(".navbar__create-append");
+    const navbarBottom = document.querySelector(".navbar-bottom");
+    const groupAppendTarget = document.querySelector(
+      ".group-container-create-append"
+    );
+
+    // Append the contents to the target elements
+    if (navbarCreate && appendTarget) {
+      appendTarget.appendChild(navbarCreate);
+    }
+    if (navbarBottom && groupAppendTarget) {
+      groupAppendTarget.appendChild(navbarBottom);
+    }
+  } else {
+    // If the screen size is greater or equal to 985px, move the content back if needed
+    const navbarCreate = document.querySelector(".navbar__create");
+    const navbarBottom = document.querySelector(".navbar-bottom");
+    const originalParent = document.querySelector(".original-parent-class"); // Replace with actual parent class/element
+    const originalBottomParent = document.querySelector(
+      ".original-bottom-parent-class"
+    ); // Replace with actual parent class/element
+
+    if (navbarCreate && originalParent) {
+      originalParent.appendChild(navbarCreate);
+    }
+    if (navbarBottom && originalBottomParent) {
+      originalBottomParent.appendChild(navbarBottom);
+    }
+  }
+}
+
+// Call the function on page load and on resize
+window.addEventListener("load", moveNavbarContent);
+window.addEventListener("resize", moveNavbarContent);
