@@ -12,9 +12,9 @@
     width: 100%;
   }
   .navbar__create {
-    padding-right: .5rem;
+    padding-right: 0.5rem;
   }
-  @include media-medium {
+  @media screen and (max-width: 985px) {
     display: flex;
     align-items: start;
     justify-content: center;

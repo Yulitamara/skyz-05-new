@@ -8,7 +8,7 @@
   flex-direction: column;
   padding: $padding-medium;
   font-size: font-size(font-size-regular);
-  // height: 6.5rem;
+  height: 7rem;
   z-index: 100;
   border: 1px solid var(--color-light-gray);
   .navbar-top {
@@ -94,17 +94,7 @@
     font-size: font-size(font-size-regular);
   }
 
-  @media screen and (max-width: 920px) {
-    .navbar-top {
-      .navbar__personal {
-        .navbar__personal--name {
-          display: none;
-        }
-      }
-    }
-  }
-
-  @include media-medium {
+  @media screen and (max-width: 985px) {
     .navbar-top {
       .navbar__main {
         display: none;
@@ -113,6 +103,9 @@
           gap: $gap-medium;
           align-items: center;
         }
+      }
+      .navbar__create {
+        display: none;
       }
     }
   }
@@ -125,9 +118,6 @@
         .navbar__menu--logo {
           display: none;
         }
-      }
-      .navbar__create {
-        display: none;
       }
     }
   }
