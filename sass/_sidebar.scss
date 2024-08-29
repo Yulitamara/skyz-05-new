@@ -1,5 +1,4 @@
 .side-nav {
-  background-color: var(--color-on-primary);
   background-color: var(--color-bg-light);
   top: 0;
   right: 0;
@@ -15,6 +14,7 @@
   min-height: 100vh;
   max-height: min-content;
   min-width: 200px;
+  margin-top: 1rem;
 
   &__content {
     &--list {
