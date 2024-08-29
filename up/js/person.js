@@ -592,9 +592,9 @@ function moveNavbarContent() {
     // If the screen size is greater or equal to 985px, move the content back if needed
     const navbarCreate = document.querySelector(".navbar__create");
     const navbarBottom = document.querySelector(".navbar-bottom");
-    const originalParent = document.querySelector(".original-parent-class"); // Replace with actual parent class/element
+    const originalParent = document.querySelector(".navbar__menu"); // Replace with actual parent class/element
     const originalBottomParent = document.querySelector(
-      ".original-bottom-parent-class"
+      ".navbar"
     ); // Replace with actual parent class/element
 
     if (navbarCreate && originalParent) {
