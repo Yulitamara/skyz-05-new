@@ -594,6 +594,7 @@ hr {
 
 .side-nav {
   background-color: var(--color-bg-light);
+  background-color: #EBF5FE;
   top: 0;
   right: 0;
   z-index: 99;
