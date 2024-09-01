@@ -48,15 +48,19 @@
 }
 
 .round-btn-primary {
-  color: var(--color-on-primary-light);
-  background-color: transparent;
+  color: var(--color-on-primary);
+  background-color: var(--color-primary);
 
   transition: $transition;
 }
-.round-btn-primary:hover,
-.round-btn-primary:active {
-  background-color: var(--color-hover-btn);
+.round-btn-primary.green {
+  color: var(--color-on-primary);
+  background-color: var(--color-green);
 }
+// .round-btn-primary:hover,
+// .round-btn-primary:active {
+//   background-color: var(--color-primary-hover);
+// }
 
 .round-btn-secondary {
   // background-color: var(--color-permanent-secondary);

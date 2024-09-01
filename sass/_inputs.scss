@@ -61,7 +61,7 @@ input[type="text"].edit-name::placeholder {
   padding: 0 $padding-small;
   align-self: center;
   align-items: center;
-  gap: $gap-medium;
+  gap: $gap-small;
   color: var(--color-permanent-on-primary-light);
 }
 
@@ -75,7 +75,7 @@ input[type="text"].edit-name::placeholder {
   min-width: 0;
   height: 46px;
   border-radius: $border-radius-big;
-  padding: $padding-medium;
+  padding-right: $padding-small;
   background-color: var(--color-permanent-bg);
   transition: $transition;
   .navbar__main--search__links-container {

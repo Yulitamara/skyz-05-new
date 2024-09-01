@@ -567,37 +567,37 @@ document.querySelectorAll(".create-icon").forEach((icon) => {
   });
 });
 
-function moveNavbarContent() {
-  if (window.innerWidth < 985) {
-    const navbarCreate = document.querySelector(".navbar__create");
-    const appendTarget = document.querySelector(".navbar__create-append");
-    const navbarBottom = document.querySelector(".navbar-bottom");
-    const groupAppendTarget = document.querySelector(
-      ".group-container-create-append"
-    );
+// function moveNavbarContent() {
+//   if (window.innerWidth < 985) {
+//     const navbarCreate = document.querySelector(".navbar__create");
+//     const appendTarget = document.querySelector(".navbar__create-append");
+//     const navbarBottom = document.querySelector(".navbar-bottom");
+//     const groupAppendTarget = document.querySelector(
+//       ".group-container-create-append"
+//     );
 
-    if (navbarCreate && appendTarget) {
-      appendTarget.appendChild(navbarCreate);
-    }
-    if (navbarBottom && groupAppendTarget) {
-      groupAppendTarget.appendChild(navbarBottom);
-    }
-  } else {
-    const navbarCreate = document.querySelector(".navbar__create");
-    const navbarBottom = document.querySelector(".navbar-bottom");
-    const originalParent = document.querySelector(".navbar__menu"); 
-    const originalBottomParent = document.querySelector(
-      ".navbar"
-    ); 
+//     if (navbarCreate && appendTarget) {
+//       appendTarget.appendChild(navbarCreate);
+//     }
+//     if (navbarBottom && groupAppendTarget) {
+//       groupAppendTarget.appendChild(navbarBottom);
+//     }
+//   } else {
+//     const navbarCreate = document.querySelector(".navbar__create");
+//     const navbarBottom = document.querySelector(".navbar-bottom");
+//     const originalParent = document.querySelector(".navbar__menu"); 
+//     const originalBottomParent = document.querySelector(
+//       ".navbar"
+//     ); 
 
-    if (navbarCreate && originalParent) {
-      originalParent.appendChild(navbarCreate);
-    }
-    if (navbarBottom && originalBottomParent) {
-      originalBottomParent.appendChild(navbarBottom);
-    }
-  }
-}
+//     if (navbarCreate && originalParent) {
+//       originalParent.appendChild(navbarCreate);
+//     }
+//     if (navbarBottom && originalBottomParent) {
+//       originalBottomParent.appendChild(navbarBottom);
+//     }
+//   }
+// }
 
-window.addEventListener("load", moveNavbarContent);
-window.addEventListener("resize", moveNavbarContent);
+// window.addEventListener("load", moveNavbarContent);
+// window.addEventListener("resize", moveNavbarContent);
