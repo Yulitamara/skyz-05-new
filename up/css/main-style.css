@@ -1033,39 +1033,30 @@ hr {
 .icons-container-create {
   display: flex;
   overflow: hidden;
+  gap: 0.3rem;
 }
 
 .navbar__create-append {
   display: flex;
   flex-direction: column-reverse;
   gap: 1rem;
+  width: 100%;
 }
 
 .navbar__create {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
+  background-color: var(--color-blue);
+  padding: 0.4rem 0.9rem 0.4rem 0.4rem;
+  border-radius: 8px;
+  width: max-content;
 }
 .navbar__create .create-title {
   display: flex;
   align-items: center;
 }
 .navbar__create .create-icon {
-  padding: 0.2rem;
   font-size: 22px !important;
-  margin: 0 0.3rem;
-  color: #818181 !important;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-}
-.navbar__create .create-icon:hover {
-  background-color: #e2e1e1;
-  border: 1px solid #c9c9c9;
-}
-.navbar__create .create-icon.clicked {
-  background-color: #e2e1e1;
-  border: 1px solid #c9c9c9;
 }
 
 .home {

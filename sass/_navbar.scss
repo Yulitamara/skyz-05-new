@@ -140,39 +140,45 @@
 .icons-container-create {
   display: flex;
   overflow: hidden;
+  gap: .3rem;
 }
 
 .navbar__create-append {
   display: flex;
   flex-direction: column-reverse;
   gap: 1rem;
+  width: 100%;
 }
 
 
 
 .navbar__create {
   display: flex;
-  gap: 1rem;
+  gap: .5rem;
+  background-color: var(--color-blue);
+  padding: 0.4rem .9rem 0.4rem 0.4rem;
+  border-radius: 8px;
+  width: max-content;
   .create-title {
     display: flex;
     align-items: center;
   }
   .create-icon {
-    padding: 0.2rem;
+    // padding: 0.2rem;
     font-size: 22px !important;
-    margin: 0 0.3rem;
-    color: #818181 !important;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    transition: $transition;
-    cursor: pointer;
+    // margin: 0 0.3rem;
+    // color: #818181 !important;
+    // border: 1px solid transparent;
+    // border-radius: 5px;
+    // transition: $transition;
+    // cursor: pointer;
   }
-  .create-icon:hover {
-    background-color: #e2e1e1;
-    border: 1px solid #c9c9c9;
-  }
-  .create-icon.clicked {
-    background-color: #e2e1e1;
-    border: 1px solid #c9c9c9;
-  }
+  // .create-icon:hover {
+  //   background-color: #e2e1e1;
+  //   border: 1px solid #c9c9c9;
+  // }
+  // .create-icon.clicked {
+  //   background-color: #e2e1e1;
+  //   border: 1px solid #c9c9c9;
+  // }
 }
