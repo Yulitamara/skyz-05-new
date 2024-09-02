@@ -601,3 +601,45 @@ document.querySelectorAll(".create-icon").forEach((icon) => {
 
 // window.addEventListener("load", moveNavbarContent);
 // window.addEventListener("resize", moveNavbarContent);
+
+// navbar
+const searchInput = document.getElementById('searchInput');
+const labelContainer = document.querySelector('.label-container');
+
+function removeLabelActiveClass() {
+    labelContainer.classList.remove('active');
+}
+
+function addLabelActiveClass() {
+    labelContainer.classList.add('active');
+}
+
+searchInput.addEventListener('focus', removeLabelActiveClass);
+
+document.addEventListener('click', function(event) {
+    if (!searchInput.contains(event.target) && !labelContainer.contains(event.target)) {
+        addLabelActiveClass();
+    }
+});
+
+const createBtn = document.getElementById('create-btn');
+const iconsContainer = document.querySelector('.icons-container-create');
+
+function removeIconsActiveClass() {
+    iconsContainer.classList.remove('active');
+}
+
+function addIconsActiveClass() {
+    iconsContainer.classList.add('active');
+}
+
+createBtn.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent click from bubbling up to document
+    removeIconsActiveClass();
+});
+
+document.addEventListener('click', (event) => {
+    if (!iconsContainer.contains(event.target) && !createBtn.contains(event.target)) {
+        addIconsActiveClass();
+    }
+});
