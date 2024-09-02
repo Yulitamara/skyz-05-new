@@ -958,7 +958,9 @@ hr {
 }
 .navbar .navbar-bottom {
   display: flex;
+  flex-direction: column;
   margin-top: 1rem;
+  gap: 1rem;
 }
 .navbar .navbar-bottom.full-create {
   display: grid;
