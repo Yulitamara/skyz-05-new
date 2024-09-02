@@ -1086,6 +1086,15 @@ hr {
   align-items: center;
 }
 
+.group-fields {
+  padding: 0 1rem;
+  font-size: 14px;
+}
+
+.focus-category {
+  background-color: var(--color-blue);
+}
+
 .home {
   background-color: var(--color-bg);
   display: flex;

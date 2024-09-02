@@ -564,6 +564,12 @@ document.querySelectorAll(".create-category").forEach((icon) => {
     if (selectedMenu) {
       selectedMenu.classList.remove("active");
     }
+
+    document.querySelectorAll(".create-category").forEach((icon) => {
+      icon.classList.remove("focus-category");
+    });
+
+    this.classList.add("focus-category");
   });
 });
 
