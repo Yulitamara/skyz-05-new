@@ -550,7 +550,7 @@ document
 
 // create
 
-document.querySelectorAll(".create-icon").forEach((icon) => {
+document.querySelectorAll(".create-category").forEach((icon) => {
   icon.addEventListener("click", function () {
     document.querySelectorAll(".group-container-create").forEach((menu) => {
       menu.classList.add("active");
