@@ -657,3 +657,13 @@ document.addEventListener("click", (event) => {
     addIconsActiveClass();
   }
 });
+
+document.getElementById("skyz-btn").addEventListener("click", function () {
+  // Select all elements with the class 'skyz'
+  var skyzElements = document.querySelectorAll(".skyz");
+
+  // Loop through each element and remove the 'active' class
+  skyzElements.forEach(function (element) {
+    element.classList.toggle("active");
+  });
+});

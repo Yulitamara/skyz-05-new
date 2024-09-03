@@ -1106,6 +1106,42 @@ hr {
   background-color: var(--color-blue);
 }
 
+.full-menu {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  padding: 1rem;
+  border-top: 1px solid var(--color-light-gray);
+}
+.full-menu__box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.full-menu__box--title {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+.full-menu__box--title .material-symbols-outlined {
+  font-size: 1.9rem;
+}
+.full-menu__box--list {
+  font-size: 1.2rem;
+}
+.full-menu__box--list li {
+  cursor: pointer;
+  font-weight: 300;
+}
+.full-menu__box--list li:hover,
+.full-menu__box--list li:active {
+  font-weight: 400;
+}
+
 .home {
   background-color: var(--color-bg);
   display: flex;
