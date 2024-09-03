@@ -37,13 +37,13 @@
     .navbar__main {
       display: flex;
       gap: 1rem;
-      width: 300px;
-      .navbar__main--search {
+      .navbar__main--search,
+      .navbar__main--create {
         display: flex;
         align-items: center;
         gap: $gap-medium;
         position: relative;
-
+        width: 100px;
         &__links-container {
           display: flex;
           align-items: center;

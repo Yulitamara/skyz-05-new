@@ -939,15 +939,17 @@ hr {
 .navbar .navbar-top .navbar__main {
   display: flex;
   gap: 1rem;
-  width: 300px;
 }
-.navbar .navbar-top .navbar__main .navbar__main--search {
+.navbar .navbar-top .navbar__main .navbar__main--search,
+.navbar .navbar-top .navbar__main .navbar__main--create {
   display: flex;
   align-items: center;
   gap: 1rem;
   position: relative;
+  width: 100px;
 }
-.navbar .navbar-top .navbar__main .navbar__main--search__links-container {
+.navbar .navbar-top .navbar__main .navbar__main--search__links-container,
+.navbar .navbar-top .navbar__main .navbar__main--create__links-container {
   display: flex;
   align-items: center;
 }
