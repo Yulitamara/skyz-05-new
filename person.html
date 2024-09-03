@@ -83,6 +83,14 @@
               <span class="material-symbols-outlined"> add_circle </span>
             </div>
           </div>
+          <div class="navbar__create">
+            <div class="create-title">
+              <div>הצג</div>
+            </div>
+            <div class="round-btn round-btn-primary purple" id="skyz-btn">
+              <span class="material-symbols-outlined"> category </span>
+            </div>
+          </div>
         </div>
 
         <div class="navbar__personal">
@@ -104,56 +112,44 @@
       </div>
 
       <div class="navbar-bottom">
-        <div class="icons-container-create">
+        <div class="icons-container-create active">
           <div class="create-category" data-color="gray">
-            <span class="material-symbols-outlined create-icon" title="שכיח">
-              app_shortcut
-            </span>
-            <span>שכיח</span>
+            <span>מועדפים</span>
           </div>
 
           <div class="create-category" data-color="blue">
-            <span class="material-symbols-outlined create-icon" title="כרטיס">
-              category
-            </span>
             <span>כרטיס</span>
           </div>
 
-          <div class="create-category">
-            <span class="material-symbols-outlined create-icon" title="כתוב">
-              drafts
-            </span>
-            <span>כתוב</span>
+          <div class="create-category" data-color="send">
+            <span>שלח</span>
           </div>
 
           <div class="create-category" data-color="yellow">
-            <span class="material-symbols-outlined create-icon" title="לטיפול">
-              calendar_clock
-            </span>
             <span>לטיפול</span>
           </div>
 
           <div class="create-category" data-color="purple">
-            <span class="material-symbols-outlined create-icon" title="תיעוד">
-              archive
-            </span>
             <span>תיעוד</span>
           </div>
 
-          <div class="create-category" data-color="green">
-            <span class="material-symbols-outlined create-icon" title="מכירות">
-              attach_money
-            </span>
-            <span>מכירות</span>
+          <div class="create-category" data-color="pre-sales">
+            <span>קדם מכירות</span>
+          </div>
+
+          <div class="create-category" data-color="invoice">
+            <span>חשבונית/קבלה</span>
+          </div>
+
+          <div class="create-category" data-color="credit">
+            <span>זיכוי</span>
+          </div>
+
+          <div class="create-category" data-color="instruction">
+            <span>הוראות</span>
           </div>
 
           <div class="create-category" data-color="red">
-            <span
-              class="material-symbols-outlined create-icon"
-              title="לוגיסטיקה"
-            >
-              electric_rickshaw
-            </span>
             <span>לוגיסטיקה</span>
           </div>
         </div>
@@ -250,14 +246,8 @@
             </div>
           </div>
         </div>
-        <div class="group-container-create active" data-color="green">
+        <div class="group-container-create active" data-color="pre-sales">
           <div class="group green">
-            <div class="group-name">
-              <div>
-                <span>קדם מכירות</span>
-              </div>
-            </div>
-
             <div class="group-fields">
               <span class="edit-content">
                 <span class="edit-field">
@@ -293,13 +283,9 @@
               </span>
             </div>
           </div>
+        </div>
+        <div class="group-container-create active" data-color="invoice">
           <div class="group green">
-            <div class="group-name">
-              <div>
-                <span>חשבונית/קבלה</span>
-              </div>
-            </div>
-
             <div class="group-fields">
               <span class="edit-content">
                 <span class="edit-field">
@@ -335,13 +321,9 @@
               </span>
             </div>
           </div>
+        </div>
+        <div class="group-container-create active" data-color="credit">
           <div class="group green">
-            <div class="group-name">
-              <div>
-                <span>זיכויים</span>
-              </div>
-            </div>
-
             <div class="group-fields">
               <span class="edit-content medium">
                 <span class="edit-field">
@@ -369,13 +351,9 @@
               </span>
             </div>
           </div>
+        </div>
+        <div class="group-container-create active" data-color="instruction">
           <div class="group green">
-            <div class="group-name">
-              <div>
-                <span>הוראות</span>
-              </div>
-            </div>
-
             <div class="group-fields">
               <span class="edit-content">
                 <span class="edit-field">
@@ -412,13 +390,9 @@
             </div>
           </div>
         </div>
+
         <div class="group-container-create active" data-color="blue">
           <div class="group blue">
-            <div class="group-name">
-              <div>
-                <span>כרטיס</span>
-              </div>
-            </div>
             <div class="group-fields">
               <span class="edit-content">
                 <span class="edit-field">
@@ -470,12 +444,10 @@
               </span>
             </div>
           </div>
+        </div>
+
+        <div class="group-container-create active" data-color="send">
           <div class="group blue">
-            <div class="group-name">
-              <div>
-                <span>שלח</span>
-              </div>
-            </div>
             <div class="group-fields">
               <span class="edit-content">
                 <span class="edit-field">
@@ -496,6 +468,7 @@
             </div>
           </div>
         </div>
+
         <div class="group-container-create active" data-color="red">
           <div class="group">
             <div class="group-fields">

@@ -57,6 +57,10 @@
   color: var(--color-on-primary);
   background-color: var(--color-green);
 }
+.round-btn-primary.purple {
+  color: var(--color-on-primary);
+  background-color: var(--color-on-btn);
+}
 // .round-btn-primary:hover,
 // .round-btn-primary:active {
 //   background-color: var(--color-primary-hover);
@@ -135,8 +139,7 @@
   opacity: 0;
 }
 .group-fields:hover {
-  .show-on-hover-btn{
+  .show-on-hover-btn {
     opacity: 1;
-
   }
 }
