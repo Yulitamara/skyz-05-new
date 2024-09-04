@@ -38,91 +38,99 @@
             <div class="navbar__main--logo__name">Skyz<span>CRM</span></div>
           </div> -->
         </div>
-        <div class="navbar__main">
-          <div class="navbar__main--menu">
-            <div class="field-container">
-              <div class="input-container">
-                <div class="navbar__main--search__links-container">
-                  <div
-                    class="round-btn round-btn-primary white"
-                    id="sideNavBtn"
-                  >
-                    <span class="material-symbols-outlined"> menu </span>
-                  </div>
-                </div>
-                <div class="skyz-name">SKYZ</div>
-              </div>
-            </div>
-          </div>
-          <div class="navbar__main--home">
-            <div class="field-container">
-              <div class="input-container">
-                <div class="navbar__main--search__links-container">
-                  <div class="round-btn round-btn-primary yellow">
-                    <span class="material-symbols-outlined"> dashboard </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="navbar__main--search">
-            <div class="field-container">
-              <div class="input-container">
-                <input
-                  type="text"
-                  class="input"
-                  placeholder="חפש..."
-                  id="searchInput"
-                />
-                <div class="navbar__main--search__links-container">
-                  <div class="label-container active">
-                    <label
-                      class="label-text"
-                      style="display: flex; gap: 0.6rem"
+
+        <div class="navbar__main-container">
+          <div class="navbar__main">
+            <div class="navbar__main--menu">
+              <div class="field-container">
+                <div class="input-container">
+                  <div class="navbar__main--search__links-container">
+                    <div
+                      class="round-btn round-btn-primary white"
+                      id="sideNavBtn"
                     >
-                      <nobr style="opacity: 0.8"> חפש ב: </nobr>
-                      <span>כללי</span>
-                    </label>
-                    <span class="material-symbols-outlined label-icon">
-                      expand_more
-                    </span>
+                      <span class="material-symbols-outlined"> menu </span>
+                    </div>
                   </div>
-                  <div class="round-btn round-btn-primary">
-                    <span class="material-symbols-outlined" id="addMenuBtn">
-                      search
-                    </span>
+                  <div class="skyz-name active">SKYZ</div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar__main--home">
+              <div class="field-container">
+                <div class="input-container">
+                  <div class="navbar__main--search__links-container">
+                    <div class="round-btn round-btn-primary yellow">
+                      <span class="material-symbols-outlined"> dashboard </span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="navbar__main--create">
-            <div class="field-container">
-              <div class="input-container">
-                <input
-                  type="text"
-                  class="input"
-                  placeholder="צור..."
-                  id="searchInput"
-                />
-                <div class="navbar__main--search__links-container">
-                  <div
-                    class="round-btn round-btn-primary green"
-                    id="create-btn"
-                  >
-                    <span class="material-symbols-outlined"> add_circle </span>
+            <div class="navbar__main--search">
+              <div class="field-container">
+                <div class="input-container">
+                  <input
+                    type="text"
+                    class="input"
+                    placeholder="חפש..."
+                    id="searchInput"
+                  />
+                  <div class="navbar__main--search__links-container">
+                    <div class="label-container active">
+                      <label
+                        class="label-text"
+                        style="display: flex; gap: 0.6rem"
+                      >
+                        <nobr style="opacity: 0.8"> חפש ב: </nobr>
+                        <span>כללי</span>
+                      </label>
+                      <span class="material-symbols-outlined label-icon">
+                        expand_more
+                      </span>
+                    </div>
+                    <div class="round-btn round-btn-primary">
+                      <span class="material-symbols-outlined" id="addMenuBtn">
+                        search
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="navbar__main--create">
-            <div class="field-container">
-              <div class="input-container">
-                <input type="text" class="input" placeholder="הצג..." />
-                <div class="navbar__main--search__links-container">
-                  <div class="round-btn round-btn-primary purple" id="skyz-btn">
-                    <span class="material-symbols-outlined"> category </span>
+            <div class="navbar__main--create">
+              <div class="field-container">
+                <div class="input-container">
+                  <input
+                    type="text"
+                    class="input"
+                    placeholder="צור..."
+                    id="searchInput"
+                  />
+                  <div class="navbar__main--search__links-container">
+                    <div
+                      class="round-btn round-btn-primary green"
+                      id="create-btn"
+                    >
+                      <span class="material-symbols-outlined">
+                        add_circle
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar__main--create">
+              <div class="field-container">
+                <div class="input-container">
+                  <input type="text" class="input" placeholder="הצג..." />
+                  <div class="navbar__main--search__links-container">
+                    <div
+                      class="round-btn round-btn-primary purple"
+                      id="skyz-btn"
+                    >
+                      <span class="material-symbols-outlined"> category </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -867,7 +875,7 @@
 
     <div class="main">
       <!---*-*-*-*-*-*-*-*--*-*-*- Search For Small Screen --*-*-*-*-*-*-*-*-*-*-*-->
-      <section class="small-screen-search">
+      <!-- <section class="small-screen-search">
         <div class="field-container">
           <div class="input-container">
             <input
@@ -893,10 +901,12 @@
             </div>
           </div>
         </div>
+
+        <div class="small-screen-append__navbar-main"></div>
         <div class="navbar__create-append">
           <div class="group-container-create-append"></div>
         </div>
-      </section>
+      </section> -->
 
       <!-- -*-*-*-*-*-*-*-*--*-*-*- Card Section - Person --*-*-*-*-*-*-*-*-*-*-* -->
       <section class="card-container" id="personCard">

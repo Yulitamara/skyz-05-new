@@ -22,3 +22,42 @@
     gap: 1.5rem;
   }
 }
+
+.small-screen-append__navbar-main {
+  .small-screen-append__navbar-main {
+    display: flex;
+  }
+}
+
+.navbar__main {
+  display: flex;
+  gap: 1rem;
+  .navbar__main--search,
+  .navbar__main--create {
+    display: flex;
+    align-items: center;
+    gap: $gap-medium;
+    position: relative;
+    width: 100px;
+    &__links-container {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .navbar__main--menu {
+    .field-container {
+      .input-container {
+        background-color: var(--color-blue);
+        .skyz-name {
+          padding-left: 1.5rem;
+          color: var(--color-primary);
+          font-weight: 700;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .navbar__main--media-small {
+    display: none;
+  }
+}
