@@ -614,12 +614,12 @@ const labelContainer = document.querySelector(".label-container");
 
 function removeLabelActiveClass() {
   labelContainer.classList.remove("active");
-  // document.querySelector(".navbar__main--menu").style.width = "min-content";
+  document.querySelector(".navbar__main--search").style.width = "fit-content";
 }
 
 function addLabelActiveClass() {
   labelContainer.classList.add("active");
-  // document.querySelector(".navbar__main--menu").style.width = "100px";
+  document.querySelector(".navbar__main--search").style.width = "100px";
 }
 
 searchInput.addEventListener("focus", removeLabelActiveClass);
