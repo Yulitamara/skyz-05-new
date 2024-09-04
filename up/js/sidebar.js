@@ -7,6 +7,7 @@ sidebarBtn.addEventListener("click", () => {
   sidebar.classList.toggle("active");
   // navbarOverlay.classList.toggle("open");
   skyzName.classList.toggle("active");
+  // document.querySelector(".navbar__main--menu").style.width = "min-content";
 });
 
 document.addEventListener("click", (event) => {

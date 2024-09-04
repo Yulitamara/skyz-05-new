@@ -980,11 +980,11 @@ hr {
   opacity: 0.5;
   font-size: 1.25rem;
 }
-@media screen and (max-width: 985px) {
+@media screen and (max-width: 850px) {
   .navbar .navbar-top {
     flex-direction: column-reverse;
     align-items: end;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   .navbar .navbar-top .navbar__main .navbar__main--media-small {
     display: flex;
@@ -992,6 +992,17 @@ hr {
     align-items: center;
   }
   .navbar .navbar-top .navbar__create {
+    display: none;
+  }
+  .navbar .navbar-top .navbar__menu {
+    display: none;
+  }
+  .navbar .navbar-top .navbar__main .navbar__main--search,
+  .navbar .navbar-top .navbar__main .navbar__main--create {
+    width: -moz-min-content;
+    width: min-content;
+  }
+  .navbar .navbar-input {
     display: none;
   }
 }
@@ -1595,7 +1606,7 @@ tr > td:first-child {
 .card-container .card__boxes.full-boxes {
   grid-template-columns: repeat(1, 1fr);
 }
-@media screen and (max-width: 985px) {
+@media screen and (max-width: 850px) {
   .card-container {
     padding: 0rem;
   }
@@ -2009,36 +2020,6 @@ textarea {
 
 .small-screen-append__navbar-main .small-screen-append__navbar-main {
   display: flex;
-}
-
-.navbar__main {
-  display: flex;
-  gap: 1rem;
-}
-.navbar__main .navbar__main--search,
-.navbar__main .navbar__main--create {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  position: relative;
-  width: 100px;
-}
-.navbar__main .navbar__main--search__links-container,
-.navbar__main .navbar__main--create__links-container {
-  display: flex;
-  align-items: center;
-}
-.navbar__main .navbar__main--menu .field-container .input-container {
-  background-color: var(--color-blue);
-}
-.navbar__main .navbar__main--menu .field-container .input-container .skyz-name {
-  padding-left: 1.5rem;
-  color: var(--color-primary);
-  font-weight: 700;
-  font-size: 14px;
-}
-.navbar__main .navbar__main--media-small {
-  display: none;
 }
 
 .dropdown {

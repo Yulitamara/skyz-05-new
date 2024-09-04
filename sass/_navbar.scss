@@ -84,13 +84,11 @@
     font-size: font-size(font-size-regular);
   }
 
-  @media screen and (max-width: 985px) {
-    // height: 7rem;
-
+  @media screen and (max-width: 850px) {
     .navbar-top {
       flex-direction: column-reverse;
       align-items: end;
-      gap: 1rem;
+      gap: 1.5rem;
       .navbar__main {
         // display: none;
         .navbar__main--media-small {
@@ -102,8 +100,19 @@
       .navbar__create {
         display: none;
       }
+      .navbar__menu {
+        display: none;
+      }
+      .navbar__main .navbar__main--search,
+      .navbar__main .navbar__main--create {
+        width: min-content;
+      }
+    }
+    .navbar-input {
+      display: none;
     }
   }
+
   @include media-tablet-big {
     .navbar-top {
       .navbar__menu--side-toggle {
