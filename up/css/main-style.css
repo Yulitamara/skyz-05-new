@@ -953,6 +953,15 @@ hr {
   display: flex;
   align-items: center;
 }
+.navbar .navbar-top .navbar__main .navbar__main--menu .field-container .input-container {
+  background-color: var(--color-blue);
+}
+.navbar .navbar-top .navbar__main .navbar__main--menu .field-container .input-container .skyz-name {
+  padding-left: 1.5rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 14px;
+}
 .navbar .navbar-top .navbar__main .navbar__main--media-small {
   display: none;
 }
@@ -1896,9 +1905,11 @@ input[type=text].edit-name::placeholder {
   min-width: 0;
   height: 46px;
   border-radius: 2.2rem;
-  padding-right: 0.5rem;
   background-color: var(--color-permanent-bg);
   transition: all 0.2s ease-in-out;
+}
+.input-container input {
+  padding-right: 1rem;
 }
 .input-container .navbar__main--search__links-container {
   display: flex;
@@ -2469,7 +2480,17 @@ textarea {
 
 .round-btn-primary.purple {
   color: var(--color-on-primary);
-  background-color: var(--color-on-btn);
+  background-color: #6d35bb;
+}
+
+.round-btn-primary.yellow {
+  color: var(--color-on-primary);
+  background-color: #ba9e09;
+}
+
+.round-btn-primary.white {
+  color: var(--color-primary);
+  background-color: var(--color-on-primary);
 }
 
 .round-btn-secondary {

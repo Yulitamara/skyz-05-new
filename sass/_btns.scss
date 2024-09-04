@@ -59,7 +59,15 @@
 }
 .round-btn-primary.purple {
   color: var(--color-on-primary);
-  background-color: var(--color-on-btn);
+  background-color: #6d35bb;
+}
+.round-btn-primary.yellow {
+  color: var(--color-on-primary);
+  background-color: #ba9e09;
+}
+.round-btn-primary.white {
+  color: var(--color-primary);
+  background-color: var(--color-on-primary);
 }
 // .round-btn-primary:hover,
 // .round-btn-primary:active {

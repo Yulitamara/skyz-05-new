@@ -49,6 +49,19 @@
           align-items: center;
         }
       }
+      .navbar__main--menu {
+        .field-container {
+          .input-container {
+            background-color: var(--color-blue);
+            .skyz-name {
+              padding-left: 1.5rem;
+              color: var(--color-primary);
+              font-weight: 700;
+              font-size: 14px;
+            }
+          }
+        }
+      }
       .navbar__main--media-small {
         display: none;
       }
