@@ -16,6 +16,7 @@
   max-height: min-content;
   min-width: 200px;
   margin-top: 1rem;
+  display: block;
 
   &__content {
     &--list {
@@ -135,16 +136,12 @@
   @include media-tablet-big {
     position: fixed;
     width: 150px;
-    display: none;
+    // display: none;
     &__content {
       position: relative;
       height: 100vh;
     }
   }
-}
-
-.active-sidebar {
-  display: block;
 }
 
 .side-nav__content--list__item {

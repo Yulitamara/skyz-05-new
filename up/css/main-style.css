@@ -614,6 +614,7 @@ hr {
   max-height: min-content;
   min-width: 200px;
   margin-top: 1rem;
+  display: block;
 }
 .side-nav__content--list {
   display: flex;
@@ -717,16 +718,11 @@ hr {
   .side-nav {
     position: fixed;
     width: 150px;
-    display: none;
   }
   .side-nav__content {
     position: relative;
     height: 100vh;
   }
-}
-
-.active-sidebar {
-  display: block;
 }
 
 .side-nav__content--list__item {
@@ -1003,9 +999,6 @@ hr {
 @media screen and (max-width: 1250px) {
   .navbar .navbar-top .navbar__menu--side-toggle {
     display: block;
-  }
-  .navbar .navbar-top .navbar__menu .navbar__menu--logo {
-    display: none;
   }
 }
 
