@@ -85,11 +85,14 @@
   }
 
   @media screen and (max-width: 985px) {
-    height: 7rem;
+    // height: 7rem;
 
     .navbar-top {
+      flex-direction: column-reverse;
+      align-items: end;
+      gap: 1rem;
       .navbar__main {
-        display: none;
+        // display: none;
         .navbar__main--media-small {
           display: flex;
           gap: $gap-medium;
@@ -114,8 +117,8 @@
 }
 
 .round-img-container {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: $border-radius-round;
   overflow: hidden;
   img {
@@ -123,10 +126,6 @@
     object-fit: cover;
     height: 100%;
     display: block;
-  }
-  @include media-medium {
-    width: 40px;
-    height: 40px;
   }
 }
 

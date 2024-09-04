@@ -140,14 +140,13 @@
       grid-template-columns: repeat(1, 1fr);
     }
   }
-
-  @include media-tablet {
+  @media screen and (max-width: 985px) {
     padding: 0rem;
 
     .card {
       padding: $padding-medium $padding-medium;
       border-radius: 0rem;
-      padding-top: 2.5rem;
+      padding-top: 8rem;
 
       &__boxes {
         grid-template-columns: repeat(1, 1fr);

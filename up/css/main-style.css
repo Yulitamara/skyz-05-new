@@ -981,11 +981,10 @@ hr {
   font-size: 1.25rem;
 }
 @media screen and (max-width: 985px) {
-  .navbar {
-    height: 7rem;
-  }
-  .navbar .navbar-top .navbar__main {
-    display: none;
+  .navbar .navbar-top {
+    flex-direction: column-reverse;
+    align-items: end;
+    gap: 1rem;
   }
   .navbar .navbar-top .navbar__main .navbar__main--media-small {
     display: flex;
@@ -1007,8 +1006,8 @@ hr {
 }
 
 .round-img-container {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -1018,12 +1017,6 @@ hr {
      object-fit: cover;
   height: 100%;
   display: block;
-}
-@media screen and (max-width: 600px) {
-  .round-img-container {
-    width: 40px;
-    height: 40px;
-  }
 }
 
 .navbar__overlay {
@@ -1602,14 +1595,14 @@ tr > td:first-child {
 .card-container .card__boxes.full-boxes {
   grid-template-columns: repeat(1, 1fr);
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 985px) {
   .card-container {
     padding: 0rem;
   }
   .card-container .card {
     padding: 1rem 1rem;
     border-radius: 0rem;
-    padding-top: 2.5rem;
+    padding-top: 8rem;
   }
   .card-container .card__boxes {
     grid-template-columns: repeat(1, 1fr);
