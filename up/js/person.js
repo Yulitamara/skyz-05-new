@@ -619,7 +619,7 @@ function removeLabelActiveClass() {
 
 function addLabelActiveClass() {
   labelContainer.classList.add("active");
-  document.querySelector(".navbar__main--search").style.width = "100px";
+  document.querySelector(".navbar__main--search").style.width = "120px";
 }
 
 searchInput.addEventListener("focus", removeLabelActiveClass);
@@ -633,37 +633,28 @@ document.addEventListener("click", function (event) {
   }
 });
 
-const createBtn = document.getElementById("create-btn");
-const iconsContainer = document.querySelector(".icons-container-create");
+// const createBtn = document.getElementById("create-btn");
+// const iconsContainer = document.querySelector(".icons-container-create");
 
-function removeIconsActiveClass() {
-  iconsContainer.classList.remove("active");
-}
+// function removeIconsActiveClass() {
+//   iconsContainer.classList.remove("active");
+// }
 
-function addIconsActiveClass() {
-  iconsContainer.classList.add("active");
-}
+// function addIconsActiveClass() {
+//   iconsContainer.classList.add("active");
+// }
 
-createBtn.addEventListener("click", (event) => {
-  event.stopPropagation(); // Prevent click from bubbling up to document
-  removeIconsActiveClass();
-});
+// createBtn.addEventListener("click", (event) => {
+//   event.stopPropagation(); // Prevent click from bubbling up to document
+//   removeIconsActiveClass();
+// });
 
-document.addEventListener("click", (event) => {
-  if (
-    !iconsContainer.contains(event.target) &&
-    !createBtn.contains(event.target)
-  ) {
-    addIconsActiveClass();
-  }
-});
+// document.addEventListener("click", (event) => {
+//   if (
+//     !iconsContainer.contains(event.target) &&
+//     !createBtn.contains(event.target)
+//   ) {
+//     addIconsActiveClass();
+//   }
+// });
 
-document.getElementById("skyz-btn").addEventListener("click", function () {
-  // Select all elements with the class 'skyz'
-  var skyzElements = document.querySelectorAll(".skyz");
-
-  // Loop through each element and remove the 'active' class
-  skyzElements.forEach(function (element) {
-    element.classList.toggle("active");
-  });
-});
