@@ -962,7 +962,7 @@ hr {
 .navbar .navbar-top .navbar__personal {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 .navbar .navbar-bottom {
   display: flex;
