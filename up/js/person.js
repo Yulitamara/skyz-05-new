@@ -548,7 +548,6 @@ document
     }
   });
 
-// create
 
 document.querySelectorAll(".create-category").forEach((icon) => {
   icon.addEventListener("click", function () {

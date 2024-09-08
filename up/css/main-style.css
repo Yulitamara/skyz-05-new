@@ -783,7 +783,7 @@ hr {
   padding-bottom: 1rem;
   font-size: 1.25rem;
   z-index: 100;
-  border: 1px solid var(--color-light-gray);
+  box-shadow: 5px 5px 5px rgba(207, 207, 207, 0.466);
 }
 .navbar .navbar-top {
   display: flex;
@@ -817,7 +817,6 @@ hr {
   align-items: center;
   gap: 1rem;
   position: relative;
-  width: 120px;
 }
 .navbar .navbar-top .navbar__main .navbar__main--search__links-container,
 .navbar .navbar-top .navbar__main .navbar__main--create__links-container {
@@ -1784,9 +1783,13 @@ input[type=number] {
   padding: 0 0.5rem;
   color: var(--color-on-primary-light);
   background-color: transparent;
-  width: 100%;
   font-size: 1.25rem;
+  width: 80px;
   font-family: "Open Sans", sans-serif;
+}
+
+.search-input-clicked {
+  width: 120px !important;
 }
 
 input[type=text]:focus,
@@ -1797,7 +1800,6 @@ textarea {
 }
 
 input[type=number] {
-  -moz-appearance: textfield;
   max-width: 120px;
 }
 

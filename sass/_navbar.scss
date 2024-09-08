@@ -10,7 +10,9 @@
   padding-bottom: 1rem;
   font-size: font-size(font-size-regular);
   z-index: 100;
-  border: 1px solid var(--color-light-gray);
+  // border: 1px solid var(--color-light-gray);
+	box-shadow: 5px 5px 5px rgba(207, 207, 207, 0.466);
+
 
   .navbar-top {
     display: flex;
@@ -44,7 +46,7 @@
         align-items: center;
         gap: $gap-medium;
         position: relative;
-        width: 120px;
+        // width: 120px;
         &__links-container {
           display: flex;
           align-items: center;
@@ -78,7 +80,6 @@
     align-items: center;
     margin-top: 1.5rem;
     gap: .5rem;
-    // box-shadow: 0px 15px 10px -15px #afafaf;  
     .create-container {
      .group-container-create {
      margin-bottom: 1rem;

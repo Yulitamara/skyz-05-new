@@ -2,12 +2,12 @@ const menu = document.querySelector(".menu");
 const hamburger = document.getElementById("hamburger-btn");
 const navbarOverlay = document.querySelector(".navbar__overlay");
 const skyzName = document.querySelector(".skyz-name");
+const navbarInput = document.querySelector('.navbar-input');
+const labelContainer = document.querySelector('.label-container');
 
 hamburger.addEventListener("click", () => {
   menu.classList.toggle("active");
-  // navbarOverlay.classList.toggle("open");
   skyzName.classList.toggle("active");
-  // document.querySelector(".navbar__main--menu").style.width = "min-content";
 });
 
 document.addEventListener("click", (event) => {
@@ -16,5 +16,21 @@ document.addEventListener("click", (event) => {
   if (!menu.contains(targetElement) && !hamburger.contains(targetElement)) {
     menu.classList.add("active");
     skyzName.classList.add("active");
+  }
+});
+
+navbarInput.addEventListener('click', function() {
+  labelContainer.classList.remove('active');
+  
+  navbarInput.classList.add('search-input-clicked');
+});
+
+document.addEventListener("click", (event) => {
+  const targetElement = event.target;
+
+  if (!navbarInput.contains(targetElement)) {
+    labelContainer.classList.add('active');
+  
+  navbarInput.classList.remove('search-input-clicked');
   }
 });
