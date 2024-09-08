@@ -780,7 +780,7 @@ hr {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  padding-bottom: 0;
+  padding-bottom: 1rem;
   font-size: 1.25rem;
   z-index: 100;
   border: 1px solid var(--color-light-gray);
@@ -826,7 +826,7 @@ hr {
 }
 .navbar .navbar-top .navbar__main .navbar__main--menu .field-container .input-container .skyz-name {
   padding-left: 1.5rem;
-  color: var(--color-primary);
+  color: #DFAC4A;
   font-weight: 700;
   font-size: 14px;
 }
@@ -844,7 +844,6 @@ hr {
   align-items: center;
   margin-top: 1.5rem;
   gap: 0.5rem;
-  box-shadow: 0px 15px 10px -15px #afafaf;
 }
 .navbar .navbar-bottom .create-container .group-container-create {
   margin-bottom: 1rem;
@@ -993,6 +992,13 @@ hr {
     align-items: center;
   }
   .navbar .navbar-top .navbar__menu {
+    display: none;
+  }
+  .navbar .navbar-top .navbar__main .navbar__main--search,
+  .navbar .navbar-top .navbar__main .navbar__main--create {
+    width: min-content;
+  }
+  .navbar .navbar-input {
     display: none;
   }
 }
@@ -3320,20 +3326,18 @@ textarea {
   align-items: center;
   gap: 1.5rem;
   font-size: 1.25rem;
-  flex-wrap: wrap;
   margin-bottom: 1rem;
 }
 .card-header .top .right .header-fields {
   display: flex;
   gap: 0.5rem;
-  flex-wrap: wrap;
   align-items: center;
 }
 .card-header .top .right .header-fields .add-circle {
   opacity: 0;
 }
 .card-header .top .right .header-fields .edit-content {
-  width: fit-content;
+  width: max-content;
   height: 35px;
 }
 .card-header .top .right .header-fields .edit-content.green .edit-field {

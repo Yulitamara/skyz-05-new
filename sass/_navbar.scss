@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   padding: $padding-medium;
-  padding-bottom: 0;
+  padding-bottom: 1rem;
   font-size: font-size(font-size-regular);
   z-index: 100;
   border: 1px solid var(--color-light-gray);
@@ -20,6 +20,7 @@
       display: flex;
       align-items: center;
       gap: $gap-large;
+
       &--side-toggle {
         cursor: pointer;
         display: none;
@@ -54,7 +55,7 @@
           .input-container {
             .skyz-name {
               padding-left: 1.5rem;
-              color: var(--color-primary);
+              color: #DFAC4A;
               font-weight: 700;
               font-size: 14px;
             }
@@ -77,7 +78,7 @@
     align-items: center;
     margin-top: 1.5rem;
     gap: .5rem;
-    box-shadow: 0px 15px 10px -15px #afafaf;  
+    // box-shadow: 0px 15px 10px -15px #afafaf;  
     .create-container {
      .group-container-create {
      margin-bottom: 1rem;
@@ -271,14 +272,14 @@
       .navbar__menu {
         display: none;
       }
-      // .navbar__main .navbar__main--search,
-      // .navbar__main .navbar__main--create {
-      //   width: min-content;
-      // }
+      .navbar__main .navbar__main--search,
+      .navbar__main .navbar__main--create {
+        width: min-content;
+      }
     }
-    // .navbar-input {
-    //   display: none;
-    // }
+    .navbar-input {
+      display: none;
+    }
   }
 
   @include media-tablet-big {
