@@ -62,26 +62,71 @@ navbarInputs.forEach((navbarInput) => {
   });
 });
 
+
 function handleResize() {
   if (window.innerWidth < 850) {
       document.querySelectorAll('.navbar-input').forEach(input => {
           input.classList.add('active');
       });
+      // Add event listeners only if the screen is smaller than 850px
+      setupEventListeners();
   } else {
       document.querySelectorAll('.navbar-input').forEach(input => {
           input.classList.remove('active');
       });
+      // Remove event listeners if the screen is larger than 850px
+      removeEventListeners();
   }
 }
 
-document.getElementById('create-btn').addEventListener('click', function() {
-  document.getElementById('createInput').classList.toggle('active');
-});
+function setupEventListeners() {
+  document.getElementById('create-btn').addEventListener('click', createBtnClickHandler);
+  document.getElementById('search-btn').addEventListener('click', searchBtnClickHandler);
+  document.addEventListener('click', documentClickHandler);
+}
 
-document.getElementById('search-btn').addEventListener('click', function() {
-  document.getElementById('searchInput').classList.toggle('active');
-});
+function removeEventListeners() {
+  document.getElementById('create-btn').removeEventListener('click', createBtnClickHandler);
+  document.getElementById('search-btn').removeEventListener('click', searchBtnClickHandler);
+  document.removeEventListener('click', documentClickHandler);
+}
+
+function createBtnClickHandler(event) {
+  event.stopPropagation(); // Prevents click event from propagating to document
+
+  const createInput = document.getElementById('createInput');
+  const searchInput = document.getElementById('searchInput');
+
+  createInput.classList.toggle('active');
+  searchInput.classList.add('active');
+}
+
+function searchBtnClickHandler(event) {
+  event.stopPropagation(); // Prevents click event from propagating to document
+
+  const createInput = document.getElementById('createInput');
+  const searchInput = document.getElementById('searchInput');
+
+  searchInput.classList.toggle('active');
+  createInput.classList.add('active');
+}
+
+function documentClickHandler(event) {
+  const createInput = document.getElementById('createInput');
+  const searchInput = document.getElementById('searchInput');
+  const createBtn = document.getElementById('create-btn');
+  const searchBtn = document.getElementById('search-btn');
+
+  if (!createInput.contains(event.target) && !createBtn.contains(event.target)) {
+      createInput.classList.add('active');
+  }
+
+  if (!searchInput.contains(event.target) && !searchBtn.contains(event.target)) {
+      searchInput.classList.add('active');
+  }
+}
 
 window.addEventListener('resize', handleResize);
 
+// Initial check to set up event listeners if necessary
 handleResize();
