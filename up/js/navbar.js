@@ -15,6 +15,6 @@ document.addEventListener("click", (event) => {
 
   if (!menu.contains(targetElement) && !hamburger.contains(targetElement)) {
     menu.classList.add("active");
-    skyzName.classList.toggle("active");
+    skyzName.classList.add("active");
   }
 });
