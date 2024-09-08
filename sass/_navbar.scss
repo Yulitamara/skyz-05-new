@@ -16,8 +16,9 @@
 
   .navbar-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+   
     .navbar__menu {
       display: flex;
       align-items: center;
@@ -40,6 +41,7 @@
     .navbar__main {
       display: flex;
       gap: 1rem;
+   
       .navbar__main--search,
       .navbar__main--create {
         display: flex;
@@ -50,6 +52,10 @@
         &__links-container {
           display: flex;
           align-items: center;
+          .material-symbols-outlined {
+            color: var(--color-on-primary);
+          }
+       
         }
       }
       .navbar__main--menu {
@@ -238,18 +244,31 @@
     }
   }
 
-  .navbar-bottom.menu {
     .menu {
+      position: absolute;
       display: flex;
       flex-direction: column;
       font-size: 14px;
       gap: 1rem;
       margin-bottom: 1.5rem;
+      width: 300px;
+      background-color: var(--color-on-primary);
+      padding: 0.8rem;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      margin-top: 1rem;
+
+      .material-symbols-outlined {
+        color: var(--color-primary);
+      }
+      .menu-item {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
     }
-    .material-symbols-outlined {
-      color: var(--color-primary);
-    }
-  }
+  
+
+  
 
   input[type="text"].search-input::placeholder {
     opacity: 0.5;
@@ -442,6 +461,7 @@
   }
   .input-container.yellow {
     border: 1px solid #DFAC4A;
+    position: relative;
   }
   .input-container.purple {
     border: 1px solid #6F45A1;
@@ -453,3 +473,4 @@
     border: 1px solid var(--color-primary);
   }
 }
+

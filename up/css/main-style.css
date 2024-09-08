@@ -787,7 +787,7 @@ hr {
 }
 .navbar .navbar-top {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .navbar .navbar-top .navbar__menu {
@@ -822,6 +822,10 @@ hr {
 .navbar .navbar-top .navbar__main .navbar__main--create__links-container {
   display: flex;
   align-items: center;
+}
+.navbar .navbar-top .navbar__main .navbar__main--search__links-container .material-symbols-outlined,
+.navbar .navbar-top .navbar__main .navbar__main--create__links-container .material-symbols-outlined {
+  color: var(--color-on-primary);
 }
 .navbar .navbar-top .navbar__main .navbar__main--menu .field-container .input-container .skyz-name {
   padding-left: 1.5rem;
@@ -965,15 +969,26 @@ hr {
 .navbar .navbar-bottom .create-container .group-container-create .group.purple .group-fields .edit-content .edit-field:hover {
   background-color: #e1d6fe;
 }
-.navbar .navbar-bottom.menu .menu {
+.navbar .menu {
+  position: absolute;
   display: flex;
   flex-direction: column;
   font-size: 14px;
   gap: 1rem;
   margin-bottom: 1.5rem;
+  width: 300px;
+  background-color: var(--color-on-primary);
+  padding: 0.8rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
 }
-.navbar .navbar-bottom.menu .material-symbols-outlined {
+.navbar .menu .material-symbols-outlined {
   color: var(--color-primary);
+}
+.navbar .menu .menu-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 .navbar input[type=text].search-input::placeholder {
   opacity: 0.5;
@@ -1110,6 +1125,7 @@ hr {
 }
 .field-container .input-container.yellow {
   border: 1px solid #DFAC4A;
+  position: relative;
 }
 .field-container .input-container.purple {
   border: 1px solid #6F45A1;
