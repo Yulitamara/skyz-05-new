@@ -281,25 +281,21 @@
       align-items: end;
       gap: 1.5rem;
       .navbar__main {
-        // display: none;
+       
         .navbar__main--media-small {
           display: flex;
           gap: $gap-medium;
           align-items: center;
         }
       }
-
-      .navbar__menu {
-        display: none;
-      }
       .navbar__main .navbar__main--search,
       .navbar__main .navbar__main--create {
         width: min-content;
       }
     }
-    .navbar-input {
-      display: none;
-    }
+    // .navbar-input {
+    //   display: none;
+    // }
   }
 
   @include media-tablet-big {

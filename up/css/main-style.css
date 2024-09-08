@@ -1005,15 +1005,9 @@ hr {
     gap: 1rem;
     align-items: center;
   }
-  .navbar .navbar-top .navbar__menu {
-    display: none;
-  }
   .navbar .navbar-top .navbar__main .navbar__main--search,
   .navbar .navbar-top .navbar__main .navbar__main--create {
     width: min-content;
-  }
-  .navbar .navbar-input {
-    display: none;
   }
 }
 @media screen and (max-width: 1250px) {
