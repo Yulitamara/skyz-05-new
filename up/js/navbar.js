@@ -2,8 +2,12 @@ const menu = document.querySelector(".menu");
 const hamburger = document.getElementById("hamburger-btn");
 const navbarOverlay = document.querySelector(".navbar__overlay");
 const skyzName = document.querySelector(".skyz-name");
-const navbarInput = document.querySelector('.navbar-input');
+const navbarInputs = document.querySelectorAll('.navbar-input');
 const labelContainer = document.querySelector('.label-container');
+const searchInput = document.getElementById("searchInput");
+const createInput = document.getElementById("createInput");
+const createShow = document.querySelector(".create-show")
+
 
 hamburger.addEventListener("click", () => {
   menu.classList.toggle("active");
@@ -19,18 +23,41 @@ document.addEventListener("click", (event) => {
   }
 });
 
-navbarInput.addEventListener('click', function() {
+searchInput.addEventListener('click', function() {
   labelContainer.classList.remove('active');
-  
-  navbarInput.classList.add('search-input-clicked');
 });
 
 document.addEventListener("click", (event) => {
   const targetElement = event.target;
 
-  if (!navbarInput.contains(targetElement)) {
+  if (!searchInput.contains(targetElement)) {
     labelContainer.classList.add('active');
-  
-  navbarInput.classList.remove('search-input-clicked');
   }
+});
+
+createInput.addEventListener('click', function() {
+  createShow.classList.remove('active');
+});
+
+document.addEventListener("click", (event) => {
+  const targetElement = event.target;
+
+  if (!createInput.contains(targetElement) &&  !createShow.contains(targetElement)) {
+    createShow.classList.add('active');
+  }
+});
+
+navbarInputs.forEach((navbarInput) => {
+  navbarInput.addEventListener('click', function() {
+
+    navbarInput.classList.add('search-input-clicked');
+  });
+
+  document.addEventListener("click", (event) => {
+    const targetElement = event.target;
+
+    if (!navbarInput.contains(targetElement)) {
+      navbarInput.classList.remove('search-input-clicked');
+    }
+  });
 });

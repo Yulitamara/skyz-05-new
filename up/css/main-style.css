@@ -1784,7 +1784,7 @@ input[type=number] {
   color: var(--color-on-primary-light);
   background-color: transparent;
   font-size: 1.25rem;
-  width: 80px;
+  width: 70px;
   font-family: "Open Sans", sans-serif;
 }
 
