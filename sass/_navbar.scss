@@ -212,6 +212,8 @@
               height: 19px;
               padding: 0 1rem;
               cursor: pointer;
+              color: #88bbe7;
+              transition: opacity 0.3s ease;
             }
             .hover-text {
               visibility: hidden;
@@ -219,6 +221,10 @@
               transition: opacity 0.3s ease;
             }
 
+            .show-box:hover {
+              color: #5fa1db;
+              border: 1px solid #8fc4f1;
+            }
             .show-box:hover .hover-text {
               visibility: visible;
               opacity: 1;

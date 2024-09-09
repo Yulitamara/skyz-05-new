@@ -968,11 +968,17 @@ hr {
   height: 19px;
   padding: 0 1rem;
   cursor: pointer;
+  color: #88bbe7;
+  transition: opacity 0.3s ease;
 }
 .navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .hover-text {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+.navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .show-box:hover {
+  color: #5fa1db;
+  border: 1px solid #8fc4f1;
 }
 .navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .show-box:hover .hover-text {
   visibility: visible;
