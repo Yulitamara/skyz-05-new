@@ -302,13 +302,13 @@
     flex-direction: column;
     font-size: 14px;
     gap: 1rem;
-    margin-bottom: 1.5rem;
-    // width: 300px;
+    margin: 5rem 0 1.5rem 0;
     background-color: var(--color-on-primary);
     padding: 0.8rem;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    margin-top: 5rem;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   input[type="text"].search-input::placeholder {
@@ -333,9 +333,6 @@
         width: min-content;
       }
     }
-    // .navbar-input {
-    //   display: none;
-    // }
   }
 
   @include media-tablet-big {
@@ -343,6 +340,37 @@
       .navbar__menu--side-toggle {
         display: block;
       }
+    }
+  }
+
+  @media screen and (max-width: 913px) {
+    .create-show {
+      position: fixed;
+      margin-top: 6rem;
+      width: 90%;
+      display: flex;
+      align-items: flex-start;
+      overflow: hidden;
+
+      .icons-container-create {
+        overflow-x: scroll;
+        display: flex; /* This ensures the content aligns horizontally */
+        white-space: nowrap; /* Prevents content from wrapping */
+        width: 100%;
+      }
+    }
+    .menu {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      .menu-item {
+        flex-wrap: wrap;
+      }
+    }
+  }
+  @media screen and (max-width: 325px) {
+    .menu {
+      width: 95%;
     }
   }
 }
@@ -439,51 +467,6 @@
 .focus-category {
   background-color: var(--color-blue);
 }
-
-// .full-menu {
-//   display: grid;
-//   grid-template-columns: repeat(7, 1fr);
-//   justify-items: center;
-//   padding: 1rem;
-//   border-top: 1px solid var(--color-light-gray);
-//   &__box {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 1rem;
-//     align-items: center;
-//     &--title {
-//       font-size: 1.4rem;
-//       display: flex;
-//       align-items: center;
-//       gap: 0.5rem;
-//       color: var(--color-primary);
-//       font-weight: 500;
-//       .material-symbols-outlined {
-//         font-size: 1.9rem;
-//       }
-//     }
-//     &--list {
-//       font-size: 1.2rem;
-//       // margin-right: 2.5rem;
-//       li {
-//         cursor: pointer;
-//         font-weight: font-weight(font-weight-light);
-//       }
-//       li:hover,
-//       li:active {
-//         font-weight: font-weight(font-weight-regular);
-//       }
-//     }
-//   }
-
-//   @include media-tablet-big {
-//     grid-template-columns: repeat(4, 1fr);
-//     gap: 20px;
-//   }
-//   @include media-small {
-//     grid-template-columns: repeat(2, 1fr);
-//   }
-// }
 
 .search-width {
   width: fit-content;

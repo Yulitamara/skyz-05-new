@@ -1032,12 +1032,13 @@ hr {
   flex-direction: column;
   font-size: 14px;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin: 5rem 0 1.5rem 0;
   background-color: var(--color-on-primary);
   padding: 0.8rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  margin-top: 5rem;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .navbar input[type=text].search-input::-moz-placeholder {
   opacity: 0.5;
@@ -1067,6 +1068,35 @@ hr {
 @media screen and (max-width: 1250px) {
   .navbar .navbar-top .navbar__menu--side-toggle {
     display: block;
+  }
+}
+@media screen and (max-width: 913px) {
+  .navbar .create-show {
+    position: fixed;
+    margin-top: 6rem;
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .navbar .create-show .icons-container-create {
+    overflow-x: scroll;
+    display: flex; /* This ensures the content aligns horizontally */
+    white-space: nowrap; /* Prevents content from wrapping */
+    width: 100%;
+  }
+  .navbar .menu {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .navbar .menu .menu-item {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 325px) {
+  .navbar .menu {
+    width: 95%;
   }
 }
 
