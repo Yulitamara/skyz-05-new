@@ -195,9 +195,9 @@
               cursor: pointer;
               width: 120px;
             }
-            .group-item-topic:hover {
-              text-decoration: underline;
-            }
+            // .group-item-topic:hover {
+            //   text-decoration: underline;
+            // }
             .show-box {
               display: flex;
               align-items: center;
@@ -473,11 +473,14 @@
 
 .search-width {
   width: fit-content;
-  background-color: red;
 }
 
 .field-container {
   .input-container {
+    background-color: var(--color-on-primary);
+    background-color: #f9f9f9;
+  }
+  .input-container:hover {
     background-color: var(--color-on-primary);
   }
   .input-container.yellow {
@@ -489,9 +492,13 @@
   }
   .input-container.green {
     border: 1px solid #3a700b;
+    border: 1px solid #3a700ba6;
     input::placeholder {
       color: #295008;
     }
+  }
+  .input-container.green:hover {
+    border: 1px solid #3a700b;
   }
   .input-container.blue {
     border: 1px solid var(--color-primary);
