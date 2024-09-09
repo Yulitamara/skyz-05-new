@@ -952,7 +952,7 @@ hr {
 }
 .navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .group-item-topic {
   cursor: pointer;
-  width: 100px;
+  width: 120px;
 }
 .navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .group-item-topic:hover {
   text-decoration: underline;
