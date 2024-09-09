@@ -51,9 +51,6 @@
         &__links-container {
           display: flex;
           align-items: center;
-          .material-symbols-outlined {
-            color: var(--color-on-primary);
-          }
         }
       }
       .navbar__main--menu {
@@ -492,8 +489,14 @@
   }
   .input-container.green {
     border: 1px solid #3a700b;
+    input::placeholder {
+      color: #295008;
+    }
   }
   .input-container.blue {
     border: 1px solid var(--color-primary);
+    input::placeholder {
+      color: #081b50;
+    }
   }
 }

@@ -826,10 +826,6 @@ hr {
   display: flex;
   align-items: center;
 }
-.navbar .navbar-top .navbar__main .navbar__main--search__links-container .material-symbols-outlined,
-.navbar .navbar-top .navbar__main .navbar__main--create__links-container .material-symbols-outlined {
-  color: var(--color-on-primary);
-}
 .navbar .navbar-top .navbar__main .navbar__main--menu .field-container .input-container .skyz-name {
   padding-left: 1.5rem;
   color: #dfac4a;
@@ -1222,8 +1218,20 @@ hr {
 .field-container .input-container.green {
   border: 1px solid #3a700b;
 }
+.field-container .input-container.green input::-moz-placeholder {
+  color: #295008;
+}
+.field-container .input-container.green input::placeholder {
+  color: #295008;
+}
 .field-container .input-container.blue {
   border: 1px solid var(--color-primary);
+}
+.field-container .input-container.blue input::-moz-placeholder {
+  color: #081b50;
+}
+.field-container .input-container.blue input::placeholder {
+  color: #081b50;
 }
 
 .home {
