@@ -947,7 +947,6 @@ hr {
   gap: 1rem;
 }
 .navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .group-item-topic {
-  cursor: pointer;
   width: 120px;
 }
 .navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .show-box {
