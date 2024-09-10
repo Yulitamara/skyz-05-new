@@ -955,11 +955,15 @@ hr {
   border-radius: 4px;
   min-width: 45px;
   width: 45px;
-  height: 19px;
+  height: 21px;
   padding: 0 1rem;
   cursor: pointer;
   color: #b5d9f9;
   transition: opacity 0.3s ease;
+}
+.navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .show-box.big {
+  width: 90px;
+  padding: 0 0.5rem;
 }
 .navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .hover-text {
   transition: opacity 0.3s ease;
