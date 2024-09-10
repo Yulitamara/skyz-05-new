@@ -7,6 +7,7 @@ const labelContainer = document.querySelector(".label-container");
 const searchInput = document.getElementById("searchInput");
 const createInput = document.getElementById("createInput");
 const createShow = document.querySelector(".create-show");
+const addMenuBtn = document.getElementById("addMenuBtn");
 
 hamburger.addEventListener("click", () => {
   menu.classList.toggle("active");
@@ -25,6 +26,7 @@ document.addEventListener("click", (event) => {
 searchInput.addEventListener("click", function () {
   labelContainer.classList.remove("active");
 });
+
 
 document.addEventListener("click", (event) => {
   const targetElement = event.target;
@@ -62,6 +64,7 @@ navbarInputs.forEach((navbarInput) => {
     }
   });
 });
+
 
 function handleResize() {
   if (window.innerWidth < 850) {

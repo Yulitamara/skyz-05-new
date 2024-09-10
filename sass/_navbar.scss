@@ -323,7 +323,7 @@
   @media screen and (max-width: 850px) {
     .navbar-top {
       flex-direction: column-reverse;
-      align-items: end;
+      // align-items: end;
       gap: 1.5rem;
       .navbar__main {
         .navbar__main--media-small {
