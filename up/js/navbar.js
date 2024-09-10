@@ -146,19 +146,13 @@ window.addEventListener("resize", handleResize);
 handleResize();
 
 // Select all elements with the class 'hover-text'
-const hoverTextElements = document.querySelectorAll(".hover-text");
+// const hoverTextElements = document.querySelectorAll(".hover-text");
 
-hoverTextElements.forEach(function (hoverTextElement) {
-  hoverTextElement.addEventListener("mouseover", function () {
-    document.querySelectorAll(".hover-example").forEach(function (el) {
-      el.classList.add("hover-text");
-    });
-  });
+// hoverTextElements.forEach(function (hoverTextElement) {
+//   hoverTextElement.addEventListener("mouseover", function () {
+//     document.querySelectorAll(".hover-example").forEach(function (el) {
+//       el.classList.add("hover-text");
+//     });
+//   });
 
-  // hoverTextElement.addEventListener("mouseout", function () {
-  //   // When mouse leaves, remove 'hover-text' class from all elements with 'hover-example'
-  //   document.querySelectorAll(".hover-example").forEach(function (el) {
-  //     el.classList.remove("hover-text");
-  //   });
-  // });
-});
+// });
