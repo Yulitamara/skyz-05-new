@@ -39,6 +39,7 @@
     .navbar__main {
       display: flex;
       gap: 1rem;
+      overflow-x: auto;
 
       .navbar__main--search,
       .navbar__main--create {
