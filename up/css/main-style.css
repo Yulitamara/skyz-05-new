@@ -947,9 +947,6 @@ hr {
 .navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .group-item-topic {
   width: 120px;
 }
-.navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .group-item-topic:hover {
-  text-decoration: underline;
-}
 .navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .show-box {
   display: flex;
   align-items: center;
