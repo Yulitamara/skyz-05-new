@@ -27,7 +27,6 @@ searchInput.addEventListener("click", function () {
   labelContainer.classList.remove("active");
 });
 
-
 document.addEventListener("click", (event) => {
   const targetElement = event.target;
 
@@ -64,7 +63,6 @@ navbarInputs.forEach((navbarInput) => {
     }
   });
 });
-
 
 function handleResize() {
   if (window.innerWidth < 850) {
@@ -117,7 +115,7 @@ function searchBtnClickHandler(event) {
 
   const createInput = document.getElementById("createInput");
   const searchInput = document.getElementById("searchInput");
-
+  labelContainer.classList.toggle("active");
   searchInput.classList.toggle("active");
   createInput.classList.add("active");
 }
