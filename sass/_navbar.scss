@@ -389,12 +389,15 @@
       }
     }
   }
-  @media screen and (max-width: 325px) {
+  @media screen and (max-width: 350px) {
     .menu {
       width: 95%;
     }
     .navbar__main > *:not(:first-child) {
       margin-right: -20px;
+    }
+    .navbar-top {
+      align-self: end;
     }
   }
 }
