@@ -1112,6 +1112,9 @@ hr {
   .navbar .menu {
     width: 95%;
   }
+  .navbar .navbar__main > *:not(:first-child) {
+    margin-right: -20px;
+  }
 }
 
 .active {

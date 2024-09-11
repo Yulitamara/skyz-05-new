@@ -69,6 +69,7 @@
         display: none;
       }
     }
+
     .navbar__personal {
       display: flex;
       align-items: center;
@@ -391,6 +392,9 @@
   @media screen and (max-width: 325px) {
     .menu {
       width: 95%;
+    }
+    .navbar__main > *:not(:first-child) {
+      margin-right: -20px;
     }
   }
 }
