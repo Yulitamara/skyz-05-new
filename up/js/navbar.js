@@ -170,3 +170,115 @@ $(document).ready(function () {
     groupItem.find(".not-edit-mode").addClass("active");
   });
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Define variables for elements
+//   const searchBtn = document.getElementById("search-btn");
+//   const createBtn = document.getElementById("create-btn");
+//   const smallScreenContainer = document.querySelector(
+//     ".navbar__small-screen--append"
+//   );
+//   const searchDiv = document.querySelector(".navbar__main--search");
+//   const createDiv = document.querySelector(".navbar__main--create");
+//   const navbarMainContainer = document.querySelector(".navbar__main");
+
+//   function moveToSmallScreen(targetElement) {
+//     if (window.innerWidth <= 490) {
+//       // Check if the small-screen container already has a child
+//       if (smallScreenContainer.firstChild) {
+//         // Return the currently appended element to its original place
+//         const currentElement = smallScreenContainer.firstChild;
+//         navbarMainContainer.appendChild(currentElement);
+//       }
+//       // Append the target element to the small-screen container
+//       smallScreenContainer.appendChild(targetElement);
+//     }
+//   }
+
+//   // Attach click event listeners to buttons
+//   searchBtn.addEventListener("click", function () {
+//     moveToSmallScreen(searchDiv);
+//   });
+
+//   createBtn.addEventListener("click", function () {
+//     moveToSmallScreen(createDiv);
+//   });
+
+//   // Return the elements to their original positions when resizing back to larger screen
+//   window.addEventListener("resize", function () {
+//     if (window.innerWidth > 490) {
+//       // Move back the elements to the main container if not already there
+//       if (smallScreenContainer.contains(searchDiv)) {
+//         navbarMainContainer.appendChild(searchDiv);
+//       }
+//       if (smallScreenContainer.contains(createDiv)) {
+//         navbarMainContainer.appendChild(createDiv);
+//       }
+//     }
+//   });
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const searchBtn = document.getElementById("search-btn");
+  const createBtn = document.getElementById("create-btn");
+  const smallScreenContainer = document.querySelector(
+    ".navbar__small-screen--append"
+  );
+  const searchDiv = document.querySelector(".navbar__main--search");
+  const createDiv = document.querySelector(".navbar__main--create");
+  const navbarMainContainer = document.querySelector(".navbar__main");
+
+  let currentElement = null;
+
+  function moveToSmallScreen(targetElement) {
+    if (window.innerWidth <= 490) {
+      if (smallScreenContainer.firstChild) {
+        // Move the currently appended element back to its original place
+        navbarMainContainer.appendChild(smallScreenContainer.firstChild);
+      }
+      // Append the new target element to the small-screen container
+      smallScreenContainer.appendChild(targetElement);
+      currentElement = targetElement;
+    }
+  }
+
+  // Function to handle click outside the element
+  function handleClickOutside(event) {
+    if (
+      currentElement &&
+      !currentElement.contains(event.target) &&
+      !smallScreenContainer.contains(event.target)
+    ) {
+      // Return the element back to the main container if clicked outside
+      navbarMainContainer.appendChild(currentElement);
+      currentElement = null;
+    }
+  }
+
+  // Attach click event listeners to buttons
+  searchBtn.addEventListener("click", function () {
+    moveToSmallScreen(searchDiv);
+  });
+
+  createBtn.addEventListener("click", function () {
+    moveToSmallScreen(createDiv);
+  });
+
+  // Handle click events outside the active element
+  document.addEventListener("click", function (event) {
+    handleClickOutside(event);
+  });
+
+  // Return the elements to their original positions when resizing back to larger screen
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 490) {
+      if (smallScreenContainer.contains(searchDiv)) {
+        navbarMainContainer.appendChild(searchDiv);
+      }
+      if (smallScreenContainer.contains(createDiv)) {
+        navbarMainContainer.appendChild(createDiv);
+      }
+      currentElement = null;
+    }
+  });
+});

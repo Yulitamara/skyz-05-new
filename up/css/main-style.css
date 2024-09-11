@@ -1066,7 +1066,6 @@ hr {
 @media screen and (max-width: 850px) {
   .navbar .navbar-top {
     flex-direction: column-reverse;
-    gap: 1.5rem;
   }
   .navbar .navbar-top .navbar__main .navbar__main--media-small {
     display: flex;
@@ -1108,7 +1107,7 @@ hr {
     flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 490px) {
   .navbar .menu {
     width: 95%;
   }
@@ -1117,6 +1116,8 @@ hr {
   }
   .navbar .navbar-top {
     align-self: end;
+    flex-direction: row-reverse;
+    gap: 1rem;
   }
 }
 

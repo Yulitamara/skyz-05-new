@@ -17,24 +17,3 @@ document.addEventListener("click", (event) => {
     // navbarOverlay.classList.remove("open");
   }
 });
-
-// window.addEventListener("resize", handleResize);
-// window.addEventListener("load", handleResize);
-
-// function handleResize() {
-//   const navbarMain = document.querySelector(".navbar__main");
-//   const smallScreenContainer = document.querySelector(
-//     ".small-screen-append__navbar-main"
-//   );
-
-//   if (window.innerWidth <= 985) {
-//     if (navbarMain && !smallScreenContainer.contains(navbarMain)) {
-//       smallScreenContainer.appendChild(navbarMain);
-//     }
-//   } else {
-//     const originalContainer = document.querySelector(".navbar__main-container"); // Replace with the original container
-//     if (navbarMain && !originalContainer.contains(navbarMain)) {
-//       originalContainer.appendChild(navbarMain);
-//     }
-//   }
-// }

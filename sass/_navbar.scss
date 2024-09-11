@@ -341,7 +341,6 @@
     .navbar-top {
       flex-direction: column-reverse;
       // align-items: end;
-      gap: 1.5rem;
       .navbar__main {
         .navbar__main--media-small {
           display: flex;
@@ -389,7 +388,7 @@
       }
     }
   }
-  @media screen and (max-width: 350px) {
+  @media screen and (max-width: 490px) {
     .menu {
       width: 95%;
     }
@@ -398,6 +397,8 @@
     }
     .navbar-top {
       align-self: end;
+      flex-direction: row-reverse;
+      gap: 1rem;
     }
   }
 }
