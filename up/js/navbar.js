@@ -157,3 +157,16 @@ handleResize();
 //   });
 
 // });
+
+$(document).ready(function () {
+  $(".edit-group-item-topic").click(function () {
+    // Get the current group-item container
+    var groupItem = $(this).closest(".group-item");
+
+    // Remove "active" class from all ".edit-show-box" inside the group item
+    groupItem.find(".edit-show-box").removeClass("active");
+
+    // Add "active" class to all ".not-edit-mode" elements inside the group item
+    groupItem.find(".not-edit-mode").addClass("active");
+  });
+});

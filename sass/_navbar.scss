@@ -192,13 +192,25 @@
             align-items: center;
             gap: 1rem;
             cursor: pointer;
+            .edit-show-box {
+              color: #5fa1db !important;
+              border: 1px solid #8fc4f1 !important;
+            }
             .group-item-topic {
               width: 120px;
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              .edit-group-item-topic {
+                opacity: 0;
+              }
             }
-            // .group-item-topic:hover {
-            //   text-decoration: underline;
+            .group-item-topic:hover {
+              .edit-group-item-topic {
+                opacity: 1;
+              }
+            }
 
-            // }
             .show-box {
               display: flex;
               align-items: center;
