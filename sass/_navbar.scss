@@ -193,10 +193,6 @@
             align-items: center;
             gap: 1rem;
             cursor: pointer;
-            .edit-show-box {
-              color: #5fa1db !important;
-              border: 1px solid #8fc4f1 !important;
-            }
             .group-item-topic {
               width: 120px;
               display: flex;
@@ -210,39 +206,6 @@
               .edit-group-item-topic {
                 opacity: 1;
               }
-            }
-
-            .show-box {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              border: 1px solid #c9e6ff;
-              border-radius: 4px;
-              min-width: 45px;
-              width: 45px;
-              height: 21px;
-              padding: 0 1rem;
-              cursor: pointer;
-              color: #b5d9f9;
-              transition: opacity 0.3s ease;
-            }
-            .show-box.big {
-              width: 90px;
-              padding: 0 0.5rem;
-            }
-            .hover-text {
-              // visibility: hidden;
-              // opacity: 0;
-              transition: opacity 0.3s ease;
-            }
-
-            .show-box:hover {
-              color: #5fa1db;
-              border: 1px solid #8fc4f1;
-            }
-            .show-box:hover .hover-text {
-              visibility: visible;
-              opacity: 1;
             }
           }
 

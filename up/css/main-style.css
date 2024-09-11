@@ -948,10 +948,6 @@ hr {
   gap: 1rem;
   cursor: pointer;
 }
-.navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .edit-show-box {
-  color: #5fa1db !important;
-  border: 1px solid #8fc4f1 !important;
-}
 .navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .group-item-topic {
   width: 120px;
   display: flex;
@@ -962,35 +958,6 @@ hr {
   opacity: 0;
 }
 .navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .group-item-topic:hover .edit-group-item-topic {
-  opacity: 1;
-}
-.navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .show-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #c9e6ff;
-  border-radius: 4px;
-  min-width: 45px;
-  width: 45px;
-  height: 21px;
-  padding: 0 1rem;
-  cursor: pointer;
-  color: #b5d9f9;
-  transition: opacity 0.3s ease;
-}
-.navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .show-box.big {
-  width: 90px;
-  padding: 0 0.5rem;
-}
-.navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .hover-text {
-  transition: opacity 0.3s ease;
-}
-.navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .show-box:hover {
-  color: #5fa1db;
-  border: 1px solid #8fc4f1;
-}
-.navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .show-box:hover .hover-text {
-  visibility: visible;
   opacity: 1;
 }
 .navbar .navbar-bottom .create-container .group-container-create .group-fields .edit-content .edit-field {
