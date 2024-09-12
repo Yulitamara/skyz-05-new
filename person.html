@@ -47,18 +47,6 @@
                     id="searchInput"
                   />
                   <div class="navbar__main--search__links-container">
-                    <div class="label-container active">
-                      <label
-                        class="label-text"
-                        style="display: flex; gap: 0.6rem"
-                      >
-                        <nobr style="opacity: 0.8"> חפש ב: </nobr>
-                        <span>כללי</span>
-                      </label>
-                      <span class="material-symbols-outlined label-icon">
-                        expand_more
-                      </span>
-                    </div>
                     <div class="round-btn round-btn-primary" id="search-btn">
                       <span class="material-symbols-outlined" id="addMenuBtn">
                         search
@@ -384,8 +372,12 @@
             <div class="icons-container-create">
               <div
                 class="create-category focus-category"
-                data-color="search-fav"
+                data-color="search-history"
               >
+                <span>היסטורית חיפושים</span>
+              </div>
+
+              <div class="create-category" data-color="search-fav">
                 <span>מועדפים</span>
               </div>
 
@@ -425,7 +417,56 @@
                 <span>לוגיסטיקה</span>
               </div>
             </div>
-            <div class="group-container-create" data-color="search-fav">
+            <div class="group-container-create" data-color="search-history">
+              <div class="group-blue">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>
+                        <b>כללי:</b>
+                        אייל כהן
+                      </span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>
+                        <b>קריאה:</b>
+                        עזרה עם התקשרויות, קרנית לא רואה גביה
+                      </span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קריאות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>
+                        <b>קריאה:</b>
+                        עזרה עם מיזוג כרטיסים + שימור שם משתמש
+                      </span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>
+                        <b>קריאה:</b>
+                        בהמשך לקריאה קודמת, שלחה מייל העברתי לעמית
+                      </span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>
+                        <b>קריאה:</b>
+                        עזרה עם כרטיס לקוח, כנראה פתוח אצל משתמש אחר
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="search-fav">
               <div class="group-blue">
                 <div class="group-fields">
                   <div class="group-item">

@@ -3,7 +3,6 @@ const hamburger = document.getElementById("hamburger-btn");
 const navbarOverlay = document.querySelector(".navbar__overlay");
 const skyzName = document.querySelector(".skyz-name");
 const navbarInputs = document.querySelectorAll(".navbar-input");
-const labelContainer = document.querySelector(".label-container");
 const searchInput = document.getElementById("searchInput");
 const createInput = document.getElementById("createInput");
 const createShow = document.querySelector(".create-show");
@@ -27,20 +26,17 @@ document.addEventListener("click", (event) => {
 
 searchInput.addEventListener("click", function () {
   searchMenu.classList.remove("active");
-  labelContainer.classList.remove("active");
 });
 
 document.addEventListener("click", (event) => {
   const targetElement = event.target;
 
-  if (!searchInput.contains(targetElement)) {
-    labelContainer.classList.add("active");
-
-    if (!searchMenu.contains(targetElement)) {
-      searchMenu.classList.add("active");
-    }
+  if (!searchInput.contains(targetElement) && !searchMenu.contains(targetElement)) {
+    // If the click is outside both searchInput and searchMenu, add 'active' to searchMenu
+    searchMenu.classList.add("active");
   }
 });
+
 
 
 createInput.addEventListener("click", function () {
@@ -125,7 +121,6 @@ function searchBtnClickHandler(event) {
 
   const createInput = document.getElementById("createInput");
   const searchInput = document.getElementById("searchInput");
-  labelContainer.classList.toggle("active");
   searchInput.classList.toggle("active");
   createInput.classList.add("active");
 }
