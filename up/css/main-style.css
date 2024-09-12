@@ -1042,7 +1042,7 @@ hr {
   }
 }
 @media screen and (max-width: 913px) {
-  .navbar .create-show {
+  .navbar .create-show, .navbar .search-menu {
     position: fixed;
     margin-top: 6rem;
     width: 90%;
@@ -1050,7 +1050,7 @@ hr {
     align-items: flex-start;
     overflow: hidden;
   }
-  .navbar .create-show .icons-container-create {
+  .navbar .create-show .icons-container-create, .navbar .search-menu .icons-container-create {
     overflow-x: scroll;
     display: flex; /* This ensures the content aligns horizontally */
     white-space: nowrap; /* Prevents content from wrapping */
