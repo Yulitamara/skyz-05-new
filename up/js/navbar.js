@@ -148,20 +148,9 @@ function documentClickHandler(event) {
 
 window.addEventListener("resize", handleResize);
 
-// Initial check to set up event listeners if necessary
 handleResize();
 
-// Select all elements with the class 'hover-text'
-// const hoverTextElements = document.querySelectorAll(".hover-text");
 
-// hoverTextElements.forEach(function (hoverTextElement) {
-//   hoverTextElement.addEventListener("mouseover", function () {
-//     document.querySelectorAll(".hover-example").forEach(function (el) {
-//       el.classList.add("hover-text");
-//     });
-//   });
-
-// });
 
 $(document).ready(function () {
   $(".edit-group-item-topic").click(function () {
@@ -173,66 +162,66 @@ $(document).ready(function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const searchBtn = document.getElementById("search-btn");
-  const createBtn = document.getElementById("create-btn");
-  const smallScreenContainer = document.querySelector(
-    ".navbar__small-screen--append"
-  );
-  const searchDiv = document.querySelector(".navbar__main--search");
-  const createDiv = document.querySelector(".navbar__main--create");
-  const navbarMainContainer = document.querySelector(".navbar__main");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const searchBtn = document.getElementById("search-btn");
+//   const createBtn = document.getElementById("create-btn");
+//   const smallScreenContainer = document.querySelector(
+//     ".navbar__small-screen--append"
+//   );
+//   const searchDiv = document.querySelector(".navbar__main--search");
+//   const createDiv = document.querySelector(".navbar__main--create");
+//   const navbarMainContainer = document.querySelector(".navbar__main");
 
-  let currentElement = null;
+//   let currentElement = null;
 
-  function moveToSmallScreen(targetElement) {
-    if (window.innerWidth <= 490) {
-      if (smallScreenContainer.firstChild) {
-        navbarMainContainer.appendChild(smallScreenContainer.firstChild);
-      }
-      // Append the new target element to the small-screen container
-      smallScreenContainer.appendChild(targetElement);
-      currentElement = targetElement;
-    }
-  }
+//   function moveToSmallScreen(targetElement) {
+//     if (window.innerWidth <= 490) {
+//       if (smallScreenContainer.firstChild) {
+//         navbarMainContainer.appendChild(smallScreenContainer.firstChild);
+//       }
+//       // Append the new target element to the small-screen container
+//       smallScreenContainer.appendChild(targetElement);
+//       currentElement = targetElement;
+//     }
+//   }
 
-  // Function to handle click outside the element
-  function handleClickOutside(event) {
-    if (
-      currentElement &&
-      !currentElement.contains(event.target) &&
-      !smallScreenContainer.contains(event.target)
-    ) {
-      // Return the element back to the main container if clicked outside
-      navbarMainContainer.appendChild(currentElement);
-      currentElement = null;
-    }
-  }
+//   // Function to handle click outside the element
+//   function handleClickOutside(event) {
+//     if (
+//       currentElement &&
+//       !currentElement.contains(event.target) &&
+//       !smallScreenContainer.contains(event.target)
+//     ) {
+//       // Return the element back to the main container if clicked outside
+//       navbarMainContainer.appendChild(currentElement);
+//       currentElement = null;
+//     }
+//   }
 
-  // Attach click event listeners to buttons
-  searchBtn.addEventListener("click", function () {
-    moveToSmallScreen(searchDiv);
-  });
+//   // Attach click event listeners to buttons
+//   searchBtn.addEventListener("click", function () {
+//     moveToSmallScreen(searchDiv);
+//   });
 
-  createBtn.addEventListener("click", function () {
-    moveToSmallScreen(createDiv);
-  });
+//   createBtn.addEventListener("click", function () {
+//     moveToSmallScreen(createDiv);
+//   });
 
-  // Handle click events outside the active element
-  document.addEventListener("click", function (event) {
-    handleClickOutside(event);
-  });
+//   // Handle click events outside the active element
+//   document.addEventListener("click", function (event) {
+//     handleClickOutside(event);
+//   });
 
-  // Return the elements to their original positions when resizing back to larger screen
-  window.addEventListener("resize", function () {
-    if (window.innerWidth > 490) {
-      if (smallScreenContainer.contains(searchDiv)) {
-        navbarMainContainer.appendChild(searchDiv);
-      }
-      if (smallScreenContainer.contains(createDiv)) {
-        navbarMainContainer.appendChild(createDiv);
-      }
-      currentElement = null;
-    }
-  });
-});
+//   // Return the elements to their original positions when resizing back to larger screen
+//   window.addEventListener("resize", function () {
+//     if (window.innerWidth > 490) {
+//       if (smallScreenContainer.contains(searchDiv)) {
+//         navbarMainContainer.appendChild(searchDiv);
+//       }
+//       if (smallScreenContainer.contains(createDiv)) {
+//         navbarMainContainer.appendChild(createDiv);
+//       }
+//       currentElement = null;
+//     }
+//   });
+// });

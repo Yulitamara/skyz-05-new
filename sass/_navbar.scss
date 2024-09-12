@@ -355,9 +355,9 @@
     .menu {
       width: 95%;
     }
-    .navbar__main > *:not(:first-child) {
-      margin-right: -20px;
-    }
+    // .navbar__main > *:not(:first-child) {
+    //   margin-right: -20px;
+    // }
     .navbar-top {
       align-self: end;
       flex-direction: row-reverse;
