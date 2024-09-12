@@ -9,6 +9,8 @@ const createInput = document.getElementById("createInput");
 const createShow = document.querySelector(".create-show");
 const addMenuBtn = document.getElementById("addMenuBtn");
 
+const searchMenu = document.querySelector(".search-menu");
+
 hamburger.addEventListener("click", () => {
   menu.classList.toggle("active");
   skyzName.classList.toggle("active");
@@ -24,6 +26,7 @@ document.addEventListener("click", (event) => {
 });
 
 searchInput.addEventListener("click", function () {
+  searchMenu.classList.remove("active");
   labelContainer.classList.remove("active");
 });
 
@@ -32,8 +35,13 @@ document.addEventListener("click", (event) => {
 
   if (!searchInput.contains(targetElement)) {
     labelContainer.classList.add("active");
+
+    if (!searchMenu.contains(targetElement)) {
+      searchMenu.classList.add("active");
+    }
   }
 });
+
 
 createInput.addEventListener("click", function () {
   createShow.classList.remove("active");
@@ -49,6 +57,8 @@ document.addEventListener("click", (event) => {
     createShow.classList.add("active");
   }
 });
+
+
 
 navbarInputs.forEach((navbarInput) => {
   navbarInput.addEventListener("click", function () {
