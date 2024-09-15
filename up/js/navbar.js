@@ -114,6 +114,8 @@ function createBtnClickHandler(event) {
 
   createInput.classList.toggle("active");
   searchInput.classList.add("active");
+  createShow.classList.remove("active");
+  searchMenu.classList.add("active");
 }
 
 function searchBtnClickHandler(event) {
@@ -123,6 +125,8 @@ function searchBtnClickHandler(event) {
   const searchInput = document.getElementById("searchInput");
   searchInput.classList.toggle("active");
   createInput.classList.add("active");
+  searchMenu.classList.remove("active");
+  createShow.classList.add("active");
 }
 
 function documentClickHandler(event) {
