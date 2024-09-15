@@ -11,7 +11,7 @@
   font-size: font-size(font-size-regular);
   z-index: 100;
   border: 1px solid var(--color-light-gray);
-  
+
   .navbar-top {
     display: flex;
     justify-content: center;
@@ -353,9 +353,9 @@
     .menu {
       width: 95%;
     }
-    // .navbar__main > *:not(:first-child) {
-    //   margin-right: -20px;
-    // }
+    .navbar__main > *:not(:first-child) {
+      margin-right: -20px;
+    }
     .navbar-top {
       align-self: end;
       flex-direction: row-reverse;
@@ -494,6 +494,6 @@
   }
 }
 
-.moved-element {
-  margin-left: -20px;
+.margin-adjustment {
+  margin-right: -20px;
 }
