@@ -1211,6 +1211,10 @@ hr {
   margin-right: -20px;
 }
 
+.hide-main-elements > * {
+  display: none;
+}
+
 .home {
   background-color: var(--color-bg);
   display: flex;

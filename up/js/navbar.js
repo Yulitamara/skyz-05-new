@@ -152,15 +152,86 @@ handleResize();
 
 
 
-$(document).ready(function () {
-  $(".edit-group-item-topic").click(function () {
-    var groupItem = $(this).closest(".group-item");
+// $(document).ready(function () {
+//   $(".edit-group-item-topic").click(function () {
+//     var groupItem = $(this).closest(".group-item");
 
-    groupItem.find(".edit-show-box").removeClass("active");
+//     groupItem.find(".edit-show-box").removeClass("active");
 
-    groupItem.find(".not-edit-mode").addClass("active");
-  });
-});
+//     groupItem.find(".not-edit-mode").addClass("active");
+//   });
+// });
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const searchBtn = document.getElementById("search-btn");
+//   const createBtn = document.getElementById("create-btn");
+//   const smallScreenContainer = document.querySelector(
+//     ".navbar__small-screen--append"
+//   );
+//   const searchDiv = document.querySelector(".navbar__main--search");
+//   const createDiv = document.querySelector(".navbar__main--create");
+//   const navbarMainContainer = document.querySelector(".navbar__main");
+
+//   let currentElement = null;
+
+//   function moveToSmallScreen(targetElement) {
+//     if (window.innerWidth <= 490) {
+//       if (smallScreenContainer.firstChild) {
+//         // Remove margin adjustment from the previously appended element
+//         smallScreenContainer.firstChild.classList.remove("margin-adjustment");
+//         navbarMainContainer.appendChild(smallScreenContainer.firstChild);
+//       }
+//       // Append the new target element to the small-screen container
+//       smallScreenContainer.appendChild(targetElement);
+//       targetElement.classList.add("margin-adjustment"); // Add margin adjustment
+//       currentElement = targetElement;
+//     }
+//   }
+
+//   // Function to handle click outside the element
+//   function handleClickOutside(event) {
+//     if (
+//       currentElement &&
+//       !currentElement.contains(event.target) &&
+//       !smallScreenContainer.contains(event.target)
+//     ) {
+//       // Remove the margin adjustment before moving back
+//       currentElement.classList.remove("margin-adjustment");
+//       navbarMainContainer.appendChild(currentElement);
+//       currentElement = null;
+//     }
+//   }
+
+//   // Attach click event listeners to buttons
+//   searchBtn.addEventListener("click", function () {
+//     moveToSmallScreen(searchDiv);
+//   });
+
+//   createBtn.addEventListener("click", function () {
+//     moveToSmallScreen(createDiv);
+//   });
+
+//   // Handle click events outside the active element
+//   document.addEventListener("click", function (event) {
+//     handleClickOutside(event);
+//   });
+
+//   // Return the elements to their original positions when resizing back to larger screen
+//   window.addEventListener("resize", function () {
+//     if (window.innerWidth > 490) {
+//       if (smallScreenContainer.contains(searchDiv)) {
+//         searchDiv.classList.remove("margin-adjustment");
+//         navbarMainContainer.appendChild(searchDiv);
+//       }
+//       if (smallScreenContainer.contains(createDiv)) {
+//         createDiv.classList.remove("margin-adjustment");
+//         navbarMainContainer.appendChild(createDiv);
+//       }
+//       currentElement = null;
+//     }
+//   });
+// });
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -178,32 +249,37 @@ document.addEventListener("DOMContentLoaded", function () {
   function moveToSmallScreen(targetElement) {
     if (window.innerWidth <= 490) {
       if (smallScreenContainer.firstChild) {
-        // Remove margin adjustment from the previously appended element
         smallScreenContainer.firstChild.classList.remove("margin-adjustment");
         navbarMainContainer.appendChild(smallScreenContainer.firstChild);
       }
-      // Append the new target element to the small-screen container
       smallScreenContainer.appendChild(targetElement);
-      targetElement.classList.add("margin-adjustment"); // Add margin adjustment
+      targetElement.classList.add("margin-adjustment");
       currentElement = targetElement;
+
+      // Hide .navbar__main children if screen width is less than 330px
+      if (window.innerWidth <= 330) {
+        navbarMainContainer.classList.add("hide-main-elements");
+      }
     }
   }
 
-  // Function to handle click outside the element
   function handleClickOutside(event) {
     if (
       currentElement &&
       !currentElement.contains(event.target) &&
       !smallScreenContainer.contains(event.target)
     ) {
-      // Remove the margin adjustment before moving back
       currentElement.classList.remove("margin-adjustment");
       navbarMainContainer.appendChild(currentElement);
       currentElement = null;
+
+      // Show .navbar__main children when element is moved back
+      if (window.innerWidth <= 330) {
+        navbarMainContainer.classList.remove("hide-main-elements");
+      }
     }
   }
 
-  // Attach click event listeners to buttons
   searchBtn.addEventListener("click", function () {
     moveToSmallScreen(searchDiv);
   });
@@ -212,12 +288,10 @@ document.addEventListener("DOMContentLoaded", function () {
     moveToSmallScreen(createDiv);
   });
 
-  // Handle click events outside the active element
   document.addEventListener("click", function (event) {
     handleClickOutside(event);
   });
 
-  // Return the elements to their original positions when resizing back to larger screen
   window.addEventListener("resize", function () {
     if (window.innerWidth > 490) {
       if (smallScreenContainer.contains(searchDiv)) {
@@ -229,6 +303,13 @@ document.addEventListener("DOMContentLoaded", function () {
         navbarMainContainer.appendChild(createDiv);
       }
       currentElement = null;
+    }
+
+    // Handle hiding or showing navbar elements based on screen size
+    if (window.innerWidth <= 330 && smallScreenContainer.firstChild) {
+      navbarMainContainer.classList.add("hide-main-elements");
+    } else {
+      navbarMainContainer.classList.remove("hide-main-elements");
     }
   });
 });
