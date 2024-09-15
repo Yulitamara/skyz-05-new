@@ -1050,7 +1050,6 @@ hr {
     overflow: hidden;
   }
   .navbar .create-show .icons-container-create, .navbar .search-menu .icons-container-create {
-    overflow-x: scroll;
     display: flex; /* This ensures the content aligns horizontally */
     white-space: nowrap; /* Prevents content from wrapping */
     width: 100%;
