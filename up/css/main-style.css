@@ -810,7 +810,6 @@ hr {
 .navbar .navbar-top .navbar__main {
   display: flex;
   gap: 1rem;
-  overflow-x: auto;
 }
 .navbar .navbar-top .navbar__main .navbar__main--search,
 .navbar .navbar-top .navbar__main .navbar__main--create {
@@ -1203,6 +1202,10 @@ hr {
 }
 .field-container .input-container.blue input::placeholder {
   color: #081b50;
+}
+
+.moved-element {
+  margin-left: -20px;
 }
 
 .home {

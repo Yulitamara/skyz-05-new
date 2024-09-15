@@ -11,8 +11,7 @@
   font-size: font-size(font-size-regular);
   z-index: 100;
   border: 1px solid var(--color-light-gray);
-  // box-shadow: 5px 5px 5px rgba(207, 207, 207, 0.466);
-
+  
   .navbar-top {
     display: flex;
     justify-content: center;
@@ -39,7 +38,6 @@
     .navbar__main {
       display: flex;
       gap: 1rem;
-      overflow-x: auto;
 
       .navbar__main--search,
       .navbar__main--create {
@@ -494,4 +492,8 @@
       color: #081b50;
     }
   }
+}
+
+.moved-element {
+  margin-left: -20px;
 }
