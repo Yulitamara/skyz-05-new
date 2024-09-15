@@ -234,6 +234,87 @@ handleResize();
 // });
 
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   const searchBtn = document.getElementById("search-btn");
+//   const createBtn = document.getElementById("create-btn");
+//   const smallScreenContainer = document.querySelector(
+//     ".navbar__small-screen--append"
+//   );
+//   const searchDiv = document.querySelector(".navbar__main--search");
+//   const createDiv = document.querySelector(".navbar__main--create");
+//   const navbarMainContainer = document.querySelector(".navbar__main");
+
+//   let currentElement = null;
+
+//   function moveToSmallScreen(targetElement) {
+//     if (window.innerWidth <= 490) {
+//       if (smallScreenContainer.firstChild) {
+//         smallScreenContainer.firstChild.classList.remove("margin-adjustment");
+//         navbarMainContainer.appendChild(smallScreenContainer.firstChild);
+//       }
+//       smallScreenContainer.appendChild(targetElement);
+//       targetElement.classList.add("margin-adjustment");
+//       currentElement = targetElement;
+
+//       // Hide .navbar__main children if screen width is less than 330px
+//       if (window.innerWidth <= 330) {
+//         navbarMainContainer.classList.add("hide-main-elements");
+//       }
+//     }
+//   }
+
+//   function handleClickOutside(event) {
+//     if (
+//       currentElement &&
+//       !currentElement.contains(event.target) &&
+//       !smallScreenContainer.contains(event.target)
+//     ) {
+//       currentElement.classList.remove("margin-adjustment");
+//       navbarMainContainer.appendChild(currentElement);
+//       currentElement = null;
+
+//       // Show .navbar__main children when element is moved back
+//       if (window.innerWidth <= 330) {
+//         navbarMainContainer.classList.remove("hide-main-elements");
+//       }
+//     }
+//   }
+
+//   searchBtn.addEventListener("click", function () {
+//     moveToSmallScreen(searchDiv);
+//   });
+
+//   createBtn.addEventListener("click", function () {
+//     moveToSmallScreen(createDiv);
+//   });
+
+//   document.addEventListener("click", function (event) {
+//     handleClickOutside(event);
+//   });
+
+//   window.addEventListener("resize", function () {
+//     if (window.innerWidth > 490) {
+//       if (smallScreenContainer.contains(searchDiv)) {
+//         searchDiv.classList.remove("margin-adjustment");
+//         navbarMainContainer.appendChild(searchDiv);
+//       }
+//       if (smallScreenContainer.contains(createDiv)) {
+//         createDiv.classList.remove("margin-adjustment");
+//         navbarMainContainer.appendChild(createDiv);
+//       }
+//       currentElement = null;
+//     }
+
+//     // Handle hiding or showing navbar elements based on screen size
+//     if (window.innerWidth <= 330 && smallScreenContainer.firstChild) {
+//       navbarMainContainer.classList.add("hide-main-elements");
+//     } else {
+//       navbarMainContainer.classList.remove("hide-main-elements");
+//     }
+//   });
+// });
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const searchBtn = document.getElementById("search-btn");
   const createBtn = document.getElementById("create-btn");
@@ -246,11 +327,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let currentElement = null;
 
+  // Store the original parent and sibling positions of searchDiv and createDiv
+  const searchOriginalParent = searchDiv.parentNode;
+  const searchOriginalNextSibling = searchDiv.nextElementSibling;
+  const createOriginalParent = createDiv.parentNode;
+  const createOriginalNextSibling = createDiv.nextElementSibling;
+
   function moveToSmallScreen(targetElement) {
     if (window.innerWidth <= 490) {
       if (smallScreenContainer.firstChild) {
         smallScreenContainer.firstChild.classList.remove("margin-adjustment");
-        navbarMainContainer.appendChild(smallScreenContainer.firstChild);
+        // Append back to original position
+        restoreOriginalPosition(smallScreenContainer.firstChild);
       }
       smallScreenContainer.appendChild(targetElement);
       targetElement.classList.add("margin-adjustment");
@@ -263,6 +351,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function restoreOriginalPosition(element) {
+    if (element === searchDiv) {
+      searchOriginalParent.insertBefore(searchDiv, searchOriginalNextSibling);
+    } else if (element === createDiv) {
+      createOriginalParent.insertBefore(createDiv, createOriginalNextSibling);
+    }
+  }
+
   function handleClickOutside(event) {
     if (
       currentElement &&
@@ -270,7 +366,7 @@ document.addEventListener("DOMContentLoaded", function () {
       !smallScreenContainer.contains(event.target)
     ) {
       currentElement.classList.remove("margin-adjustment");
-      navbarMainContainer.appendChild(currentElement);
+      restoreOriginalPosition(currentElement);
       currentElement = null;
 
       // Show .navbar__main children when element is moved back
@@ -296,11 +392,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth > 490) {
       if (smallScreenContainer.contains(searchDiv)) {
         searchDiv.classList.remove("margin-adjustment");
-        navbarMainContainer.appendChild(searchDiv);
+        restoreOriginalPosition(searchDiv);
       }
       if (smallScreenContainer.contains(createDiv)) {
         createDiv.classList.remove("margin-adjustment");
-        navbarMainContainer.appendChild(createDiv);
+        restoreOriginalPosition(createDiv);
       }
       currentElement = null;
     }
