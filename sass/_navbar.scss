@@ -278,7 +278,8 @@
     }
   }
 
-  .create-show, .search-menu {
+  .create-show,
+  .search-menu {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -325,7 +326,8 @@
   }
 
   @media screen and (max-width: 913px) {
-    .create-show, .search-menu {
+    .create-show,
+    .search-menu {
       position: fixed;
       margin-top: 6rem;
       width: 90%;
@@ -505,7 +507,7 @@
 }
 
 .margin-adjustment {
-  margin-right: -20px;
+  z-index: 10000;
 }
 
 .hide-main-elements > * {
