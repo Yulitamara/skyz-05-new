@@ -828,6 +828,12 @@ hr {
   color: #dfac4a;
   font-weight: 700;
   font-size: 14px;
+  overflow: hidden; /* Hide text when width is 0 */
+  transition: width 0.2s ease-in-out, opacity 0.3s ease-in-out;
+}
+.navbar .navbar-top .navbar__main .navbar__main--menu .field-container .input-container .skyz-name.active {
+  width: 100px; /* Define a target width */
+  opacity: 1; /* Make it visible */
 }
 .navbar .navbar-top .navbar__main .navbar__main--media-small {
   display: none;
@@ -1178,9 +1184,13 @@ hr {
   width: fit-content;
 }
 
+.field-container {
+  transition: width 0.2s ease-in-out, opacity 0.3s ease-in-out;
+}
 .field-container .input-container {
   background-color: var(--color-on-primary);
   background-color: #f9f9f9;
+  transition: width 0.2s ease-in-out, opacity 0.3s ease-in-out;
 }
 .field-container .input-container:hover {
   background-color: var(--color-on-primary);
@@ -1217,24 +1227,7 @@ hr {
 }
 
 .navbar-input {
-  width: 0;
   transition: width 0.2s ease-in-out, opacity 0.3s ease-in-out;
-  overflow: hidden;
-}
-
-.navbar-input.active {
-  width: 100%;
-  opacity: 1;
-}
-
-.slide-in {
-  width: 100%;
-  opacity: 1;
-}
-
-.slide-out {
-  width: 0;
-  opacity: 0;
 }
 
 .home {
