@@ -46,6 +46,7 @@
         gap: $gap-medium;
         position: relative;
         // width: 120px;
+
         &__links-container {
           display: flex;
           align-items: center;
@@ -54,6 +55,7 @@
       .navbar__main--menu {
         .field-container {
           .input-container {
+            
             .skyz-name {
               padding-left: 1.5rem;
               color: #dfac4a;
@@ -516,3 +518,25 @@
 
 
 
+
+.navbar-input {
+  width: 0;
+  transition: width 0.2s ease-in-out, opacity 0.3s ease-in-out; 
+  overflow: hidden; 
+}
+
+
+.navbar-input.active {
+  width: 100%;
+  opacity: 1; 
+}
+
+.slide-in {
+  width: 100%; 
+  opacity: 1; 
+}
+
+.slide-out {
+  width: 0; 
+  opacity: 0; 
+}

@@ -1216,6 +1216,27 @@ hr {
   display: none;
 }
 
+.navbar-input {
+  width: 0;
+  transition: width 0.2s ease-in-out, opacity 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.navbar-input.active {
+  width: 100%;
+  opacity: 1;
+}
+
+.slide-in {
+  width: 100%;
+  opacity: 1;
+}
+
+.slide-out {
+  width: 0;
+  opacity: 0;
+}
+
 .home {
   background-color: var(--color-bg);
   display: flex;
