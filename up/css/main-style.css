@@ -3551,7 +3551,6 @@ textarea {
   }
   .card-header .top .right {
     margin: 1rem 0 1.5rem 0;
-    align-self: flex-start;
   }
 }
 @media screen and (max-width: 350px) {
