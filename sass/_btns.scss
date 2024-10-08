@@ -6,11 +6,7 @@
   color: var(--color-on-primary);
   background-color: var(--color-primary);
   border: 1px solid var(--color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: font-size(font-size-small);
-  gap: $gap-small;
   padding: 0.4rem 0.8rem;
   border-radius: $border-radius-small;
   width: fit-content;
@@ -55,15 +51,15 @@
 }
 .round-btn-primary.green {
   color: var(--color-on-primary);
-  background-color: #3A700B;
+  background-color: #3a700b;
 }
 .round-btn-primary.purple {
   color: var(--color-on-primary);
-  background-color: #6F45A1;;
+  background-color: #6f45a1;
 }
 .round-btn-primary.yellow {
   color: var(--color-on-primary);
-  background-color: #DFAC4A;
+  background-color: #dfac4a;
 }
 .round-btn-primary.blue {
   color: var(--color-primary);
