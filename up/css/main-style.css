@@ -1702,6 +1702,15 @@ tr > td:first-child {
   flex-direction: column;
   gap: 1rem;
 }
+.card-container .card__boxes--box__content.filters .filters-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.card-container .card__boxes--box__content.filters .filters-header .title {
+  font-size: 15px;
+}
 .card-container .card__boxes--box__content.filters .filters__line {
   display: flex;
   align-items: center;

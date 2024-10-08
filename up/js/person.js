@@ -548,7 +548,6 @@ document
     }
   });
 
-
 document.querySelectorAll(".create-category").forEach((icon) => {
   icon.addEventListener("click", function () {
     document.querySelectorAll(".group-container-create").forEach((menu) => {
@@ -572,4 +571,14 @@ document.querySelectorAll(".create-category").forEach((icon) => {
   });
 });
 
+document.getElementById("filter-btn").addEventListener("click", function () {
+  document
+    .querySelector(".card__boxes--box__content.filters.active")
+    .classList.remove("active");
+});
 
+document.getElementById("close-filters").addEventListener("click", function () {
+  document
+    .querySelector(".card__boxes--box__content.filters")
+    .classList.add("active");
+});
