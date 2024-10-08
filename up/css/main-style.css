@@ -1730,9 +1730,11 @@ tr > td:first-child {
   width: -moz-fit-content;
   width: fit-content;
   min-width: 150px;
+  height: 35px;
 }
 .card-container .card__boxes--box__content.filters .filters__line .fields .edit-content .edit-field {
   border: none;
+  background-color: transparent;
 }
 .card-container .card__boxes--box__content.filters .filters__line .fields .edit-content:hover {
   background-color: transparent;
@@ -1762,7 +1764,7 @@ tr > td:first-child {
 .card-container .card__boxes--box__content.filters .filters__line .check-box .filters-number {
   border: 1px solid transparent;
   padding: 0 0.6rem;
-  height: 3.7rem;
+  height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1785,7 +1787,7 @@ tr > td:first-child {
   width: 100%;
   background-color: var(--color-on-primary-light);
   opacity: 0.1;
-  margin: 0.7rem 0;
+  margin: 0.5rem 0;
 }
 .card-container .card__boxes--box .add-circle {
   opacity: 0;
