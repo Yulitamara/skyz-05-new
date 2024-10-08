@@ -482,3 +482,9 @@
 .card__boxes--box__content--fields span.not-visible {
   display: none;
 }
+
+@media (pointer: coarse) {
+  .dynamic-btns {
+    visibility: visible !important;
+  }
+}

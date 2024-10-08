@@ -2000,6 +2000,11 @@ tr > td:first-child {
   display: none;
 }
 
+@media (pointer: coarse) {
+  .dynamic-btns {
+    visibility: visible !important;
+  }
+}
 input[type=text],
 input[type=password],
 input[type=number] {
