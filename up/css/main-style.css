@@ -1748,6 +1748,7 @@ tr > td:first-child {
   display: flex;
   align-items: center;
   gap: 1rem;
+  width: 80px;
 }
 .card-container .card__boxes--box__content.filters .filters__line .check-box .filters-number {
   border: 1px solid transparent;
