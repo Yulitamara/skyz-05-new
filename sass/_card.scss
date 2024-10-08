@@ -143,6 +143,7 @@
               display: flex;
               align-items: center;
               gap: 0.7rem;
+              flex-wrap: wrap;
               .edit-content {
                 width: 190px;
                 border: 1px solid rgba(135, 125, 74, 0.361);
@@ -152,8 +153,26 @@
                   border: none;
                 }
               }
+              .edit-content:hover {
+                background-color: transparent;
+              }
+              .edit-content.disabled {
+                opacity: 0.8;
+              }
             }
-
+            .add-delete-btns-container {
+              display: flex;
+              gap: 1rem;
+              span {
+                cursor: pointer;
+                border-radius: 180px;
+                background-color: var(--color-bg);
+                transition: $transition;
+              }
+              span:hover {
+                background-color: var(--color-blue);
+              }
+            }
             .check-box {
               display: flex;
               align-items: center;
@@ -167,10 +186,18 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 4px;
+                gap: 0.2rem;
                 cursor: pointer;
+                transition: $transition;
+                .small-icon {
+                  opacity: 0;
+                }
               }
               .filters-number:hover {
                 border: 1px solid var(--color-on-primary-light);
+                .small-icon {
+                  opacity: 1;
+                }
               }
             }
           }
