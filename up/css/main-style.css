@@ -1780,6 +1780,13 @@ tr > td:first-child {
 .card-container .card__boxes--box__content.filters .filters__line .check-box .filters-number:hover .small-icon {
   opacity: 1;
 }
+.card-container .card__boxes--box__content.filters .line {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-on-primary-light);
+  opacity: 0.1;
+  margin: 0.7rem 0;
+}
 .card-container .card__boxes--box .add-circle {
   opacity: 0;
 }

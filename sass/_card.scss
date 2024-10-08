@@ -209,6 +209,13 @@
               }
             }
           }
+          .line {
+            height: 1px;
+            width: 100%;
+            background-color: var(--color-on-primary-light);
+            opacity: 0.1;
+            margin: 0.7rem 0;
+          }
         }
         .add-circle {
           opacity: 0;
