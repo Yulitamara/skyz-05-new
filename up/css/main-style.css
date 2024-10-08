@@ -1751,6 +1751,7 @@ tr > td:first-child {
   border-radius: 180px;
   background-color: var(--color-bg);
   transition: all 0.2s ease-in-out;
+  font-size: 19px;
 }
 .card-container .card__boxes--box__content.filters .filters__line .add-delete-btns-container span:hover {
   background-color: var(--color-blue);
