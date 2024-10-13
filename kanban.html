@@ -31,217 +31,667 @@
   <body class="container" dir="rtl">
     <!---*-*-*-*-*-*-*-*--*-*-*- Navbar Section --*-*-*-*-*-*-*-*-*-*-*-->
     <div class="navbar">
-      <div class="navbar__menu">
-        <span
-          class="material-symbols-outlined navbar__menu--side-toggle"
-          id="sideNavBtn"
-        >
-          menu
-        </span>
-        <div class="navbar__menu--logo">
-          <span class="material-symbols-outlined navbar__main--logo__icon">
-            home</span
-          >
-          <div class="navbar__main--logo__name">Skyz<span>CRM</span></div>
-        </div>
-      </div>
-      <div class="navbar__main">
-        <div class="navbar__main--search">
-          <div class="field-container">
-            <div class="input-container">
-              <input
-                type="text"
-                class="input"
-                placeholder="חיפוש..."
-                id="searchInput"
-              />
-              <div class="navbar__main--search__links-container">
-                <div class="round-btn round-btn-primary">
-                  <span class="material-symbols-outlined"> search </span>
+      <div class="navbar-top">
+        <div class="navbar__main-container">
+          <div class="navbar__main">
+            <div class="navbar__main--menu">
+              <div class="field-container">
+                <div class="input-container yellow">
+                  <div class="navbar__main--search__links-container">
+                    <div
+                      class="round-btn round-btn-primary yellow"
+                      id="hamburger-btn"
+                    >
+                      <span class="material-symbols-outlined"> menu </span>
+                    </div>
+                  </div>
+                  <div class="skyz-name active">SKYZ</div>
                 </div>
-                <div class="round-btn round-btn-secondary">
-                  <span class="material-symbols-outlined" id="addMenuBtn">
-                    add
-                  </span>
+              </div>
+              <div class="menu active">
+                <div class="menu-item">
+                  <div class="round-img-container">
+                    <img src="./up/imgs/passport.webp" alt="" />
+                  </div>
+                  <span>רוני שרון</span>
                 </div>
-                <div class="label-container">
-                  <label class="label-text">
-                    <nobr> רשומה </nobr>
-                  </label>
-                  <span class="material-symbols-outlined label-icon">
-                    expand_more
+                <div class="menu-item">
+                  <span class="material-symbols-outlined"> settings </span>
+                  <span>הגדרות שלי</span>
+                  <span class="material-symbols-outlined stop-icon">
+                    stop
                   </span>
+                  <span>הגדרות מערכות</span>
+                </div>
+                <div class="menu-item">
+                  <!-- <span class="material-symbols-outlined"> dark_mode </span> -->
+                  <span
+                    class="material-symbols-outlined fill-icon color-change"
+                    style="cursor: pointer; display: inline-block"
+                    >circle</span
+                  >
+                  <div class="darkmode-toggle">
+                    <button aria-label="darkmode-toggle" id="darkmodeToggle">
+                      <span class="material-symbols-outlined"> dark_mode </span>
+                    </button>
+                  </div>
+                  <span>מצב כהה / dark mode</span>
+                </div>
+                <div class="menu-item">
+                  <span class="material-symbols-outlined">
+                    developer_board
+                  </span>
+                  <span>מידע למפתחים</span>
+                </div>
+                <div class="menu-item">
+                  <span class="material-symbols-outlined"> question_mark </span>
+                  <span>הדרכה על המערכת</span>
+                </div>
+                <div class="menu-item">
+                  <span class="material-symbols-outlined"> tab_move </span>
+                  <span>יציאה מהמערכת</span>
+                </div>
+              </div>
+            </div>
+            <div class="navbar__main--home">
+              <div class="field-container">
+                <div class="input-container purple">
+                  <div class="navbar__main--search__links-container">
+                    <div class="round-btn round-btn-primary purple">
+                      <span class="material-symbols-outlined"> home </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar__main--search">
+              <div class="field-container">
+                <div class="input-container blue">
+                  <input
+                    type="text"
+                    class="navbar-input"
+                    placeholder="חפש..."
+                    id="searchInput"
+                  />
+                  <div class="navbar__main--search__links-container">
+                    <div class="round-btn round-btn-primary" id="search-btn">
+                      <span class="material-symbols-outlined" id="addMenuBtn">
+                        search
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar__main--create">
+              <div class="field-container">
+                <div class="input-container green">
+                  <input
+                    type="text"
+                    class="navbar-input"
+                    placeholder="צור..."
+                    id="createInput"
+                  />
+                  <div class="navbar__main--search__links-container">
+                    <div
+                      class="round-btn round-btn-primary green"
+                      id="create-btn"
+                    >
+                      <span class="material-symbols-outlined">
+                        add_circle
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="navbar__personal">
-        <span
-          class="material-symbols-outlined fill-icon color-change"
-          style="cursor: pointer"
-          >circle</span
-        >
-        <div class="darkmode-toggle">
-          <button aria-label="darkmode-toggle" id="darkmodeToggle">
-            <span class="material-symbols-outlined"> dark_mode </span>
-          </button>
+        <div class="navbar-bottom create-show active">
+          <div class="create-container">
+            <div class="icons-container-create">
+              <div class="create-category focus-category" data-color="gray">
+                <span>מועדפים</span>
+              </div>
+
+              <div class="create-category" data-color="blue">
+                <span>כרטיסים</span>
+              </div>
+
+              <div class="create-category" data-color="send">
+                <span>הודעות</span>
+              </div>
+
+              <div class="create-category" data-color="yellow">
+                <span>פעולות לביצוע</span>
+              </div>
+
+              <div class="create-category" data-color="pre-sales">
+                <span>קדם מכירות</span>
+              </div>
+
+              <div class="create-category" data-color="purple">
+                <span>קורסים</span>
+              </div>
+
+              <div class="create-category" data-color="invoice">
+                <span>חשבוניות / קבלות</span>
+              </div>
+
+              <div class="create-category" data-color="credit">
+                <span>מסמכי זיכוי</span>
+              </div>
+
+              <div class="create-category" data-color="instruction">
+                <span>הוראות תשלום</span>
+              </div>
+
+              <div class="create-category" data-color="red">
+                <span>לוגיסטיקה</span>
+              </div>
+            </div>
+            <div class="group-container-create" data-color="gray">
+              <div class="group-blue">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>ליד</span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>איש</span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">ארגון</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">משימה לביצוע</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הצעת מחיר</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">מסמכי מכירה</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="purple">
+              <div class="group purple">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">קורס</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קורס אב</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">מפגש קורס</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="pre-sales">
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הזדמנות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הצעת מחיר</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הזמנה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קמפיין</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="invoice">
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבונית מס</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבונית עסקה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבונית מס/קבלה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קבלה</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="credit">
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבונית מס זיכוי</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבונית עסקה זיכוי</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">זיכוי</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="instruction">
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הוראת חיוב</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הפקדה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הוראת זיכוי</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="blue">
+              <div class="group blue">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">ליד</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">איש</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">ארגון</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">משאב</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="send">
+              <div class="group blue">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">מייל</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הודעה</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="red">
+              <div class="group">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">תעודת משלוח</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">תעודת החזרה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">כניסה למלאי</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">יציאה מהמלאי</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="yellow">
+              <div class="group purple">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">משימה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">שיחה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הערה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">פגישה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">דיווח שעות עצמי</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">דיווח שעות</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="navbar__personal--name">Impact System</div>
-        <div class="round-img-container">
-          <img src="./up/imgs/passport.webp" alt="" />
+
+        <div class="navbar-bottom search-menu active">
+          <div class="create-container">
+            <div class="icons-container-create">
+              <div
+                class="create-category focus-category"
+                data-color="search-history"
+              >
+                <span>היסטורית חיפושים</span>
+              </div>
+
+              <div class="create-category" data-color="search-fav">
+                <span>מועדפים</span>
+              </div>
+
+              <div class="create-category" data-color="search-cards">
+                <span>כרטיסים</span>
+              </div>
+
+              <div class="create-category" data-color="search-msgs">
+                <span>הודעות</span>
+              </div>
+
+              <div class="create-category" data-color="search-todo">
+                <span>פעולות לביצוע</span>
+              </div>
+
+              <div class="create-category" data-color="search-presales">
+                <span>קדם מכירות</span>
+              </div>
+
+              <div class="create-category" data-color="search-courses">
+                <span>קורסים</span>
+              </div>
+
+              <div class="create-category" data-color="search-invoice">
+                <span>חשבוניות / קבלות</span>
+              </div>
+
+              <div class="create-category" data-color="search-credit">
+                <span>מסמכי זיכוי</span>
+              </div>
+
+              <div class="create-category" data-color="search-instruction">
+                <span>הוראות תשלום</span>
+              </div>
+
+              <div class="create-category" data-color="search-logistics">
+                <span>לוגיסטיקה</span>
+              </div>
+            </div>
+            <div class="group-container-create" data-color="search-history">
+              <div class="group-blue">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>
+                        <b>כללי:</b>
+                        אייל כהן
+                      </span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>
+                        <b>קריאה:</b>
+                        עזרה עם התקשרויות, קרנית לא רואה גביה
+                      </span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קריאות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>
+                        <b>קריאה:</b>
+                        עזרה עם מיזוג כרטיסים + שימור שם משתמש
+                      </span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>
+                        <b>קריאה:</b>
+                        בהמשך לקריאה קודמת, שלחה מייל העברתי לעמית
+                      </span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>
+                        <b>קריאה:</b>
+                        עזרה עם כרטיס לקוח, כנראה פתוח אצל משתמש אחר
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="search-fav">
+              <div class="group-blue">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>כרטסות</span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>פעולות</span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">מסמכי מכירה</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group-container-create active"
+              data-color="search-cards"
+            >
+              <div class="group purple">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הכל</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">לידים</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">אנשים</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">ארגונים</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">משאבים</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="search-msgs">
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">מיילים</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הודעות</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="search-todo">
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      הכל (פתוחות, בביצוע, סגורות)
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">משימות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">שיחות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הערות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">פגישות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">דיווחי שעות</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group-container-create active"
+              data-color="search-presales"
+            >
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הכל</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הזדמנויות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הצעות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הזמנות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קמפיינים</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group-container-create active"
+              data-color="search-courses"
+            >
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">קורסים</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">מפגשי קורסים</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קורסי אב</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group-container-create active"
+              data-color="search-invoice"
+            >
+              <div class="group blue">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הכל</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבוניות מס</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבונית עסקה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבוניות מס/קבלה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קבלות</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group-container-create active"
+              data-color="search-credit"
+            >
+              <div class="group blue">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הכל</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבוניות מס זיכוי</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבוניות עסקה זיכוי</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קבלות זיכויים</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group-container-create active"
+              data-color="search-instruction"
+            >
+              <div class="group">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הוראות חיוב</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הפקדות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הוראות זיכוי</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group-container-create active"
+              data-color="search-logistics"
+            >
+              <div class="group purple">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הכל</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">תעודות משלוח</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">תעודות החזרה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">כניסה למלאי</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">יציאה מהמלאי</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="navbar__small-screen--append"></div>
       </div>
     </div>
 
     <div class="navbar__overlay"></div>
-
-    <!---*-*-*-*-*-*-*-*--*-*-*- Sidebar Section --*-*-*-*-*-*-*-*-*-*-*-->
-    <aside class="side-nav" dir="rtl">
-      <div class="side-nav__content">
-        <ul class="side-nav__content--list">
-          <li class="side-nav__content--list__item create-item">
-            <div class="item-name">
-              <a href="#">
-                <span class="material-symbols-outlined"> create </span>
-                <div>צור</div>
-              </a>
-              <span class="material-symbols-outlined btn-default"> add </span>
-            </div>
-          </li>
-
-          <li class="side-nav__content--list__item" id="homeBtn">
-            <div class="item-name">
-              <a href="#">
-                <span class="material-symbols-outlined"> home </span>
-                <div>SkyzCRM</div>
-              </a>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="formPDF.html">
-                <span class="material-symbols-outlined"> view_timeline </span>
-                <div>טופס</div>
-              </a>
-              <span class="material-symbols-outlined btn-default">
-                expand_more
-              </span>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item" id="actionsBtn">
-            <div class="item-name">
-              <a href="#">
-                <span class="material-symbols-outlined"> category </span>
-                <div>פעולות</div>
-              </a>
-              <span class="material-symbols-outlined btn-default">
-                expand_more
-              </span>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="calendar.html">
-                <span class="material-symbols-outlined"> event </span>
-                <div>יומן</div>
-              </a>
-              <span class="material-symbols-outlined btn-default">
-                expand_more
-              </span>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="kanban.html">
-                <span class="material-symbols-outlined"> view_kanban </span>
-                <div>תצוגת קנבן</div>
-              </a>
-              <span class="material-symbols-outlined btn-default">
-                expand_more
-              </span>
-            </div>
-          </li>
-          <li id="acountsBtnSidebar" class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="#">
-                <span class="material-symbols-outlined">
-                  account_balance_wallet
-                </span>
-                <div>חשבונות</div>
-              </a>
-              <span
-                class="material-symbols-outlined btn-default btn-actions-menu"
-              >
-                expand_more
-              </span>
-            </div>
-            <div
-              class="side-nav__content--list__item--collapse active"
-              id="acountsCollapse"
-            >
-              <span>הכול</span>
-              <span>פתוחים</span>
-              <span>בתהליך</span>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="edit-person.html">
-                <span class="material-symbols-outlined"> person </span>
-                <div>עריכת איש</div>
-              </a>
-              <span
-                class="material-symbols-outlined btn-default btn-actions-menu"
-              >
-                expand_more
-              </span>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="new-person.html">
-                <span class="material-symbols-outlined"> person </span>
-                <div>איש חדש</div>
-              </a>
-              <span
-                class="material-symbols-outlined btn-default btn-actions-menu"
-              >
-                expand_more
-              </span>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="#">
-                <span class="material-symbols-outlined"> chat </span>
-                <div>צ'אט</div>
-              </a>
-              <span
-                class="material-symbols-outlined btn-default btn-actions-menu"
-              >
-                expand_more
-              </span>
-            </div>
-          </li>
-          <li class="side-nav__content--list__item">
-            <div class="item-name">
-              <a href="#">
-                <span class="material-symbols-outlined"> handyman </span>
-                <div>הגדרות</div>
-              </a>
-              <span
-                class="material-symbols-outlined btn-default btn-actions-menu"
-              >
-                expand_more
-              </span>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </aside>
 
     <div class="main">
       <!---*-*-*-*-*-*-*-*--*-*-*- Search For Small Screen --*-*-*-*-*-*-*-*-*-*-*-->
