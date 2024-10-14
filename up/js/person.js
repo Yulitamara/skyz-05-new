@@ -582,3 +582,31 @@ document.getElementById("close-filters").addEventListener("click", function () {
     .querySelector(".card__boxes--box__content.filters")
     .classList.add("active");
 });
+
+
+  // Store the original content of elements
+  const originalContents = {};
+
+  // Store the original contents for visibility-width elements
+  document.querySelectorAll('.visibility-width').forEach((element, index) => {
+      originalContents[index] = element.innerHTML;
+  });
+
+  document.getElementById('visibility-btn').addEventListener('click', function() {
+      // Toggle button text
+      const btn = document.getElementById('visibility-btn');
+      btn.innerHTML = btn.innerHTML === 'visibility' ? 'visibility_off' : 'visibility';
+
+      // Toggle the content and class of elements with class 'visibility-width'
+      document.querySelectorAll('.visibility-width').forEach((element, index) => {
+          // Toggle between original content and empty string
+          element.innerHTML = element.innerHTML === '' ? originalContents[index] : '';
+          // Toggle the 'visibility-is-off' class
+          element.classList.toggle('visibility-is-off');
+      });
+
+      // Toggle the class 'visibility-title-off' for elements with class 'visibility-width-title'
+      document.querySelectorAll('.visibility-width-title').forEach((element) => {
+          element.classList.toggle('visibility-title-off');
+      });
+  });

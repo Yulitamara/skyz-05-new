@@ -34,6 +34,13 @@
   white-space: nowrap;
   color: var(--color-on-primary-light);
   //   border-left: 2px solid #fff;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+}
+
+.visibility-btn {
+  cursor: pointer;
 }
 
 .table-row:hover {
@@ -73,4 +80,11 @@
 
 .big-cell {
   min-width: 300px;
+}
+.visibility-is-off {
+  max-width: 120px;
+}
+
+.visibility-title-off {
+  max-width: 120px;
 }
