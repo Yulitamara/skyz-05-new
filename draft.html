@@ -1,0 +1,1464 @@
+]<!DOCTYPE html>
+<html lang="en" data-theme="blue">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="./up/css/main-style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <title>Impact System</title>
+  </head>
+
+  <body class="container" dir="rtl">
+    <!---*-*-*-*-*-*-*-*--*-*-*- Navbar Section --*-*-*-*-*-*-*-*-*-*-*-->
+    <div class="navbar">
+      <div class="navbar-top">
+        <div class="navbar__main-container">
+          <div class="navbar__main">
+            <div class="navbar__main--menu">
+              <div class="field-container">
+                <div class="input-container yellow">
+                  <div class="navbar__main--search__links-container">
+                    <div
+                      class="round-btn round-btn-primary yellow"
+                      id="hamburger-btn"
+                    >
+                      <span class="material-symbols-outlined"> menu </span>
+                    </div>
+                  </div>
+                  <div class="skyz-name active">SKYZ</div>
+                </div>
+              </div>
+              <div class="menu active">
+                <div class="menu-item">
+                  <div class="round-img-container">
+                    <img src="./up/imgs/passport.webp" alt="" />
+                  </div>
+                  <span>רוני שרון</span>
+                </div>
+                <div class="menu-item">
+                  <span class="material-symbols-outlined"> settings </span>
+                  <span>הגדרות שלי</span>
+                  <span class="material-symbols-outlined stop-icon">
+                    stop
+                  </span>
+                  <span>הגדרות מערכות</span>
+                </div>
+                <div class="menu-item">
+                  <!-- <span class="material-symbols-outlined"> dark_mode </span> -->
+                  <span
+                    class="material-symbols-outlined fill-icon color-change"
+                    style="cursor: pointer"
+                    >circle</span
+                  >
+                  <div class="darkmode-toggle">
+                    <button aria-label="darkmode-toggle" id="darkmodeToggle">
+                      <span class="material-symbols-outlined"> dark_mode </span>
+                    </button>
+                  </div>
+                  <span>מצב כהה / dark mode</span>
+                </div>
+                <div class="menu-item">
+                  <span class="material-symbols-outlined">
+                    developer_board
+                  </span>
+                  <span>מידע למפתחים</span>
+                </div>
+                <div class="menu-item">
+                  <span class="material-symbols-outlined"> question_mark </span>
+                  <span>הדרכה על המערכת</span>
+                </div>
+                <div class="menu-item">
+                  <span class="material-symbols-outlined"> tab_move </span>
+                  <span>יציאה מהמערכת</span>
+                </div>
+              </div>
+            </div>
+            <div class="navbar__main--home">
+              <div class="field-container">
+                <div class="input-container purple">
+                  <div class="navbar__main--search__links-container">
+                    <div class="round-btn round-btn-primary purple">
+                      <span class="material-symbols-outlined"> home </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar__main--search">
+              <div class="field-container">
+                <div class="input-container blue">
+                  <input
+                    type="text"
+                    class="navbar-input"
+                    placeholder="חפש..."
+                    id="searchInput"
+                  />
+                  <div class="navbar__main--search__links-container">
+                    <div class="round-btn round-btn-primary" id="search-btn">
+                      <span class="material-symbols-outlined" id="addMenuBtn">
+                        search
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar__main--create">
+              <div class="field-container">
+                <div class="input-container green">
+                  <input
+                    type="text"
+                    class="navbar-input"
+                    placeholder="צור..."
+                    id="createInput"
+                  />
+                  <div class="navbar__main--search__links-container">
+                    <div
+                      class="round-btn round-btn-primary green"
+                      id="create-btn"
+                    >
+                      <span class="material-symbols-outlined">
+                        add_circle
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-bottom create-show active">
+          <div class="create-container">
+            <div class="icons-container-create">
+              <div class="create-category focus-category" data-color="gray">
+                <span>מועדפים</span>
+              </div>
+
+              <div class="create-category" data-color="blue">
+                <span>כרטיסים</span>
+              </div>
+
+              <div class="create-category" data-color="send">
+                <span>הודעות</span>
+              </div>
+
+              <div class="create-category" data-color="yellow">
+                <span>פעולות לביצוע</span>
+              </div>
+
+              <div class="create-category" data-color="pre-sales">
+                <span>קדם מכירות</span>
+              </div>
+
+              <div class="create-category" data-color="purple">
+                <span>קורסים</span>
+              </div>
+
+              <div class="create-category" data-color="invoice">
+                <span>חשבוניות / קבלות</span>
+              </div>
+
+              <div class="create-category" data-color="credit">
+                <span>מסמכי זיכוי</span>
+              </div>
+
+              <div class="create-category" data-color="instruction">
+                <span>הוראות תשלום</span>
+              </div>
+
+              <div class="create-category" data-color="red">
+                <span>לוגיסטיקה</span>
+              </div>
+            </div>
+            <div class="group-container-create" data-color="gray">
+              <div class="group-blue">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>ליד</span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>איש</span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">ארגון</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">משימה לביצוע</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הצעת מחיר</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">מסמכי מכירה</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="purple">
+              <div class="group purple">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">קורס</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קורס אב</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">מפגש קורס</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="pre-sales">
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הזדמנות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הצעת מחיר</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הזמנה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קמפיין</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="invoice">
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבונית מס</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבונית עסקה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבונית מס/קבלה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קבלה</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="credit">
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבונית מס זיכוי</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבונית עסקה זיכוי</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">זיכוי</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="instruction">
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הוראת חיוב</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הפקדה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הוראת זיכוי</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="blue">
+              <div class="group blue">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">ליד</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">איש</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">ארגון</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">משאב</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="send">
+              <div class="group blue">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">מייל</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הודעה</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="red">
+              <div class="group">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">תעודת משלוח</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">תעודת החזרה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">כניסה למלאי</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">יציאה מהמלאי</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="yellow">
+              <div class="group purple">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">משימה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">שיחה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הערה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">פגישה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">דיווח שעות עצמי</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">דיווח שעות</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-bottom search-menu active">
+          <div class="create-container">
+            <div class="icons-container-create">
+              <div
+                class="create-category focus-category"
+                data-color="search-history"
+              >
+                <span>היסטורית חיפושים</span>
+              </div>
+
+              <div class="create-category" data-color="search-fav">
+                <span>מועדפים</span>
+              </div>
+
+              <div class="create-category" data-color="search-cards">
+                <span>כרטיסים</span>
+              </div>
+
+              <div class="create-category" data-color="search-msgs">
+                <span>הודעות</span>
+              </div>
+
+              <div class="create-category" data-color="search-todo">
+                <span>פעולות לביצוע</span>
+              </div>
+
+              <div class="create-category" data-color="search-presales">
+                <span>קדם מכירות</span>
+              </div>
+
+              <div class="create-category" data-color="search-courses">
+                <span>קורסים</span>
+              </div>
+
+              <div class="create-category" data-color="search-invoice">
+                <span>חשבוניות / קבלות</span>
+              </div>
+
+              <div class="create-category" data-color="search-credit">
+                <span>מסמכי זיכוי</span>
+              </div>
+
+              <div class="create-category" data-color="search-instruction">
+                <span>הוראות תשלום</span>
+              </div>
+
+              <div class="create-category" data-color="search-logistics">
+                <span>לוגיסטיקה</span>
+              </div>
+            </div>
+            <div class="group-container-create" data-color="search-history">
+              <div class="group-blue">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>
+                        <b>כללי:</b>
+                        אייל כהן
+                      </span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>
+                        <b>קריאה:</b>
+                        עזרה עם התקשרויות, קרנית לא רואה גביה
+                      </span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קריאות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>
+                        <b>קריאה:</b>
+                        עזרה עם מיזוג כרטיסים + שימור שם משתמש
+                      </span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>
+                        <b>קריאה:</b>
+                        בהמשך לקריאה קודמת, שלחה מייל העברתי לעמית
+                      </span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>
+                        <b>קריאה:</b>
+                        עזרה עם כרטיס לקוח, כנראה פתוח אצל משתמש אחר
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="search-fav">
+              <div class="group-blue">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>כרטסות</span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      <span>פעולות</span>
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">מסמכי מכירה</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group-container-create active"
+              data-color="search-cards"
+            >
+              <div class="group purple">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הכל</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">לידים</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">אנשים</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">ארגונים</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">משאבים</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="search-msgs">
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">מיילים</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הודעות</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-container-create active" data-color="search-todo">
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">
+                      הכל (פתוחות, בביצוע, סגורות)
+                    </div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">משימות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">שיחות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הערות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">פגישות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">דיווחי שעות</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group-container-create active"
+              data-color="search-presales"
+            >
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הכל</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הזדמנויות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הצעות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הזמנות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קמפיינים</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group-container-create active"
+              data-color="search-courses"
+            >
+              <div class="group green">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">קורסים</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">מפגשי קורסים</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קורסי אב</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group-container-create active"
+              data-color="search-invoice"
+            >
+              <div class="group blue">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הכל</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבוניות מס</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבונית עסקה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבוניות מס/קבלה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קבלות</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group-container-create active"
+              data-color="search-credit"
+            >
+              <div class="group blue">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הכל</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבוניות מס זיכוי</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">חשבוניות עסקה זיכוי</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">קבלות זיכויים</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group-container-create active"
+              data-color="search-instruction"
+            >
+              <div class="group">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הוראות חיוב</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הפקדות</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">הוראות זיכוי</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group-container-create active"
+              data-color="search-logistics"
+            >
+              <div class="group purple">
+                <div class="group-fields">
+                  <div class="group-item">
+                    <div class="group-item-topic">הכל</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">תעודות משלוח</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">תעודות החזרה</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">כניסה למלאי</div>
+                  </div>
+                  <div class="group-item">
+                    <div class="group-item-topic">יציאה מהמלאי</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar__small-screen--append"></div>
+      </div>
+    </div>
+
+    <div class="navbar__overlay"></div>
+
+    <div class="main">
+      <!-- -*-*-*-*-*-*-*-*--*-*-*- Card Section - Person --*-*-*-*-*-*-*-*-*-*-* -->
+      <section class="card-container" id="personCard">
+        <div class="card">
+          <div class="top-container">
+            <div class="card__navigate"></div>
+
+            <div class="right">
+              <span class="material-symbols-outlined open-in-new btn-default">
+                web_asset
+              </span>
+              <div class="icon-container not-in-table">
+                <span class="material-symbols-outlined bigger-icon">mail</span>
+                <span
+                  class="material-symbols-outlined smaller-icon green"
+                  id="new-mail-btn"
+                  >add</span
+                >
+              </div>
+              <span class="material-symbols-outlined btn-default">
+                more_vert
+              </span>
+              <span class="material-symbols-outlined btn-default"> close </span>
+            </div>
+          </div>
+          <div class="card-header long-header">
+            <div class="top">
+              <div class="right">
+                <div class="header-fields">
+                  <span class="edit-content green">
+                    <span class="edit-field">
+                      <span class="value-text">
+                        <span class="material-symbols-outlined green-circle">
+                          circle
+                        </span>
+                        פתוח</span
+                      >
+                      <span class="material-symbols-outlined">
+                        expand_more
+                      </span>
+                    </span>
+                  </span>
+
+                  <span class="edit-content transparent">
+                    <span class="edit-field">
+                      <span class="value-text">14/08/24</span>
+                      <span class="material-symbols-outlined">
+                        expand_more
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="left">
+                <div class="title">
+                  <span>הצעת מחיר (טיוטה)</span>
+                </div>
+              </div>
+              <div class="left active" id="left-second">
+                <div class="small-boxes-container" style="align-items: center">
+                  <div
+                    class="small-box red-background"
+                    style="height: 50px; width: 120px; gap: 1rem"
+                  >
+                    <span
+                      class="round-img-container"
+                      style="height: 33px; width: 33px"
+                    >
+                      <img src="./up/imgs/passport.webp" alt="person-img" />
+                    </span>
+                    <span>אלנה סגל</span>
+                  </div>
+                  <div
+                    class="small-box"
+                    style="height: 50px; width: 120px; gap: 1rem"
+                  >
+                    <span
+                      class="round-img-container"
+                      style="height: 33px; width: 33px"
+                    >
+                      <img src="./up/imgs/person-2.jpg" alt="person-img" />
+                    </span>
+                    <span>רונה ראובני</span>
+                  </div>
+                  <div
+                    class="small-box"
+                    style="height: 50px; width: 120px; gap: 1rem"
+                  >
+                    <span
+                      class="round-img-container"
+                      style="height: 33px; width: 33px"
+                    >
+                      <img src="./up/imgs/person-3.jpg" alt="person-img" />
+                    </span>
+                    <span>אלון כהן</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card__boxes">
+            <!-- לקוח -->
+            <div
+              class="card__boxes--box box-reduced temp-class"
+              data-target="box1"
+            >
+              <div class="card__boxes--box__header">
+                <div class="card__boxes--box__header--title">
+                  <span class="material-symbols-outlined"> event </span>
+                  <span>לקוח</span>
+                </div>
+                <div class="card__boxes--box__header--btns">
+                  <div class="dynamic-btns">
+                    <span class="material-symbols-outlined btn-default">
+                      add
+                    </span>
+                    <span
+                      class="material-symbols-outlined btn-default close-expand-new"
+                    >
+                      close
+                    </span>
+                    <span
+                      class="material-symbols-outlined material-symbols-outlined btn-default expend-btn"
+                      id="toggleButton"
+                    >
+                      arrows_more_up
+                    </span>
+                    <span
+                      class="material-symbols-outlined btn-default minimize"
+                      data-target="box1"
+                      id="start-animation"
+                    >
+                      arrows_more_down
+                    </span>
+                    <span
+                      class="material-symbols-outlined btn-default more-vert"
+                    >
+                      more_vert
+                      <div class="local-menu-more-vert icons-menu active">
+                        <div class="local-menu-more-vert__item only-icons">
+                          <span
+                            class="material-symbols-outlined showSingle btn-default"
+                          >
+                            top_panel_open
+                          </span>
+                          <span class="material-symbols-outlined btn-defadivt"
+                            >search</span
+                          >
+                          <span
+                            class="material-symbols-outlined btn-default"
+                            id="filter-btn"
+                            >filter_alt</span
+                          >
+                          <span class="material-symbols-outlined btn-default"
+                            >cached</span
+                          >
+                          <span class="material-symbols-outlined btn-default"
+                            >print</span
+                          >
+                          <span
+                            class="material-symbols-outlined btn-default"
+                            id="push-pin"
+                            >push_pin</span
+                          >
+                          <span class="material-symbols-outlined btn-default"
+                            >content_copy</span
+                          >
+                          <span
+                            class="material-symbols-outlined btn-default"
+                            id="open-export-menu"
+                            >exit_to_app</span
+                          >
+                          <span
+                            class="material-symbols-outlined btn-default"
+                            id="open-mark-menu"
+                            >done</span
+                          >
+                          <span
+                            class="material-symbols-outlined btn-default"
+                            id="open-delete-menu"
+                            >delete</span
+                          >
+                          <span class="material-symbols-outlined btn-default">
+                            close
+                          </span>
+                        </div>
+                        <span class="edit-content small">
+                          <span class="label">
+                            <span># שדות</span>
+                          </span>
+                          <span class="edit-field">
+                            <input type="number" placeholder="הקלד מספר..." />
+                            <!-- <span class="material-symbols-outlined">
+                              expand_more
+                            </span> -->
+                          </span>
+                        </span>
+                      </div>
+                      <div
+                        class="local-menu-more-vert push-pin-menu active"
+                        id="display-menu"
+                      >
+                        <div class="local-menu-more-vert__item">
+                          <div class="title">ברירת מחדל לתצוגה:</div>
+                          <div>
+                            <span
+                              class="material-symbols-outlined check-box-checked"
+                            >
+                              done
+                            </span>
+                            <span
+                              class="material-symbols-outlined icon-disabled"
+                            >
+                              crop_16_9
+                            </span>
+                            <span>מצומצמת</span>
+                          </div>
+                          <div>
+                            <span
+                              class="material-symbols-outlined check-box-checked"
+                            >
+                              check_box_outline_blank
+                            </span>
+                            <span
+                              class="material-symbols-outlined icon-disabled"
+                            >
+                              web_asset
+                            </span>
+                            <span>מורחבת</span>
+                          </div>
+                          <div>
+                            <span
+                              class="material-symbols-outlined check-box-blank"
+                            >
+                              check_box_outline_blank
+                            </span>
+                            <span
+                              class="material-symbols-outlined icon-disabled"
+                            >
+                              top_panel_open
+                            </span>
+                            <span>פתוחה למטה</span>
+                          </div>
+                          <div>
+                            <span
+                              class="material-symbols-outlined check-box-blank"
+                            >
+                              check_box_outline_blank
+                            </span>
+                            <span
+                              class="material-symbols-outlined icon-disabled"
+                            >
+                              arrows_more_down
+                            </span>
+                            <span>מוקטנת</span>
+                          </div>
+                          <div>
+                            <span
+                              class="material-symbols-outlined check-box-blank"
+                            >
+                              check_box_outline_blank
+                            </span>
+                            <span
+                              class="material-symbols-outlined icon-disabled"
+                            >
+                              visibility_off
+                            </span>
+                            <span>מוסתרת</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="local-menu-more-vert push-pin-menu active"
+                        id="delete-menu"
+                      >
+                        <div class="local-menu-more-vert__item">
+                          <div class="title">מחק:</div>
+                          <div>
+                            <span>מסומנים</span>
+                          </div>
+                          <div>
+                            <span>מוצגים</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="local-menu-more-vert push-pin-menu active"
+                        id="mark-menu"
+                      >
+                        <div class="local-menu-more-vert__item">
+                          <div class="title">סימון:</div>
+                          <div>
+                            <span>בטל את כל המסומנים</span>
+                          </div>
+                          <div>
+                            <span>סמן הכול</span>
+                          </div>
+                          <div>
+                            <span>הפוך בחירה</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="local-menu-more-vert push-pin-menu active"
+                        id="export-menu"
+                      >
+                        <div class="local-menu-more-vert__item">
+                          <div class="title">יצוא:</div>
+                          <div>
+                            <span>רגיל</span>
+                          </div>
+                          <div>
+                            <span>מורחב</span>
+                          </div>
+                        </div>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="card__boxes--box__content filters active">
+                <div class="filters-header">
+                  <div class="title">סינון תוצאות</div>
+
+                  <div class="icon-container">
+                    <span class="btn-primary">הפעל</span>
+
+                    <span
+                      class="material-symbols-outlined btn-default"
+                      id="close-filters"
+                    >
+                      close
+                    </span>
+                  </div>
+                </div>
+                <div class="line"></div>
+
+                <div class="filters__line">
+                  <div class="check-box">
+                    <span class="material-symbols-outlined">
+                      check_box_outline_blank
+                    </span>
+                    <div class="filters-number">
+                      <span>1</span>
+                      <span
+                        class="material-symbols-outlined small-icon btn-default"
+                      >
+                        more_vert
+                      </span>
+                    </div>
+                  </div>
+                  <div class="fields">
+                    <span class="edit-content transparent">
+                      <span class="label">
+                        <span>תגית</span>
+                      </span>
+                      <span class="edit-field">
+                        <span class="value-text"></span>
+                        <span class="material-symbols-outlined">
+                          expand_more
+                        </span>
+                      </span>
+                    </span>
+                    <span class="edit-content transparent">
+                      <span class="label">
+                        <span>שווה</span>
+                      </span>
+                      <span class="edit-field">
+                        <span class="value-text"></span>
+                        <span class="material-symbols-outlined">
+                          expand_more
+                        </span>
+                      </span>
+                    </span>
+                    <span class="edit-content transparent">
+                      <span class="label">
+                        <span>חשוב</span>
+                      </span>
+                      <span class="edit-field">
+                        <span class="value-text"></span>
+                        <span class="material-symbols-outlined">
+                          expand_more
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="add-delete-btns-container">
+                    <span class="material-symbols-outlined"> add </span>
+                    <span class="material-symbols-outlined"> remove </span>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="filters__line">
+                  <div class="check-box">
+                    <span class="material-symbols-outlined">
+                      check_box_outline_blank
+                    </span>
+                    <div class="filters-number">
+                      <span>1</span>
+                      <span
+                        class="material-symbols-outlined small-icon btn-default"
+                      >
+                        more_vert
+                      </span>
+                    </div>
+                  </div>
+                  <div class="fields">
+                    <span class="edit-content transparent">
+                      <span class="label">
+                        <span>סטטוס</span>
+                      </span>
+                      <span class="edit-field">
+                        <span class="value-text"></span>
+                        <span class="material-symbols-outlined">
+                          expand_more
+                        </span>
+                      </span>
+                    </span>
+                    <span class="edit-content transparent">
+                      <span class="label">
+                        <span>לא שווה</span>
+                      </span>
+                      <span class="edit-field">
+                        <span class="value-text"></span>
+                        <span class="material-symbols-outlined">
+                          expand_more
+                        </span>
+                      </span>
+                    </span>
+                    <span class="edit-content transparent">
+                      <span class="label">
+                        <span>ליד</span>
+                      </span>
+                      <span class="edit-field">
+                        <span class="value-text"></span>
+                        <span class="material-symbols-outlined">
+                          expand_more
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="add-delete-btns-container">
+                    <span class="material-symbols-outlined"> add </span>
+                    <span class="material-symbols-outlined"> remove </span>
+                  </div>
+                </div>
+                <div class="line"></div>
+
+                <div class="filters__line">
+                  <div class="check-box"></div>
+                  <div class="fields">
+                    <span class="edit-content disabled">
+                      <span class="label">
+                        <span>בחר שדה...</span>
+                      </span>
+                      <span class="edit-field">
+                        <span class="value-text"></span>
+                        <span class="material-symbols-outlined">
+                          expand_more
+                        </span>
+                      </span>
+                    </span>
+                    <span class="edit-content disabled">
+                      <span class="label">
+                        <span>שווה</span>
+                      </span>
+                      <span class="edit-field">
+                        <span class="value-text"></span>
+                        <span class="material-symbols-outlined">
+                          expand_more
+                        </span>
+                      </span>
+                    </span>
+                    <span class="edit-content disabled">
+                      <span class="label">
+                        <span>בחר ערך...</span>
+                      </span>
+                      <span class="edit-field">
+                        <span class="value-text"></span>
+                        <span class="material-symbols-outlined">
+                          expand_more
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="add-delete-btns-container">
+                    <span class="material-symbols-outlined"> add </span>
+                    <span class="material-symbols-outlined"> remove </span>
+                  </div>
+                </div>
+                <div class="line"></div>
+
+                <div class="filters__line">
+                  <div class="check-box">
+                    <span>מיון</span>
+                  </div>
+                  <div class="fields">
+                    <span class="edit-content">
+                      <span class="label">
+                        <span>יורד</span>
+                      </span>
+                      <span class="edit-field">
+                        <span class="value-text"></span>
+                        <span class="material-symbols-outlined">
+                          expand_more
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="line"></div>
+
+                <div class="filters__line">
+                  <div class="check-box">
+                    <div class="check-box">
+                      <span
+                        class="material-symbols-outlined"
+                        style="opacity: 0"
+                      >
+                        check_box_outline_blank
+                      </span>
+                      <div class="filters-number">
+                        <span>1</span>
+                        <span
+                          class="material-symbols-outlined small-icon btn-default"
+                        >
+                          more_vert
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fields">
+                    <span class="edit-content">
+                      <span class="label">
+                        <span>סטטוס</span>
+                      </span>
+                      <span class="edit-field">
+                        <span class="value-text"></span>
+                        <span class="material-symbols-outlined">
+                          expand_more
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card__boxes--box__content zero-extend"
+                id="zero-extend-communications"
+              >
+                <div class="card__boxes--box__content--fields">
+                  <span class="edit-content small">
+                    <!-- <span class="label">
+                          <span>מעסיק</span>
+                        </span> -->
+                    <span class="edit-field">
+                      <span>הקלד...</span>
+                      <span class="material-symbols-outlined">
+                        expand_more
+                      </span>
+                    </span>
+                  </span>
+                </div>
+                <span class="material-symbols-outlined btn-default">
+                  expand_content
+                </span>
+              </div>
+              <div
+                class="card__boxes--box__content active first-extend"
+                id="first-extend-communications"
+              >
+                <div class="card__boxes--box__content--table">
+                  <div class="table-flex-container">
+                    <div class="table-flex">
+                      <div class="table-header">
+                        <div class="table-cell sticky-cell sticky-header">
+                          שם
+                        </div>
+                        <div class="table-cell">
+                          <span>תפקיד בקשר</span>
+                        </div>
+                        <div class="table-cell big-cell">תקשורת</div>
+                      </div>
+                      <div class="table-row">
+                        <div class="table-cell sticky-cell sticky-row">
+                          Figma
+                        </div>
+                        <div class="table-cell">מעסיק חיצוני, בעלים</div>
+                        <div class="table-cell big-cell">
+                          <span>04-84900301, ראשי</span>
+                          <span class="material-symbols-outlined stop-icon">
+                            stop
+                          </span>
+                          <span>04-8490032, פקס</span>
+                          <span class="material-symbols-outlined stop-icon">
+                            stop
+                          </span>
+                          <span>055-5555555, סיווג</span>
+                        </div>
+                      </div>
+                      <div class="table-row">
+                        <div class="table-cell sticky-cell sticky-row">
+                          אביבה
+                        </div>
+                        <div class="table-cell">עובד</div>
+                        <div class="table-cell big-cell"></div>
+                      </div>
+                      <div class="table-row">
+                        <div class="table-cell sticky-cell sticky-row">
+                          יצחק נהון
+                        </div>
+                        <div class="table-cell">עובד, מזכיר</div>
+                        <div class="table-cell big-cell">
+                          <span>04-84900301, ראשי</span>
+                          <span class="material-symbols-outlined stop-icon">
+                            stop
+                          </span>
+                          <span>04-8490032, פקס</span>
+                          <span class="material-symbols-outlined stop-icon">
+                            stop
+                          </span>
+                          <span>055-5555555, סיווג</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- איש מכירות -->
+            <div class="card__boxes--box box-reduced" data-target="box2">
+              <div class="card__boxes--box__header">
+                <div class="card__boxes--box__header--title">
+                  <span class="material-symbols-outlined"> event </span>
+                  <span>איש מכירות/ספק</span>
+                </div>
+                <div class="card__boxes--box__header--btns">
+                  <div class="dynamic-btns">
+                    <span
+                      class="material-symbols-outlined btn-default expand-grid-button"
+                    >
+                      add
+                    </span>
+                    <span
+                      class="material-symbols-outlined btn-default close-expand-new"
+                    >
+                      close
+                    </span>
+                    <span
+                      class="material-symbols-outlined btn-default expend-btn"
+                    >
+                      arrows_more_up
+                    </span>
+                    <span
+                      class="material-symbols-outlined showSingle btn-default"
+                      style="display: none"
+                    >
+                      top_panel_open
+                    </span>
+                    <span
+                      class="material-symbols-outlined btn-default minimize"
+                      data-target="box2"
+                    >
+                      arrows_more_down
+                    </span>
+                    <span class="material-symbols-outlined btn-default">
+                      more_vert
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="card__boxes--box__content zero-extend">
+                <div class="card__boxes--box__content--fields">
+                  <span class="edit-content small">
+                    <!-- <span class="label">
+                      <span>מעסיק</span>
+                    </span> -->
+                    <span class="edit-field">
+                      <span>יצחק אפרתי</span>
+                      <span class="material-symbols-outlined">
+                        expand_more
+                      </span>
+                    </span>
+                  </span>
+                  <span class="material-symbols-outlined stop-icon">
+                    stop
+                  </span>
+                  <span class="edit-content small">
+                    <!-- <span class="label">
+                      <span>מעסיק</span>
+                    </span> -->
+                    <span class="edit-field">
+                      <span>אימפקט</span>
+                      <span class="material-symbols-outlined">
+                        expand_more
+                      </span>
+                    </span>
+                  </span>
+                  <span class="edit-content large">
+                    <!-- <span class="label">
+                      <span>מעסיק</span>
+                    </span> -->
+                    <span class="edit-field">
+                      <span>אימפקט מערכות תוכנה (1996) בע"מ</span>
+                      <span class="material-symbols-outlined">
+                        expand_more
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="card__boxes--box__content active first-extend">
+                <div class="card__boxes--box__content--table">
+                  <div class="table-flex-container">
+                    <div class="table-flex">
+                      <div class="table-header">
+                        <div class="table-cell sticky-cell sticky-header">
+                          <span class="material-symbols-outlined"
+                            >category</span
+                          >
+                        </div>
+                        <div class="table-cell medium-cell">קטגוריה</div>
+                        <div class="table-cell big-cell">פרטים</div>
+                        <div class="table-cell small-cell">סיווג</div>
+                      </div>
+                      <div class="table-row">
+                        <div class="table-cell sticky-cell sticky-row">
+                          <span class="material-symbols-outlined">phone</span>
+                        </div>
+                        <div class="table-cell medium-cell">מספר טלפון</div>
+                        <div class="table-cell big-cell">053-344242</div>
+                        <div class="table-cell small-cell">עבודה</div>
+                      </div>
+                      <div class="table-row">
+                        <div class="table-cell sticky-cell sticky-row">
+                          <span class="material-symbols-outlined">phone</span>
+                        </div>
+                        <div class="table-cell medium-cell">מספר טלפון</div>
+                        <div class="table-cell big-cell">052-3232678</div>
+                        <div class="table-cell small-cell">עבודה</div>
+                      </div>
+                      <div class="table-row">
+                        <div class="table-cell sticky-cell sticky-row">
+                          <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div class="table-cell medium-cell">דואר אלקטרוני</div>
+                        <div class="table-cell big-cell">impact@gmail.com</div>
+                        <div class="table-cell small-cell">פרטי</div>
+                      </div>
+                      <div class="table-row">
+                        <div class="table-cell sticky-cell sticky-row">
+                          <span class="material-symbols-outlined"
+                            >language</span
+                          >
+                        </div>
+                        <div class="table-cell medium-cell">אתר אינטרנט</div>
+                        <div class="table-cell big-cell">www.ynet.co.il</div>
+                        <div class="table-cell small-cell">עסקי</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-* JavaScript Files *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+    <script src="./up/js/dark-mode.js"></script>
+    <script src="up/js/edit-address.js"></script>
+    <script src="/up/js/person.js"></script>
+    <script src="/up/js/navbar.js"></script>
+  </body>
+</html>

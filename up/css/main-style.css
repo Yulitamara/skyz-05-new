@@ -958,6 +958,9 @@ hr {
 .navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .group-item-topic .edit-group-item-topic {
   opacity: 0;
 }
+.navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .group-item-topic:hover {
+  text-decoration: underline;
+}
 .navbar .navbar-bottom .create-container .group-container-create .group-fields .group-item .group-item-topic:hover .edit-group-item-topic {
   opacity: 1;
 }
@@ -3289,6 +3292,14 @@ textarea {
 
 .arrow-small-padding:hover {
   opacity: 1;
+}
+
+.edit-content.large {
+  width: 250px;
+}
+
+.edit-content.small {
+  width: 120px;
 }
 
 .table-flex-container {
