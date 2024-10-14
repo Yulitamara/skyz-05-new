@@ -3371,10 +3371,20 @@ textarea {
 
 .visibility-is-off {
   max-width: 50px;
+  min-width: 50px;
 }
 
 .visibility-title-off {
   max-width: 50px;
+  min-width: 50px;
+}
+
+.visibility-btn {
+  opacity: 0;
+}
+
+.table-cell:hover .visibility-btn {
+  opacity: 1;
 }
 
 .small-boxes-wrapper {

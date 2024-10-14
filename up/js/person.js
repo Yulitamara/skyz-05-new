@@ -621,3 +621,4 @@ document.getElementById("close-filters").addEventListener("click", function () {
            element.innerHTML = element.innerHTML === '' ? originalTitleContents[index] : '';
        });
    });
+
