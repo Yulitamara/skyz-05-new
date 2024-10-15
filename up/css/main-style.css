@@ -1677,6 +1677,9 @@ tr > td:first-child {
   padding: 1rem;
   overflow: hidden;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 .card-container .card__boxes--box__content.filters {
   padding: 1rem;
@@ -1987,6 +1990,12 @@ tr > td:first-child {
     visibility: visible !important;
   }
 }
+.bheader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 input[type=text],
 input[type=password],
 input[type=number] {
@@ -3337,6 +3346,9 @@ textarea {
   overflow: hidden;
   white-space: nowrap;
   color: var(--color-on-primary-light);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .visibility-btn {

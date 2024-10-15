@@ -119,6 +119,9 @@
             overflow: hidden;
             // overflow-x: scroll;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
           }
         }
 
@@ -488,4 +491,9 @@
   .dynamic-btns {
     visibility: visible !important;
   }
+}
+.bheader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }

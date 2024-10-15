@@ -34,8 +34,9 @@
   white-space: nowrap;
   color: var(--color-on-primary-light);
   //   border-left: 2px solid #fff;
-  // display: flex;
-  // align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   // justify-content: space-between;
 }
 
@@ -99,5 +100,4 @@
   .visibility-btn {
     opacity: 1;
   }
-  
 }
