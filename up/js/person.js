@@ -583,7 +583,6 @@ document.getElementById("close-filters").addEventListener("click", function () {
     .classList.add("active");
 });
 
-
 const visibilityBtn = document.getElementById('visibility-btn');
 const moreFieldsBtn = document.getElementById('more-fields-table');
 const visibilityElements = document.querySelectorAll('.visibility-width');
@@ -592,6 +591,12 @@ visibilityBtn.addEventListener('click', function() {
   visibilityElements.forEach(element => {
     element.classList.add('active');
   });
+  
+  moreFieldsBtn.style.animation = "grow 0.3s ease-in-out";
+  
+  setTimeout(() => {
+    moreFieldsBtn.style.animation = "";
+  }, 300); 
 });
 
 moreFieldsBtn.addEventListener('click', function() {

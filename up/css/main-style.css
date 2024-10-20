@@ -2012,6 +2012,50 @@ tr > td:first-child {
   animation: pop 0.3s ease-in-out;
 }
 
+/* Define the small-to-big animation */
+@keyframes smallToBig {
+  0% {
+    transform: scale(0.8); /* Start small */
+  }
+  100% {
+    transform: scale(1.2); /* End bigger */
+  }
+}
+@keyframes bigToSmall {
+  0% {
+    transform: scale(1.2); /* Start bigger */
+  }
+  100% {
+    transform: scale(0.8); /* End smaller */
+  }
+}
+#more-fields-table {
+  transition: transform 0.3s ease-in-out;
+}
+
+#more-fields-table.active {
+  animation: smallToBig 0.3s forwards;
+}
+
+#more-fields-table.inactive {
+  animation: bigToSmall 0.3s forwards;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#more-fields-table {
+  display: inline-block;
+}
+
 input[type=text],
 input[type=password],
 input[type=number] {
