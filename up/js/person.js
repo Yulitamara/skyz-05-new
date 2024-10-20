@@ -584,41 +584,20 @@ document.getElementById("close-filters").addEventListener("click", function () {
 });
 
 
-   // Store the original content of elements
-   const originalContents = {};
-   const originalTitleContents = {};
+const visibilityBtn = document.getElementById('visibility-btn');
+const moreFieldsBtn = document.getElementById('more-fields-table');
+const visibilityElements = document.querySelectorAll('.visibility-width');
 
-   // Store the original contents for visibility-width elements
-   document.querySelectorAll('.visibility-width').forEach((element, index) => {
-       originalContents[index] = element.innerHTML;
-   });
+visibilityBtn.addEventListener('click', function() {
+  visibilityElements.forEach(element => {
+    element.classList.add('active');
+  });
+});
 
-   // Store the original contents for visibility-title elements
-   document.querySelectorAll('.visibility-title').forEach((element, index) => {
-       originalTitleContents[index] = element.innerHTML;
-   });
-
-   document.getElementById('visibility-btn').addEventListener('click', function() {
-       // Toggle button text
-       const btn = document.getElementById('visibility-btn');
-       btn.innerHTML = btn.innerHTML === 'visibility' ? 'visibility_off' : 'visibility';
-
-       // Toggle the content and class of elements with class 'visibility-width'
-       document.querySelectorAll('.visibility-width').forEach((element, index) => {
-           // Toggle between original content and empty string
-           element.innerHTML = element.innerHTML === '' ? originalContents[index] : '';
-           // Toggle the 'visibility-is-off' class
-           element.classList.toggle('visibility-is-off');
-       });
-
-       // Toggle the class 'visibility-title-off' for elements with class 'visibility-width-title'
-       document.querySelectorAll('.visibility-width-title').forEach((element) => {
-           element.classList.toggle('visibility-title-off');
-       });
-
-       // Toggle the content of elements with class 'visibility-title'
-       document.querySelectorAll('.visibility-title').forEach((element, index) => {
-           element.innerHTML = element.innerHTML === '' ? originalTitleContents[index] : '';
-       });
-   });
-
+moreFieldsBtn.addEventListener('click', function() {
+  visibilityElements.forEach(element => {
+    element.classList.remove('active');
+  });
+  
+  moreFieldsBtn.style.animation = "pop 0.3s ease-in-out";
+});

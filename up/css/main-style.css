@@ -1996,6 +1996,22 @@ tr > td:first-child {
   gap: 1rem;
 }
 
+@keyframes pop {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Apply pop animation */
+.visibility-width,
+#more-fields-table {
+  animation: pop 0.3s ease-in-out;
+}
+
 input[type=text],
 input[type=password],
 input[type=number] {
