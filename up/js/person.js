@@ -591,8 +591,10 @@ visibilityBtn.addEventListener('click', function() {
   visibilityElements.forEach(element => {
     element.classList.add('active');
   });
-  
+
   moreFieldsBtn.style.animation = "grow 0.3s ease-in-out";
+  visibilityElements.style.animation = "grow 0.3s ease-in-out";   
+
   
   setTimeout(() => {
     moreFieldsBtn.style.animation = "";
