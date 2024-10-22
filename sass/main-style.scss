@@ -61,6 +61,7 @@
 @import "calendar";
 @import "kanban";
 @import "chat";
+@import "draft";
 
 *,
 *::before,
@@ -84,4 +85,3 @@ h4 {
   font-size: font-size(font-size-regular);
   font-weight: font-weight(font-weight-regular);
 }
-
